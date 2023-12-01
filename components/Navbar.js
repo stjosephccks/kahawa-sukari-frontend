@@ -14,7 +14,7 @@ function NavBar() {
 
 
  
-  const dropdown = "relative md:absolute right-0 md:mt-8 rounded-md  bg-blue-400 text-white max-w-max py-3 whitespace-nowrap";
+  const dropdown = "relative md:absolute right-0 md:mt-8 rounded-md  bg-blue-400 text-white max-w-max py-3 md:whitespace-nowrap";
 
 
 
