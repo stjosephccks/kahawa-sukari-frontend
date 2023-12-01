@@ -66,7 +66,7 @@ function NavBar() {
             >
               <ul className="h-screen md:h-auto  justify-end md:flex ">
                 <li className={Navstyles}>
-                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                  <Link href="#about" onClick={(e) => {setNavbar(!navbar); setIsDropdownOpen(false)}}>
                     Home
                   </Link>
                 </li>
@@ -79,6 +79,15 @@ function NavBar() {
                     setLiturgyDropDown(false);
                     setSacramentsDropDown(false);
                     setFormationDropDown(false)}}
+
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setAboutDropDown(!aboutDropDown);
+                      setIsDropdownOpen(!isDropdownOpen);
+                      setcommunityDropDown(false);
+                      setLiturgyDropDown(false);
+                      setSacramentsDropDown(false);
+                      setFormationDropDown(false)}}
                     >
                         {aboutDropDown ?(
                           <span className="md:hidden">- &nbsp;</span>
@@ -116,7 +125,16 @@ function NavBar() {
                     setcommunityDropDown(!communityDropDown);
                     setLiturgyDropDown(false);
                     setSacramentsDropDown(false);
-                    setFormationDropDown(false)}}>
+                    setFormationDropDown(false)}}
+                    
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setAboutDropDown(false);
+                      setIsDropdownOpen(!isDropdownOpen);
+                      setcommunityDropDown(!communityDropDown);
+                      setLiturgyDropDown(false);
+                      setSacramentsDropDown(false);
+                      setFormationDropDown(false)}}>
 
                             {communityDropDown ?(
                           <span className="md:hidden">- &nbsp;</span>
@@ -151,7 +169,16 @@ function NavBar() {
                     setcommunityDropDown(false);
                     setLiturgyDropDown(!liturgyDropDown);
                     setSacramentsDropDown(false);
-                    setFormationDropDown(false)}} >
+                    setFormationDropDown(false)}}
+                    
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setAboutDropDown(false);
+                      setIsDropdownOpen(!isDropdownOpen);
+                      setcommunityDropDown(false);
+                      setLiturgyDropDown(!liturgyDropDown);
+                      setSacramentsDropDown(false);
+                      setFormationDropDown(false)}}>
                            {liturgyDropDown ?(
                           <span className="md:hidden">- &nbsp;</span>
                           ) : (
@@ -190,7 +217,14 @@ function NavBar() {
                     setcommunityDropDown(false);
                     setLiturgyDropDown(false);
                     setSacramentsDropDown(!sacramentsDropDown);
-                    setFormationDropDown(false)}} >
+                    setFormationDropDown(false)}}
+                    
+                    onClick={()=>{setAboutDropDown(false);
+                      setIsDropdownOpen(!isDropdownOpen);
+                      setcommunityDropDown(false);
+                      setLiturgyDropDown(false);
+                      setSacramentsDropDown(!sacramentsDropDown);
+                      setFormationDropDown(false)}}>
                      {sacramentsDropDown ?(
                           <span className="md:hidden">- &nbsp;</span>
                           ) : (
@@ -239,7 +273,15 @@ function NavBar() {
                     setcommunityDropDown(false);
                     setLiturgyDropDown(false);
                     setSacramentsDropDown(false);
-                    setFormationDropDown(!formationDropDown)}} >
+                    setFormationDropDown(!formationDropDown)}}
+                    
+                    onClick={()=>{
+                      setAboutDropDown(false);
+                      setIsDropdownOpen(!isDropdownOpen);
+                      setcommunityDropDown(false);
+                      setLiturgyDropDown(false);
+                      setSacramentsDropDown(false);
+                      setFormationDropDown(!formationDropDown)}}>
                      {formationDropDown ?(
                           <span className="md:hidden">- &nbsp;</span>
                           ) : (
