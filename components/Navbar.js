@@ -29,7 +29,7 @@ function NavBar() {
         setLiturgyDropDown(false);
         setSacramentsDropDown(false);
         setFormationDropDown(false);
-        setParishDropDown(false);
+       
       }}>
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
@@ -75,7 +75,10 @@ function NavBar() {
                     e.preventDefault();
                     setAboutDropDown(!aboutDropDown);
                     setIsDropdownOpen(!isDropdownOpen);
-                    setcommunityDropDown(false)}}
+                    setcommunityDropDown(false);
+                    setLiturgyDropDown(false);
+                    setSacramentsDropDown(false);
+                    setFormationDropDown(false)}}
                     >
                         {aboutDropDown ?(
                           <span className="md:hidden">- &nbsp;</span>
@@ -108,10 +111,12 @@ function NavBar() {
                 <li className={`relative ${Navstyles}`}>
                   <Link href="#contact" onMouseEnter={(e) => {
                     e.preventDefault();
-                    setcommunityDropDown(!communityDropDown);
-                    setIsDropdownOpen(!isDropdownOpen);
                     setAboutDropDown(false);
-                    setLiturgyDropDown(false)}}>
+                    setIsDropdownOpen(!isDropdownOpen);
+                    setcommunityDropDown(!communityDropDown);
+                    setLiturgyDropDown(false);
+                    setSacramentsDropDown(false);
+                    setFormationDropDown(false)}}>
 
                             {communityDropDown ?(
                           <span className="md:hidden">- &nbsp;</span>
@@ -141,11 +146,12 @@ function NavBar() {
                 <li className={`relative ${Navstyles}`}>
                   <Link href="#contact" onMouseEnter={(e) => {
                     e.preventDefault();
-                    setcommunityDropDown(false);
-                    setIsDropdownOpen(!isDropdownOpen);
                     setAboutDropDown(false);
+                    setIsDropdownOpen(!isDropdownOpen);
+                    setcommunityDropDown(false);
                     setLiturgyDropDown(!liturgyDropDown);
-                    setSacramentsDropDown(false)}} >
+                    setSacramentsDropDown(false);
+                    setFormationDropDown(false)}} >
                            {liturgyDropDown ?(
                           <span className="md:hidden">- &nbsp;</span>
                           ) : (
@@ -179,7 +185,12 @@ function NavBar() {
                 </li>
                 <li className={`relative ${Navstyles}`}>
                   <Link href="#projects"
-                  onMouseEnter={()=>{setSacramentsDropDown(!sacramentsDropDown);setLiturgyDropDown(false);setFormationDropDown(false)}} >
+                  onMouseEnter={()=>{setAboutDropDown(false);
+                    setIsDropdownOpen(!isDropdownOpen);
+                    setcommunityDropDown(false);
+                    setLiturgyDropDown(false);
+                    setSacramentsDropDown(!sacramentsDropDown);
+                    setFormationDropDown(false)}} >
                      {sacramentsDropDown ?(
                           <span className="md:hidden">- &nbsp;</span>
                           ) : (
@@ -222,7 +233,13 @@ function NavBar() {
                   )}
                 </li>
                 <li className={`relative ${Navstyles}`}>
-                  <Link href="#projects"   onMouseEnter={()=>{setFormationDropDown(!formationDropDown);setSacramentsDropDown(false);setParishDropDown(false)}} >
+                  <Link href="#projects"   onMouseEnter={()=>{
+                    setAboutDropDown(false);
+                    setIsDropdownOpen(!isDropdownOpen);
+                    setcommunityDropDown(false);
+                    setLiturgyDropDown(false);
+                    setSacramentsDropDown(false);
+                    setFormationDropDown(!formationDropDown)}} >
                      {formationDropDown ?(
                           <span className="md:hidden">- &nbsp;</span>
                           ) : (
