@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ul li a{
+    @apply block text-white  px-2 w-full pb-1
+}
