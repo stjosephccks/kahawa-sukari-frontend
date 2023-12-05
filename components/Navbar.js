@@ -10,11 +10,10 @@ function NavBar() {
   const [sacramentsDropDown, setSacramentsDropDown]= useState(false)
   const [formationDropDown, setFormationDropDown]= useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [parishDropDown, setParishDropDown]= useState(false)
-
+  
 
  
-  const dropdown = "relative md:absolute right-0 md:mt-8 rounded-md  bg-blue-400 text-white max-w-max py-3 md:whitespace-nowrap";
+  const dropdown = "relative md:absolute right-0 md:mt-8 rounded-md  bg-cyan-600 text-white max-w-max py-3 md:whitespace-nowrap";
 
 
 
@@ -22,8 +21,8 @@ function NavBar() {
 
   const Navstyles= 'pb-6 text-md text-white py-2 md:px-6  md:flex  md:border-b-0  md:hover:text-purple-600 md:hover:bg-transparent'
   return (
-    <div className='h-screen'>
-      <nav className="w-full bg-gray-700 fixed top-0 left-0 right-0 z-10"onMouseLeave={() => {
+    <div className=''>
+      <nav className={`md:w-full bg-primary fixed top-0 left-0 right-0 z-10 `}onMouseLeave={() => {
         setAboutDropDown(false);
         setcommunityDropDown(false);
         setLiturgyDropDown(false);
@@ -59,12 +58,9 @@ function NavBar() {
             </div>
           </div>
           <div>
-            <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? 'p-12 md:p-0 block' : 'hidden'
-              }`}
-            >
-              <ul className="h-screen md:h-auto  justify-end md:flex ">
+          <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'px-12 right-0 md:p-0 block' : 'hidden'}`}>
+          <ul className={`h-screen md:h-auto ${navbar ? 'justify-center' : 'justify-start'} md:flex`}>
+           
                 <li className={Navstyles}>
                   <Link href="#about" onClick={(e) => {setNavbar(!navbar); setIsDropdownOpen(false)}}>
                     Home
