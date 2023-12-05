@@ -5,3 +5,7 @@
 ul li a{
     @apply block text-white  px-2 w-full pb-1
 }
+h1{
+    @apply 
+      text-2xl text-center font-bold
+}

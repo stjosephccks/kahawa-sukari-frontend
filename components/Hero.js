@@ -8,7 +8,7 @@ function Hero({imageUrl, text}) {
         src={imageUrl}
         alt="Hero Image"
       />
-      <div className="absolute text-center text-yellow-600">
+      <div className="absolute text-center text-yellow-400">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
           {text}
         </h1>

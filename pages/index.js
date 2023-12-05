@@ -1,5 +1,7 @@
+import Announcements from "@/components/Announcements";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
+import MassSchedule from "@/components/Mass_Schedule";
 import Navbar from "@/components/Navbar";
 
 
@@ -9,6 +11,8 @@ export default function  Home(){
   return (
     <Layout>
       <Hero imageUrl={imageurl} text={text}/>
+      <MassSchedule/>
+      <Announcements/>
     </Layout>
   )
 }
