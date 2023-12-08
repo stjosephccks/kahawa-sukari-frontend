@@ -4,4 +4,5 @@ const SundaySchema = new Schema({
     sunday:{type:String, required:true},
     
 });
-export const Sunday = models?.Sunday||model('Sunday', SundaySchema);
+const Sunday = models?.Sunday||model('Sunday', SundaySchema);
+export default Sunday;

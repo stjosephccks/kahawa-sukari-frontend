@@ -3,20 +3,13 @@ import { Sunday } from "@/models/Sunday";
 
 
 export default async function handler(req, res) {
-  const { method } = req;
-
-  switch (method) {
-    case 'GET':
-      try {
-        await mongooseConnect();
-        const data = await Sunday.find({}); // Replace YourModel with your actual MongoDB model
-        res.status(200).json({ success: true, data });
-      } catch (error) {
-        res.status(500).json({ success: false, error });
-      }
-      break;
-    default:
-      res.status(405).json({ success: false });
-      break;
+  
+  try {
+    await mongooseConnect();
+    const sundays = await Sunday.find().exec();
+    res.json(sundays);
+  } catch (error) {
+    console.error('Error fetching Sundays:', error);
+    return new NextResponse('Error fetching Sundays', { status: 500 });
   }
 }
