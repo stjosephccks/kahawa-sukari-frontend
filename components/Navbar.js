@@ -109,6 +109,9 @@ function NavBar() {
                      <li>
                        <Link href="#"onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Bulletin</Link>
                      </li>
+                     <li>
+                       <Link href="#" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Announcements</Link>
+                     </li>
                    </ul>
                   )}
 

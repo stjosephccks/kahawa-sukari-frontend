@@ -2,8 +2,8 @@ import React from 'react'
 
 function MassSchedule() {
   return (
-    <div className="flex flex-col md:flex-row md:mx-24">
-    <div className="md:w-1/2 p-4 "> {/* Adjust the width and padding as needed */}
+    <div className="flex flex-col md:flex-row md:ml-44 ">
+    <div className="md:w-1/2 p-4  "> {/* Adjust the width and padding as needed */}
       {/* Content for the first column */}
       <h1 className='mb-10'>Mass Times.</h1>
       <div>
