@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   
   try {
     await mongooseConnect();
-    const announcements = await Announcement.find().exec()
+    const announcements = await Announcement.find()
     res.json(announcements);
   } catch (error) {
     console.error('Error fetching Announcements:', error);
