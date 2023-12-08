@@ -1,7 +1,3 @@
-// import { connectDatabase, db } from '@/lib/mongodb';
-import {  mongooseConnect } from '@/lib/mongoose'
-import { Announcement } from '@/models/Announcements';
-import { Sunday } from '@/models/Sunday';
 import axios from 'axios';
 
 import React, { useEffect, useState } from 'react'

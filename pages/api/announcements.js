@@ -5,9 +5,10 @@ import { NextResponse } from "next/server";
 export default async function handler(req, res) {
   try {
     await mongooseConnect();
-res.json(await Announcement.find().populate('sunday'))
+    const announcements = await Announcement.find().populate('sunday');
+    res.json(announcements);
   } catch (error) {
+    console.error('Error fetching Announcements:', error);
     return new NextResponse('Error fetching Announcements', { status: 500 });
   }
 }
-
