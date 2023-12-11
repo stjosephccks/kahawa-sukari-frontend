@@ -5,4 +5,5 @@ const BulletinScema = new Schema({
     content:{type:String, required:true},
     images:{type:[String]}
 });
-export const Bulletin = models.Bulletin||model('Bulletin', BulletinScema);
+const Bulletin = models?.Bulletin||model('Bulletin', BulletinScema);
+export default Bulletin;
