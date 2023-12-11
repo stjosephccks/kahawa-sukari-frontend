@@ -2,7 +2,7 @@ import React from 'react'
 
 function Hero({imageUrl, title ,text}) {
   return (
-    <div className="relative h-screen md:h-80 flex items-center justify-center">
+    <div className="relative h-96 md:h-80 flex items-center justify-center">
       <img
         className="object-cover w-full h-full bg-blend-darken"
         src={imageUrl}

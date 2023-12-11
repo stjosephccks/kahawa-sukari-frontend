@@ -10,7 +10,7 @@ import { useEffect, useRef } from "react";
 
 export default function  Home(){
   
-  const imageurl ='https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari.jpg'
+  const imageurl ='https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg'
   const title ='LIVING IN LOVE'
   const text ='We are born to love, we live to love, and we will die to love still more.'
   return (
