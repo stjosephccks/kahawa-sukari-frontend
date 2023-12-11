@@ -5,7 +5,7 @@ import Layout from '@/components/Layout'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-function bulletin() {
+function Bulletin() {
   const [bulletins,setBulletins]= useState([])
   const [page, setPage]= useState(1)
 
@@ -41,4 +41,4 @@ function bulletin() {
   )
 }
 
-export default bulletin
+export default Bulletin
