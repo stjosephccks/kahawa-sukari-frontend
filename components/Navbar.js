@@ -62,7 +62,7 @@ function NavBar() {
           <ul className={`h-screen md:h-auto ${navbar ? 'justify-center' : 'justify-start'} md:flex`}>
            
                 <li className={Navstyles}>
-                  <Link href="#about" onClick={(e) => {setNavbar(!navbar); setIsDropdownOpen(false)}}>
+                  <Link href="/" onClick={(e) => {setNavbar(!navbar); setIsDropdownOpen(false)}}>
                     Home
                   </Link>
                 </li>
@@ -98,7 +98,7 @@ function NavBar() {
                      <ul className={dropdown}>
                     
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Welcome</Link>
+                       <Link href="/#welcome" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Welcome</Link>
                      </li>
                      <li>
                        <Link href="#"onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Contact</Link>
@@ -107,10 +107,10 @@ function NavBar() {
                        <Link href="#" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Staff</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Bulletin</Link>
+                       <Link href="/bulletin"onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Bulletin</Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Announcements</Link>
+                       <Link href="/#announcements" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Announcements</Link>
                      </li>
                    </ul>
                   )}

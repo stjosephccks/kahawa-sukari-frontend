@@ -12,7 +12,7 @@ export default function Announcements() {
 
 
   return (
-    <div>
+    <div id='announcements'>
     <h1 className='text-primary mt-24 ml-3 md:text-center'>Announcements</h1> 
     <div className='flex justify-center items-center'>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

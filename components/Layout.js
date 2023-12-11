@@ -1,3 +1,5 @@
+import Footer from "./Footer";
+
 const { default: NavBar } = require("./Navbar")
  const Layout =({children})=>{
     return(
@@ -6,6 +8,7 @@ const { default: NavBar } = require("./Navbar")
             <div  className="mt-16">
             {children}
             </div>
+            <Footer/>
             
         </div>
     )
