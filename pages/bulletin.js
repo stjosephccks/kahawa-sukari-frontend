@@ -29,6 +29,7 @@ function Bulletin() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-2">
         {bulletins.map((bulletin) => (
           <BulletinCard key={bulletin._id} bulletin={bulletin} />
+          
         ))}
       </div>
      

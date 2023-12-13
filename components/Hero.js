@@ -10,7 +10,7 @@ function Hero({imageUrl, title ,text}) {
       />
       <div className="absolute text-center text-yellow-400">
         <h1 className='mb-2'>{title}</h1>
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 mx-2">
           {text}
         </h1>
       </div>

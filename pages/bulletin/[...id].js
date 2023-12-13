@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 
-function BulletDetailsPage({initialContent}) {
+function BulletDetailsPage() {
 const [bulletin, setBulletin]= useState([])    
 const router = useRouter()
 const {id} = router.query
@@ -29,8 +29,8 @@ useEffect(()=>{
     <Layout>
         <Hero text={bulletin.title} imageUrl={imageurl} title={title}/>
         <div  className='text-center'>
-        <h1 className='text-primary mt-24 ml-3 md:text-center'>{bulletin.title}</h1>
-         <h3 className='text-center my-2 italic '>
+        <h1 className='text-primary mt-24 mx-3 md:text-center'>{bulletin.title}</h1>
+         <h3 className='text-center my-2 italic mx-2'>
             {bulletin.description}
          </h3>      
 

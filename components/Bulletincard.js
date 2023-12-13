@@ -1,14 +1,12 @@
-import bulletin from '@/pages/bulletin';
-import axios from 'axios'
+
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
 
 function BulletinCard({bulletin}) {
   
 
  
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="max-w-sm h-auto rounded overflow-hidden shadow-lg">
       
       <Link href={`/bulletin/${bulletin._id}`}>
         <img
@@ -20,7 +18,13 @@ function BulletinCard({bulletin}) {
         <div className="font-bold text-xl mb-2">{bulletin.title}</div>
         <p className="text-gray-700 text-base">{bulletin.description}</p>
       </div>
+      <span className='px-6 mb-6'>
+    <Link className='underline' href={`/bulletin/${bulletin._id}`}>Read More&#10146;</Link>
+    </span>
+
+     
     </Link>
+   
   </div>
 
   )

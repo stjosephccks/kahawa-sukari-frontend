@@ -10,7 +10,7 @@ export default async function handler(req,res){
         if(req.query?.id){
             res.json(await Bulletin.findOne({_id:req.query.id}));
         }else{
-        const bulletins = await Bulletin.find({}).sort({createdAt:-1}).exec()
+        const bulletins = await Bulletin.find({}).sort({_id:-1}).exec()
         res.json(bulletins)
         }
         

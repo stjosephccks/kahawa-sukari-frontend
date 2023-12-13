@@ -148,7 +148,7 @@ function NavBar() {
                      <ul className={dropdown}>
                     
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setcommunityDropDown(false)}}>Upcoming Events</Link>
+                       <Link href="/event" onClick={()=>{setNavbar(!navbar); setcommunityDropDown(false)}}>Upcoming Events</Link>
                      </li>
                      <li>
                        <Link href="#"onClick={()=>{setNavbar(!navbar); setcommunityDropDown(false)}}>Charity</Link>
