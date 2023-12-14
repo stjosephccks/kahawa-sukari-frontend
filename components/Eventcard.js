@@ -11,7 +11,7 @@ function Eventcard({event}) {
   return (
     <div>
 
-<Link href={`/event/${event._id}`} className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-primary dark:hover:bg-gray-700">
+<Link href={`/community/event/${event._id}`} className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-primary dark:hover:bg-gray-700">
       <div className="relative w-full h-56  md:w-56">
         {/* Adjust the size of the Image component */}
         <Image

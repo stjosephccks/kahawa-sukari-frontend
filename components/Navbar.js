@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 function NavBar() {
@@ -10,16 +11,13 @@ function NavBar() {
   const [sacramentsDropDown, setSacramentsDropDown]= useState(false)
   const [formationDropDown, setFormationDropDown]= useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const {pathname} = useRouter()
   
 
  
   const dropdown = "relative md:absolute right-0 md:mt-8 rounded-md  bg-cyan-600 text-white max-w-max py-3 md:whitespace-nowrap";
-
-
-
-
-
-  const Navstyles= 'pb-6 text-md text-white py-2 md:px-6  md:flex  md:border-b-0  md:hover:text-purple-600 md:hover:bg-transparent'
+  const Navstyles= 'pb-6 text-md  py-2 md:px-6  md:flex  md:border-b-0  md:hover:text-purple-600 md:hover:bg-transparent';
+  const activeNav = Navstyles +" text-primary1";
   return (
     <div className=''>
       <nav className={`md:w-full bg-primary fixed top-0 left-0 right-0 z-10 `}onMouseLeave={() => {
@@ -61,14 +59,14 @@ function NavBar() {
           <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'px-12 right-0 md:p-0 block' : 'hidden'}`}>
           <ul className={`h-screen md:h-auto ${navbar ? 'justify-center' : 'justify-start'} md:flex`}>
            
-                <li className={Navstyles}>
-                  <Link href="/" onClick={(e) => {setNavbar(!navbar); setIsDropdownOpen(false)}}>
+                <li className={pathname==='/'?activeNav: Navstyles}>
+                  <Link className={pathname==='/'?'text-secondary':'text-white'} href="/" onClick={(e) => {setNavbar(!navbar); setIsDropdownOpen(false)}}>
                     Home
                   </Link>
                 </li>
                 <li className={`relative ${Navstyles}`}>
-                  <Link href="#blog"  onMouseEnter={(e) => {
-                    e.preventDefault();
+                  <Link className={pathname.includes('welcome')?'text-secondary':'text-white'} href="/welcome"  onMouseEnter={() => {
+                   
                     setAboutDropDown(!aboutDropDown);
                     setIsDropdownOpen(!isDropdownOpen);
                     setcommunityDropDown(false);
@@ -76,8 +74,7 @@ function NavBar() {
                     setSacramentsDropDown(false);
                     setFormationDropDown(false)}}
 
-                    onClick={(e) => {
-                      e.preventDefault();
+                    onClick={() => {
                       setAboutDropDown(!aboutDropDown);
                       setIsDropdownOpen(!isDropdownOpen);
                       setcommunityDropDown(false);
@@ -98,16 +95,16 @@ function NavBar() {
                      <ul className={dropdown}>
                     
                      <li>
-                       <Link href="/#welcome" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Welcome</Link>
+                       <Link className={pathname==='/welcome'?'text-secondary':'text-white'} href="/welcome" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Welcome</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Contact</Link>
+                       <Link className={pathname.includes('contact')?'text-secondary':''} href="/welcome/contact"onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Contact</Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Staff</Link>
+                       <Link className={pathname.includes('staff')?'text-secondary':''} href="/welcome/staff" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Staff</Link>
                      </li>
                      <li>
-                       <Link href="/bulletin"onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Bulletin</Link>
+                       <Link className={pathname.includes('bulletin')?'text-secondary':''} href="/welcome/bulletin"onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Bulletin</Link>
                      </li>
                      <li>
                        <Link href="/#announcements" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Announcements</Link>
@@ -117,8 +114,8 @@ function NavBar() {
 
                 </li>
                 <li className={`relative ${Navstyles}`}>
-                  <Link href="#contact" onMouseEnter={(e) => {
-                    e.preventDefault();
+                  <Link className={pathname.includes('community')?'text-secondary':''} href="/community/event" onMouseEnter={() => {
+                   
                     setAboutDropDown(false);
                     setIsDropdownOpen(!isDropdownOpen);
                     setcommunityDropDown(!communityDropDown);
@@ -126,8 +123,8 @@ function NavBar() {
                     setSacramentsDropDown(false);
                     setFormationDropDown(false)}}
                     
-                    onClick={(e) => {
-                      e.preventDefault();
+                    onClick={() => {
+                     
                       setAboutDropDown(false);
                       setIsDropdownOpen(!isDropdownOpen);
                       setcommunityDropDown(!communityDropDown);
@@ -148,21 +145,21 @@ function NavBar() {
                      <ul className={dropdown}>
                     
                      <li>
-                       <Link href="/event" onClick={()=>{setNavbar(!navbar); setcommunityDropDown(false)}}>Upcoming Events</Link>
+                       <Link className={pathname==='/community'?'text-secondary':''} href="/community" onClick={()=>{setNavbar(!navbar); setcommunityDropDown(false)}}>Upcoming Events</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setcommunityDropDown(false)}}>Charity</Link>
+                       <Link className={pathname.includes('charity')?'text-secondary':''} href="/community/charity"onClick={()=>{setNavbar(!navbar); setcommunityDropDown(false)}}>Charity</Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setcommunityDropDown(false)}}>SCC</Link>
+                       <Link className={pathname.includes('jumuiya')?'text-secondary':''}  href="/community/jumuiya" onClick={()=>{setNavbar(!navbar); setcommunityDropDown(false)}}>Jumuiya</Link>
                      </li>
                      
                    </ul>
                   )}
                 </li>
                 <li className={`relative ${Navstyles}`}>
-                  <Link href="#contact" onMouseEnter={(e) => {
-                    e.preventDefault();
+                  <Link className={pathname.includes('liturgy')?'text-secondary':'text-white'} href="/liturgy" onMouseEnter={(e) => {
+                
                     setAboutDropDown(false);
                     setIsDropdownOpen(!isDropdownOpen);
                     setcommunityDropDown(false);
@@ -171,7 +168,6 @@ function NavBar() {
                     setFormationDropDown(false)}}
                     
                     onClick={(e) => {
-                      e.preventDefault();
                       setAboutDropDown(false);
                       setIsDropdownOpen(!isDropdownOpen);
                       setcommunityDropDown(false);
@@ -193,16 +189,16 @@ function NavBar() {
                      <ul className={dropdown}>
                     
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setLiturgyDropDown(false)}}>Mass Times</Link>
+                       <Link className={pathname==='/liturgy'?'text-secondary':'text-white'} href="/liturgy" onClick={()=>{setNavbar(!navbar); setLiturgyDropDown(false)}}>Mass Times</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setLiturgyDropDown(false)}}>Eucharistic Adoration</Link>
+                       <Link className={pathname.includes('adoration')?'text-secondary':''} href="/liturgy/adoration"onClick={()=>{setNavbar(!navbar); setLiturgyDropDown(false)}}>Eucharistic Adoration</Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setLiturgyDropDown(false)}}>Alter Serving</Link>
+                       <Link className={pathname.includes('alter')?'text-secondary':''}  href="/liturgy/alter" onClick={()=>{setNavbar(!navbar); setLiturgyDropDown(false)}}>Alter Serving</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setLiturgyDropDown(false)}}>Choir</Link>
+                       <Link className={pathname.includes('choir')?'text-secondary':''}  href="/liturgy/choir"onClick={()=>{setNavbar(!navbar); setLiturgyDropDown(false)}}>Choir</Link>
                      </li>
                    
                      
@@ -210,7 +206,7 @@ function NavBar() {
                   )}
                 </li>
                 <li className={`relative ${Navstyles}`}>
-                  <Link href="#projects"
+                  <Link className={pathname.includes('sacraments')?'text-secondary':'text-white'} href="/sacraments"
                   onMouseEnter={()=>{setAboutDropDown(false);
                     setIsDropdownOpen(!isDropdownOpen);
                     setcommunityDropDown(false);
@@ -238,35 +234,35 @@ function NavBar() {
                      <ul className={dropdown}>
                     
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Becoming Catholic</Link>
+                       <Link className={pathname==='/sacraments'? 'text-secondary':''} href="/sacraments" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Becoming Catholic</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Baptism</Link>
+                       <Link className={pathname.includes('baptism')?'text-secondary':''} href="/sacraments/baptism"onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Baptism</Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Reconciliation</Link>
+                       <Link className={pathname.includes('penance')?'text-secondary':''} href="/sacraments/penance" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Reconciliation</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Confirmation</Link>
+                       <Link className={pathname.includes('confirmation')?'text-secondary':''}  href="/sacraments/confirmation"onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Confirmation</Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Eucharist</Link>
+                       <Link className={pathname.includes('eucharist')?'text-secondary':''} href="/sacraments/eucharist" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Eucharist</Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Marriage</Link>
+                       <Link className={pathname.includes('matrimony')?'text-secondary':''} href="/sacraments/matrimony" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Matrimony</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Annointing </Link>
+                       <Link className={pathname.includes('annointing')?'text-secondary':''}  href="/sacraments/annointing"onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Annointing </Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Holy Order</Link>
+                       <Link className={pathname.includes('orders')? 'text-secondary':''} href="/sacraments/orders" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Holy Orders</Link>
                      </li>
                      
                    </ul>
                   )}
                 </li>
                 <li className={`relative ${Navstyles}`}>
-                  <Link href="#projects"   onMouseEnter={()=>{
+                  <Link className={pathname.includes('formation')?'text-secondary':''} href="/formation"   onMouseEnter={()=>{
                     setAboutDropDown(false);
                     setIsDropdownOpen(!isDropdownOpen);
                     setcommunityDropDown(false);
@@ -295,25 +291,28 @@ function NavBar() {
                      <ul className={dropdown}>
                     
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Pontifical Missionary Childhood (PMC)</Link>
+                       <Link className={pathname==='/formation'?'text-secondary':''} href="/formation" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Pontifical Missionary Childhood (PMC)</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Mantle of St Joseph</Link>
+                       <Link className={pathname.includes('mantle')?'text-secondary':''} href="/formation/mantle"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Mantle of St Joseph</Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Missionary Youth Movement(MYM)</Link>
+                       <Link className={pathname.includes('mym')?'text-secondary':''} href="/formation/mym" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Missionary Youth Movement(MYM)</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Youth Serving Christ(YSC)</Link>
+                       <Link className={pathname.includes('ysc')?'text-secondary':''} href="/formation/ysc"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Youth Serving Christ(YSC)</Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Young Catholic Adults(YCA)</Link>
+                       <Link className={pathname.includes('yca')?'text-secondary':''} href="/formation/yca" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Young Catholic Adults(YCA)</Link>
                      </li>
                      <li>
-                       <Link href="#" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Catholic Women Association (CWA)</Link>
+                       <Link className={pathname.includes('charismatic')?'text-secondary':''} href="/formation/charismatic" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Charismatic</Link>
                      </li>
                      <li>
-                       <Link href="#"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Catholic Men Association (CMA)</Link>
+                       <Link className={pathname.includes('cma')?'text-secondary':''} href="/formation/cma" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Catholic Women Association (CWA)</Link>
+                     </li>
+                     <li>
+                       <Link className={pathname.includes('cwa')?'text-secondary':''}  href="/formation/cwa"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Catholic Men Association (CMA)</Link>
                      </li>
                      
                      

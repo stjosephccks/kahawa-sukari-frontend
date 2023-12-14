@@ -8,7 +8,7 @@ function BulletinCard({bulletin}) {
   return (
     <div className="max-w-sm h-auto rounded overflow-hidden shadow-lg">
       
-      <Link href={`/bulletin/${bulletin._id}`}>
+      <Link href={`/welcome/bulletin/${bulletin._id}`}>
         <img
         className="w-full h-64 object-cover"
         src={bulletin.images[0]}
@@ -19,7 +19,7 @@ function BulletinCard({bulletin}) {
         <p className="text-gray-700 text-base">{bulletin.description}</p>
       </div>
       <span className='px-6 mb-6'>
-    <Link className='underline' href={`/bulletin/${bulletin._id}`}>Read More&#10146;</Link>
+    <Link className='underline' href={`/welcome/bulletin/${bulletin._id}`}>Read More&#10146;</Link>
     </span>
 
      
