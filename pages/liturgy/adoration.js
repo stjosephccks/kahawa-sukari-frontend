@@ -4,7 +4,7 @@ import React from 'react'
 function EucharisticAdoration() {
   return (
    <Layout>
-         <div>EucharisticAdoration</div>
+         <h1>EucharisticAdoration</h1>
    </Layout>
   )
 }

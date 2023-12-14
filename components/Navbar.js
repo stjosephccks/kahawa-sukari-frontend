@@ -65,8 +65,8 @@ function NavBar() {
                   </Link>
                 </li>
                 <li className={`relative ${Navstyles}`}>
-                  <Link className={pathname.includes('welcome')?'text-secondary':'text-white'} href="/welcome"  onMouseEnter={() => {
-                   
+                  <Link className={pathname.includes('welcome')?'text-secondary':'text-white'} href="/welcome"  onMouseEnter={(e) => {
+                   e.preventDefault()
                     setAboutDropDown(!aboutDropDown);
                     setIsDropdownOpen(!isDropdownOpen);
                     setcommunityDropDown(false);
@@ -74,7 +74,8 @@ function NavBar() {
                     setSacramentsDropDown(false);
                     setFormationDropDown(false)}}
 
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.preventDefault()
                       setAboutDropDown(!aboutDropDown);
                       setIsDropdownOpen(!isDropdownOpen);
                       setcommunityDropDown(false);
@@ -114,8 +115,8 @@ function NavBar() {
 
                 </li>
                 <li className={`relative ${Navstyles}`}>
-                  <Link className={pathname.includes('community')?'text-secondary':''} href="/community/event" onMouseEnter={() => {
-                   
+                  <Link className={pathname.includes('community')?'text-secondary':''} href="/community/event" onMouseEnter={(e) => {
+                    e.preventDefault()
                     setAboutDropDown(false);
                     setIsDropdownOpen(!isDropdownOpen);
                     setcommunityDropDown(!communityDropDown);
@@ -123,8 +124,8 @@ function NavBar() {
                     setSacramentsDropDown(false);
                     setFormationDropDown(false)}}
                     
-                    onClick={() => {
-                     
+                    onClick={(e) => {
+                     e.preventDefault()
                       setAboutDropDown(false);
                       setIsDropdownOpen(!isDropdownOpen);
                       setcommunityDropDown(!communityDropDown);
@@ -159,7 +160,7 @@ function NavBar() {
                 </li>
                 <li className={`relative ${Navstyles}`}>
                   <Link className={pathname.includes('liturgy')?'text-secondary':'text-white'} href="/liturgy" onMouseEnter={(e) => {
-                
+                    e.preventDefault()
                     setAboutDropDown(false);
                     setIsDropdownOpen(!isDropdownOpen);
                     setcommunityDropDown(false);
@@ -168,6 +169,7 @@ function NavBar() {
                     setFormationDropDown(false)}}
                     
                     onClick={(e) => {
+                      e.preventDefault()
                       setAboutDropDown(false);
                       setIsDropdownOpen(!isDropdownOpen);
                       setcommunityDropDown(false);
@@ -207,14 +209,17 @@ function NavBar() {
                 </li>
                 <li className={`relative ${Navstyles}`}>
                   <Link className={pathname.includes('sacraments')?'text-secondary':'text-white'} href="/sacraments"
-                  onMouseEnter={()=>{setAboutDropDown(false);
+                  onMouseEnter={(e)=>{
+                    e.preventDefault()
+                    setAboutDropDown(false);
                     setIsDropdownOpen(!isDropdownOpen);
                     setcommunityDropDown(false);
                     setLiturgyDropDown(false);
                     setSacramentsDropDown(!sacramentsDropDown);
                     setFormationDropDown(false)}}
                     
-                    onClick={()=>{setAboutDropDown(false);
+                    onClick={(e)=>{setAboutDropDown(false);
+                      e.preventDefault()
                       setIsDropdownOpen(!isDropdownOpen);
                       setcommunityDropDown(false);
                       setLiturgyDropDown(false);
@@ -262,7 +267,8 @@ function NavBar() {
                   )}
                 </li>
                 <li className={`relative ${Navstyles}`}>
-                  <Link className={pathname.includes('formation')?'text-secondary':''} href="/formation"   onMouseEnter={()=>{
+                  <Link className={pathname.includes('formation')?'text-secondary':''} href="/formation"   onMouseEnter={(e)=>{
+                    e.preventDefault()
                     setAboutDropDown(false);
                     setIsDropdownOpen(!isDropdownOpen);
                     setcommunityDropDown(false);
@@ -270,7 +276,8 @@ function NavBar() {
                     setSacramentsDropDown(false);
                     setFormationDropDown(!formationDropDown)}}
                     
-                    onClick={()=>{
+                    onClick={(e)=>{
+                      e.preventDefault()
                       setAboutDropDown(false);
                       setIsDropdownOpen(!isDropdownOpen);
                       setcommunityDropDown(false);
