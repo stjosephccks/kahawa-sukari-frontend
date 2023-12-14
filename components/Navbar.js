@@ -298,28 +298,28 @@ function NavBar() {
                      <ul className={`${dropdown} dropdown`}>
                     
                      <li>
-                       <Link className={pathname==='/formation'?'text-secondary':''} href="/formation" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Pontifical Missionary Childhood (PMC)</Link>
+                       <Link className={pathname==='/formation'?'text-secondary':''} href="/formation" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>PMC</Link>
                      </li>
                      <li>
                        <Link className={pathname.includes('mantle')?'text-secondary':''} href="/formation/mantle"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Mantle of St Joseph</Link>
                      </li>
                      <li>
-                       <Link className={pathname.includes('mym')?'text-secondary':''} href="/formation/mym" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Missionary Youth Movement(MYM)</Link>
+                       <Link className={pathname.includes('mym')?'text-secondary':''} href="/formation/mym" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>MYM</Link>
                      </li>
                      <li>
-                       <Link className={pathname.includes('ysc')?'text-secondary':''} href="/formation/ysc"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Youth Serving Christ(YSC)</Link>
+                       <Link className={pathname.includes('ysc')?'text-secondary':''} href="/formation/ysc"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>YSC</Link>
                      </li>
                      <li>
-                       <Link className={pathname.includes('yca')?'text-secondary':''} href="/formation/yca" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Young Catholic Adults(YCA)</Link>
+                       <Link className={pathname.includes('yca')?'text-secondary':''} href="/formation/yca" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>YCA</Link>
                      </li>
                      <li>
                        <Link className={pathname.includes('charismatic')?'text-secondary':''} href="/formation/charismatic" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Charismatic</Link>
                      </li>
                      <li>
-                       <Link className={pathname.includes('cma')?'text-secondary':''} href="/formation/cma" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Catholic Women Association (CWA)</Link>
+                       <Link className={pathname.includes('cwa')?'text-secondary':''} href="/formation/cwa" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>CWA</Link>
                      </li>
                      <li>
-                       <Link className={pathname.includes('cwa')?'text-secondary':''}  href="/formation/cwa"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Catholic Men Association (CMA)</Link>
+                       <Link className={pathname.includes('cma')?'text-secondary':''}  href="/formation/cma"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>CMA</Link>
                      </li>
                      
                      
