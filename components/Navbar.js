@@ -15,7 +15,7 @@ function NavBar() {
   
 
  
-  const dropdown = "relative md:absolute right-0 md:mt-8 rounded-md  bg-cyan-600 text-white max-w-max py-3 md:whitespace-nowrap";
+  const dropdown = "relative md:absolute right-0 md:mt-8 rounded-md  bg-cyan-600 text-white w-full max-w-max py-3 md:whitespace-nowrap";
   const Navstyles= 'pb-6 text-md  py-2 md:px-6  md:flex  md:border-b-0  md:hover:text-purple-600 md:hover:bg-transparent';
   const activeNav = Navstyles +" text-primary1";
   return (
@@ -93,7 +93,7 @@ function NavBar() {
                           </span>
                   </Link>
                   {aboutDropDown && (
-                     <ul className={dropdown}>
+                     <ul className={`${dropdown} dropdown`}>
                     
                      <li>
                        <Link className={pathname==='/welcome'?'text-secondary':'text-white'} href="/welcome" onClick={()=>{setNavbar(!navbar); setAboutDropDown(false)}}>Welcome</Link>
@@ -143,7 +143,7 @@ function NavBar() {
                    <span> Community</span></span>
                   </Link>
                   {communityDropDown && (
-                     <ul className={dropdown}>
+                     <ul className={`${dropdown} dropdown`}>
                     
                      <li>
                        <Link className={pathname==='/community'?'text-secondary':''} href="/community" onClick={()=>{setNavbar(!navbar); setcommunityDropDown(false)}}>Upcoming Events</Link>
@@ -188,7 +188,7 @@ function NavBar() {
 
                   </Link>
                   {liturgyDropDown && (
-                     <ul className={dropdown}>
+                     <ul className={`${dropdown} dropdown`}>
                     
                      <li>
                        <Link className={pathname==='/liturgy'?'text-secondary':'text-white'} href="/liturgy" onClick={()=>{setNavbar(!navbar); setLiturgyDropDown(false)}}>Mass Times</Link>
@@ -236,7 +236,7 @@ function NavBar() {
                     Sacraments</span></span>
                   </Link>
                   {sacramentsDropDown && (
-                     <ul className={dropdown}>
+                     <ul className={`${dropdown} dropdown`}>
                     
                      <li>
                        <Link className={pathname==='/sacraments'? 'text-secondary':''} href="/sacraments" onClick={()=>{setNavbar(!navbar); setSacramentsDropDown(false)}}>Becoming Catholic</Link>
@@ -295,7 +295,7 @@ function NavBar() {
                     Formation</span></span>
                   </Link>
                   {formationDropDown && (
-                     <ul className={dropdown}>
+                     <ul className={`${dropdown} dropdown`}>
                     
                      <li>
                        <Link className={pathname==='/formation'?'text-secondary':''} href="/formation" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Pontifical Missionary Childhood (PMC)</Link>
