@@ -15,7 +15,7 @@ function NavBar() {
   
 
  
-  const dropdown = "relative md:absolute right-0 md:mt-8 rounded-md  bg-cyan-600 text-white w-full max-w-max py-3 md:whitespace-nowrap";
+  const dropdown = "relative md:absolute right-0 md:mt-8 rounded-md  bg-cyan-600 text-white  max-w-max py-3 md:whitespace-nowrap";
   const Navstyles= 'pb-6 text-md  py-2 md:px-6  md:flex  md:border-b-0  md:hover:text-purple-600 md:hover:bg-transparent';
   const activeNav = Navstyles +" text-primary1";
   return (
@@ -188,7 +188,7 @@ function NavBar() {
 
                   </Link>
                   {liturgyDropDown && (
-                     <ul className={`${dropdown} dropdown`}>
+                     <ul className={`${dropdown} `}>
                     
                      <li>
                        <Link className={pathname==='/liturgy'?'text-secondary':'text-white'} href="/liturgy" onClick={()=>{setNavbar(!navbar); setLiturgyDropDown(false)}}>Mass Times</Link>
@@ -301,7 +301,7 @@ function NavBar() {
                        <Link className={pathname==='/formation'?'text-secondary':''} href="/formation" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>PMC</Link>
                      </li>
                      <li>
-                       <Link className={pathname.includes('mantle')?'text-secondary':''} href="/formation/mantle"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Mantle of St Joseph</Link>
+                       <Link className={pathname.includes('mantle')?'text-secondary':''} href="/formation/mantle"onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>Mantle of St.Joseph</Link>
                      </li>
                      <li>
                        <Link className={pathname.includes('mym')?'text-secondary':''} href="/formation/mym" onClick={()=>{setNavbar(!navbar); setFormationDropDown(false)}}>MYM</Link>
