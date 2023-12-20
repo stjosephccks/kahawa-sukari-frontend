@@ -4,7 +4,7 @@ import React from 'react'
 export default function Staff() {
   return (
     <Layout>
-        <div>Staff</div>
+        <h1>Staff</h1>
     </Layout>
   )
 }

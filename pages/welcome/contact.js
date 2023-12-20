@@ -4,7 +4,7 @@ import React from 'react'
 function Contact() {
   return (
     <Layout>
-        <div>Contact</div>
+        <h1>Contact</h1>
     </Layout>
     
   )
