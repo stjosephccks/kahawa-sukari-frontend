@@ -8,7 +8,7 @@ export default function Announcements() {
     axios.get('/api/announcements').then(response=>{
             setAnnouncements(response.data)
     })
-},[])
+},[announcements])
 
 
   return (

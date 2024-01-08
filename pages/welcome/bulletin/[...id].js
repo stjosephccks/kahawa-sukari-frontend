@@ -9,7 +9,8 @@ function BulletDetailsPage() {
 const [bulletin, setBulletin]= useState([])    
 const router = useRouter()
 const {id} = router.query
-console.log('ID:', id);
+
+console.log('ID:', router);
 const imageurl ='https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg'
 const title='Bulletin:'
 useEffect(()=>{
@@ -21,6 +22,7 @@ useEffect(()=>{
     });
 
 },[id])
+console.log(router)
 
 
 

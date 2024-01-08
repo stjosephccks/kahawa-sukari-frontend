@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 function BulletinCard({bulletin}) {
-  
+  const titleSlug = decodeURI(bulletin.title)  
 
  
   return (
