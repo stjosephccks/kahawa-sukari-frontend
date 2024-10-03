@@ -2,25 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    /* font-family: 'Roboto', sans-serif; */
-    font-family: 'Roboto Flex', sans-serif;
-    /* font-family: 'Roboto Slab', serif; */
+body {
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Roboto Flex", sans-serif;
+  /* font-family: "Roboto Slab", serif; */
+}
+.special-text {
+  font-family: "Roboto Slab", serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Roboto Flex", sans-serif;
 }
 
-ul li a{
-    @apply block text-white  px-2 w-full pb-1
+ul li a {
+  @apply block text-white  px-2 w-full pb-1;
 }
-h1{
-    @apply 
-      text-4xl
+h1 {
+  @apply text-4xl;
 }
-h2{
-    @apply font-bold text-2xl
+h2 {
+  @apply font-bold text-2xl;
 }
-h3{
-    @apply text-2xl
+h3 {
+  @apply text-2xl;
 }
 .dropdown li a {
-    @apply my-2
+  @apply my-2;
 }
