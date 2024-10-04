@@ -1,6 +1,7 @@
 import InfiniteCarousel from "@/components/Carousel";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
@@ -28,6 +29,9 @@ function YoungCatholicAdults() {
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
   return (
     <Layout>
+      <Head>
+        <title>Young Catholic Adults</title>
+      </Head>
       <Hero title={title} imageUrl={imageurl} text={text} />
       <div className="flex flex-col items-center lg:mx-72 mx-2">
         <p className=" special-text md:text-3xl my-3">
