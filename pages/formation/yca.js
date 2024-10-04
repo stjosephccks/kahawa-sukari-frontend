@@ -54,14 +54,14 @@ function YoungCatholicAdults() {
         <div className="flex flex-col md:flex-row justify-between mt-5">
           <div className="w-full md:w-1/2 ">
             <h4 className="font-semibold ">ACTIVITIES</h4>
-            <ul className="md:mt-0 my-5">
+            <ul className="md:mt-0 mb-5">
               <li>Parish programs</li>
               <li>Formation Classes</li>
               <li>Social Activities(Hiking, Team Building, e.t.c)</li>
               <li>Welfare (Outreach)</li>
             </ul>
-            <h4 className="font-semibold">CHARITY</h4>
-            <p>
+            <h4 className="font-semibold ">CHARITY</h4>
+            <p className="md:mb-0 mb-5">
               The group has a charitable activity every{" "}
               <strong>4th Sunday of the month,</strong> where they visit{" "}
               <strong>Nyumba Ya Wazee - kasarani</strong>
@@ -69,7 +69,7 @@ function YoungCatholicAdults() {
           </div>
           <div className="w-full md:w-1/2  ">
             <h4 className="font-semibold ">OBJECTIVES</h4>
-            <ul className="md:mt-0 my-5">
+            <ul className="md:mt-0 mb-5">
               <li>Developing Personal Identity</li>
               <li>Developing Relationships</li>
               <li>Developing a Meaning for work </li>
@@ -95,10 +95,10 @@ function YoungCatholicAdults() {
             </ul>
           </div>
         </div>
-        <div className=" my-5">
+        <div className="my-5 w-full md:w-1/4">
           <h4 className="font-semibold ">CONTACTS</h4>
 
-          <p>
+          <p className="text-left md:text-left">
             Fr. Guliano - Chaplain - &nbsp;
             <Link href="tel:0737032180" className="text-primary">
               0737032180
@@ -110,6 +110,7 @@ function YoungCatholicAdults() {
             </Link>
           </p>
         </div>
+
         <h2 className="my-20"> Gallery</h2>
         <InfiniteCarousel className="mb-9" images={images} interval={10000} />
       </div>{" "}
