@@ -1,19 +1,36 @@
+import InfiniteCarousel from "@/components/Carousel";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Link from "next/link";
 import React from "react";
 
 function YoungCatholicAdults() {
+  const images = [
+    "https://kahawa-sukari.s3.amazonaws.com/1728037544945.jpg",
+    "https://kahawa-sukari.s3.amazonaws.com/1728037588402.jpg",
+    "https://kahawa-sukari.s3.amazonaws.com/1728037649063.jpg",
+    "https://kahawa-sukari.s3.amazonaws.com/1728037707265.jpg",
+    "https://kahawa-sukari.s3.amazonaws.com/1728037725405.jpg",
+    "https://kahawa-sukari.s3.amazonaws.com/yca7.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/yca8.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/yca9.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/yca10.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/yca13.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/yca14.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/yca15.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/yca16.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/yca17.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/yca19.jpeg",
+  ];
   const title = "St. Joseph Young Catholic Adults";
   const text =
     " “Dear young people, do not be satisfied with anything less than Truth and Love; do not be content with anything less than Christ. —Pope Benedict XVI” ";
-  const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
   return (
     <Layout>
       <Hero title={title} imageUrl={imageurl} text={text} />
-      <div className="flex flex-col items-center lg:mx-72 mx-2 ">
-        <p className=" special-text md:text-3xl mt-3">
+      <div className="flex flex-col items-center lg:mx-72 mx-2">
+        <p className=" special-text md:text-3xl my-3">
           <span className=" text-5xl text-primary font-extrabold float-left">
             Y
           </span>
@@ -31,15 +48,31 @@ function YoungCatholicAdults() {
           Archdiocese, deanery and parish level.
         </p>
         <div className="flex flex-col md:flex-row justify-between mt-5">
-          <div className="w-full md:w-1/2 space-y-8">
-            <h4 className="font-semibold">ACTIVITIES</h4>
-            <ul>
+          <div className="w-full md:w-1/2 ">
+            <h4 className="font-semibold ">ACTIVITIES</h4>
+            <ul className="md:mt-0 my-5">
               <li>Parish programs</li>
               <li>Formation Classes</li>
-              <li>Hikes</li>
-              <li>Team Building</li>
+              <li>Social Activities(Hiking, Team Building, e.t.c)</li>
+              <li>Welfare (Outreach)</li>
             </ul>
-            <h4 className="font-semibold">MEETINGS</h4>
+            <h4 className="font-semibold">CHARITY</h4>
+            <p>
+              The group has a charitable activity every{" "}
+              <strong>4th Sunday of the month,</strong> where they visit{" "}
+              <strong>Nyumba Ya Wazee - kasarani</strong>
+            </p>
+          </div>
+          <div className="w-full md:w-1/2  ">
+            <h4 className="font-semibold ">OBJECTIVES</h4>
+            <ul className="md:mt-0 my-5">
+              <li>Developing Personal Identity</li>
+              <li>Developing Relationships</li>
+              <li>Developing a Meaning for work </li>
+              <li>Developing a Spirirtual Life</li>
+            </ul>
+
+            <h4 className="font-semibold ">MEETINGS</h4>
             <ul>
               <li>
                 <strong>1st Sunday of the Month at 1:45pm</strong> - Spiritual
@@ -57,30 +90,24 @@ function YoungCatholicAdults() {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-1/2  space-y-8">
-            <h4 className="font-semibold md:mt-0 mt-5">OBJECTIVES</h4>
-            <h4 className="font-semibold">CHARITY</h4>
-            <p>
-              The group has a charitable activity every{" "}
-              <strong>4th Sunday of the month,</strong> where they visit{" "}
-              <strong>Nyumba Ya Wazee - kasarani</strong>
-            </p>
-            <h4 className="font-semibold">CONTACTS</h4>
-
-            <p>
-              Fr. Guliano - Chaplain - &nbsp;
-              <Link href="tel:0737032180" className="text-primary">
-                0737032180
-              </Link>
-              <br />
-              Vincent Kirima - Moderator -&nbsp;
-              <Link href="tel:0723721678" className="text-primary">
-                0723721678
-              </Link>
-            </p>
-          </div>
         </div>
-        <div> Gallery</div>
+        <div className=" my-5">
+          <h4 className="font-semibold ">CONTACTS</h4>
+
+          <p>
+            Fr. Guliano - Chaplain - &nbsp;
+            <Link href="tel:0737032180" className="text-primary">
+              0737032180
+            </Link>
+            <br />
+            Vincent Kirima - Moderator -&nbsp;
+            <Link href="tel:0723721678" className="text-primary">
+              0723721678
+            </Link>
+          </p>
+        </div>
+        <h2 className="my-20"> Gallery</h2>
+        <InfiniteCarousel images={images} interval={10000} />
       </div>{" "}
     </Layout>
   );

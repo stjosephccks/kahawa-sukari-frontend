@@ -28,7 +28,7 @@ export default function Announcements() {
             </h2>
             <ul className="list-disc text-left md:ml-44">
               {groupedAnnouncements[sunday].map((announcement) => (
-                <li key={announcement._id} className="mb-4">
+                <li key={announcement._id} className="mb-4 ml-3">
                   <h3 className="text-xl font-semibold">
                     {announcement.title}
                   </h3>
@@ -37,10 +37,10 @@ export default function Announcements() {
                   {announcement.massScheduleAssignments &&
                     announcement.massScheduleAssignments.length > 0 && (
                       <div className="mt-2">
-                        <ul className="list-inside list-disc special-text ">
+                        <ul className="text-sm md:text-md list-inside list-disc special-text ">
                           {announcement.massScheduleAssignments.map(
                             (assignment, index) => (
-                              <li key={index} className="whitespace-nowrap">
+                              <li key={index} className="">
                                 {assignment.name}: {assignment.time}
                               </li>
                             )
