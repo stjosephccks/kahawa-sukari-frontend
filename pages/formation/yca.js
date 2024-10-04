@@ -93,7 +93,7 @@ function YoungCatholicAdults() {
               </li>
               <li>
                 <strong>
-                  Tuesdays preeceeding the 1st and the 3rd Sundays of the month
+                  Tuesdays preceeding the 1st and the 3rd Sundays of the month
                 </strong>{" "}
                 - Free Meeting
               </li>
