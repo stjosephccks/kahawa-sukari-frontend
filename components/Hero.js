@@ -5,7 +5,7 @@ function Hero({ imageUrl, title, text, link, linkTitle }) {
   return (
     <div className="relative md:h-5/6 h-80 flex items-center justify-center">
       <img
-        className="object-fill w-full h-full  bg-blend-darken brightness-100"
+        className="object-cover w-full h-full  bg-blend-darken brightness-100"
         src={imageUrl}
         alt="Hero Image"
       />

@@ -80,7 +80,7 @@ const InfiniteCarousel = ({ images = [], interval = 3000 }) => {
         </div>
       </div>
       {/* Controls */}
-      <div className="flex justify-center items-center pt-4">
+      <div className="flex justify-center items-center pt-4 pb-4">
         <button
           type="button"
           className="flex justify-center items-center me-4 h-full cursor-pointer group focus:outline-none"

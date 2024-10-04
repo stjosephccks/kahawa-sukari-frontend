@@ -111,7 +111,7 @@ function YoungCatholicAdults() {
           </p>
         </div>
         <h2 className="my-20"> Gallery</h2>
-        <InfiniteCarousel images={images} interval={10000} />
+        <InfiniteCarousel className="mb-9" images={images} interval={10000} />
       </div>{" "}
     </Layout>
   );
