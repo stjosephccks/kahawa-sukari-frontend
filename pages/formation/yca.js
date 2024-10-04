@@ -30,7 +30,12 @@ function YoungCatholicAdults() {
   return (
     <Layout>
       <Head>
-        <title>Young Catholic Adults</title>
+        <title>St.Jospek Kahawa Sukari | Young Catholic Adults</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Young Catholic Adults Group - We are Legacy Seekers"
+          key="title"
+        />
       </Head>
       <Hero title={title} imageUrl={imageurl} text={text} />
       <div className="flex flex-col items-center lg:mx-72 mx-2">
