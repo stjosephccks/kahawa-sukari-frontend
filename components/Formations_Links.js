@@ -3,20 +3,20 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-function Sacraments_Links() {
+function Formations_Links() {
   const { pathname } = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
-  const sacraments = [
-    { name: "Baptism", path: "baptism" },
-    { name: "Confirmation", path: "confirmation" },
-    { name: "Eucharist", path: "eucharist" },
-    { name: "Reconciliation", path: "penance" },
-    { name: "Anointing of the Sick", path: "annointing" },
-    { name: "Matrimony", path: "matrimony" },
-    { name: "Holy Orders", path: "orders" },
-    { name: "Becoming Catholic (RCIC)", path: "rcic" },
-    { name: "Becoming Catholic (RCIA)", path: "rcia" },
+  const formations = [
+    { name: "PMC", path: "pmc" },
+    { name: "Mantle of St. Joseph", path: "mantle" },
+    { name: "MYM", path: "mym" },
+    { name: "YSC", path: "ysc" },
+    { name: "YCA", path: "yca" },
+    { name: "Charismatic", path: "charismatic" },
+    { name: "CL", path: "cl" },
+    { name: "CWA", path: "cwa" },
+    { name: "CMA", path: "cma" },
   ];
 
   return (
@@ -27,7 +27,7 @@ function Sacraments_Links() {
           onClick={() => setIsOpen(!isOpen)}
           className="w-full flex items-center justify-between p-4 bg-primary text-white rounded-lg"
         >
-          <span className="text-lg font-semibold">Sacraments</span>
+          <span className="text-lg font-semibold">Formations</span>
           <svg
             className={`w-5 h-5 transform transition-transform ${
               isOpen ? "rotate-180" : ""
@@ -48,19 +48,19 @@ function Sacraments_Links() {
 
       {/* Desktop Menu */}
       <div className="hidden lg:block">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Sacraments</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Formations</h2>
         <ul className="space-y-2">
-          {sacraments.map((sacrament) => (
-            <li key={sacrament.path}>
+          {formations.map((formation) => (
+            <li key={formation.path}>
               <Link
                 className={`block p-2 rounded-lg transition-colors ${
-                  pathname.includes(sacrament.path)
+                  pathname.includes(formation.path)
                     ? "bg-secondary text-white"
                     : "text-gray-700 hover:bg-gray-100"
                 }`}
-                href={`/sacraments/${sacrament.path}`}
+                href={`/formation/${formation.path}`}
               >
-                {sacrament.name}
+                {formation.name}
               </Link>
             </li>
           ))}
@@ -77,18 +77,18 @@ function Sacraments_Links() {
             className="lg:hidden"
           >
             <ul className="mt-2 space-y-1">
-              {sacraments.map((sacrament) => (
-                <li key={sacrament.path}>
+              {formations.map((formation) => (
+                <li key={formation.path}>
                   <Link
                     className={`block p-3 rounded-lg transition-colors ${
-                      pathname.includes(sacrament.path)
+                      pathname.includes(formation.path)
                         ? "bg-secondary text-white"
                         : "text-gray-700 hover:bg-gray-100"
                     }`}
-                    href={`/sacraments/${sacrament.path}`}
+                    href={`/formation/${formation.path}`}
                     onClick={() => setIsOpen(false)}
                   >
-                    {sacrament.name}
+                    {formation.name}
                   </Link>
                 </li>
               ))}
@@ -100,4 +100,4 @@ function Sacraments_Links() {
   );
 }
 
-export default Sacraments_Links;
+export default Formations_Links;

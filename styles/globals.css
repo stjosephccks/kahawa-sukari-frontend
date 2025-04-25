@@ -10,6 +10,9 @@ body {
 .special-text {
   font-family: "Roboto Slab", serif;
 }
+.passage {
+  @apply text-gray-700 leading-relaxed my-2;
+}
 h1,
 h2,
 h3 {

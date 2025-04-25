@@ -157,34 +157,7 @@ function NavBar() {
                           Welcome
                         </Link>
                       </li>
-                      <li>
-                        <Link
-                          className={
-                            pathname.includes("contact") ? "text-secondary" : ""
-                          }
-                          href="/welcome/contact"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setAboutDropDown(false);
-                          }}
-                        >
-                          Contact
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className={
-                            pathname.includes("staff") ? "text-secondary" : ""
-                          }
-                          href="/welcome/staff"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setAboutDropDown(false);
-                          }}
-                        >
-                          Staff
-                        </Link>
-                      </li>
+
                       <li>
                         <Link
                           className={
@@ -613,9 +586,9 @@ function NavBar() {
                       <li>
                         <Link
                           className={
-                            pathname === "/formation" ? "text-secondary" : ""
+                            pathname.includes("pmc") ? "text-secondary" : ""
                           }
-                          href="/formation"
+                          href="/formation/pmc"
                           onClick={() => {
                             setNavbar(!navbar);
                             setFormationDropDown(false);
@@ -694,6 +667,20 @@ function NavBar() {
                           }}
                         >
                           Charismatic
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className={
+                            pathname.includes("cl") ? "text-secondary" : ""
+                          }
+                          href="/formation/cl"
+                          onClick={() => {
+                            setNavbar(!navbar);
+                            setFormationDropDown(false);
+                          }}
+                        >
+                          CL
                         </Link>
                       </li>
                       <li>
