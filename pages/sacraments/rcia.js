@@ -161,6 +161,16 @@ function AdultsBecomingCatholic() {
               Email: [Email Address]
             </p>
           </div>
+
+          <div className="mt-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              What is RCIA?
+            </h3>
+            <p className="text-gray-600">
+              The RCIA process is the Church&apos;s way of initiating new
+              members into the Catholic faith.
+            </p>
+          </div>
         </div>
       </div>
     </Layout>

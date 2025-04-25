@@ -27,6 +27,7 @@ function MassSchedule() {
               <p className="text-gray-600">
                 7:30 am, 9:00 am, 10:30 am, 12:00 noon
               </p>
+              <p className="text-gray-600">Wendani Mass - 9:30 am</p>
             </div>
           </div>
         </div>
@@ -73,7 +74,7 @@ function MassSchedule() {
             </div>
             <div className="bg-white p-4 rounded-md shadow-sm">
               <h3 className="font-medium text-lg">Sunday</h3>
-              <p className="text-gray-600">7:00 pm</p>
+              <p className="text-gray-600">7:00 am</p>
             </div>
           </div>
         </div>

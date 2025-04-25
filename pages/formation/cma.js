@@ -98,7 +98,7 @@ function CatholicMenAssociation() {
                           at 2:00 PM
                         </li>
                         <li>
-                          <strong>Every Third Saturday</strong> - Men's
+                          <strong>Every Third Saturday</strong> - Men&apos;s
                           Breakfast at 8:00 AM
                         </li>
                         <li>
@@ -163,11 +163,11 @@ function CatholicMenAssociation() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-gray-50 p-6 rounded-lg">
                       <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                        Men's Retreat
+                        Men&apos;s Retreat
                       </h3>
                       <p className="text-gray-600">
-                        Our annual men's retreat provides an opportunity for
-                        spiritual renewal, fellowship, and personal growth.
+                        Our annual men&apos;s retreat provides an opportunity
+                        for spiritual renewal, fellowship, and personal growth.
                         Through prayer, reflection, and sharing, men strengthen
                         their relationship with God and each other.
                       </p>

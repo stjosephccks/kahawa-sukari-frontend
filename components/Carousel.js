@@ -1,9 +1,13 @@
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const InfiniteCarousel = ({ images = [], interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imagesToShow, setImagesToShow] = useState(1); // Default to showing 1 image
+
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  }, [images.length]);
 
   useEffect(() => {
     // Set imagesToShow based on screen size
@@ -18,23 +22,16 @@ const InfiniteCarousel = ({ images = [], interval = 3000 }) => {
     updateImagesToShow(); // Set initial value
     window.addEventListener("resize", updateImagesToShow);
 
-    const autoplay = setInterval(() => {
-      goToNext();
-    }, interval);
+    const autoplay = setInterval(goToNext, interval);
 
     return () => {
       clearInterval(autoplay);
       window.removeEventListener("resize", updateImagesToShow);
     };
-  }, [currentIndex, interval]);
+  }, [interval, goToNext]); // Added goToNext as a dependency
 
   const goToPrevious = () => {
     const newIndex = (currentIndex - 1 + images.length) % images.length;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToNext = () => {
-    const newIndex = (currentIndex + 1) % images.length;
     setCurrentIndex(newIndex);
   };
 

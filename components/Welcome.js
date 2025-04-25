@@ -30,11 +30,12 @@ function Welcome() {
             viewport={{ once: true }}
             className="md:w-1/2"
           >
-            <div className="relative rounded-xl overflow-hidden shadow-lg">
-              <img
+            <div className="relative rounded-xl overflow-hidden shadow-lg h-[400px]">
+              <Image
                 src={"https://kahawa-sukari.s3.amazonaws.com/st.Joseph.jpg"}
                 alt="St. Joseph Catholic Church"
-                className="w-full h-auto md:h-[400px] object-cover"
+                fill
+                className="object-cover"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                 <div className="text-white">
