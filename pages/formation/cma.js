@@ -60,7 +60,7 @@ function CatholicMenAssociation() {
                       Our Objectives
                     </h2>
                     <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                      <li>To strengthen men's faith and spiritual life</li>
+                      <li>To strengthen men&apos;s faith and spiritual life</li>
                       <li>To promote strong Catholic family values</li>
                       <li>To develop leadership skills</li>
                       <li>To serve the Church and community</li>
@@ -78,7 +78,7 @@ function CatholicMenAssociation() {
                         Regular Activities
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Monthly Men's Breakfast</li>
+                        <li>Monthly Men&apos;s Breakfast</li>
                         <li>Bible Study and Prayer Groups</li>
                         <li>Leadership Training</li>
                         <li>Family Life Seminars</li>

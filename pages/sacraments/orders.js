@@ -9,7 +9,7 @@ export default function Orders() {
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text =
-    "The means through which Christ's mission continues in the Church";
+    "The means through which Christ&apos;s mission continues in the Church";
 
   return (
     <Layout>
@@ -34,9 +34,9 @@ export default function Orders() {
                 <div className="prose max-w-none">
                   <p className="text-lg text-gray-600 mb-6">
                     The Sacrament of Holy Orders is the means through which
-                    Christ's mission continues in the Church. It includes three
-                    degrees: episcopate (bishops), presbyterate (priests), and
-                    diaconate (deacons). Through this sacrament, men are
+                    Christ&apos;s mission continues in the Church. It includes
+                    three degrees: episcopate (bishops), presbyterate (priests),
+                    and diaconate (deacons). Through this sacrament, men are
                     ordained to serve the Church in these distinct roles.
                   </p>
 

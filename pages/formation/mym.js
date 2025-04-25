@@ -157,7 +157,7 @@ function MissionaryYouthMovement() {
                       MYM members typically transition to YSC (Youth Service
                       Committee) after completing high school. YSC is a separate
                       ministry for young adults aged 18-26 years, focusing on
-                      different aspects of service and leadership. It's
+                      different aspects of service and leadership. It&apos;s
                       important to note that while MYM members can serve as
                       altar servers, YSC members do not serve in this capacity.
                     </p>

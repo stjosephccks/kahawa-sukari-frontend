@@ -63,7 +63,9 @@ function PontificalMissionHospital() {
                     </h2>
                     <ul className="list-disc pl-6 space-y-2 text-gray-600">
                       <li>To provide solid Catholic faith formation</li>
-                      <li>To develop children's talents in music and dance</li>
+                      <li>
+                        To develop children&apos;s talents in music and dance
+                      </li>
                       <li>To teach the importance of charity and service</li>
                       <li>To prepare children for future ministries</li>
                     </ul>
@@ -81,7 +83,7 @@ function PontificalMissionHospital() {
                       </h3>
                       <ul className="space-y-2 text-gray-600">
                         <li>Catechism Classes</li>
-                        <li>Children's Choir Practice</li>
+                        <li>Children&apos;s Choir Practice</li>
                         <li>Liturgical Dance Practice</li>
                         <li>Charity Projects</li>
                         <li>Bible Stories and Activities</li>
@@ -100,7 +102,7 @@ function PontificalMissionHospital() {
                         </li>
                         <li>
                           <strong>First Sunday of the Month</strong> -
-                          Children's Mass at 10:00 AM
+                          Children&apos;s Mass at 10:00 AM
                         </li>
                         <li>
                           <strong>Third Sunday of the Month</strong> - Charity

@@ -70,7 +70,7 @@ export default function Baptism() {
                         role in raising their child in the Catholic faith.
                       </p>
                       <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                        <li>Understanding the sacrament's meaning</li>
+                        <li>Understanding the sacrament&apos;s meaning</li>
                         <li>Role of parents and godparents</li>
                         <li>Ritual and symbols explained</li>
                         <li>Practical preparation guidance</li>
@@ -120,9 +120,11 @@ export default function Baptism() {
                     </h2>
                     <div className="bg-gray-50 p-6 rounded-lg">
                       <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                        <li>Child's birth certificate</li>
-                        <li>Parents' marriage certificate (if applicable)</li>
-                        <li>Godparents' Confirmation certificates</li>
+                        <li>Child&apos;s birth certificate</li>
+                        <li>
+                          Parents&apos; marriage certificate (if applicable)
+                        </li>
+                        <li>Godparents&apos; Confirmation certificates</li>
                         <li>Completed Baptism registration form</li>
                       </ul>
                     </div>

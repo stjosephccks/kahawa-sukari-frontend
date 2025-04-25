@@ -8,7 +8,7 @@ import React from "react";
 function MantleOfStJoseph() {
   const title = "Mantle of St. Joseph";
   const text =
-    "The Mantle of St. Joseph is a special group for young Catholics who have completed their confirmation but haven't yet entered high school.";
+    "The Mantle of St. Joseph is a special group for young Catholics who have completed their confirmation but haven&apos;t yet entered high school.";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
 
   return (
@@ -43,16 +43,17 @@ function MantleOfStJoseph() {
                     <p className="text-lg text-gray-600 mb-6">
                       The Mantle of St. Joseph is a special group for young
                       Catholics who have completed their confirmation but
-                      haven't yet entered high school. This group serves as a
-                      bridge between childhood faith formation and the more
+                      haven&apos;t yet entered high school. This group serves as
+                      a bridge between childhood faith formation and the more
                       mature youth ministry programs.
                     </p>
                     <p className="text-lg text-gray-600">
                       Under the patronage of St. Joseph, we help young people
                       deepen their faith, develop their spiritual gifts, and
-                      prepare for active participation in the Church's mission.
-                      We focus on building a strong foundation for their future
-                      involvement in MYM and other parish ministries.
+                      prepare for active participation in the Church&apos;s
+                      mission. We focus on building a strong foundation for
+                      their future involvement in MYM and other parish
+                      ministries.
                     </p>
                   </div>
 

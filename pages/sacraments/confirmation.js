@@ -34,9 +34,9 @@ export default function Confirmation() {
                   <p className="text-lg text-gray-600 mb-6">
                     Confirmation completes the grace of Baptism by a special
                     outpouring of the gifts of the Holy Spirit, which seal or
-                    "confirm" the baptized in union with Christ and equip them
-                    for active participation in the worship and apostolic life
-                    of the Church.
+                    &quot;confirm&quot; the baptized in union with Christ and
+                    equip them for active participation in the worship and
+                    apostolic life of the Church.
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-8">
@@ -66,7 +66,7 @@ export default function Confirmation() {
                         <li>Must be in at least 8th grade or older</li>
                         <li>Must have received First Holy Communion</li>
                         <li>
-                          Must be registered in the parish's Confirmation
+                          Must be registered in the parish&apos;s Confirmation
                           program
                         </li>
                         <li>Must attend all required classes and retreats</li>
@@ -90,7 +90,7 @@ export default function Confirmation() {
                           Regularly participates in the sacramental life of the
                           Church
                         </li>
-                        <li>Is not the candidate's parent</li>
+                        <li>Is not the candidate&apos;s parent</li>
                         <li>
                           Is willing to support the candidate in their faith
                           journey

@@ -59,7 +59,7 @@ function CatholicWomenAssociation() {
                       Our Objectives
                     </h2>
                     <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                      <li>To deepen women's faith and spiritual life</li>
+                      <li>To deepen women&apos;s faith and spiritual life</li>
                       <li>To promote Catholic family values</li>
                       <li>To develop leadership and service skills</li>
                       <li>To support the Church and community</li>
