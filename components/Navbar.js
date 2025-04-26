@@ -13,15 +13,25 @@ function NavBar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { pathname } = useRouter();
 
+  const handleLinkClick = () => {
+    setNavbar(false);
+    setAboutDropDown(false);
+    setcommunityDropDown(false);
+    setLiturgyDropDown(false);
+    setSacramentsDropDown(false);
+    setFormationDropDown(false);
+    setIsDropdownOpen(false);
+  };
+
   const dropdown =
-    "relative md:absolute right-0 md:mt-8 rounded-md bg-cyan-600 text-white max-w-max py-3 md:whitespace-nowrap shadow-lg";
+    "relative md:absolute right-0 md:mt-8 rounded-md bg-cyan-600 text-white max-w-max py-3 md:whitespace-nowrap shadow-lg z-[999999]";
   const Navstyles =
     "pb-3 md:pb-6 text-md py-1 md:py-2 md:px-6 md:flex md:border-b-0 md:hover:text-purple-600 md:hover:bg-transparent";
   const activeNav = Navstyles + " text-primary1";
   return (
-    <div className="">
+    <div className="relative z-[999999]">
       <nav
-        className={`md:w-full bg-primary fixed top-0 left-0 right-0 z-[9999] md:relative md:mt-0 overflow-visible`}
+        className={`w-full bg-primary fixed top-0 left-0 right-0 z-[999999] md:relative md:mt-0`}
         onMouseLeave={() => {
           setAboutDropDown(false);
           setcommunityDropDown(false);
@@ -30,19 +40,17 @@ function NavBar() {
           setFormationDropDown(false);
         }}
       >
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 w-full">
           <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+            <div className="flex items-center justify-between py-2 md:py-5 md:block">
               {/* LOGO */}
               <Link href="/">
-                <h2 className="text-2xl text-cyan-600 font-bold mr-4">
-                  SJCCKS
-                </h2>
+                <h2 className="text-2xl text-cyan-600 font-bold">SJCCKS</h2>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
-              <div className="md:hidden">
+              <div className="md:hidden absolute right-4 top-2">
                 <button
-                  className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border fixed right-4 top-4"
+                  className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
@@ -82,14 +90,14 @@ function NavBar() {
           </div>
           <div>
             <div
-              className={`flex-1 justify-self-start pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+              className={`flex-1 justify-self-start pb-3 mt-2 md:block md:pb-0 md:mt-0 ${
                 navbar
-                  ? "px-4 right-0 md:p-0 block fixed top-0 left-0 w-2/3 h-screen bg-primary overflow-y-auto"
+                  ? "px-4 right-0 md:p-0 block fixed top-10 left-0 w-2/3 h-[calc(100vh-2.5rem)] bg-primary overflow-y-auto"
                   : "hidden"
               }`}
             >
               <ul
-                className={`h-screen md:h-auto ${
+                className={`h-full md:h-auto ${
                   navbar ? "justify-start" : "justify-start"
                 } md:flex`}
               >
@@ -99,10 +107,7 @@ function NavBar() {
                       pathname === "/" ? "text-secondary" : "text-white"
                     }
                     href="/"
-                    onClick={() => {
-                      setNavbar(false);
-                      setIsDropdownOpen(false);
-                    }}
+                    onClick={handleLinkClick}
                   >
                     Home
                   </Link>
@@ -153,10 +158,7 @@ function NavBar() {
                               : "text-white"
                           }
                           href="/welcome"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setAboutDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Welcome
                         </Link>
@@ -170,22 +172,13 @@ function NavBar() {
                               : ""
                           }
                           href="/welcome/bulletin"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setAboutDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Bulletin
                         </Link>
                       </li>
                       <li>
-                        <Link
-                          href="/#announcements"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setAboutDropDown(false);
-                          }}
-                        >
+                        <Link href="/#announcements" onClick={handleLinkClick}>
                           Announcements
                         </Link>
                       </li>
@@ -234,10 +227,7 @@ function NavBar() {
                             pathname === "/community" ? "text-secondary" : ""
                           }
                           href="/community"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setcommunityDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Upcoming Events
                         </Link>
@@ -248,10 +238,7 @@ function NavBar() {
                             pathname.includes("charity") ? "text-secondary" : ""
                           }
                           href="/community/charity"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setcommunityDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Charity
                         </Link>
@@ -262,10 +249,7 @@ function NavBar() {
                             pathname.includes("jumuiya") ? "text-secondary" : ""
                           }
                           href="/community/jumuiya"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setcommunityDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Jumuiya
                         </Link>
@@ -319,10 +303,7 @@ function NavBar() {
                               : "text-white"
                           }
                           href="/liturgy"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setLiturgyDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Mass Times
                         </Link>
@@ -335,10 +316,7 @@ function NavBar() {
                               : ""
                           }
                           href="/liturgy/adoration"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setLiturgyDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Eucharistic Adoration
                         </Link>
@@ -349,10 +327,7 @@ function NavBar() {
                             pathname.includes("alter") ? "text-secondary" : ""
                           }
                           href="/liturgy/alter"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setLiturgyDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Alter Serving
                         </Link>
@@ -363,10 +338,7 @@ function NavBar() {
                             pathname.includes("choir") ? "text-secondary" : ""
                           }
                           href="/liturgy/choir"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setLiturgyDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Choir
                         </Link>
@@ -418,10 +390,7 @@ function NavBar() {
                             pathname.includes("rcic") ? "text-secondary" : ""
                           }
                           href="/sacraments/rcic"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setSacramentsDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Becoming Catholic (RCIC)
                         </Link>
@@ -432,10 +401,7 @@ function NavBar() {
                             pathname.includes("rcia") ? "text-secondary" : ""
                           }
                           href="/sacraments/rcia"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setSacramentsDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Becoming Catholic (RCIA)
                         </Link>
@@ -446,10 +412,7 @@ function NavBar() {
                             pathname.includes("baptism") ? "text-secondary" : ""
                           }
                           href="/sacraments/baptism"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setSacramentsDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Baptism
                         </Link>
@@ -463,10 +426,7 @@ function NavBar() {
                               : ""
                           }
                           href="/sacraments/confirmation"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setSacramentsDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Confirmation
                         </Link>
@@ -479,10 +439,7 @@ function NavBar() {
                               : ""
                           }
                           href="/sacraments/eucharist"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setSacramentsDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Eucharist
                         </Link>
@@ -493,10 +450,7 @@ function NavBar() {
                             pathname.includes("penance") ? "text-secondary" : ""
                           }
                           href="/sacraments/penance"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setSacramentsDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Reconciliation
                         </Link>
@@ -509,10 +463,7 @@ function NavBar() {
                               : ""
                           }
                           href="/sacraments/annointing"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setSacramentsDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Anointing of the sick{" "}
                         </Link>
@@ -525,10 +476,7 @@ function NavBar() {
                               : ""
                           }
                           href="/sacraments/matrimony"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setSacramentsDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Matrimony
                         </Link>
@@ -540,10 +488,7 @@ function NavBar() {
                             pathname.includes("orders") ? "text-secondary" : ""
                           }
                           href="/sacraments/orders"
-                          onClick={() => {
-                            setNavbar(!navbar);
-                            setSacramentsDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Holy Orders
                         </Link>
@@ -593,10 +538,7 @@ function NavBar() {
                             pathname.includes("pmc") ? "text-secondary" : ""
                           }
                           href="/formation/pmc"
-                          onClick={() => {
-                            setNavbar(false);
-                            setFormationDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           PMC
                         </Link>
@@ -607,10 +549,7 @@ function NavBar() {
                             pathname.includes("mantle") ? "text-secondary" : ""
                           }
                           href="/formation/mantle"
-                          onClick={() => {
-                            setNavbar(false);
-                            setFormationDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Mantle of St.Joseph
                         </Link>
@@ -621,10 +560,7 @@ function NavBar() {
                             pathname.includes("mym") ? "text-secondary" : ""
                           }
                           href="/formation/mym"
-                          onClick={() => {
-                            setNavbar(false);
-                            setFormationDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           MYM
                         </Link>
@@ -635,10 +571,7 @@ function NavBar() {
                             pathname.includes("ysc") ? "text-secondary" : ""
                           }
                           href="/formation/ysc"
-                          onClick={() => {
-                            setNavbar(false);
-                            setFormationDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           YSC
                         </Link>
@@ -649,10 +582,7 @@ function NavBar() {
                             pathname.includes("yca") ? "text-secondary" : ""
                           }
                           href="/formation/yca"
-                          onClick={() => {
-                            setNavbar(false);
-                            setFormationDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           YCA
                         </Link>
@@ -665,10 +595,7 @@ function NavBar() {
                               : ""
                           }
                           href="/formation/charismatic"
-                          onClick={() => {
-                            setNavbar(false);
-                            setFormationDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           Charismatic
                         </Link>
@@ -679,10 +606,7 @@ function NavBar() {
                             pathname.includes("cl") ? "text-secondary" : ""
                           }
                           href="/formation/cl"
-                          onClick={() => {
-                            setNavbar(false);
-                            setFormationDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           CL
                         </Link>
@@ -693,10 +617,7 @@ function NavBar() {
                             pathname.includes("cwa") ? "text-secondary" : ""
                           }
                           href="/formation/cwa"
-                          onClick={() => {
-                            setNavbar(false);
-                            setFormationDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           CWA
                         </Link>
@@ -707,10 +628,7 @@ function NavBar() {
                             pathname.includes("cma") ? "text-secondary" : ""
                           }
                           href="/formation/cma"
-                          onClick={() => {
-                            setNavbar(false);
-                            setFormationDropDown(false);
-                          }}
+                          onClick={handleLinkClick}
                         >
                           CMA
                         </Link>
