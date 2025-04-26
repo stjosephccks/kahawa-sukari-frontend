@@ -63,17 +63,17 @@ export default function Announcements() {
   }
 
   return (
-    <div className="py-8 px-4 sm:px-6 lg:px-8">
+    <div className="py-8 px-1 sm:px-2 lg:px-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center mb-12"
+        className="text-center mb-8 sm:mb-12"
       >
-        <h1 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-3 sm:mb-4">
           Announcements
         </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
+        <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg px-1 sm:px-2">
           Stay updated with the latest news and events from our parish
           community.
         </p>
@@ -83,7 +83,7 @@ export default function Announcements() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="max-w-6xl mx-auto space-y-8"
+        className="max-w-6xl mx-auto space-y-6 sm:space-y-8"
       >
         {Object.keys(groupedAnnouncements).map((sunday) => (
           <motion.div
@@ -91,30 +91,30 @@ export default function Announcements() {
             variants={itemVariants}
             className="bg-white rounded-xl shadow-lg overflow-hidden"
           >
-            <div className="bg-primary p-4 sm:p-6">
+            <div className="bg-primary p-3 sm:p-6">
               <h2 className="text-xl sm:text-2xl font-semibold text-white">
                 Announcements for {sunday}
               </h2>
             </div>
-            <div className="p-4 sm:p-6">
-              <ul className="space-y-6">
+            <div className="p-3 sm:p-6">
+              <ul className="space-y-4 sm:space-y-6">
                 {groupedAnnouncements[sunday].map((announcement) => (
                   <motion.li
                     key={announcement._id}
                     variants={itemVariants}
-                    className="border-l-4 border-primary pl-4 sm:pl-6 py-3 hover:bg-gray-50 transition-colors duration-200"
+                    className="border-l-4 border-primary pl-3 sm:pl-6 py-2 sm:py-3 hover:bg-gray-50 transition-colors duration-200"
                   >
-                    <h3 className="text-lg sm:text-xl font-semibold text-primary mb-2">
+                    <h3 className="text-lg sm:text-xl font-semibold text-primary mb-1 sm:mb-2">
                       {announcement.title}
                     </h3>
-                    <p className="text-gray-700 mb-4 text-base sm:text-lg leading-relaxed">
+                    <p className="text-gray-700 mb-3 sm:mb-4 text-base sm:text-lg leading-relaxed">
                       {announcement.description}
                     </p>
 
                     {announcement.massScheduleAssignments &&
                       announcement.massScheduleAssignments.length > 0 && (
-                        <div className="bg-gray-50 p-4 rounded-lg">
-                          <h4 className="font-medium text-primary mb-3 text-base sm:text-lg">
+                        <div className="bg-gray-50 p-3 sm:p-4 rounded-lg">
+                          <h4 className="font-medium text-primary mb-2 sm:mb-3 text-base sm:text-lg">
                             Mass Schedule Assignments
                           </h4>
                           <ul className="space-y-2">

@@ -14,14 +14,14 @@ function NavBar() {
   const { pathname } = useRouter();
 
   const dropdown =
-    "relative md:absolute right-0 md:mt-8 rounded-md  bg-cyan-600 text-white  max-w-max py-3 md:whitespace-nowrap";
+    "relative md:absolute right-0 md:mt-8 rounded-md bg-cyan-600 text-white max-w-max py-3 md:whitespace-nowrap shadow-lg";
   const Navstyles =
-    "pb-6 text-md  py-2 md:px-6  md:flex  md:border-b-0  md:hover:text-purple-600 md:hover:bg-transparent";
+    "pb-3 md:pb-6 text-md py-1 md:py-2 md:px-6 md:flex md:border-b-0 md:hover:text-purple-600 md:hover:bg-transparent";
   const activeNav = Navstyles + " text-primary1";
   return (
     <div className="">
       <nav
-        className={`md:w-full bg-primary fixed top-0 left-0 right-0 z-10 `}
+        className={`md:w-full bg-primary fixed top-0 left-0 right-0 z-[9999] md:relative md:mt-0 overflow-visible`}
         onMouseLeave={() => {
           setAboutDropDown(false);
           setcommunityDropDown(false);
@@ -35,12 +35,14 @@ function NavBar() {
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               {/* LOGO */}
               <Link href="/">
-                <h2 className="text-2xl text-cyan-600 font-bold ">SJCCKS</h2>
+                <h2 className="text-2xl text-cyan-600 font-bold mr-4">
+                  SJCCKS
+                </h2>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">
                 <button
-                  className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border"
+                  className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border fixed right-4 top-4"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
@@ -80,13 +82,15 @@ function NavBar() {
           </div>
           <div>
             <div
-              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-                navbar ? "px-12 right-0 md:p-0 block" : "hidden"
+              className={`flex-1 justify-self-start pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                navbar
+                  ? "px-4 right-0 md:p-0 block fixed top-0 left-0 w-2/3 h-screen bg-primary overflow-y-auto"
+                  : "hidden"
               }`}
             >
               <ul
                 className={`h-screen md:h-auto ${
-                  navbar ? "justify-center" : "justify-start"
+                  navbar ? "justify-start" : "justify-start"
                 } md:flex`}
               >
                 <li className={pathname === "/" ? activeNav : Navstyles}>
@@ -95,8 +99,8 @@ function NavBar() {
                       pathname === "/" ? "text-secondary" : "text-white"
                     }
                     href="/"
-                    onClick={(e) => {
-                      setNavbar(!navbar);
+                    onClick={() => {
+                      setNavbar(false);
                       setIsDropdownOpen(false);
                     }}
                   >
@@ -140,7 +144,7 @@ function NavBar() {
                     </span>
                   </Link>
                   {aboutDropDown && (
-                    <ul className={`${dropdown} dropdown`}>
+                    <ul className={`${dropdown} dropdown z-[9999]`}>
                       <li>
                         <Link
                           className={
@@ -223,7 +227,7 @@ function NavBar() {
                     </span>
                   </Link>
                   {communityDropDown && (
-                    <ul className={`${dropdown} dropdown`}>
+                    <ul className={`${dropdown} dropdown z-[9999]`}>
                       <li>
                         <Link
                           className={
@@ -306,7 +310,7 @@ function NavBar() {
                     </span>
                   </Link>
                   {liturgyDropDown && (
-                    <ul className={`${dropdown} `}>
+                    <ul className={`${dropdown} dropdown z-[9999]`}>
                       <li>
                         <Link
                           className={
@@ -407,7 +411,7 @@ function NavBar() {
                     </span>
                   </Link>
                   {sacramentsDropDown && (
-                    <ul className={`${dropdown} dropdown`}>
+                    <ul className={`${dropdown} dropdown z-[9999]`}>
                       <li>
                         <Link
                           className={
@@ -556,16 +560,14 @@ function NavBar() {
                     onMouseEnter={(e) => {
                       e.preventDefault();
                       setAboutDropDown(false);
-                      setIsDropdownOpen(!isDropdownOpen);
                       setcommunityDropDown(false);
                       setLiturgyDropDown(false);
                       setSacramentsDropDown(false);
-                      setFormationDropDown(!formationDropDown);
+                      setFormationDropDown(true);
                     }}
                     onClick={(e) => {
                       e.preventDefault();
                       setAboutDropDown(false);
-                      setIsDropdownOpen(!isDropdownOpen);
                       setcommunityDropDown(false);
                       setLiturgyDropDown(false);
                       setSacramentsDropDown(false);
@@ -582,7 +584,9 @@ function NavBar() {
                     </span>
                   </Link>
                   {formationDropDown && (
-                    <ul className={`${dropdown} dropdown`}>
+                    <ul
+                      className={`${dropdown} dropdown rounded-md z-[9999] md:absolute md:right-0`}
+                    >
                       <li>
                         <Link
                           className={
@@ -590,7 +594,7 @@ function NavBar() {
                           }
                           href="/formation/pmc"
                           onClick={() => {
-                            setNavbar(!navbar);
+                            setNavbar(false);
                             setFormationDropDown(false);
                           }}
                         >
@@ -604,7 +608,7 @@ function NavBar() {
                           }
                           href="/formation/mantle"
                           onClick={() => {
-                            setNavbar(!navbar);
+                            setNavbar(false);
                             setFormationDropDown(false);
                           }}
                         >
@@ -618,7 +622,7 @@ function NavBar() {
                           }
                           href="/formation/mym"
                           onClick={() => {
-                            setNavbar(!navbar);
+                            setNavbar(false);
                             setFormationDropDown(false);
                           }}
                         >
@@ -632,7 +636,7 @@ function NavBar() {
                           }
                           href="/formation/ysc"
                           onClick={() => {
-                            setNavbar(!navbar);
+                            setNavbar(false);
                             setFormationDropDown(false);
                           }}
                         >
@@ -646,7 +650,7 @@ function NavBar() {
                           }
                           href="/formation/yca"
                           onClick={() => {
-                            setNavbar(!navbar);
+                            setNavbar(false);
                             setFormationDropDown(false);
                           }}
                         >
@@ -662,7 +666,7 @@ function NavBar() {
                           }
                           href="/formation/charismatic"
                           onClick={() => {
-                            setNavbar(!navbar);
+                            setNavbar(false);
                             setFormationDropDown(false);
                           }}
                         >
@@ -676,7 +680,7 @@ function NavBar() {
                           }
                           href="/formation/cl"
                           onClick={() => {
-                            setNavbar(!navbar);
+                            setNavbar(false);
                             setFormationDropDown(false);
                           }}
                         >
@@ -690,7 +694,7 @@ function NavBar() {
                           }
                           href="/formation/cwa"
                           onClick={() => {
-                            setNavbar(!navbar);
+                            setNavbar(false);
                             setFormationDropDown(false);
                           }}
                         >
@@ -704,7 +708,7 @@ function NavBar() {
                           }
                           href="/formation/cma"
                           onClick={() => {
-                            setNavbar(!navbar);
+                            setNavbar(false);
                             setFormationDropDown(false);
                           }}
                         >

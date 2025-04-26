@@ -32,7 +32,7 @@ export default function Home() {
     {
       title: "Mass Times",
       description: "View our weekly mass schedule",
-      link: "/liturgy",
+      link: "#liturgy",
       icon: "⛪",
     },
     {
@@ -59,7 +59,7 @@ export default function Home() {
     <Layout>
       <Hero imageUrl={images[currentImageIndex]} title={title} text={text} />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Quick Links Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {quickLinks.map((link, index) => (
@@ -78,8 +78,8 @@ export default function Home() {
         </div>
 
         {/* Mass Schedule and Announcements Section */}
-        <div className="bg-white rounded-lg shadow-sm">
-          <div className="p-6 space-y-8">
+        <div className="bg-white rounded-lg shadow-sm" id="liturgy">
+          <div className="py-6 px-2 space-y-8">
             <MassSchedule />
             <div className="border-t border-gray-200 pt-8" id="announcements">
               <Announcements />
