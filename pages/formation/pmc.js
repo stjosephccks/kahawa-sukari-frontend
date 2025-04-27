@@ -5,8 +5,8 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
-function PontificalMissionHospital() {
-  const title = "Parish Missionary Children";
+function Pmc() {
+  const title = "PMC";
   const text =
     "Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these. —Matthew 19:14";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
@@ -14,7 +14,7 @@ function PontificalMissionHospital() {
   return (
     <Layout>
       <Head>
-        <title>St.Joseph Kahawa Sukari | Parish Missionary Children</title>
+        <title>St.Joseph Kahawa Sukari | Pontifical Missionary Children</title>
         <meta
           property="og:title"
           content="St Joseph Catholic Church Kahwa sukari - Parish Missionary Children"
@@ -247,4 +247,4 @@ function PontificalMissionHospital() {
   );
 }
 
-export default PontificalMissionHospital;
+export default Pmc;

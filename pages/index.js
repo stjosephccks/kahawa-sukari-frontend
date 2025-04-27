@@ -12,7 +12,6 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg",
-    "https://kahawa-sukari.s3.amazonaws.com/st.Joseph.jpg",
     // Add more church images here
   ];
 

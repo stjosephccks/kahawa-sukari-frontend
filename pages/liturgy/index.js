@@ -54,15 +54,11 @@ export default function MassSchedule() {
                     </li>
                     <li className="flex justify-between">
                       <span>9:00 AM</span>
-                      <span class Name="font-medium">
-                        Swahili
-                      </span>
+                      <span className="font-medium">Swahili</span>
                     </li>
                     <li className="flex justify-between">
                       <span>9:30 AM -Wendani</span>
-                      <span class Name="font-medium">
-                        Swahili
-                      </span>
+                      <span className="font-medium">Swahili</span>
                     </li>
                     <li className="flex justify-between">
                       <span>10:30 AM</span>
