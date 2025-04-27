@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Hero({ imageUrl, title, text, link, linkTitle }) {
   return (
-    <div className="relative h-[60vh] md:h-[80vh] flex items-center justify-center w-full overflow-hidden">
+    <div className="relative h-[40vh] md:h-[50vh] flex items-center justify-center w-full overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src={imageUrl}

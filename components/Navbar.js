@@ -633,6 +633,28 @@ function NavBar() {
                           CMA
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          className={
+                            pathname.includes("cjpd") ? "text-secondary" : ""
+                          }
+                          href="/formation/cjpd"
+                          onClick={handleLinkClick}
+                        >
+                          CJPD
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className={
+                            pathname.includes("couples") ? "text-secondary" : ""
+                          }
+                          href="/formation/couples"
+                          onClick={handleLinkClick}
+                        >
+                          Young Couples
+                        </Link>
+                      </li>
                     </ul>
                   )}
                 </li>

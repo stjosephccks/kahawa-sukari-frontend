@@ -17,6 +17,8 @@ function Formations_Links() {
     { name: "CL", path: "cl" },
     { name: "CWA", path: "cwa" },
     { name: "CMA", path: "cma" },
+    { name: "CJPD", path: "cjpd" },
+    { name: "Young Couples", path: "couples" },
   ];
 
   return (
