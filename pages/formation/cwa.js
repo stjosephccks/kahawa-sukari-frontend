@@ -8,8 +8,8 @@ import React from "react";
 function CatholicWomenAssociation() {
   const title = "Catholic Women Association";
   const text =
-    "The Catholic Women Association (CWA) is a vibrant group of Catholic women dedicated to growing in faith, serving the Church, and supporting each other in their spiritual journey.";
-  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
+    "The CWA is a vibrant group of Catholic women dedicated to growing in faith, serving the Church, and supporting each other in their spiritual journey.";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/cwa2.jpeg";
 
   return (
     <Layout>
@@ -209,7 +209,7 @@ function CatholicWomenAssociation() {
                   </h3>
                   <div className="space-y-2 text-blue-800">
                     <p>
-                      <strong>CWA Chairlady</strong>
+                      <strong>CWA Moderator</strong>
                       <br />
                       <Link
                         href="tel:0723721678"
@@ -226,16 +226,6 @@ function CatholicWomenAssociation() {
                         className="hover:text-blue-600"
                       >
                         0737032180
-                      </Link>
-                    </p>
-                    <p>
-                      <strong>Email</strong>
-                      <br />
-                      <Link
-                        href="mailto:cwa@stjosephkahawasukari.org"
-                        className="hover:text-blue-600"
-                      >
-                        cwa@stjosephkahawasukari.org
                       </Link>
                     </p>
                   </div>

@@ -9,7 +9,7 @@ function Pmc() {
   const title = "PMC";
   const text =
     "Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these. —Matthew 19:14";
-  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/pmc_1.jpeg";
 
   return (
     <Layout>
@@ -41,33 +41,44 @@ function Pmc() {
                       About PMC
                     </h2>
                     <p className="text-lg text-gray-600 mb-6">
-                      The Parish Missionary Children (PMC) is a vibrant group
-                      for young Catholics from ages 6 to 12. We provide a
-                      nurturing environment where children can grow in their
-                      faith, develop their talents, and learn to serve others
-                      through various ministries and activities.
+                      The Pontifical Missionary Children (PMC) was founded in
+                      1843 by Bishop Charles de Forbin Hanson in France. Our
+                      motto is "Children Helping Children" - we are little
+                      flowers of Jesus, helping other children, especially the
+                      less fortunate. PMC's role in the Church is to save
+                      children's lives from death and misery, to give others
+                      hope in God and in life, and prepare them to be apostles
+                      to their fellow children.
                     </p>
                     <p className="text-lg text-gray-600">
-                      Our mission is to help children develop a strong
-                      foundation in their Catholic faith, discover their
-                      God-given talents, and learn the joy of serving others. We
-                      focus on making faith formation fun and engaging while
-                      preparing children for their future involvement in the
-                      Mantle of St. Joseph.
+                      PMC welcomes children within the age bracket of 0-14
+                      years. As Jesus said, "let the little children come to me"
+                      - and so we follow Him courageously and joyfully. Jesus
+                      becomes our intimate friend in various ways, especially
+                      through the Rosary prayer, for He says, "where two or
+                      three are gathered I am in their midst."
                     </p>
                   </div>
 
                   <div>
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                      Our Objectives
+                      Our Duties
                     </h2>
                     <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                      <li>To provide solid Catholic faith formation</li>
                       <li>
-                        To develop children&apos;s talents in music and dance
+                        <strong>Prayer</strong> - We pray for each and every
+                        child, reciting daily the Hail Mary, Our Father, and
+                        Glory be
                       </li>
-                      <li>To teach the importance of charity and service</li>
-                      <li>To prepare children for future ministries</li>
+                      <li>
+                        <strong>Offering</strong> - We make offerings to God and
+                        pray for children who are suffering
+                      </li>
+                      <li>To develop children's talents in music and prayer</li>
+                      <li>To visit and support sick children</li>
+                      <li>
+                        To participate in annual PMC Mass with our Cardinal
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -82,33 +93,34 @@ function Pmc() {
                         Regular Activities
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Catechism Classes</li>
-                        <li>Children&apos;s Choir Practice</li>
-                        <li>Liturgical Dance Practice</li>
-                        <li>Charity Projects</li>
-                        <li>Bible Stories and Activities</li>
-                        <li>Arts and Crafts</li>
+                        <li>Sunday Rosary Recitation at 9:00 AM</li>
+                        <li>Gospel Reading Discussion</li>
+                        <li>Mass Practice</li>
+                        <li>PMC Mass Attendance</li>
+                        <li>Visiting Sick Children</li>
+                        <li>Annual PMC Mass with Cardinal</li>
                         <li>Prayer and Worship</li>
                       </ul>
                     </div>
 
                     <div className="bg-gray-50 p-6 rounded-lg">
                       <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                        Meeting Schedule
+                        Testimonial
                       </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>
-                          <strong>Every Saturday</strong> - 9:00 AM to 12:00 PM
-                        </li>
-                        <li>
-                          <strong>First Sunday of the Month</strong> -
-                          Children&apos;s Mass at 10:00 AM
-                        </li>
-                        <li>
-                          <strong>Third Sunday of the Month</strong> - Charity
-                          Activity
-                        </li>
-                      </ul>
+                      <blockquote className="italic text-gray-600">
+                        "I joined PMC when I was eight years old and at that
+                        time, I did not know how to recite the Holy Rosary, but
+                        as time passed, I became an expert. We are taught how to
+                        recite the Holy Rosary and other important moral values
+                        such as respect, patience, helping the needy, visiting
+                        the sick, and visiting the orphans. Through PMC, I have
+                        met other children and helped others. I am now the
+                        conductor of the Church PMC choir. PMC is the best thing
+                        that can happen to a child like me."
+                        <footer className="text-right mt-2 font-semibold">
+                          - Rita Mugambi
+                        </footer>
+                      </blockquote>
                     </div>
                   </div>
                 </div>
