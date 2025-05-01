@@ -17,7 +17,7 @@ function Pmc() {
         <title>St.Joseph Kahawa Sukari | Pontifical Missionary Children</title>
         <meta
           property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Parish Missionary Children"
+          content="St Joseph Catholic Church Kahwa sukari - Parish Missionary Childhood"
           key="title"
         />
       </Head>
@@ -95,11 +95,11 @@ function Pmc() {
                       <ul className="space-y-2 text-gray-600">
                         <li>Sunday Rosary Recitation at 9:00 AM</li>
                         <li>Gospel Reading Discussion</li>
-                        <li>Mass Practice</li>
-                        <li>PMC Mass Attendance</li>
+                        <li>Choir Practice at 9:00 AM</li>
+                        <li>PMC Mass Attendance at 10:30 AM-Sunday</li>
                         <li>Visiting Sick Children</li>
                         <li>Annual PMC Mass with Cardinal</li>
-                        <li>Prayer and Worship</li>
+                        <li>PMC Festivals</li>
                       </ul>
                     </div>
 
@@ -138,7 +138,7 @@ function Pmc() {
                         <li>Children's Choir</li>
                         <li>Liturgical Dancers</li>
                         <li>Altar Servers</li>
-                        <li>Readers</li>
+                        <li>Lectors</li>
                       </ul>
                     </div>
 
@@ -149,8 +149,7 @@ function Pmc() {
                       <ul className="space-y-2 text-gray-600">
                         <li>Catechism Classes</li>
                         <li>Bible Study</li>
-                        <li>Prayer Groups</li>
-                        <li>Faith Formation</li>
+                        <li>PMC Formation Classes and Activities</li>
                       </ul>
                     </div>
 
@@ -219,33 +218,13 @@ function Pmc() {
                   </h3>
                   <div className="space-y-2 text-blue-800">
                     <p>
-                      <strong>PMC Coordinator</strong>
+                      <strong>PMC Moderator</strong>
                       <br />
                       <Link
-                        href="tel:0723721678"
+                        href="tel:0724052150"
                         className="hover:text-blue-600"
                       >
-                        0723721678
-                      </Link>
-                    </p>
-                    <p>
-                      <strong>Choir Director</strong>
-                      <br />
-                      <Link
-                        href="tel:0737032180"
-                        className="hover:text-blue-600"
-                      >
-                        0737032180
-                      </Link>
-                    </p>
-                    <p>
-                      <strong>Email</strong>
-                      <br />
-                      <Link
-                        href="mailto:pmc@stjosephkahawasukari.org"
-                        className="hover:text-blue-600"
-                      >
-                        pmc@stjosephkahawasukari.org
+                        0724052150
                       </Link>
                     </p>
                   </div>

@@ -6,9 +6,8 @@ import Sacraments_Links from "@/components/Sacraments_Links";
 
 export default function Confirmation() {
   const title = "The Sacrament of Confirmation";
-  const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
-  const text = "Sealed with the gift of the Holy Spirit";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/confirmation.jpg";
+  const text = "Sealed with the mark of the Holy Spirit";
 
   return (
     <Layout>

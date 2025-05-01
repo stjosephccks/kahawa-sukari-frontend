@@ -6,8 +6,7 @@ import Sacraments_Links from "@/components/Sacraments_Links";
 
 export default function Baptism() {
   const title = "The Sacrament of Baptism";
-  const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/baptism.jpg";
   const text =
     "The gateway to life in the Spirit and the door to other sacraments";
 
@@ -95,10 +94,10 @@ export default function Baptism() {
                             Regular Baptism Times
                           </h4>
                           <ul className="space-y-2 text-gray-600">
-                            <li>
+                            {/* <li>
                               First Sunday of the month: During 11:00 AM Mass
-                            </li>
-                            <li>Third Saturday of the month: 10:00 AM</li>
+                            </li> */}
+                            <li>First Saturday of the month: 10:00 AM</li>
                           </ul>
                         </div>
                         <div>
@@ -138,9 +137,18 @@ export default function Baptism() {
                       For more information or to schedule a Baptism, please
                       contact the parish office at:
                       <br />
-                      Phone: [Parish Office Number]
+                      Phone:{" "}
+                      <a href="tel:0724052150" className="text-blue-800">
+                        0724052150
+                      </a>
                       <br />
-                      Email: [Parish Email]
+                      Email:{" "}
+                      <a
+                        href="mailto:stjosephkahawasukari@gmail.com"
+                        className="text-blue-800"
+                      >
+                        stjosephkahawasukari@gmail.com
+                      </a>
                     </p>
                   </div>
                 </div>
