@@ -21,13 +21,13 @@ function Charity() {
 
   const groups = [
     {
-      name: "Ujiachilie Moms",
+      name: "Ujiachilie ",
       description:
-        "A support group for mothers of children whos are abled differently. This group provides a safe space for mothers to share experiences, receive support, and learn from each other.",
+        "Ujiachilie supports people with disabilities in different ways and other aspects of their lives. Its activity begins with screening, making a diagnosis, offering a clear management plan for each person, and then enrolling them for each care category they need. All persons enrolled come from disadvantaged families and don’t have access to therapy clinics and medical care. If disabled people get proper comprehensive therapy, it reduces the burden of disability to a great extent. To ensure better outcomes of our efforts, we run a comprehensive therapy unit at St Joseph Health Centre, catering to the multiple therapy needs of people with disabilities. So far, the population of the project is 50 children with physical and mental disabilities from economically disadvantaged families. We hope to extend it in the next months, with the support of our donors.",
       meetingDay: "Tuesdays",
       meetingTime: "10:00 AM - 12:00 PM",
       location: "Parish Hall",
-      image: "/images/ujiachilie-mom.jpg",
+      image: "https://kahawa-sukari.s3.amazonaws.com/ujiachilie.webp",
       icon: <FaUsers className="text-4xl text-primary" />,
     },
     {
@@ -49,8 +49,8 @@ function Charity() {
         "Our parish offers regular visits to the sick and elderly members of our community. This service provides companionship, spiritual support, and assistance with daily needs.",
       bookingInfo: "To book a visit, please contact:",
       contact: [
-        "Parish Email: parish@kahawasukari.org",
-        "Catechist: +254 700 000 000",
+        "Parish Email: stjosephccks@gmail.com",
+        "Contact: +254726 145609",
       ],
       image: "/images/visiting-sick.jpg",
       icon: <FaHandHoldingHeart className="text-4xl text-primary" />,
@@ -159,6 +159,7 @@ function Charity() {
                       alt={group.name}
                       fill
                       className="object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-6">

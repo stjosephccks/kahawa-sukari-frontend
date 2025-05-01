@@ -9,7 +9,7 @@ function Charismatic() {
   const title = "Catholic Charismatic Renewal";
   const text =
     "The Catholic Charismatic Renewal is a movement within the Church that emphasizes the power of the Holy Spirit in our daily lives and worship.";
-  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/charismatic.jpeg";
 
   return (
     <Layout>
@@ -94,19 +94,12 @@ function Charismatic() {
                       </h3>
                       <ul className="space-y-2 text-gray-600">
                         <li>
-                          <strong>Every Tuesday</strong> - Prayer Meeting at
-                          6:00 PM
+                          <strong>Every Sunday</strong> - Prayer/Fellowship
+                          Meeting at 3:00pm - 5:00pm
                         </li>
+
                         <li>
-                          <strong>First Friday of the Month</strong> -
-                          Charismatic Mass at 6:00 PM
-                        </li>
-                        <li>
-                          <strong>Third Saturday of the Month</strong> - Healing
-                          Service at 2:00 PM
-                        </li>
-                        <li>
-                          <strong>Monthly</strong> - Life in the Spirit Seminar
+                          <strong>Yearly</strong> - Life in the Spirit Seminar
                         </li>
                       </ul>
                     </div>
@@ -125,8 +118,6 @@ function Charismatic() {
                       <ul className="space-y-2 text-gray-600">
                         <li>Intercessory Prayer</li>
                         <li>Prayer for Healing</li>
-                        <li>Deliverance Ministry</li>
-                        <li>Prayer Counseling</li>
                       </ul>
                     </div>
 
@@ -136,9 +127,6 @@ function Charismatic() {
                       </h3>
                       <ul className="space-y-2 text-gray-600">
                         <li>Praise and Worship Team</li>
-                        <li>Charismatic Choir</li>
-                        <li>Music Ministry</li>
-                        <li>Dance Ministry</li>
                       </ul>
                     </div>
 
@@ -158,46 +146,11 @@ function Charismatic() {
 
                 <div className="mt-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                    Spiritual Gifts
-                  </h2>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-gray-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                        Charismatic Gifts
-                      </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>Speaking in Tongues</li>
-                        <li>Prophecy</li>
-                        <li>Healing</li>
-                        <li>Discernment of Spirits</li>
-                        <li>Word of Knowledge</li>
-                        <li>Word of Wisdom</li>
-                      </ul>
-                    </div>
-
-                    <div className="bg-gray-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                        Service Gifts
-                      </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>Leadership</li>
-                        <li>Teaching</li>
-                        <li>Administration</li>
-                        <li>Hospitality</li>
-                        <li>Service</li>
-                        <li>Encouragement</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
                     Life in the Spirit Seminar
                   </h2>
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <p className="text-gray-600">
-                      The Life in the Spirit Seminar is a seven-week program
+                      The Life in the Spirit Seminar is a nine-week program
                       designed to help Catholics understand and experience the
                       power of the Holy Spirit in their lives. Through teaching,
                       prayer, and fellowship, participants learn about the gifts
@@ -213,33 +166,13 @@ function Charismatic() {
                   </h3>
                   <div className="space-y-2 text-blue-800">
                     <p>
-                      <strong>Charismatic Coordinator</strong>
+                      <strong>Charismatic Moderator</strong>
                       <br />
                       <Link
-                        href="tel:0723721678"
+                        href="tel:0717306070"
                         className="hover:text-blue-600"
                       >
-                        0723721678
-                      </Link>
-                    </p>
-                    <p>
-                      <strong>Prayer Ministry Leader</strong>
-                      <br />
-                      <Link
-                        href="tel:0737032180"
-                        className="hover:text-blue-600"
-                      >
-                        0737032180
-                      </Link>
-                    </p>
-                    <p>
-                      <strong>Email</strong>
-                      <br />
-                      <Link
-                        href="mailto:charismatic@stjosephkahawasukari.org"
-                        className="hover:text-blue-600"
-                      >
-                        charismatic@stjosephkahawasukari.org
+                        0717306070
                       </Link>
                     </p>
                   </div>
