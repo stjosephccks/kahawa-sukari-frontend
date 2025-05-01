@@ -51,7 +51,7 @@ export default function Matrimony() {
                           wedding
                         </li>
                         <li>Complete the marriage preparation program</li>
-                        <li>Attend Pre-Cana classes</li>
+
                         <li>Complete Natural Family Planning instruction</li>
                         <li>Meet with the priest or deacon for interviews</li>
                       </ul>
@@ -62,10 +62,9 @@ export default function Matrimony() {
                         Required Documents
                       </h2>
                       <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                        <li>Baptismal certificates (issued within 6 months)</li>
+                        <li>Baptismal certificates</li>
                         <li>First Communion and Confirmation certificates</li>
                         <li>Civil marriage license</li>
-                        <li>Letters of freedom to marry</li>
                         <li>Pre-nuptial investigation forms</li>
                         <li>Dispensation documents (if applicable)</li>
                       </ul>
@@ -80,7 +79,7 @@ export default function Matrimony() {
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
                           <h4 className="font-semibold text-gray-800 mb-2">
-                            Pre-Cana Classes
+                            Marriage Preparation Classes
                           </h4>
                           <ul className="space-y-2 text-gray-600">
                             <li>Communication skills</li>
@@ -105,40 +104,6 @@ export default function Matrimony() {
                     </div>
                   </div>
 
-                  <div className="mt-8">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                      Wedding Guidelines
-                    </h2>
-                    <div className="bg-gray-50 p-6 rounded-lg">
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-2">
-                            Ceremony Details
-                          </h4>
-                          <ul className="space-y-2 text-gray-600">
-                            <li>Weddings typically celebrated on Saturdays</li>
-                            <li>
-                              Available times: 10:00 AM, 12:00 PM, 2:00 PM
-                            </li>
-                            <li>Wedding rehearsal: Friday evening</li>
-                            <li>Music must be approved by music director</li>
-                          </ul>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-800 mb-2">
-                            Church Guidelines
-                          </h4>
-                          <ul className="space-y-2 text-gray-600">
-                            <li>Floral arrangements must be approved</li>
-                            <li>No rice, confetti, or flower petals</li>
-                            <li>Photography guidelines provided</li>
-                            <li>Dress code for wedding party</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                   <div className="mt-8 p-6 bg-blue-50 rounded-lg">
                     <h3 className="text-xl font-bold text-blue-900 mb-4">
                       Contact Information
@@ -147,9 +112,19 @@ export default function Matrimony() {
                       For more information about marriage preparation or to
                       schedule a wedding, please contact:
                       <br />
-                      Parish Office: [Phone Number]
                       <br />
-                      Email: [Email Address]
+                      Phone:{" "}
+                      <a href="tel:+254726145609" className="text-blue-800">
+                        0726 145609
+                      </a>
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:stjosephccks@gmail.com"
+                        className="text-blue-800"
+                      >
+                        stjosephccks@gmail.com
+                      </a>
                     </p>
                   </div>
                 </div>

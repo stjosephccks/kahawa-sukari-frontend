@@ -7,7 +7,7 @@ import Sacraments_Links from "@/components/Sacraments_Links";
 export default function Penance() {
   const title = "The Sacrament of Penance";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/confession-banner.png";
   const text = "The sacrament of God's mercy and forgiveness";
 
   return (
@@ -109,8 +109,7 @@ export default function Penance() {
                             Regular Confession Times
                           </h4>
                           <ul className="space-y-2 text-gray-600">
-                            <li>Saturday: 3:00 PM - 4:30 PM</li>
-                            <li>Wednesday: 6:00 PM - 7:00 PM</li>
+                            <li>Sunday: 9:00 AM - 11:30 PM</li>
                             <li>By appointment: Contact the parish office</li>
                           </ul>
                         </div>
@@ -120,9 +119,16 @@ export default function Penance() {
                           </h4>
                           <ul className="space-y-2 text-gray-600">
                             <li>Advent and Lent Penance Services</li>
-                            <li>First Friday: Extended hours</li>
                             <li>Before major feasts and holy days</li>
                           </ul>
+                        </div>
+                        <div>
+                          <a
+                            href="/liturgy"
+                            className="text-blue-500 hover:text-blue-600"
+                          >
+                            View Full Confession Schedule
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -156,9 +162,19 @@ export default function Penance() {
                       schedule a confession outside regular hours, please
                       contact:
                       <br />
-                      Parish Office: [Phone Number]
                       <br />
-                      Email: [Email Address]
+                      Phone:{" "}
+                      <a href="tel:+254726145609" className="text-blue-800">
+                        0726 145609
+                      </a>
+                      <br />
+                      Email:{" "}
+                      <a
+                        href="mailto:stjosephccks@gmail.com"
+                        className="text-blue-800"
+                      >
+                        stjosephccks@gmail.com
+                      </a>
                     </p>
                   </div>
                 </div>

@@ -44,7 +44,7 @@ export default function Confirmation() {
                         Confirmation Preparation
                       </h2>
                       <p className="text-gray-600 mb-4">
-                        Our parish offers a comprehensive two-year preparation
+                        Our parish offers a comprehensive one-year preparation
                         program for Confirmation. The program includes:
                       </p>
                       <ul className="list-disc pl-6 space-y-2 text-gray-600">
@@ -109,10 +109,9 @@ export default function Confirmation() {
                             Preparation Timeline
                           </h4>
                           <ul className="space-y-2 text-gray-600">
-                            <li>Registration: August - September</li>
-                            <li>Classes: September - May</li>
-                            <li>Retreat: March</li>
-                            <li>Confirmation: May</li>
+                            <li>Registration: December - January</li>
+                            <li>Classes: January - November</li>
+                            <li>Confirmation: November</li>
                           </ul>
                         </div>
                         <div>
@@ -120,8 +119,6 @@ export default function Confirmation() {
                             Important Dates
                           </h4>
                           <ul className="space-y-2 text-gray-600">
-                            <li>Parent Meeting: First week of September</li>
-                            <li>Sponsor Meeting: October</li>
                             <li>Rehearsal: Week before Confirmation</li>
                           </ul>
                         </div>
@@ -137,11 +134,18 @@ export default function Confirmation() {
                       For more information about Confirmation preparation,
                       please contact:
                       <br />
-                      Director of Religious Education: [Name]
+                      Phone:{" "}
+                      <a href="tel:0724052150" className="text-blue-800">
+                        0724052150
+                      </a>
                       <br />
-                      Phone: [Office Number]
-                      <br />
-                      Email: [Email Address]
+                      Email:{" "}
+                      <a
+                        href="mailto:stjosephkahawasukari@gmail.com"
+                        className="text-blue-800"
+                      >
+                        stjosephkahawasukari@gmail.com
+                      </a>
                     </p>
                   </div>
                 </div>

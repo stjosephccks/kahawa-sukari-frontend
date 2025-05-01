@@ -9,6 +9,7 @@ function Hero({ imageUrl, title, text, link, linkTitle }) {
         <Image
           src={imageUrl}
           alt="Hero Image"
+          loading="eager"
           fill
           className="object-cover md:object-cover brightness-[0.7] blur-[0.5px]"
           priority
