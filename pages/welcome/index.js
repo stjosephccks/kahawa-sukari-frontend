@@ -150,7 +150,7 @@ function welcome() {
             <div className="mb-12">
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
+                  <div className="order-2 md:order-1">
                     <h3 className="text-2xl font-semibold mb-4">
                       Emmanuela Mazzola Kindergarten
                     </h3>
@@ -172,12 +172,25 @@ function welcome() {
                       <h4 className="font-semibold mb-2">
                         Contact Information
                       </h4>
-                      <p className="text-gray-600">Phone: +254 700 000 000</p>
-                      <p className="text-gray-600">
-                        Email: kindergarten@stjoseph.org
-                      </p>
-                      <p className="text-gray-600">
-                        Location: [Kindergarten Address]
+                      <a
+                        href="tel:+254797299854"
+                        className="text-gray-600 flex items-center"
+                      >
+                        <span className="mr-2">📞</span>
+                        Phone: 254 797 299 854
+                      </a>
+
+                      <a
+                        href="mailto:info@emschool.ke"
+                        className="text-gray-600 flex items-center"
+                      >
+                        <span className="mr-2">📧</span>
+                        Email: info@emschool.ke
+                      </a>
+                      <p className="text-gray-600 flex items-center">
+                        <span className="mr-2">📍</span>
+                        Location: [Next to St.Joseph Catholic Church Kahawa
+                        Sukari]
                       </p>
                     </div>
                     <Link
@@ -188,7 +201,23 @@ function welcome() {
                       Learn More →
                     </Link>
                   </div>
-                  <div className="h-64 bg-gray-200 rounded-lg"></div>
+                  <div className="h-72 bg-gray-200 rounded-lg order-1 md:order-2">
+                    <Image
+                      src={
+                        "https://kahawa-sukari.s3.amazonaws.com/emanuela-mazzola-kindergarten.webp"
+                      }
+                      style={{
+                        objectFit: "cover",
+                        objectPosition: "center",
+                        width: "100%",
+                        height: "100%",
+                        borderRadius: "10px",
+                      }}
+                      alt="Emmanuel Mazzola Kindergarten"
+                      width={500}
+                      height={500}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -196,30 +225,55 @@ function welcome() {
             {/* Primary and JSS Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
+                <div className="h-48 bg-gray-200 rounded-lg mb-4">
+                  <Image
+                    src={
+                      "https://kahawa-sukari.s3.amazonaws.com/urafiki-carovana.jpg"
+                    }
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "10px",
+                    }}
+                    alt="Emmanuel Mazzola Kindergarten"
+                    width={500}
+                    height={500}
+                    loading="lazy"
+                  />
+                </div>
                 <h3 className="text-2xl font-semibold mb-3">
-                  Carovana Primary School
+                  Urafiki Carovana School
                 </h3>
                 <p className="mb-4 text-gray-700">
-                  Our primary school offers a comprehensive education that
-                  combines academic excellence with Catholic teachings. We
-                  prepare students for success in their academic and spiritual
-                  journey.
+                  Our comprehensive school offers both primary and junior
+                  secondary education, combining academic excellence with
+                  Catholic teachings. We prepare students for success in their
+                  academic and spiritual journey.
                 </p>
                 <ul className="mb-4 space-y-2 text-gray-600">
+                  <li>• Primary and Junior Secondary Education</li>
                   <li>• Strong academic foundation</li>
                   <li>• Daily prayer and religious education</li>
                   <li>• Extracurricular activities</li>
                   <li>• Character development</li>
                   <li>• Sports and arts programs</li>
-                  <li>• Computer literacy</li>
                 </ul>
                 <div className="mb-4">
                   <h4 className="font-semibold mb-2">Contact Information</h4>
-                  <p className="text-gray-600">Phone: +254 700 000 001</p>
-                  <p className="text-gray-600">Email: primary@stjoseph.org</p>
-                  <p className="text-gray-600">
-                    Location: [Primary School Address]
+                  <a href="tel:+254 791517782" className="text-gray-600">
+                    <span className="mr-2">📞</span>
+                    Phone: +254 791 517 782
+                  </a>
+                  <br />
+                  <a href="mailto:info@ucschool.ke" className="text-gray-600">
+                    <span className="mr-2">📧</span>
+                    Email: info@ucschool.ke
+                  </a>
+                  <p className="text-gray-600 flex items-center">
+                    <span className="mr-2">📍</span>
+                    Location: [Wundanyi Road Kahawa Sukari]
                   </p>
                 </div>
                 <Link
@@ -232,31 +286,59 @@ function welcome() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
+                <div className="h-48 bg-gray-200 rounded-lg mb-4">
+                  <Image
+                    src={
+                      "https://kahawa-sukari.s3.amazonaws.com/St+Kizito+TVET.jpg"
+                    }
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "10px",
+                    }}
+                    alt="Emmanuel Mazzola Kindergarten"
+                    width={500}
+                    height={500}
+                    loading="lazy"
+                  />
+                </div>
                 <h3 className="text-2xl font-semibold mb-3">
-                  Carovana Junior Secondary School
+                  St. Kizito Vocational Training
                 </h3>
                 <p className="mb-4 text-gray-700">
-                  Our JSS program prepares students for higher education while
-                  strengthening their Catholic faith and values. We focus on
-                  academic excellence and character formation.
+                  Our vocational training center provides practical skills and
+                  technical education to prepare students for the workforce. We
+                  focus on hands-on training and professional development.
                 </p>
                 <ul className="mb-4 space-y-2 text-gray-600">
-                  <li>• Advanced academic curriculum</li>
-                  <li>• Faith-based leadership development</li>
-                  <li>• College preparation</li>
-                  <li>• Community service opportunities</li>
+                  <li>• Technical skills training</li>
+                  <li>• Professional certification</li>
+                  <li>• Hands-on practical experience</li>
+                  <li>• Industry partnerships</li>
                   <li>• Career guidance</li>
-                  <li>• Science and technology focus</li>
+                  <li>• Job placement support</li>
                 </ul>
                 <div className="mb-4">
                   <h4 className="font-semibold mb-2">Contact Information</h4>
-                  <p className="text-gray-600">Phone: +254 700 000 002</p>
-                  <p className="text-gray-600">Email: jss@stjoseph.org</p>
-                  <p className="text-gray-600">Location: [JSS Address]</p>
+                  <a href="tel: +254724253547" className="text-gray-600">
+                    <span className="mr-2">📞</span>
+                    Phone: +254 724 253 547
+                  </a>
+                  <br />
+                  <a href="mailto:info@stkizito.ke" className="text-gray-600">
+                    <span className="mr-2">📧</span>
+                    Email: info@stkizito.ke
+                  </a>
+                  <p className="text-gray-600">
+                    <span className="mr-2">📍</span>
+                    Location: [Main Campus: Githurai 45 Mwihoko
+                    <br /> Branch Campus: Roysambu Opposite TRM Drive]
+                  </p>
                 </div>
                 <Link
-                  href="https://ucschool.ke/"
+                  href="https://stkizito.ke/"
                   target="_blank"
                   className="text-blue-600 hover:underline font-semibold"
                 >
@@ -290,29 +372,55 @@ function welcome() {
                     <li>• Laboratory services</li>
                     <li>• Pharmacy services</li>
                   </ul>
+                  <div className="mb-4">
+                    <h4 className="font-semibold mb-2">Contact Information</h4>
+                    <ul className="space-y-3">
+                      <li className="flex items-center">
+                        <span className="mr-2">📞</span>
+                        <a href="tel:+254700602602" className="text-gray-600">
+                          Emergency: +254 700 602 602
+                        </a>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="mr-2">📞</span>
+                        <a href="tel:+254715683924" className="text-gray-600">
+                          Main Line: +254 715 683 924
+                        </a>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="mr-2">📧</span>
+                        <a
+                          href="mailto:customercare@stjosephwendani.org"
+                          className="text-gray-600"
+                        >
+                          <span className="mr-2">📧</span>
+                          Email: customercare@ stjosephwendani.org
+                        </a>
+                      </li>
+                      <li className="flex items-center">
+                        <span className="mr-2">📍</span>
+                        <span className="text-gray-600">
+                          Location: [Kahawa Wendani]
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-semibold mb-4">
-                    Contact Information
-                  </h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-center">
-                      <span className="mr-2">📞</span>
-                      <span>Emergency: +254 700 000 003</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">📞</span>
-                      <span>Main Line: +254 700 000 004</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">📧</span>
-                      <span>Email: hospital@stjoseph.org</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="mr-2">📍</span>
-                      <span>Location: [Hospital Address]</span>
-                    </li>
-                  </ul>
+                <div className="h-72 bg-gray-200 rounded-lg">
+                  <Image
+                    src="https://kahawa-sukari.s3.amazonaws.com/stJosephhostpital.webp"
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: "center",
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "10px",
+                    }}
+                    alt="St. Joseph Hospital"
+                    width={500}
+                    height={500}
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
@@ -341,9 +449,16 @@ function welcome() {
                   </ul>
                   <div className="mb-4">
                     <h4 className="font-semibold mb-2">Contact Information</h4>
-                    <p className="text-gray-600">Phone: +254 700 000 005</p>
-                    <p className="text-gray-600">Email: wendani@stjoseph.org</p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 flex items-center">
+                      <span className="mr-2">📞</span>
+                      Phone: +254 700 000 005
+                    </p>
+                    <p className="text-gray-600 flex items-center">
+                      <span className="mr-2">📧</span>
+                      Email: wendani@stjoseph.org
+                    </p>
+                    <p className="text-gray-600 flex items-center">
+                      <span className="mr-2">📍</span>
                       Location: [Kahawa Wendani Address]
                     </p>
                   </div>

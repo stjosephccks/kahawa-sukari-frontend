@@ -21,9 +21,9 @@ function Charity() {
 
   const groups = [
     {
-      name: "Ujiachilie Mom",
+      name: "Ujiachilie Moms",
       description:
-        "A support group for mothers of children with different abilities. This group provides a safe space for mothers to share experiences, receive support, and learn from each other.",
+        "A support group for mothers of children whos are abled differently. This group provides a safe space for mothers to share experiences, receive support, and learn from each other.",
       meetingDay: "Tuesdays",
       meetingTime: "10:00 AM - 12:00 PM",
       location: "Parish Hall",
