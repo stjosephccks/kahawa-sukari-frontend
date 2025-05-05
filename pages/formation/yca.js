@@ -5,6 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import Formations_Links from "@/components/Formations_Links";
+import ContactCard from "@/components/ContactCard";
 
 function YoungCatholicAdults() {
   const images = [

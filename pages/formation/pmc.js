@@ -2,7 +2,7 @@ import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Formations_Links from "@/components/Formations_Links";
 import Head from "next/head";
-import Link from "next/link";
+import ContactCard from "@/components/ContactCard";
 import React from "react";
 
 function Pmc() {
