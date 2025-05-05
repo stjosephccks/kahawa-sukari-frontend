@@ -4,12 +4,17 @@ import Formations_Links from "@/components/Formations_Links";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
+import ContactCard from "@/components/ContactCard";
 
 function YouthServiceCommittee() {
   const title = "Youth Service Committee";
   const text =
     "The Youth Service Committee (YSC) is a vibrant group of young Catholics aged 18-26 years dedicated to serving our parish community.";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
+  const chaplain = "Fr. Guliano - Youth Chaplain";
+  const chapTel = "0737032180";
+  const moderator = "YSC Coordinator - Moderator";
+  const modTel = "0703689886";
 
   return (
     <Layout>
@@ -100,10 +105,10 @@ function YouthServiceCommittee() {
                       </h3>
                       <ul className="space-y-2 text-gray-600">
                         <li>
-                          <strong>Every Sunday</strong> - After 10:00 AM Mass
+                          <strong>Every Sunday</strong> - After 12:00 NOON Mass
                         </li>
                         <li>
-                          <strong>Every Wednesday</strong> - Bible Study at 6:00
+                          <strong>Every Thursday</strong> - Bible Study at 6:00
                           PM
                         </li>
                         <li>
@@ -125,7 +130,7 @@ function YouthServiceCommittee() {
                         Liturgical Ministry
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Altar Servers</li>
+                        <li>Liturgical Dancers</li>
                         <li>Lectors</li>
                         <li>Choir</li>
                         <li>Ushers</li>
@@ -156,43 +161,12 @@ function YouthServiceCommittee() {
                   </div>
                 </div>
 
-                <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-                  <h3 className="text-xl font-bold text-blue-900 mb-4">
-                    Contact Information
-                  </h3>
-                  <div className="space-y-2 text-blue-800">
-                    <p>
-                      <strong>Youth Chaplain</strong>
-                      <br />
-                      <Link
-                        href="tel:0737032180"
-                        className="hover:text-blue-600"
-                      >
-                        0737032180
-                      </Link>
-                    </p>
-                    <p>
-                      <strong>YSC Coordinator</strong>
-                      <br />
-                      <Link
-                        href="tel:0723721678"
-                        className="hover:text-blue-600"
-                      >
-                        0723721678
-                      </Link>
-                    </p>
-                    <p>
-                      <strong>Email</strong>
-                      <br />
-                      <Link
-                        href="mailto:ysc@stjosephkahawasukari.org"
-                        className="hover:text-blue-600"
-                      >
-                        ysc@stjosephkahawasukari.org
-                      </Link>
-                    </p>
-                  </div>
-                </div>
+                <ContactCard
+                  chaplain={chaplain}
+                  chapTel={chapTel}
+                  moderator={moderator}
+                  modTel={modTel}
+                />
               </div>
             </div>
           </div>

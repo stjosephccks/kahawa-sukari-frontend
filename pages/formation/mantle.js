@@ -4,12 +4,17 @@ import Formations_Links from "@/components/Formations_Links";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
+import ContactCard from "@/components/ContactCard";
 
 function MantleOfStJoseph() {
   const title = "Mantle of St. Joseph";
   const text =
     "The Mantle of St. Joseph is a special group for young Catholics who have completed their confirmation but haven&apos;t yet entered high school.";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
+  const chaplain = "Fr. Mimo - Youth Chaplain";
+  const chapTel = "0737032180";
+  const moderator = "Mantle of St. Joseph Coordinator - Moderator";
+  const modTel = "0723721678";
 
   return (
     <Layout>
@@ -165,44 +170,12 @@ function MantleOfStJoseph() {
                     </p>
                   </div>
                 </div>
-
-                <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-                  <h3 className="text-xl font-bold text-blue-900 mb-4">
-                    Contact Information
-                  </h3>
-                  <div className="space-y-2 text-blue-800">
-                    <p>
-                      <strong>Youth Chaplain</strong>
-                      <br />
-                      <Link
-                        href="tel:0737032180"
-                        className="hover:text-blue-600"
-                      >
-                        0737032180
-                      </Link>
-                    </p>
-                    <p>
-                      <strong>Mantle of St. Joseph Coordinator</strong>
-                      <br />
-                      <Link
-                        href="tel:0723721678"
-                        className="hover:text-blue-600"
-                      >
-                        0723721678
-                      </Link>
-                    </p>
-                    <p>
-                      <strong>Email</strong>
-                      <br />
-                      <Link
-                        href="mailto:mantle@stjosephkahawasukari.org"
-                        className="hover:text-blue-600"
-                      >
-                        mantle@stjosephkahawasukari.org
-                      </Link>
-                    </p>
-                  </div>
-                </div>
+                <ContactCard
+                  chaplain={chaplain}
+                  chapTel={chapTel}
+                  moderator={moderator}
+                  modTel={modTel}
+                />
               </div>
             </div>
           </div>

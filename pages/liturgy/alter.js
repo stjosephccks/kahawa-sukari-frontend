@@ -3,6 +3,7 @@
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function AlterServers() {
   const title = "Altar Servers";
@@ -108,12 +109,14 @@ export default function AlterServers() {
                     contact:
                     <br />
                     <span className="font-medium">
-                      Altar Servers Coordinator: 0712 345 678
+                      <strong>
+                        {" "}
+                        Altar Servers Coordinator: Catechist John
+                      </strong>
+                      <br />
+                      <Link href="tel:0759307297">0759307297</Link>
                     </span>
                     <br />
-                    <span className="font-medium">
-                      Email: altarservers@kahawasukari.org
-                    </span>
                   </p>
                 </div>
               </div>

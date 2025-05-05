@@ -10,6 +10,10 @@ function Pmc() {
   const text =
     "Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these. —Matthew 19:14";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/pmc_1.jpeg";
+  const chaplain = "Fr. Mimo - Spiritual Director";
+  const chapTel = "0759441744";
+  const moderator = "PMC Coordinator - Moderator";
+  const modTel = "0723721678";
 
   return (
     <Layout>
@@ -212,23 +216,12 @@ function Pmc() {
                   </div>
                 </div>
 
-                <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-                  <h3 className="text-xl font-bold text-blue-900 mb-4">
-                    Contact Information
-                  </h3>
-                  <div className="space-y-2 text-blue-800">
-                    <p>
-                      <strong>PMC Moderator</strong>
-                      <br />
-                      <Link
-                        href="tel:0724052150"
-                        className="hover:text-blue-600"
-                      >
-                        0724052150
-                      </Link>
-                    </p>
-                  </div>
-                </div>
+                <ContactCard
+                  chaplain={chaplain}
+                  chapTel={chapTel}
+                  moderator={moderator}
+                  modTel={modTel}
+                />
               </div>
             </div>
           </div>

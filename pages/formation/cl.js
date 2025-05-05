@@ -4,12 +4,17 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import Formations_Links from "@/components/Formations_Links";
+import ContactCard from "@/components/ContactCard";
 
 function CommunionAndLiberation() {
   const title = "Communion and Liberation";
   const text =
     "The Christian event, as it comes to us through the Church's proclamation, responds to the deepest needs of the human heart, announced and anticipated in every religion. —Luigi Giussani";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
+  const chaplain = "Chaplain";
+  const chapTel = "0737032180";
+  const moderator = "CL Coordinator - Moderator";
+  const modTel = "0723721678";
 
   return (
     <Layout>
@@ -129,16 +134,12 @@ function CommunionAndLiberation() {
                   </div>
                 </div>
 
-                <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-                  <h3 className="text-xl font-bold text-blue-900 mb-4">
-                    Contact Information
-                  </h3>
-                  <p className="text-gray-600">
-                    For more information about Communion and Liberation, please
-                    contact the parish office or join us for our weekly School
-                    of Community meetings.
-                  </p>
-                </div>
+                <ContactCard
+                  chaplain={chaplain}
+                  chapTel={chapTel}
+                  moderator={moderator}
+                  modTel={modTel}
+                />
               </div>
             </div>
           </div>

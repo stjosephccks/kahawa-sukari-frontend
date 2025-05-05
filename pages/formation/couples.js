@@ -2,12 +2,17 @@ import React from "react";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Formations_Links from "@/components/Formations_Links";
+import ContactCard from "@/components/ContactCard";
 
 function couples() {
   const title = "Young Couples Growing Together";
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text = "Building strong Catholic marriages and families";
+  const chaplain = "Fr. Guliano - Spiritual Director";
+  const chapTel = "0737032180";
+  const moderator = "Young Couples Group Coordinator - Moderator";
+  const modTel = "0723721678";
 
   return (
     <Layout>
@@ -96,24 +101,12 @@ function couples() {
                     are welcome to join our community.
                   </p>
                 </div>
-
-                <div className="mt-8 p-4 bg-blue-50 rounded-lg">
-                  <h3 className="text-xl font-bold text-blue-900 mb-2">
-                    Join Our Community
-                  </h3>
-                  <p className="text-blue-800">
-                    Whether you're newly married or have been married for a few
-                    years, we welcome you to join our community of couples
-                    growing together in faith. For more information, please
-                    contact:
-                    <br />
-                    Couples Group Coordinator: [Name]
-                    <br />
-                    Phone: [Phone Number]
-                    <br />
-                    Email: [Email Address]
-                  </p>
-                </div>
+                <ContactCard
+                  chaplain={chaplain}
+                  chapTel={chapTel}
+                  moderator={moderator}
+                  modTel={modTel}
+                />
               </div>
             </div>
           </div>

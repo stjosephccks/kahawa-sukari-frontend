@@ -1,3 +1,4 @@
+import ContactCard from "@/components/ContactCard";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Sacraments_Links from "@/components/Sacraments_Links";
@@ -8,6 +9,10 @@ function ChildrenBecomingCatholic() {
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text = "Right of Christian Initiation for Children";
+  const chaplain = "Fr. Mimo - Spiritual Director";
+  const chapTel = "0759441744";
+  const moderator = "PMC Coordinator - Moderator";
+  const modTel = "0723721678";
   return (
     <Layout>
       <Hero text={text} title={title} imageUrl={imageurl} />
@@ -78,6 +83,12 @@ function ChildrenBecomingCatholic() {
               </p>
             </div>
           </div>
+          <ContactCard
+            chaplain={chaplain}
+            chapTel={chapTel}
+            moderator={moderator}
+            modTel={modTel}
+          />
         </div>
       </div>
     </Layout>

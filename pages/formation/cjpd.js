@@ -2,12 +2,17 @@ import React from "react";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Formations_Links from "@/components/Formations_Links";
+import ContactCard from "@/components/ContactCard";
 
 function cjpd() {
   const title = "Catholic Justice and Peace Department (CJPD)";
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text = "Promoting justice, peace, and human dignity in our community";
+  const chaplain = "Fr. Matia - Spiritual Director";
+  const chapTel = "0737032180";
+  const moderator = "CJPD Coordinator - Moderator";
+  const modTel = "0723721678";
 
   return (
     <Layout>
@@ -98,22 +103,12 @@ function cjpd() {
                   </p>
                 </div>
 
-                <div className="mt-8 p-4 bg-blue-50 rounded-lg">
-                  <h3 className="text-xl font-bold text-blue-900 mb-2">
-                    Get Involved
-                  </h3>
-                  <p className="text-blue-800">
-                    Join us in our mission to create a more just and peaceful
-                    world. For more information about CJPD and how to
-                    participate, please contact:
-                    <br />
-                    CJPD Coordinator: [Name]
-                    <br />
-                    Phone: [Phone Number]
-                    <br />
-                    Email: [Email Address]
-                  </p>
-                </div>
+                <ContactCard
+                  chaplain={chaplain}
+                  chapTel={chapTel}
+                  moderator={moderator}
+                  modTel={modTel}
+                />
               </div>
             </div>
           </div>

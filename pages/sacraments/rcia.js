@@ -1,3 +1,4 @@
+import ContactCard from "@/components/ContactCard";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Sacraments_Links from "@/components/Sacraments_Links";
@@ -8,6 +9,10 @@ function AdultsBecomingCatholic() {
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text = "Rite of Christian Initiation for Adults";
+  const chaplain = "Fr. Guliano - Spiritual Director";
+  const chapTel = "0737032180";
+  const moderator = "Catechist George";
+  const modTel = "0729455437";
 
   return (
     <Layout>
@@ -147,20 +152,12 @@ function AdultsBecomingCatholic() {
             </div>
           </div>
 
-          <div className="mt-8 p-4 bg-blue-50 rounded-lg">
-            <h3 className="text-xl font-bold text-blue-900 mb-2">
-              Contact Information
-            </h3>
-            <p className="text-blue-800">
-              For more information about the RCIA process, please contact:
-              <br />
-              RCIA Coordinator: [Name]
-              <br />
-              Phone: [Phone Number]
-              <br />
-              Email: [Email Address]
-            </p>
-          </div>
+          <ContactCard
+            chaplain={chaplain}
+            chapTel={chapTel}
+            moderator={moderator}
+            modTel={modTel}
+          />
 
           <div className="mt-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">

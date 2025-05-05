@@ -28,6 +28,10 @@ function YoungCatholicAdults() {
   const text =
     "Dear young people, do not be satisfied with anything less than Truth and Love; do not be content with anything less than Christ. —Pope Benedict XVI";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
+  const chaplain = "Fr. Guliano - Youth Chaplain";
+  const chapTel = "0737032180";
+  const moderator = "YCA Coordinator - Moderator";
+  const modTel = "0723721678";
 
   return (
     <Layout>
@@ -142,33 +146,12 @@ function YoungCatholicAdults() {
                   </div>
                 </div>
 
-                <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-                  <h3 className="text-xl font-bold text-blue-900 mb-4">
-                    Contact Information
-                  </h3>
-                  <div className="space-y-2 text-blue-800">
-                    <p>
-                      <strong>Fr. Guliano - Chaplain</strong>
-                      <br />
-                      <Link
-                        href="tel:0737032180"
-                        className="hover:text-blue-600"
-                      >
-                        0737032180
-                      </Link>
-                    </p>
-                    <p>
-                      <strong>Vincent Kirima - Moderator</strong>
-                      <br />
-                      <Link
-                        href="tel:0723721678"
-                        className="hover:text-blue-600"
-                      >
-                        0723721678
-                      </Link>
-                    </p>
-                  </div>
-                </div>
+                <ContactCard
+                  chaplain={chaplain}
+                  chapTel={chapTel}
+                  moderator={moderator}
+                  modTel={modTel}
+                />
 
                 <div className="mt-12">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
