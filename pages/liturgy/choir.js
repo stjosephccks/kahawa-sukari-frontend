@@ -4,13 +4,16 @@ import Image from "next/image";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Head from "next/head";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const choirs = [
   {
     name: "PMC Choir",
     practiceDays: ["Sunday at 9:00 AM"],
     massSchedule: "10:30 AM Mass (Swahili)",
-    contact: "Chairperson: John Doe (0712 345 678)",
+    contactTel: "0755428887",
+    moderator: "Moderator: John Doe (0712 345 678)",
     description:
       "The PMC Choir leads the congregation in worship with their harmonious voices at the 10:30 AM Swahili Mass.",
   },
@@ -22,9 +25,11 @@ const choirs = [
       "Sunday at 10:45 AM",
     ],
     massSchedule: "12:00 PM Mass (English)",
-    contact: "Chairperson: Jane Smith (0723 456 789)",
+    contactTel: "0708 576056",
+    moderator: "Moderator: Eveline Ochieng ",
     description:
       "St. Romanos Choir brings traditional hymns to life with their beautiful renditions at the 12:00 PM English Mass.",
+    src: "https://kahawa-sukari.s3.amazonaws.com/stRomanus.jpeg",
   },
   {
     name: "St. Andrew Choir",
@@ -34,7 +39,8 @@ const choirs = [
       "Friday at 7:00 PM",
     ],
     massSchedule: "9:00 AM Mass (Swahili)",
-    contact: "Chairperson: Michael Brown (0734 567 890)",
+    contactTel: "0755428887",
+    moderator: "Chairperson: Michael Brown (0734 567 890)",
     description:
       "St. Andrew Choir is known for their contemporary worship music and vibrant performances at the 9:00 AM Swahili Mass.",
   },
@@ -46,7 +52,8 @@ const choirs = [
       "Saturday at 4:00 PM",
     ],
     massSchedule: "7:30 AM Mass (English)",
-    contact: "Chairperson: Sarah Johnson (0745 678 901)",
+    contactTel: "0755428887",
+    moderator: "Chairperson: Sarah Johnson (0745 678 901)",
     description:
       "Magnificat Choir specializes in classical and traditional church music at the 7:30 AM English Mass.",
   },
@@ -58,16 +65,29 @@ const choirs = [
       "Sunday at 2:00 PM",
     ],
     massSchedule: "9:30 AM Wendani Mass (Swahili)",
-    contact: "Chairperson: David Wilson (0756 789 012)",
+    contactTel: "0755428887",
+    moderator: "Chairperson: David Wilson (0756 789 012)",
     description:
       "St. Gregory Choir brings a unique blend of traditional and contemporary music to our services at the 9:30 AM Wendani Swahili Mass.",
   },
 ];
 
 export default function Choir() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [
+    "https://kahawa-sukari.s3.amazonaws.com/stRomanus.jpeg",
+    // Add more church images here
+  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   const title = "Our Choirs";
-  const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+
   const text =
     "Join us in worship through music with our vibrant church choirs";
 
@@ -83,7 +103,11 @@ export default function Choir() {
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
-          <Hero text={text} title={title} imageUrl={imageurl} />
+          <Hero
+            text={text}
+            title={title}
+            imageUrl={images[currentImageIndex]}
+          />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -94,7 +118,7 @@ export default function Choir() {
               >
                 <div className="relative h-48">
                   <Image
-                    src="/images/choir.jpg"
+                    src={choir.src}
                     alt={`${choir.name} performing`}
                     fill
                     className="object-cover"
@@ -128,7 +152,16 @@ export default function Choir() {
                       <h3 className="font-medium text-gray-900 mb-2">
                         Contact Information
                       </h3>
-                      <p className="text-gray-600">{choir.contact}</p>
+                      <p className="text-gray-600">
+                        {choir.moderator}
+                        <br />
+                        <Link
+                          href={`tel:${choir.contactTel}`}
+                          className="font-medium hover:text-blue-600 text-blue-900"
+                        >
+                          {choir.contactTel}
+                        </Link>{" "}
+                      </p>
                     </div>
                   </div>
                 </div>
