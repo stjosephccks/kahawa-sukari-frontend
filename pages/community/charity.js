@@ -11,6 +11,7 @@ import {
   FaUsers,
   FaHospitalUser,
 } from "react-icons/fa";
+import Head from "next/head";
 
 function Charity() {
   const title = "Community Outreach";
