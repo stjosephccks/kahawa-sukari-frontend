@@ -107,6 +107,14 @@ function Charity() {
 
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | Charity</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Charity"
+          key="title"
+        />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

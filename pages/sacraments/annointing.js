@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Sacraments_Links from "@/components/Sacraments_Links";
+import Head from "next/head";
+import ContactCard from "@/components/ContactCard";
 
 export default function Anointing() {
   const title = "The Sacrament of the Anointing of the Sick";
@@ -10,9 +12,22 @@ export default function Anointing() {
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text =
     "A special grace for those who are seriously ill or facing surgery";
-
+  const chaplain = "Parish Office";
+  const chapTel = "0726 145609";
+  const moderator = "Catechist George";
+  const modTel = "0729 455437";
   return (
     <Layout>
+      <Head>
+        <title>
+          St.Joseph Kahawa Sukari | The Sacrament of the Anointing of the Sick
+        </title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - The Sacrament of the Anointing of the Sick"
+          key="title"
+        />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
@@ -130,21 +145,12 @@ export default function Anointing() {
                     </div>
                   </div>
 
-                  <div className="mt-8 p-4 bg-blue-50 rounded-lg">
-                    <h3 className="text-xl font-bold text-blue-900 mb-2">
-                      Contact Information
-                    </h3>
-                    <p className="text-blue-800">
-                      For more information or to request the Anointing of the
-                      Sick, please contact:
-                      <br />
-                      Parish Office: [Phone Number]
-                      <br />
-                      Emergency Number: [Emergency Number]
-                      <br />
-                      Email: [Email Address]
-                    </p>
-                  </div>
+                  <ContactCard
+                    chaplain={chaplain}
+                    chapTel={chapTel}
+                    moderator={moderator}
+                    modTel={modTel}
+                  />
                 </div>
               </div>
             </motion.div>

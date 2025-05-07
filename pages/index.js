@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Welcome from "@/components/Welcome";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -56,6 +57,14 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | Home</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Home"
+          key="title"
+        />
+      </Head>
       <Hero imageUrl={images[currentImageIndex]} title={title} text={text} />
 
       <div className="max-w-7xl mx-auto px-4 py-12">

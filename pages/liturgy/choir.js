@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
+import Head from "next/head";
 
 const choirs = [
   {
@@ -72,6 +73,14 @@ export default function Choir() {
 
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | Choirs</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Choirs"
+          key="title"
+        />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

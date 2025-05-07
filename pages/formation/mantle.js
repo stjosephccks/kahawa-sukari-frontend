@@ -11,7 +11,7 @@ function MantleOfStJoseph() {
   const text =
     "The Mantle of St. Joseph is a special group for young Catholics who have completed their confirmation but haven&apos;t yet entered high school.";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
-  const chaplain = "Fr. Mimo - Youth Chaplain";
+  const chaplain = "Fr. Matia - Spiritual Director";
   const chapTel = "0737032180";
   const moderator = "Mantle of St. Joseph Coordinator - Moderator";
   const modTel = "0723721678";

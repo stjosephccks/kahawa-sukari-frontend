@@ -9,7 +9,7 @@ function cjpd() {
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text = "Promoting justice, peace, and human dignity in our community";
-  const chaplain = "Fr. Matia - Spiritual Director";
+  const chaplain = "Fr. Mimmo - Spiritual Director";
   const chapTel = "0737032180";
   const moderator = "CJPD Coordinator - Moderator";
   const modTel = "0723721678";

@@ -3,19 +3,29 @@ import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Formations_Links from "@/components/Formations_Links";
 import ContactCard from "@/components/ContactCard";
+import Head from "next/head";
 
 function couples() {
-  const title = "Young Couples Growing Together";
-  const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+  const title = "Couples Growing Together in Christ";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/cgtc.jpeg";
   const text = "Building strong Catholic marriages and families";
   const chaplain = "Fr. Guliano - Spiritual Director";
   const chapTel = "0737032180";
-  const moderator = "Young Couples Group Coordinator - Moderator";
-  const modTel = "0723721678";
+  const moderator = "CGTC Moderator  - Erastus Karani";
+  const modTel = "+254 713 173886";
 
   return (
     <Layout>
+      <Head>
+        <title>
+          St.Joseph Kahawa Sukari | Couples Growing Together in Christ
+        </title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Couples Growing Together in Christ"
+          key="title"
+        />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
@@ -34,11 +44,12 @@ function couples() {
                   About Our Couples Group
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  Our Young Couples Group is a vibrant community of recently
-                  married couples who come together to grow in faith, strengthen
-                  their marriages, and build lasting friendships. Through shared
-                  experiences, prayer, and learning, we support each other in
-                  living out our Catholic faith in our marriages and families.
+                  The Couples Growing Together in Christ (CGTC) is a vibrant
+                  community of married couples who come together to grow in
+                  faith, strengthen their marriages, and build lasting
+                  friendships. Through shared experiences, prayer, and learning,
+                  we support each other in living out our Catholic faith in our
+                  marriages and families.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8 mt-8">
@@ -95,10 +106,10 @@ function couples() {
                     Meeting Schedule
                   </h3>
                   <p className="text-gray-600">
-                    We meet every second Sunday of the month after the 10:00 AM
-                    Mass in the parish hall. Special events and retreats are
-                    organized throughout the year. All recently married couples
-                    are welcome to join our community.
+                    We meet after two momnths on the 3rd Sunday at 2:00 pm in
+                    the Fathers' Gazebo. Special events and retreats are
+                    organized throughout the year. All couples are welcome to
+                    join our community.
                   </p>
                 </div>
                 <ContactCard

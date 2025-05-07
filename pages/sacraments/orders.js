@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Sacraments_Links from "@/components/Sacraments_Links";
+import Head from "next/head";
+import ContactCard from "@/components/ContactCard";
 
 export default function Orders() {
   const title = "The Sacrament of Holy Orders";
@@ -11,8 +13,21 @@ export default function Orders() {
   const text =
     "The means through which Christ&apos;s mission continues in the Church";
 
+  const chaplain = "Parish  Office";
+  const chapTel = " 0726 145609";
+  const moderator = "";
+  const modTel = "";
+
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | The Sacrament of Holy Orders</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - The Sacrament of Holy Orders"
+          key="title"
+        />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
@@ -130,35 +145,12 @@ export default function Orders() {
                     </div>
                   </div>
 
-                  <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-                    <h3 className="text-xl font-bold text-blue-900 mb-4">
-                      Contact Information
-                    </h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <h4 className="font-semibold text-blue-800 mb-2">
-                          Vocation Director
-                        </h4>
-                        <p className="text-blue-800">
-                          Name: [Vocation Director's Name]
-                          <br />
-                          Phone: [Phone Number]
-                          <br />
-                          Email: [Email Address]
-                        </p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-blue-800 mb-2">
-                          Diaconate Office
-                        </h4>
-                        <p className="text-blue-800">
-                          Phone: [Office Number]
-                          <br />
-                          Email: [Email Address]
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <ContactCard
+                    chaplain={chaplain}
+                    chapTel={chapTel}
+                    moderator={moderator}
+                    modTel={modTel}
+                  />
                 </div>
               </div>
             </motion.div>

@@ -3,15 +3,28 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Sacraments_Links from "@/components/Sacraments_Links";
+import Head from "next/head";
+import ContactCard from "@/components/ContactCard";
 
 export default function Baptism() {
   const title = "The Sacrament of Baptism";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/baptism.jpg";
   const text =
     "The gateway to life in the Spirit and the door to other sacraments";
-
+  const chaplain = "Parish Office";
+  const chapTel = "0726 145609";
+  const moderator = "Catechist George";
+  const modTel = "0729 455437";
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | The Sacrament of Baptism</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - The Sacrament of Baptism"
+          key="title"
+        />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
@@ -129,28 +142,12 @@ export default function Baptism() {
                     </div>
                   </div>
 
-                  <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-                    <h3 className="text-xl font-bold text-blue-900 mb-4">
-                      Contact Information
-                    </h3>
-                    <p className="text-blue-800">
-                      For more information or to schedule a Baptism, please
-                      contact the parish office at:
-                      <br />
-                      Phone:{" "}
-                      <a href="tel:0724052150" className="text-blue-800">
-                        0724052150
-                      </a>
-                      <br />
-                      Email:{" "}
-                      <a
-                        href="mailto:stjosephkahawasukari@gmail.com"
-                        className="text-blue-800"
-                      >
-                        stjosephkahawasukari@gmail.com
-                      </a>
-                    </p>
-                  </div>
+                  <ContactCard
+                    chaplain={chaplain}
+                    chapTel={chapTel}
+                    moderator={moderator}
+                    modTel={modTel}
+                  />
                 </div>
               </div>
             </motion.div>

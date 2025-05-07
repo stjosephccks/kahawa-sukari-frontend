@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import React from "react";
 import Hero from "@/components/Hero";
+import Head from "next/head";
 
 function Jumuiya() {
   const jumuiyas = [
@@ -68,6 +69,14 @@ function Jumuiya() {
 
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | Jumuiyas</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Jumuiyas"
+          key="title"
+        />
+      </Head>
       <Hero
         imageUrl="https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg"
         title="Our Jumuiyas - Small Christian Communities"

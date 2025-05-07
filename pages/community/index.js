@@ -2,6 +2,7 @@ import Eventcard from "@/components/Eventcard";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import axios from "axios";
+import Head from "next/head";
 import React, { useEffect, useState } from "react";
 
 function Event() {
@@ -21,6 +22,14 @@ function Event() {
   }, []);
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | Upcoming Events</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Upcoming Events"
+          key="title"
+        />
+      </Head>
       <Hero imageUrl={imageurl} text={text} title={title} />
       <div>
         <h1 className="text-primary mt-24 ml-3 md:text-center">

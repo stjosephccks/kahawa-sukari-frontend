@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function AlterServers() {
   const title = "Altar Servers";
@@ -13,6 +14,14 @@ export default function AlterServers() {
 
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | Altar Servers</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Altar Servers"
+          key="title"
+        />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

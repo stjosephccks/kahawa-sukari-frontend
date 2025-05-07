@@ -3,15 +3,29 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Sacraments_Links from "@/components/Sacraments_Links";
+import Head from "next/head";
+import ContactCard from "@/components/ContactCard";
 
 export default function Matrimony() {
   const title = "The Sacrament of Matrimony";
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text = "A sacred covenant established by God";
+  const chaplain = "Fr. Guliano";
+  const chapTel = "0737032180";
+  const moderator = "Mr. Johnson Mwaniki Murage";
+  const modTel = "0729 675982";
 
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | The Sacrament of Matrimony</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - The Sacrament of Matrimony"
+          key="title"
+        />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
@@ -104,29 +118,12 @@ export default function Matrimony() {
                     </div>
                   </div>
 
-                  <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-                    <h3 className="text-xl font-bold text-blue-900 mb-4">
-                      Contact Information
-                    </h3>
-                    <p className="text-blue-800">
-                      For more information about marriage preparation or to
-                      schedule a wedding, please contact:
-                      <br />
-                      <br />
-                      Phone:{" "}
-                      <a href="tel:+254726145609" className="text-blue-800">
-                        0726 145609
-                      </a>
-                      <br />
-                      Email:{" "}
-                      <a
-                        href="mailto:stjosephccks@gmail.com"
-                        className="text-blue-800"
-                      >
-                        stjosephccks@gmail.com
-                      </a>
-                    </p>
-                  </div>
+                  <ContactCard
+                    chaplain={chaplain}
+                    chapTel={chapTel}
+                    moderator={moderator}
+                    modTel={modTel}
+                  />
                 </div>
               </div>
             </motion.div>

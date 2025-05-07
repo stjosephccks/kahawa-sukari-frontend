@@ -2,6 +2,7 @@ import ContactCard from "@/components/ContactCard";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Sacraments_Links from "@/components/Sacraments_Links";
+import Head from "next/head";
 import React from "react";
 
 function ChildrenBecomingCatholic() {
@@ -9,12 +10,23 @@ function ChildrenBecomingCatholic() {
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text = "Right of Christian Initiation for Children";
-  const chaplain = "Fr. Mimo - Spiritual Director";
+  const chaplain = "Fr. Mimmo - Spiritual Director";
   const chapTel = "0759441744";
-  const moderator = "PMC Coordinator - Moderator";
-  const modTel = "0723721678";
+  const moderator = "PMC Moderator - Lorna Karumba";
+  const modTel = "+254 724 052152";
   return (
     <Layout>
+      <Head>
+        <title>
+          St.Joseph Kahawa Sukari | Rite for Christian Initiation for Children
+          (RCIC)
+        </title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Right for christian Initiation for Children - Catechism"
+          key="title"
+        />
+      </Head>
       <Hero text={text} title={title} imageUrl={imageurl} />
       <div className="flex flex-col md:flex-row justify-center  md:max-w-screen-lg mx-auto p-4">
         <div className="sticky top-4">
@@ -31,6 +43,14 @@ function ChildrenBecomingCatholic() {
             <li className="passage">Complete 2 years of Faith Formation.</li>
           </ul>
           <div></div>
+          <h3>STAGES OF CATECHISM</h3>
+          <ul className="passage">
+            <li>Pre Catechism - Grades 1, 2, 3</li>
+            <li>1st Year Holy Communion - Grade 4</li>
+            <li>2nd Year Holy Communion</li>
+            <li>Confirmation</li>
+            <li>Mantle of St. Joseph</li>
+          </ul>
           <h3>WHAT TO EXPECT?</h3>
           <div className=" flex flex-col md:flex-row md:space-x-5">
             <div>
@@ -46,7 +66,7 @@ function ChildrenBecomingCatholic() {
               </p>
               <h4 className=" font-semibold">PARENT INVOLVEMENT</h4>
               <p className="passage">
-                Parents are to be actively involved in their children’s
+                Parents are to be actively involved in their children's
                 sacrament process. This means they are expected to attend rites,
                 assist with homework, and accompany their children through the
                 many aspects involved in preparing for the sacraments.{" "}
@@ -65,7 +85,7 @@ function ChildrenBecomingCatholic() {
               <h4 className=" font-semibold">GODPARENT</h4>
               <p className="passage">
                 Children choose a Godparent to accompany them during preparation
-                and beyond. <b>The Godparent cannot be the seeker’s parent.</b>{" "}
+                and beyond. <b>The Godparent cannot be the seeker's parent.</b>{" "}
                 A Godparent must be a practicing Catholic, be 18 yrs of age or
                 older, if married, be married in the Catholic Church, and fully
                 initiated by having received the sacraments of Baptism,

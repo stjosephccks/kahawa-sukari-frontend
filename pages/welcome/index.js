@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 
 function welcome() {
   const title = "Welcome to St. Joseph Catholic Church";
@@ -12,6 +13,14 @@ function welcome() {
 
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | Welcome to our community</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Welcome to our community"
+          key="title"
+        />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
@@ -427,7 +436,7 @@ function welcome() {
           </section>
 
           {/* Outstations Section */}
-          <section className="mb-16" id="outstaion">
+          <section className="mb-16" id="outstation">
             <h2 className="text-3xl font-bold mb-8 text-center">
               Our Outstations
             </h2>
@@ -442,7 +451,7 @@ function welcome() {
                     with regular Mass services and religious education programs.
                   </p>
                   <ul className="mb-4 space-y-2 text-gray-600">
-                    <li>• Sunday Mass at 10:00 AM</li>
+                    <li>• Sunday Mass at 9:30 AM</li>
                     <li>• Catechism classes</li>
                     <li>• Youth programs</li>
                     <li>• Community outreach</li>

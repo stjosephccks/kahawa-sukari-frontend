@@ -10,18 +10,18 @@ function Pmc() {
   const text =
     "Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these. —Matthew 19:14";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/pmc_1.jpeg";
-  const chaplain = "Fr. Mimo - Spiritual Director";
+  const chaplain = "Fr. Mimmo - Spiritual Director";
   const chapTel = "0759441744";
-  const moderator = "PMC Coordinator - Moderator";
-  const modTel = "0723721678";
+  const moderator = "PMC Moderator - Lorna Karumba";
+  const modTel = "0724 052152";
 
   return (
     <Layout>
       <Head>
-        <title>St.Joseph Kahawa Sukari | Pontifical Missionary Children</title>
+        <title>St.Joseph Kahawa Sukari | Pontifical Missionary Childhood</title>
         <meta
           property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Parish Missionary Childhood"
+          content="St Joseph Catholic Church Kahwa sukari - Pontifical Missionary Childhood"
           key="title"
         />
       </Head>
@@ -45,7 +45,7 @@ function Pmc() {
                       About PMC
                     </h2>
                     <p className="text-lg text-gray-600 mb-6">
-                      The Pontifical Missionary Children (PMC) was founded in
+                      The Pontifical Missionary Childhood (PMC) was founded in
                       1843 by Bishop Charles de Forbin Hanson in France. Our
                       motto is "Children Helping Children" - we are little
                       flowers of Jesus, helping other children, especially the

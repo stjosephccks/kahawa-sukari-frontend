@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import axios from "axios";
+import Head from "next/head";
 import React, { useEffect, useState } from "react";
 
 function Bulletin() {
@@ -30,6 +31,14 @@ function Bulletin() {
 
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | News Bulletins</title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Knowledge Base"
+          key="title"
+        />
+      </Head>
       <Hero imageUrl={imageurl} title={title} text={text} />
       <div>
         <h1 className="text-primary mt-24 ml-3 md:text-center">Bulletins</h1>

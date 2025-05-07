@@ -3,6 +3,7 @@
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export default function EucharisticAdoration() {
   const title = "Eucharistic Adoration";
@@ -12,6 +13,14 @@ export default function EucharisticAdoration() {
 
   return (
     <Layout>
+      <Head>
+        <title>St.Joseph Kahawa Sukari | Eucharistic Adoration </title>
+        <meta
+          property="og:title"
+          content="St Joseph Catholic Church Kahwa sukari - Eucharistic Adoration"
+          key="title"
+        />
+      </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
