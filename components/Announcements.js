@@ -114,9 +114,9 @@ export default function Announcements() {
                     {announcement.massScheduleAssignments &&
                       announcement.massScheduleAssignments.length > 0 && (
                         <div className="bg-gray-50 p-3 sm:p-4 rounded-lg">
-                          <h4 className="font-medium text-primary mb-2 sm:mb-3 text-base sm:text-lg">
+                          {/* <h4 className="font-medium text-primary mb-2 sm:mb-3 text-base sm:text-lg">
                             Mass Schedule Assignments
-                          </h4>
+                          </h4> */}
                           <ul className="space-y-2">
                             {announcement.massScheduleAssignments.map(
                               (assignment, index) => (
