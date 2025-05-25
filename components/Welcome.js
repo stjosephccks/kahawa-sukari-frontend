@@ -28,21 +28,28 @@ function Welcome() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="md:w-1/2"
+            className="w-full md:w-1/2"
           >
-            <div className="relative rounded-xl overflow-hidden shadow-lg h-[400px]">
+            <div className="relative rounded-xl overflow-hidden shadow-lg w-full h-[300px] sm:h-[350px] md:h-[400px]">
               <Image
-                src={"https://kahawa-sukari.s3.amazonaws.com/st.Joseph.jpg"}
+                src="https://kahawa-sukari.s3.amazonaws.com/st.Joseph.jpg"
                 alt="St. Joseph Catholic Church"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover"
+                priority
+                quality={85}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 sm:p-6">
                 <div className="text-white">
-                  <h4 className="text-xl font-semibold">
+                  <h4 className="text-lg sm:text-xl font-semibold">
                     St. Joseph Catholic Church
                   </h4>
-                  <p className="text-sm opacity-90">Kahawa Sukari, Nairobi</p>
+                  <p className="text-xs sm:text-sm opacity-90">
+                    Kahawa Sukari, Nairobi
+                  </p>
                 </div>
               </div>
             </div>
@@ -53,15 +60,16 @@ function Welcome() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="md:w-1/2 space-y-6"
+            className="w-full md:w-1/2 space-y-6"
           >
             <div className="prose prose-lg max-w-none">
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                 St. Joseph Catholic Church is located along Baringo Road, Kahawa
                 Sukari. The parish is under the pastoral care of the{" "}
                 <Link
-                  href={"https://sancarlo.org/en/who-we-are/"}
+                  href="https://sancarlo.org/en/who-we-are/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-primary hover:text-primary/80 transition-colors duration-200"
                 >
                   Priestly fraternity of St. Charles Borromeo
@@ -69,7 +77,7 @@ function Welcome() {
                 . Since 1998, St. Joseph Catholic Church has been a living
                 testimony of faith.
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                 We invite you to learn more about our parish resources and to
                 become actively involved in the life of our community. It is our
                 sincere hope that we, as a united body of believers in the Risen
@@ -79,16 +87,16 @@ function Welcome() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/welcome"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors duration-200"
               >
                 Learn More
               </Link>
               <Link
                 href="/welcome/bulletin"
-                className="inline-flex items-center px-6 py-3 border border-primary text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
+                className="inline-flex items-center justify-center px-6 py-3 border border-primary text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
               >
                 View Bulletin
               </Link>
