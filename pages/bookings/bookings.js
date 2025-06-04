@@ -5,11 +5,7 @@ import { format } from 'date-fns';
 import { createClient } from '@supabase/supabase-js'
 import { useEffect, useState } from 'react'
 
-// Create a single supabase client for interacting with your database
 const supabase = createClient('https://ptwgptbybxpmguedsibn.supabase.co/', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB0d2dwdGJ5YnhwbWd1ZWRzaWJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA2NjI3ODYsImV4cCI6MjA1NjIzODc4Nn0.HjAT_HQuiEX3sYK2P5jPy9x4f-L1f0wwo3Gmagg6-Ho')
-//const venues = supabase.from('venues').select('*').where('id', 'eq', 'Bookings.venue_id')
-
-
 
 function Bookings() {
     const [selectedBooking, setSelectedBooking] = useState(null);
@@ -36,13 +32,9 @@ function Bookings() {
         };
         fetchBookings();
     }, []);
-
-    // Get unique venue IDs from bookings
     const bookedVenueIds = Array.from(new Set(bookings.map(b => b.venue_id)));
-    // Filter venues to those that have been booked
     const bookedVenues = venues.filter(v => bookedVenueIds.includes(v.id));
 
-    // Map tailwind-like color to hex
     const colorMap = {
         'bg-green-500': 'bg-green-500',
         'bg-blue-500': 'bg-blue-500',
@@ -53,7 +45,6 @@ function Bookings() {
         'bg-gray-500': 'bg-gray-500',
     };
 
-    // Calendar grid helpers
     const today = new Date();
     const year = today.getFullYear();
     const month = today.getMonth(); // 0-indexed
@@ -62,14 +53,10 @@ function Bookings() {
     const daysInMonth = lastDayOfMonth.getDate();
     const startDayOfWeek = firstDayOfMonth.getDay(); // 0 (Sun) - 6 (Sat)
     const calendarDays = [];
-    // Fill blanks for days before the 1st
     for (let i = 0; i < startDayOfWeek; i++) calendarDays.push(null);
-    // Fill actual days
     for (let d = 1; d <= daysInMonth; d++) calendarDays.push(new Date(year, month, d));
-    // Fill blanks after last day
     while (calendarDays.length % 7 !== 0) calendarDays.push(null);
 
-    // Group bookings by date
     function getBookingsForDay(date) {
         if (!date) return [];
         return bookings.filter(b => {
@@ -80,7 +67,6 @@ function Bookings() {
         });
     }
 
-    // Modal logic
     const venueForSelected = selectedBooking ? venues.find(v => v.id === selectedBooking.venue_id) : null;
 
     return (
@@ -88,7 +74,6 @@ function Bookings() {
             <h1 className="mb-2 text-3xl font-extrabold tracking-tight text-blue-700 flex items-center gap-2 sm:pt-12 lg:pt-6">
                 <span role="img" aria-label="calendar">📅</span> Bookings
             </h1>
-            {/* Modal for booking details */}
             {showModal && selectedBooking && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-all duration-300" onClick={() => setShowModal(false)}>
                     <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 max-w-full w-[95vw] sm:max-w-md relative animate-fadeIn" onClick={e => e.stopPropagation()}>
