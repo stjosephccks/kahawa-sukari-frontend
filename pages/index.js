@@ -8,6 +8,7 @@ import Welcome from "@/components/Welcome";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import AnnouncementDoc from "@/components/AnnouncementDocs";
 
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -89,8 +90,11 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-sm" id="liturgy">
           <div className="py-6 px-2 space-y-8">
             <MassSchedule />
-            <div className="border-t border-gray-200 pt-8" id="announcements">
+            {/* <div className="border-t border-gray-200 pt-8" id="announcements">
               <Announcements />
+            </div> */}
+            <div className="border-t border-gray-200 pt-8" id="announcements">
+              <AnnouncementDoc />
             </div>
           </div>
         </div>
