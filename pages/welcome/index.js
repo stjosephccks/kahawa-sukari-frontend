@@ -338,7 +338,7 @@ function welcome() {
                   <br />
                   <a href="mailto:info@stkizito.ke" className="text-gray-600">
                     <span className="mr-2">📧</span>
-                    Email: info@stkizito.co.ke
+                    Email: info@stkizito.ke
                   </a>
                   <p className="text-gray-600">
                     <span className="mr-2">📍</span>
@@ -347,7 +347,7 @@ function welcome() {
                   </p>
                 </div>
                 <Link
-                  href="https://stkizito.ac.ke/"
+                  href="https://stkizito.ke/"
                   target="_blank"
                   className="text-blue-600 hover:underline font-semibold"
                 >

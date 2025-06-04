@@ -50,6 +50,61 @@ export default function AnnouncementDoc() {
                 <div className="text-gray-500 text-base md:text-lg mb-1"> Updated:{formatDate(doc.documentDate)}</div>
             </header>
 
+            {/* Mass Schedule Section (Dynamic from API) */}
+            <section className="mb-8">
+                <AnimatedFadeIn delay={0.05}>
+                    <div className="bg-gray-50 rounded-xl p-4 sm:p-6 shadow-sm">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 text-center">This Week's Mass Animation</h2>
+                        {doc.massAnimation && (
+                            <div className="mb-4 text-pink-700 font-semibold italic text-center">{doc.massAnimation}</div>
+                        )}
+                        {doc.currentWeekMass && doc.currentWeekMass.length > 0 && (
+                            <div className="overflow-x-auto mb-6">
+                                <table className="min-w-full text-sm text-left">
+                                    <thead>
+                                        <tr className="text-gray-600 border-b">
+                                            <th className="py-2 px-2 font-semibold">Time</th>
+                                            <th className="py-2 px-2 font-semibold">Group</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {doc.currentWeekMass.map(mass => (
+                                            <tr key={mass._id} className="border-b last:border-b-0">
+                                                <td className="py-2 px-2 whitespace-nowrap">{mass.time}</td>
+                                                <td className="py-2 px-2 font-medium text-blue-700">{mass.group}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        )}
+                        {doc.nextWeekMasses && doc.nextWeekMasses.length > 0 && (
+                            <div>
+                                <h3 className="text-xl font-semibold text-primary mt-6 mb-2 text-center">Next Week's Mass Animation</h3>
+                                <div className="overflow-x-auto">
+                                    <table className="min-w-full text-sm text-left">
+                                        <thead>
+                                            <tr className="text-gray-600 border-b">
+                                                <th className="py-2 px-2 font-semibold">Time</th>
+                                                <th className="py-2 px-2 font-semibold">Group</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {doc.nextWeekMasses.map(mass => (
+                                                <tr key={mass._id} className="border-b last:border-b-0">
+                                                    <td className="py-2 px-2 whitespace-nowrap">{mass.time}</td>
+                                                    <td className="py-2 px-2 font-medium text-blue-700">{mass.group}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </AnimatedFadeIn>
+            </section>
+
             {/* Announcements Section */}
             <section className="mb-8">
                 <h3 className="text-blue-700 mb-6 text-2xl font-bold flex items-center gap-2 tracking-tight justify-center">📢 <span>Announcements</span></h3>
@@ -71,11 +126,11 @@ export default function AnnouncementDoc() {
                                     aria-label={`Announcement: ${ann.title}`}
                                 >
                                     <div className="flex items-center gap-3 mb-1">
-                                        <span className="text-lg sm:text-xl">📝</span>
+                                        <span className="text-lg sm:text-xl"></span>
                                         <span className="font-bold text-base sm:text-lg md:text-xl leading-tight">{ann.title}</span>
                                     </div>
                                     <div className="text-gray-800 text-base sm:text-base md:text-lg leading-relaxed whitespace-pre-line">{ann.content}</div>
-                                    <div className="text-gray-400 text-xs mt-1">Posted: {formatDate(ann.createdAt)}</div>
+
                                 </article>
                             </AnimatedFadeIn>
                         );
