@@ -12,8 +12,8 @@ const choirs = [
     name: "PMC Choir",
     practiceDays: ["Sunday at 9:00 AM"],
     massSchedule: "10:30 AM Mass (Swahili)",
-    contactTel: "0755428887",
-    moderator: "Moderator: John Doe (0712 345 678)",
+    // contactTel: "0755428887",
+    moderator: "Moderator: John Doe",
     description:
       "The PMC Choir leads the congregation in worship with their harmonious voices at the 10:30 AM Swahili Mass.",
   },
@@ -25,7 +25,7 @@ const choirs = [
       "Sunday at 10:45 AM",
     ],
     massSchedule: "12:00 PM Mass (English)",
-    contactTel: "0708 576056",
+    // contactTel: "0708 576056",
     moderator: "Moderator: Eveline Ochieng ",
     description:
       "St. Romanos Choir brings traditional hymns to life with their beautiful renditions at the 12:00 PM English Mass.",
@@ -39,8 +39,8 @@ const choirs = [
       "Friday at 7:00 PM",
     ],
     massSchedule: "9:00 AM Mass (Swahili)",
-    contactTel: "0755428887",
-    moderator: "Chairperson: Michael Brown (0734 567 890)",
+    // contactTel: "0755428887",
+    moderator: "Chairperson: Michael Brown",
     description:
       "St. Andrew Choir is known for their contemporary worship music and vibrant performances at the 9:00 AM Swahili Mass.",
   },
@@ -52,8 +52,8 @@ const choirs = [
       "Saturday at 4:00 PM",
     ],
     massSchedule: "7:30 AM Mass (English)",
-    contactTel: "0755428887",
-    moderator: "Chairperson: Sarah Johnson (0745 678 901)",
+    // contactTel: "0755428887",
+    moderator: "Chairperson: Sarah Johnson ",
     description:
       "Magnificat Choir specializes in classical and traditional church music at the 7:30 AM English Mass.",
   },
@@ -65,8 +65,8 @@ const choirs = [
       "Sunday at 2:00 PM",
     ],
     massSchedule: "9:30 AM Wendani Mass (Swahili)",
-    contactTel: "0755428887",
-    moderator: "Chairperson: David Wilson (0756 789 012)",
+    // contactTel: "0755428887",
+    moderator: "Chairperson: David Wilson",
     description:
       "St. Gregory Choir brings a unique blend of traditional and contemporary music to our services at the 9:30 AM Wendani Swahili Mass.",
   },
@@ -155,12 +155,12 @@ export default function Choir() {
                       <p className="text-gray-600">
                         {choir.moderator}
                         <br />
-                        <Link
+                        {/* <Link
                           href={`tel:${choir.contactTel}`}
                           className="font-medium hover:text-blue-600 text-blue-900"
                         >
                           {choir.contactTel}
-                        </Link>{" "}
+                        </Link>{" "} */}
                       </p>
                     </div>
                   </div>

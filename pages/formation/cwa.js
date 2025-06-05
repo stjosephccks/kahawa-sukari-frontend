@@ -12,9 +12,9 @@ function CatholicWomenAssociation() {
     "The CWA is a vibrant group of Catholic women dedicated to growing in faith, serving the Church, and supporting each other in their spiritual journey.";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/cwa2.jpeg";
   const chaplain = "Fr. Matia - Spiritual Director";
-  const chapTel = "0737032180";
+  // const chapTel = "0737032180";
   const moderator = "CWA  - Moderator";
-  const modTel = "0723721678";
+  // const modTel = "0723721678";
 
   return (
     <Layout>
@@ -209,9 +209,9 @@ function CatholicWomenAssociation() {
                 </div>
                 <ContactCard
                   chaplain={chaplain}
-                  chapTel={chapTel}
+                  // chapTel={chapTel}
                   moderator={moderator}
-                  modTel={modTel}
+                // modTel={modTel}
                 />
               </div>
             </div>

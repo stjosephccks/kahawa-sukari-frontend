@@ -54,11 +54,10 @@ export default function AlterServers() {
                     Requirements
                   </h3>
                   <ul className="list-disc list-inside space-y-2 text-gray-600">
-                    <li>Must be at least 10 years old</li>
                     <li>Must have received First Holy Communion</li>
-                    <li>Must be willing to commit to regular service</li>
+                    {/* <li>Must be willing to commit to regular service</li>
                     <li>Must attend training sessions</li>
-                    <li>Must maintain good academic standing</li>
+                    <li>Must maintain good academic standing</li> */}
                   </ul>
                 </div>
               </div>
@@ -66,26 +65,21 @@ export default function AlterServers() {
 
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                Schedule & Training
+                Schedule & Classes
               </h2>
               <div className="space-y-6">
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    Training Schedule
+                    Class Schedule
                   </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex justify-between">
-                      <span>New Servers Training</span>
+                      <span>Alter  Servers CLass</span>
                       <span className="font-medium">
-                        Every Saturday 10:00 AM
+                        Every Saturday 3:00 PM
                       </span>
                     </li>
-                    <li className="flex justify-between">
-                      <span>Refresher Course</span>
-                      <span className="font-medium">
-                        First Saturday of Month
-                      </span>
-                    </li>
+
                   </ul>
                 </div>
 
@@ -123,7 +117,7 @@ export default function AlterServers() {
                         Altar Servers Coordinator: Catechist John
                       </strong>
                       <br />
-                      <Link href="tel:0759307297">0759307297</Link>
+                      {/* <Link href="tel:0759307297">0759307297</Link> */}
                     </span>
                     <br />
                   </p>

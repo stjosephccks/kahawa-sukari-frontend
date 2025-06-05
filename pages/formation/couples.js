@@ -10,9 +10,9 @@ function couples() {
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/cgtc.jpeg";
   const text = "Building strong Catholic marriages and families";
   const chaplain = "Fr. Guliano - Spiritual Director";
-  const chapTel = "0737032180";
+  // const chapTel = "0737032180";
   const moderator = "CGTC Moderator  - Erastus Karani";
-  const modTel = "+254 713 173886";
+  // const modTel = "+254 713 173886";
 
   return (
     <Layout>

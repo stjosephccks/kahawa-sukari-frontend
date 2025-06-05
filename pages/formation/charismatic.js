@@ -168,12 +168,12 @@ function Charismatic() {
                     <p>
                       <strong>Charismatic Moderator</strong>
                       <br />
-                      <Link
+                      {/* <Link
                         href="tel:0717306070"
                         className="hover:text-blue-600"
                       >
                         0717306070
-                      </Link>
+                      </Link> */}
                     </p>
                   </div>
                 </div>

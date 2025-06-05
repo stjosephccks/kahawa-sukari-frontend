@@ -12,9 +12,9 @@ function CommunionAndLiberation() {
     "The Christian event, as it comes to us through the Church's proclamation, responds to the deepest needs of the human heart, announced and anticipated in every religion. —Luigi Giussani";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
   const chaplain = "Chaplain";
-  const chapTel = "0737032180";
+  // const chapTel = "0737032180";
   const moderator = "CL Coordinator - Moderator";
-  const modTel = "0723721678";
+  // const modTel = "0723721678";
 
   return (
     <Layout>

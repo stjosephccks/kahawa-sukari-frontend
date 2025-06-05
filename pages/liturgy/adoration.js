@@ -54,8 +54,8 @@ export default function EucharisticAdoration() {
                   </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex justify-between">
-                      <span>First Friday</span>
-                      <span className="font-medium">24-Hour Adoration</span>
+                      <span>Second Wesnesday of the Month</span>
+                      <span className="font-medium">6:30 pm</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Lent and Advent</span>
