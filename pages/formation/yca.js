@@ -149,9 +149,9 @@ function YoungCatholicAdults() {
 
                 <ContactCard
                   chaplain={chaplain}
-                  chapTel={chapTel}
+                  // chapTel={chapTel}
                   moderator={moderator}
-                  modTel={modTel}
+                // modTel={modTel}
                 />
 
                 <div className="mt-12">
