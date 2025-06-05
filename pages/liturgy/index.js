@@ -105,7 +105,7 @@ export default function MassSchedule() {
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    Eucharistic Adoration
+                    Eucharistic Adoration & Morning Prayer
                   </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex justify-between">
