@@ -192,9 +192,9 @@ function CatholicMenAssociation() {
 
                 <ContactCard
                   chaplain={chaplain}
-                  chapTel={chapTel}
+                  // chapTel={chapTel}
                   moderator={moderator}
-                  modTel={modTel}
+                // modTel={modTel}
                 />
               </div>
             </div>
