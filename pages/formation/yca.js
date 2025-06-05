@@ -30,9 +30,9 @@ function YoungCatholicAdults() {
     "Dear young people, do not be satisfied with anything less than Truth and Love; do not be content with anything less than Christ. —Pope Benedict XVI";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
   const chaplain = "Fr. Guliano - Youth Chaplain";
-  const chapTel = "0737032180";
+  // const chapTel = "0737032180";
   const moderator = "YCA Coordinator - Moderator";
-  const modTel = "0723721678";
+  // const modTel = "0723721678";
 
   return (
     <Layout>

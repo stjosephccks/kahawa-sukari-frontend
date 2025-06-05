@@ -26,8 +26,8 @@ function Charity() {
       description:
         "Ujiachilie supports people with disabilities in different ways and other aspects of their lives. Its activity begins with screening, making a diagnosis, offering a clear management plan for each person, and then enrolling them for each care category they need. All persons enrolled come from disadvantaged families and don’t have access to therapy clinics and medical care. If disabled people get proper comprehensive therapy, it reduces the burden of disability to a great extent. To ensure better outcomes of our efforts, we run a comprehensive therapy unit at St Joseph Health Centre, catering to the multiple therapy needs of people with disabilities. So far, the population of the project is 50 children with physical and mental disabilities from economically disadvantaged families. We hope to extend it in the next months, with the support of our donors.",
       meetingDay: "Tuesdays",
-      meetingTime: "10:00 AM - 12:00 PM",
-      location: "Parish Hall",
+      meetingTime: "10:00 AM - 1:00 PM",
+      location: "Mabati Church Extention",
       image: "https://kahawa-sukari.s3.amazonaws.com/ujiachilie.webp",
       icon: <FaUsers className="text-4xl text-primary" />,
     },
@@ -37,7 +37,7 @@ function Charity() {
         "A support group dedicated to providing care and assistance to persons living with HIV. The group offers counseling, medical support, and community integration programs.",
       meetingDay: "Thursdays",
       meetingTime: "2:00 PM - 4:00 PM",
-      location: "Parish Conference Room",
+      location: "Mabati Church Extention",
       image: "/images/meeting-point.jpg",
       icon: <FaHospitalUser className="text-4xl text-primary" />,
     },
@@ -53,6 +53,8 @@ function Charity() {
         "Parish Email: stjosephccks@gmail.com",
         "Contact: +254726 145609",
       ],
+      meetingDay: "Second Wednesday of the Month",
+      meetingTime: "6:30 pm",
       image: "/images/visiting-sick.jpg",
       icon: <FaHandHoldingHeart className="text-4xl text-primary" />,
     },
@@ -182,8 +184,13 @@ function Charity() {
                     <div className="space-y-2">
                       <p className="text-gray-700 flex items-center">
                         <FaClock className="mr-2 text-primary" />
+                        <span className="font-medium">Meeting Day:</span>{" "}
+                        {group.meetingDay}
+                      </p>
+                      <p className="text-gray-700 flex items-center">
+                        <FaClock className="mr-2 text-primary" />
                         <span className="font-medium">Meeting Time:</span>{" "}
-                        {group.meetingDay}, {group.meetingTime}
+                        {group.meetingTime}
                       </p>
                       <p className="text-gray-700 flex items-center">
                         <FaMapMarkerAlt className="mr-2 text-primary" />
@@ -226,6 +233,16 @@ function Charity() {
                     <p className="text-gray-600 mb-4">{service.description}</p>
                     <p className="text-gray-700 mb-2">{service.bookingInfo}</p>
                     <div className="space-y-2">
+                      <p className="text-gray-700 flex items-center">
+                        <FaClock className="mr-2 text-primary" />
+                        <span className="font-medium">Meeting Day:</span>{" "}
+                        {service.meetingDay}
+                      </p>
+                      <p className="text-gray-700 flex items-center">
+                        <FaClock className="mr-2 text-primary" />
+                        <span className="font-medium">Meeting Time:</span>{" "}
+                        {service.meetingTime}
+                      </p>
                       {service.contact.map((contact, i) => (
                         <p key={i} className="text-gray-700 flex items-center">
                           {contact.includes("Email") ? (

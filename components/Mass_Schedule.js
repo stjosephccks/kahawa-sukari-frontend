@@ -52,12 +52,12 @@ function MassSchedule() {
         {/* Eucharistic Adoration */}
         <div className="bg-gray-50 rounded-lg p-6 shadow-sm">
           <h2 className="text-2xl font-semibold text-primary mb-6">
-            Eucharistic Adoration
+            Eucharistic Adoration & Morning Prayer
           </h2>
           <div className="space-y-4">
             <div className="bg-white p-4 rounded-md shadow-sm">
               <h3 className="font-medium text-lg">In the Church</h3>
-              <p className="text-gray-600">Monday - Saturday: 7:00 am</p>
+              <p className="text-gray-600">Monday - Saturday: 6:45 am</p>
             </div>
           </div>
         </div>

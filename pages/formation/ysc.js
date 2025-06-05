@@ -12,9 +12,9 @@ function YouthServiceCommittee() {
     "The Youth Service Committee (YSC) is a vibrant group of young Catholics aged 18-26 years dedicated to serving our parish community.";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
   const chaplain = "Fr. Guliano - Youth Chaplain";
-  const chapTel = "0737032180";
+  // const chapTel = "0737032180";
   const moderator = "YSC Coordinator - Moderator";
-  const modTel = "0703689886";
+  // const modTel = "0703689886";
 
   return (
     <Layout>

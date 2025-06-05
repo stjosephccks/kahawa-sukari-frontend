@@ -12,9 +12,9 @@ function MissionaryYouthMovement() {
     "The Missionary Youth Movement (MYM) is a vibrant group of high school students who are passionate about their faith and service to the Church.";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
   const chaplain = "Fr. Matia - Youth Chaplain";
-  const chapTel = "0798 169977";
+  // const chapTel = "0798 169977";
   const moderator = "MYM Coordinator - Moderator";
-  const modTel = "0723721678";
+  // const modTel = "0723721678";
 
   return (
     <Layout>
@@ -171,9 +171,9 @@ function MissionaryYouthMovement() {
 
                 <ContactCard
                   chaplain={chaplain}
-                  chapTel={chapTel}
+                  // chapTel={chapTel}
                   moderator={moderator}
-                  modTel={modTel}
+                // modTel={modTel}
                 />
               </div>
             </div>

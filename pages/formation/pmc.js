@@ -11,9 +11,9 @@ function Pmc() {
     "Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these. —Matthew 19:14";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/pmc_1.jpeg";
   const chaplain = "Fr. Mimmo - Spiritual Director";
-  const chapTel = "0759441744";
+  // const chapTel = "0759441744";
   const moderator = "PMC Moderator - Lorna Karumba";
-  const modTel = "0724 052152";
+  // const modTel = "0724 052152";
 
   return (
     <Layout>
@@ -218,9 +218,9 @@ function Pmc() {
 
                 <ContactCard
                   chaplain={chaplain}
-                  chapTel={chapTel}
+                  // chapTel={chapTel}
                   moderator={moderator}
-                  modTel={modTel}
+                // modTel={modTel}
                 />
               </div>
             </div>
