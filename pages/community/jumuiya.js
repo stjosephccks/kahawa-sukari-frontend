@@ -6,64 +6,125 @@ import Head from "next/head";
 function Jumuiya() {
   const jumuiyas = [
     {
-      name: "Mt. Ann Jumuiya",
-      location: "Murang'a Road",
-      moderator: "John Mwangi",
-      contact: "+254 712 345 678",
-      meetingDays: "Monday and Saturday, 4:00 PM",
-      description:
-        "A vibrant community focused on youth engagement and spiritual growth through prayer and service.",
-      activities: [
-        "Weekly Bible Study",
-        "Community Service",
-        "Youth Programs",
-        "Prayer Meetings",
-      ],
+      name: "St. Ann Jumuiya",
+      location: "Kiu River Road",
+      moderator: "",
+      description: "With St. Ann, the mother of Mary, as their patron, the Jumuiya is devoted to cherishing family values, prayer, and to nurture faith across generations."
     },
     {
-      name: "Mt. Bakhita Jumuiya",
+      name: "St. Bakhita Jumuiya",
+      location: "Kwale Road",
+      moderator: "",
+      description: " A Jumuiya of hope and forgiveness, following the example of the Sudanese saint who rose from slavery to sainthood through mercy and love."
+    },
+    {
+      name: "St. Benedict Jumuiya",
+      location: "",
+      moderator: "",
+      description: "A community modeled on the principles of St.Benedict of 'pray and work', building a disciplined and spiritually grounded community."
+    },
+    {
+      name: "St. Catherine Jumuiya",
+      location: "Wundanyi Road",
+      moderator: "",
+      description: "Rooted in prayer and action, the Jumuiya follows St. Catherine of Siena's call to serve the Church with courage, wisdom, and love."
+    },
+    {
+      name: "St. Charles Lwanga Jumuiya",
       location: "Isiolo Road",
-      moderator: "Sarah Wanjiku",
-      contact: "+254 723 456 789",
-      meetingDays: "Wednesday and Sunday, 3:00 PM",
-      description:
-        "Dedicated to family values and community support, fostering strong Catholic family traditions.",
-      activities: [
-        "Family Rosary",
-        "Marriage Enrichment",
-        "Children's Catechism",
-        "Charity Work",
-      ],
+      moderator: "",
+      description: "As St. Charles Lwanga stood firm in faith amidst persecution, the Jumuiya is committed to living courageously as witnesses of Christ, especially among the youth."
     },
     {
-      name: "Mt. Mary Jumuiya",
+      name: "St. John Jumuiya",
+      location: "Nyahururu Road",
+      moderator: "",
+      description: "A loving and faithful community, walking with the beloved disciple of Jesus, seeking to grow deeper in their relationship with Christ and one another."
+    },
+    {
+      name: "St. Peter Jumuiya",
+      location: "Marsabit Road",
+      moderator: "",
+      description: "A community of leadership and forgiveness, following the first Pope who overcame weakness to lead with faith."
+    },
+    {
+      name: "St. Theresa Jumuiya",
+      location: "Geoffrey Luruti Road",
+      moderator: "Mr. Paul Ndegwa",
+      description: "Embracing St. Theresa's 'Little Way', the community seeks to grow in humility, trust, and joy as they serve God and one another with childlike faith and great love"
+    },
+    {
+      name: "St. Mary Jumuiya",
       location: "Baringo Road",
-      moderator: "Peter Kamau",
-      contact: "+254 734 567 890",
-      meetingDays: "Thursday and Sunday, 5:00 PM",
-      description:
-        "A prayerful community emphasizing Marian devotion and Eucharistic adoration.",
-      activities: [
-        "Marian Devotions",
-        "Eucharistic Adoration",
-        "Charismatic Prayer",
-        "Bible Sharing",
-      ],
+      moderator: "Mr. Francis Njoroge",
+      description: "Jumuiya walking in the footsteps of the Blessed Virgin Mary. Inspired by her faith, humility, and obedience, they strive to say 'yes' to God's will in their lives "
     },
     {
-      name: "Mt. Charles Lwanga Jumuiya",
-      location: "Garisa Road",
-      moderator: "Grace Njeri",
-      contact: "+254 745 678 901",
-      meetingDays: "Tuesday and Saturday, 6:00 PM",
-      description:
-        "Inspired by the Ugandan martyrs, this community focuses on faith formation and evangelization.",
-      activities: [
-        "Faith Formation",
-        "Evangelization",
-        "Social Justice",
-        "Youth Leadership",
-      ],
+      name: "St. Martin Jumuiya",
+      location: "",
+      moderator: "",
+      description: "A humble and compassionate community,inspired by the saint's dedication to service of the poor and sick."
+    },
+    {
+      name: "St. Dominic Jumuiya",
+      location: "",
+      moderator: "",
+      description: " A community that seeks to proclaim the Word of God boldly, inspired by St. Dominic's zeal for truth and his mission to spread the Gospel"
+    },
+    {
+      name: "St. Francis Jumuiya",
+      location: "",
+      moderator: "",
+      description: " A community that follows the joyful path of St.Francis of Assisi, embracing peace, simplicity and love for all creation and the poor."
+    },
+    {
+      name: "St. Claire Jumuiya",
+      location: "Kwa Mungara-Muchina Road",
+      moderator: "",
+      description: "Inspired by St. Claire's simplicity and deep devotion, the community strives to live lives of humility, prayer, and peaceful service to one another."
+    },
+    {
+      name: "St. Ambrose Jumuiya",
+      location: "Melrose-Wendani Junior Road",
+      moderator: "",
+      description: "Following St. Ambrose's example of leadership and truth, they are a community devoted to building strong foundations of faith and courage."
+    },
+    {
+      name: "St. Jude Jumuiya",
+      location: "",
+      moderator: "",
+      description: "A hopeful and prayerful community, drawing strength from the patron of desperate causes and forgotten souls."
+    },
+    {
+      
+      name: "St. Antony Jumuiya",
+      location: "",
+      moderator: "",
+      description: "Guided by St. Antony, known for his wisdom and compassion, they seek to be a community that helps others rediscover their faith and God's presence in daily life."
+    },
+    {
+      name: "St. Monica Jumuiya",
+      location: "",
+      moderator: "",
+      description: "A community of persistence and prayer, inspired by the mother who never gave up on her son's conversion through faith and tears."
+    },
+    {
+      name: "St.Augustine Jumuiya",
+      location: "",
+      moderator: "",
+      description: "A community seeking truth and renewal, echoing the journey of the restless heart that found peace in God"
+    },
+    {
+      name: "St. Paul Jumuiya",
+      location: "parish",
+      moderator: "",
+      description: "A community seeking to spread the Gospel with passion and perseverance wherever they go, following the Apostle of the Gentiles who turned from persecutor to tireless missionary."
+    },
+    {
+      name: "St.Michael the Archangel Jumuiya",
+      location: "parish",
+      moderator: "",
+      description: " A vigilant and courageous community under the protection of the warrior angel who defends the Church against evil."
     },
   ];
 
@@ -113,21 +174,6 @@ function Jumuiya() {
                   <span className="font-medium">Moderator:</span>{" "}
                   {jumuiya.moderator}
                 </p>
-                <p className="text-gray-600">
-                  <span className="font-medium">Phone:</span> {jumuiya.contact}
-                </p>
-                <p className="text-gray-600">
-                  <span className="font-medium">Meeting Days:</span>{" "}
-                  {jumuiya.meetingDays}
-                </p>
-              </div>
-              <div className="mt-4">
-                <h3 className="font-medium text-gray-800 mb-2">Activities:</h3>
-                <ul className="list-disc list-inside text-gray-600 space-y-1">
-                  {jumuiya.activities.map((activity, idx) => (
-                    <li key={idx}>{activity}</li>
-                  ))}
-                </ul>
               </div>
             </div>
           ))}
