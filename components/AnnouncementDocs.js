@@ -4,14 +4,17 @@ import AnimatedFadeIn from "./AnimatedFadeIn";
 
 export default function AnnouncementDoc() {
     const [isLoading, setIsLoading] = useState(true);
-    const [doc, setDoc] = useState(null);
+    const [docs, setDocs] = useState([]);
+    const [selectedDocIndex, setSelectedDocIndex] = useState(0); // 0 = most recent
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchAnnouncements = async () => {
             try {
                 const response = await axios.get("/api/announcement-docs");
-                setDoc(response.data[0]);
+                // Sort by createdAt descending (most recent first)
+                const sortedDocs = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+                setDocs(sortedDocs);
                 setIsLoading(false);
             } catch (err) {
                 setError("Failed to load announcements");
@@ -20,6 +23,40 @@ export default function AnnouncementDoc() {
         };
         fetchAnnouncements();
     }, []);
+
+    // Matrimony Bann Counter Map: {"groomName|brideName": count}
+    const bannCountMap = {};
+    docs.forEach(doc => {
+        if (doc.matrimonyNotices) {
+            doc.matrimonyNotices.forEach(notice => {
+                const key = `${notice.groomName}|${notice.brideName}`;
+                bannCountMap[key] = (bannCountMap[key] || 0) + 1;
+            });
+        }
+    });
+
+    // For the selected doc, compute bann number for each notice
+    function getBannNumber(notice) {
+        // Always count from oldest to selected doc (chronological order)
+        // docs are currently sorted most recent first, so reverse for counting
+        const docsChrono = [...docs].reverse();
+        // The index in chronological order for the selected doc
+        const chronoIndex = docs.length - 1 - selectedDocIndex;
+        let count = 0;
+        for (let i = 0; i <= chronoIndex; i++) {
+            const d = docsChrono[i];
+            if (d.matrimonyNotices) {
+                d.matrimonyNotices.forEach(n => {
+                    if (n.groomName === notice.groomName && n.brideName === notice.brideName) {
+                        count++;
+                    }
+                });
+            }
+        }
+        return count;
+    }
+
+    const doc = docs[selectedDocIndex] || null;
 
     if (isLoading) {
         return (
@@ -30,8 +67,6 @@ export default function AnnouncementDoc() {
     }
     if (!doc) return <div style={{ textAlign: 'center' }}>There are currently no announcements to display.</div>;
 
-
-
     const formatDate = (dateStr) => {
         if (!dateStr) return '';
         return new Date(dateStr).toLocaleDateString('en-KE', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
@@ -39,6 +74,24 @@ export default function AnnouncementDoc() {
 
     return (
         <section className="py-8 px-1 sm:px-2 lg:px-8">
+            {/* Announcement Doc Switcher */}
+            {docs.length > 1 && (
+                <div className="flex justify-center mb-6">
+                    <select
+                        className="border rounded px-3 py-2 text-base shadow-sm focus:ring focus:ring-primary"
+                        value={selectedDocIndex}
+                        onChange={e => setSelectedDocIndex(Number(e.target.value))}
+                        aria-label="Select announcement document"
+                    >
+                        {docs.map((d, idx) => (
+                            <option value={idx} key={d._id}>
+                                {idx === 0 ? 'Most Recent' : `Past: ${formatDate(d.documentDate)}`}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+            )}
+
             {/* SUNDAY/LITURGICAL SEASON ONLY */}
             <header className="mb-8 text-center">
                 {doc.liturgicalSeason && (
@@ -147,35 +200,43 @@ export default function AnnouncementDoc() {
                         <span className="text-3xl">💍</span>
                     </h3>
                     <div className="flex flex-col gap-6 w-full">
-                        {doc.matrimonyNotices.map((notice, i) => (
-                            <AnimatedFadeIn key={notice._id} delay={i * 0.12}>
-                                <article
-                                    className="relative bg-white/90 border border-pink-200 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col gap-2 items-center text-center ring-2 ring-pink-100 hover:ring-pink-300 transition"
-                                    tabIndex={0}
-                                    aria-label={`Marriage Bann: ${notice.groomName} & ${notice.brideName}`}
-                                >
-                                    <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-4xl">💞</span>
-                                    <div className="font-bold text-xl md:text-2xl text-pink-700 mb-1 flex flex-col items-center gap-0">
-                                        <span>{notice.groomName}</span>
-                                        <span className="text-gray-700 text-base md:text-lg font-normal mt-0.5">S/O {notice.groomParents}</span>
-                                    </div>
-                                    <div className="text-pink-700 font-semibold text-sm md:text-base mb-2 text-center tracking-wide">INTENDS TO CELEBRATE THE SACRAMENT OF MATRIMONY WITH</div>
-                                    <div className="font-bold text-xl md:text-2xl text-pink-700 mb-1 flex flex-col items-center gap-0">
-                                        <span> {notice.brideName}</span>
-                                        <span className="text-gray-700 text-base md:text-lg font-normal mt-0.5">D/O {notice.brideParents}</span>
-                                    </div>
-                                    <div className="text-gray-800 text-base md:text-lg mb-1 flex items-center justify-center gap-2">
-                                        <span className="text-pink-500">📅</span>
-                                        <span className="font-semibold">{formatDate(notice.weddingDate)}</span>
-                                    </div>
-                                    <div className="text-gray-800 text-base md:text-lg flex items-center justify-center gap-2">
-                                        <span className="text-pink-500">📍</span>
-                                        <span className="font-semibold">{notice.venue}</span>
-                                    </div>
-                                    <span className="mt-4 text-3xl animate-pulse">💕</span>
-                                </article>
-                            </AnimatedFadeIn>
-                        ))}
+                        {doc.matrimonyNotices.map((notice, i) => {
+                            const bannNumber = getBannNumber(notice);
+                            let bannText = '';
+                            if (bannNumber === 2) bannText = '2nd Marriage Bann';
+                            else if (bannNumber === 3) bannText = '3rd Marriage Bann';
+                            else if (bannNumber > 3) bannText = `${bannNumber}th Marriage Bann`;
+                            return (
+                                <AnimatedFadeIn key={notice._id} delay={i * 0.12}>
+                                    <article
+                                        className="relative bg-white/90 border border-pink-200 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col gap-2 items-center text-center ring-2 ring-pink-100 hover:ring-pink-300 transition"
+                                        tabIndex={0}
+                                        aria-label={`Marriage Bann: ${notice.groomName} & ${notice.brideName}`}
+                                    >
+                                        <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-4xl">💞</span>
+                                        <div className="font-bold text-xl md:text-2xl text-pink-700 mb-1 flex flex-col items-center gap-0">
+                                            <span>{notice.groomName}</span>
+                                            <span className="text-gray-700 text-base md:text-lg font-normal mt-0.5">S/O {notice.groomParents}</span>
+                                        </div>
+                                        <div className="text-pink-700 font-semibold text-sm md:text-base mb-2 text-center tracking-wide">INTENDS TO CELEBRATE THE SACRAMENT OF MATRIMONY WITH</div>
+                                        <div className="font-bold text-xl md:text-2xl text-pink-700 mb-1 flex flex-col items-center gap-0">
+                                            <span> {notice.brideName}</span>
+                                            <span className="text-gray-700 text-base md:text-lg font-normal mt-0.5">D/O {notice.brideParents}</span>
+                                        </div>
+                                        <div className="text-gray-800 text-base md:text-lg mb-1 flex items-center justify-center gap-2">
+                                            <span className="text-pink-500">📅</span>
+                                            <span className="font-semibold">{formatDate(notice.weddingDate)}</span>
+                                        </div>
+                                        <div className="text-gray-800 text-base md:text-lg flex items-center justify-center gap-2">
+                                            <span className="text-pink-500">📍</span>
+                                            <span className="font-semibold">{notice.venue}</span>
+                                        </div>
+                                        {bannText && <div className="mt-2 text-pink-700 font-bold text-base md:text-lg">{bannText}</div>}
+                                        <span className="mt-4 text-3xl animate-pulse">💕</span>
+                                    </article>
+                                </AnimatedFadeIn>
+                            );
+                        })}
                     </div>
                 </section>
             )}
