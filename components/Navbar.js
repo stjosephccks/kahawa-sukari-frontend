@@ -46,6 +46,13 @@ function NavBar() {
               {/* LOGO */}
               <Link href="/">
                 <h2 className="text-2xl text-cyan-600 font-bold">SJCCKS</h2>
+                {/* <Image
+                  src="https://kahawa-sukari.s3.us-east-1.amazonaws.com/sukari.png"
+                  alt="Logo"
+                  width={50}
+                  height={50}
+                  className="md:hidden"
+                /> */}
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden absolute right-4 top-2">
@@ -90,16 +97,14 @@ function NavBar() {
           </div>
           <div>
             <div
-              className={`flex-1 justify-self-start pb-3 mt-2 md:block md:pb-0 md:mt-0 ${
-                navbar
-                  ? "px-4 right-0 md:p-0 block fixed top-10 left-0 w-2/3 h-[calc(100vh-2.5rem)] bg-primary overflow-y-auto"
-                  : "hidden"
-              }`}
+              className={`flex-1 justify-self-start pb-3 mt-2 md:block md:pb-0 md:mt-0 ${navbar
+                ? "px-4 right-0 md:p-0 block fixed top-10 left-0 w-2/3 h-[calc(100vh-2.5rem)] bg-primary overflow-y-auto"
+                : "hidden"
+                }`}
             >
               <ul
-                className={`h-full md:h-auto ${
-                  navbar ? "justify-start" : "justify-start"
-                } md:flex`}
+                className={`h-full md:h-auto ${navbar ? "justify-start" : "justify-start"
+                  } md:flex`}
               >
                 <li className={pathname === "/" ? activeNav : Navstyles}>
                   <Link
@@ -195,6 +200,17 @@ function NavBar() {
                       </li>
                     </ul>
                   )}
+                </li>
+                {/* Catechesis Link - Added as a top-level item for now, can be moved under a dropdown if preferred */}
+                <li className={pathname === "/catechesis" ? activeNav : Navstyles}>
+                  <Link
+                    className={
+                      pathname === "/catechesis" ? "text-secondary" : "text-white"
+                    }
+                    href="/catechesis"
+                  >
+                    Catechesis
+                  </Link>
                 </li>
                 <li className={`relative ${Navstyles}`}>
                   <Link
