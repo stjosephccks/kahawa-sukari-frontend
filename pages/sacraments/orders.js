@@ -148,8 +148,7 @@ export default function Orders() {
                   <ContactCard
                     chaplain={chaplain}
                     chapTel={chapTel}
-                    moderator={moderator}
-                    modTel={modTel}
+
                   />
                 </div>
               </div>

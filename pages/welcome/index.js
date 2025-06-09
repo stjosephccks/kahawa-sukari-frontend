@@ -78,27 +78,26 @@ function welcome() {
               Our Catholic Faith
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-semibold mb-4">
+              <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
                   Daily Mass Schedule
                 </h3>
-                <ul className="space-y-3">
-                  <li className="flex justify-between">
-                    <span>Weekday Mass ( Tue - Fri)</span>
-                    <span>6:30 AM & 5:30 PM</span>
+                <ul className="divide-y divide-gray-200">
+                  <li className="flex flex-col sm:flex-row sm:justify-between py-3">
+                    <span className="font-medium text-gray-700 mb-1 sm:mb-0">Weekday Mass ( Tue - Fri)</span>
+                    <span className="text-gray-600 sm:text-right">6:30 AM & 5:30 PM</span>
                   </li>
-                  <li className="flex justify-between">
-                    <span>Saturday and Monday </span>
-                    <span>7:30 AM</span>
+                  <li className="flex flex-col sm:flex-row sm:justify-between py-3">
+                    <span className="font-medium text-gray-700 mb-1 sm:mb-0">Saturday and Monday</span>
+                    <span className="text-gray-600 sm:text-right">7:30 AM</span>
                   </li>
-
-                  <li className="flex justify-between">
-                    <span>Sunday Mass</span>
-                    <span>7:30 AM, 9:00 AM, 10:30 AM, 12 NOON </span>
+                  <li className="flex flex-col sm:flex-row sm:justify-between py-3">
+                    <span className="font-medium text-gray-700 mb-1 sm:mb-0">Sunday Mass</span>
+                    <span className="text-gray-600 sm:text-right">7:30 AM, 9:00 AM, 10:30 AM, 12 NOON</span>
                   </li>
-                  <li className="flex justify-between">
-                    <span>St. Joseph Kahawa Wendani</span>
-                    <span>9:30 AM (Sunday)</span>
+                  <li className="flex flex-col sm:flex-row sm:justify-between py-3">
+                    <span className="font-medium text-gray-700 mb-1 sm:mb-0">St. Joseph Kahawa Wendani</span>
+                    <span className="text-gray-600 sm:text-right">9:30 AM (Sunday)</span>
                   </li>
                 </ul>
               </div>
@@ -157,7 +156,7 @@ function welcome() {
 
             {/* Kindergarten Section */}
             <div className="mb-12">
-              <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="bg-white p-2 rounded-lg shadow-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="order-2 md:order-1">
                     <h3 className="text-2xl font-semibold mb-4">
@@ -233,7 +232,7 @@ function welcome() {
 
             {/* Primary and JSS Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-white p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <div className="h-48 bg-gray-200 rounded-lg mb-4">
                   <Image
                     src={
@@ -294,7 +293,7 @@ function welcome() {
                 </Link>
               </div>
 
-              <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-white p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                 <div className="h-48 bg-gray-200 rounded-lg mb-4">
                   <Image
                     src={
@@ -362,7 +361,7 @@ function welcome() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               St. Joseph Hospital
             </h2>
-            <div className="bg-white p-8 rounded-lg shadow-lg">
+            <div className="bg-white p-2 rounded-lg shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">
@@ -397,7 +396,7 @@ function welcome() {
                         </a>
                       </li>
                       <li className="flex items-center">
-                        <span className="mr-2">📧</span>
+
                         <a
                           href="mailto:customercare@stjosephwendani.org"
                           className="text-gray-600"
@@ -415,12 +414,12 @@ function welcome() {
                     </ul>
                   </div>
                   <Link
-                  href="https://stjosephwendani.org/"
-                  target="_blank"
-                  className="text-blue-600 hover:underline font-semibold"
-                >
-                  Learn More →
-                </Link>
+                    href="https://stjosephwendani.org/"
+                    target="_blank"
+                    className="text-blue-600 hover:underline font-semibold"
+                  >
+                    Learn More →
+                  </Link>
                 </div>
                 <div className="h-72 bg-gray-200 rounded-lg">
                   <Image
@@ -447,7 +446,7 @@ function welcome() {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Our Outstations
             </h2>
-            <div className="bg-white p-8 rounded-lg shadow-lg">
+            <div className="bg-white p-2 rounded-lg shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-semibold mb-4">
@@ -475,7 +474,7 @@ function welcome() {
                     </p>
                     <p className="text-gray-600 flex items-center">
                       <span className="mr-2">📍</span>
-                      Location: [Kahawa Wendani Address]
+                      Location: [Opposite St.Joseph Hospital ]
                     </p>
                   </div>
                 </div>

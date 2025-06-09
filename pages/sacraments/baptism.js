@@ -13,8 +13,8 @@ export default function Baptism() {
     "The gateway to life in the Spirit and the door to other sacraments";
   const chaplain = "Parish Office";
   const chapTel = "0726 145609";
-  const moderator = "Catechist George";
-  const modTel = "0729 455437";
+  // const moderator = "Catechist George";
+  // const modTel = "0729 455437";
   return (
     <Layout>
       <Head>
@@ -145,8 +145,8 @@ export default function Baptism() {
                   <ContactCard
                     chaplain={chaplain}
                     chapTel={chapTel}
-                    moderator={moderator}
-                    modTel={modTel}
+                  // moderator={moderator}
+                  // modTel={modTel}
                   />
                 </div>
               </div>

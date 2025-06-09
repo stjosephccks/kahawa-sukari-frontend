@@ -11,10 +11,8 @@ export default function Matrimony() {
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text = "A sacred covenant established by God";
-  const chaplain = "Fr. Guliano";
-  const chapTel = "0737032180";
-  const moderator = "Mr. Johnson Mwaniki Murage";
-  const modTel = "0729 675982";
+  const chaplain = "Parish Office";
+  const chapTel = "0726 145609";
 
   return (
     <Layout>
@@ -121,8 +119,7 @@ export default function Matrimony() {
                   <ContactCard
                     chaplain={chaplain}
                     chapTel={chapTel}
-                    moderator={moderator}
-                    modTel={modTel}
+
                   />
                 </div>
               </div>
