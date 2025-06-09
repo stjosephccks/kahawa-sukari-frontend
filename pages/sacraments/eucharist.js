@@ -12,8 +12,7 @@ export default function Eucharist() {
   const text = "The source and summit of the Christian life";
   const chaplain = "Parish Office";
   const chapTel = "0726 145609";
-  const moderator = "Catechist George";
-  const modTel = "0729 455437";
+
 
   return (
     <Layout>
@@ -129,8 +128,7 @@ export default function Eucharist() {
                   <ContactCard
                     chaplain={chaplain}
                     chapTel={chapTel}
-                    moderator={moderator}
-                    modTel={modTel}
+
                   />
                 </div>
               </div>

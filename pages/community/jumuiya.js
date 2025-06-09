@@ -96,7 +96,7 @@ function Jumuiya() {
       description: "A hopeful and prayerful community, drawing strength from the patron of desperate causes and forgotten souls."
     },
     {
-      
+
       name: "St. Antony Jumuiya",
       location: "",
       moderator: "",
@@ -121,7 +121,7 @@ function Jumuiya() {
       description: "A community seeking to spread the Gospel with passion and perseverance wherever they go, following the Apostle of the Gentiles who turned from persecutor to tireless missionary."
     },
     {
-      name: "St.Michael the Archangel Jumuiya",
+      name: "St.Michael The Archangel Jumuiya",
       location: "parish",
       moderator: "",
       description: " A vigilant and courageous community under the protection of the warrior angel who defends the Church against evil."

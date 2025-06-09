@@ -10,10 +10,8 @@ export default function Penance() {
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/confession-banner.png";
   const text = "The sacrament of God's mercy and forgiveness";
-  const chaplain = "Fr. Guliano";
-  const chapTel = "0737 032180";
-  const moderator = "Catechist George";
-  const modTel = "0729 455437";
+  const chaplain = "Parish Office";
+  const chapTel = "0726 145609";
 
   return (
     <Layout>
@@ -169,8 +167,7 @@ export default function Penance() {
                   <ContactCard
                     chaplain={chaplain}
                     chapTel={chapTel}
-                    moderator={moderator}
-                    modTel={modTel}
+
                   />
                 </div>
               </div>

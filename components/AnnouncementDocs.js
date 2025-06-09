@@ -116,15 +116,15 @@ export default function AnnouncementDoc() {
                                 <table className="min-w-full text-sm text-left">
                                     <thead>
                                         <tr className="text-gray-600 border-b">
-                                            <th className="py-2 px-2 font-semibold">Time</th>
-                                            <th className="py-2 px-2 font-semibold">Group</th>
+                                            <th className="py-2 px-2 font-semibold w-1/2">Time</th>
+                                            <th className="py-2 px-2 font-semibold w-1/2 md:text-right">Group</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {doc.currentWeekMass.map(mass => (
                                             <tr key={mass._id} className="border-b last:border-b-0">
-                                                <td className="py-2 px-2 whitespace-nowrap">{mass.time}</td>
-                                                <td className="py-2 px-2 font-medium text-blue-700">{mass.group}</td>
+                                                <td className="py-2 px-2 w-1/2">{mass.time}</td>
+                                                <td className="py-2 px-2 font-medium text-blue-700 w-1/2 md:text-right">{mass.group}</td>
                                             </tr>
                                         ))}
                                     </tbody>
@@ -138,15 +138,15 @@ export default function AnnouncementDoc() {
                                     <table className="min-w-full text-sm text-left">
                                         <thead>
                                             <tr className="text-gray-600 border-b">
-                                                <th className="py-2 px-2 font-semibold">Time</th>
-                                                <th className="py-2 px-2 font-semibold">Group</th>
+                                                <th className="py-2 px-2 font-semibold w-1/2">Time</th>
+                                                <th className="py-2 px-2 font-semibold w-1/2 md:text-right">Group</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {doc.nextWeekMasses.map(mass => (
                                                 <tr key={mass._id} className="border-b last:border-b-0">
-                                                    <td className="py-2 px-2 whitespace-nowrap">{mass.time}</td>
-                                                    <td className="py-2 px-2 font-medium text-blue-700">{mass.group}</td>
+                                                    <td className="py-2 px-2 w-1/2">{mass.time}</td>
+                                                    <td className="py-2 px-2 font-medium text-blue-700 w-1/2 md:text-right">{mass.group}</td>
                                                 </tr>
                                             ))}
                                         </tbody>

@@ -14,8 +14,8 @@ export default function Anointing() {
     "A special grace for those who are seriously ill or facing surgery";
   const chaplain = "Parish Office";
   const chapTel = "0726 145609";
-  const moderator = "Catechist George";
-  const modTel = "0729 455437";
+  // const moderator = "Catechist George";
+  // const modTel = "0729 455437";
   return (
     <Layout>
       <Head>
@@ -128,28 +128,13 @@ export default function Anointing() {
                     </div>
                   </div>
 
-                  <div className="mt-8">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                      Communal Celebration
-                    </h2>
-                    <div className="bg-gray-50 p-6 rounded-lg">
-                      <p className="text-gray-600 mb-4">
-                        Our parish celebrates the Anointing of the Sick
-                        communally several times a year:
-                      </p>
-                      <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                        <li>During special Masses for the sick</li>
-                        <li>During the Lenten season</li>
-                        <li>During the World Day of the Sick (February 11)</li>
-                      </ul>
-                    </div>
-                  </div>
+
 
                   <ContactCard
                     chaplain={chaplain}
                     chapTel={chapTel}
-                    moderator={moderator}
-                    modTel={modTel}
+                  // moderator={moderator}
+                  // modTel={modTel}
                   />
                 </div>
               </div>

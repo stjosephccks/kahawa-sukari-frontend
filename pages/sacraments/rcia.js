@@ -10,10 +10,8 @@ function AdultsBecomingCatholic() {
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text = "Rite of Christian Initiation for Adults";
-  const chaplain = "Fr. Guliano - Spiritual Director";
-  const chapTel = "0737032180";
-  const moderator = "Catechist George";
-  const modTel = "0729455437";
+  const chaplain = "Parish Office";
+  const chapTel = "0726 145609";
 
   return (
     <Layout>
@@ -167,8 +165,7 @@ function AdultsBecomingCatholic() {
           <ContactCard
             chaplain={chaplain}
             chapTel={chapTel}
-            moderator={moderator}
-            modTel={modTel}
+
           />
 
           <div className="mt-8">

@@ -10,10 +10,8 @@ function ChildrenBecomingCatholic() {
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
   const text = "Right of Christian Initiation for Children";
-  const chaplain = "Fr. Mimmo - Spiritual Director";
-  const chapTel = "0759441744";
-  const moderator = "PMC Moderator - Lorna Karumba";
-  const modTel = "+254 724 052152";
+  const chaplain = "Parish Office";
+  const chapTel = "0726 145609";
   return (
     <Layout>
       <Head>
@@ -106,8 +104,7 @@ function ChildrenBecomingCatholic() {
           <ContactCard
             chaplain={chaplain}
             chapTel={chapTel}
-            moderator={moderator}
-            modTel={modTel}
+
           />
         </div>
       </div>
