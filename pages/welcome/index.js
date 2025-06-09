@@ -246,7 +246,7 @@ function welcome() {
                       height: "100%",
                       borderRadius: "10px",
                     }}
-                    alt="Emmanuel Mazzola Kindergarten"
+                    alt="Urafiki Carovana School"
                     width={500}
                     height={500}
                     loading="lazy"
@@ -307,7 +307,7 @@ function welcome() {
                       height: "100%",
                       borderRadius: "10px",
                     }}
-                    alt="Emmanuel Mazzola Kindergarten"
+                    alt="St. Kizito Vocational Institute"
                     width={500}
                     height={500}
                     loading="lazy"
@@ -336,9 +336,9 @@ function welcome() {
                     Phone: +254 724 253 547
                   </a>
                   <br />
-                  <a href="mailto:info@stkizito.ke" className="text-gray-600">
+                  <a href="mailto:info@stkizito.ac.ke" className="text-gray-600">
                     <span className="mr-2">📧</span>
-                    Email: info@stkizito.ke
+                    Email: info@stkizito.ac.ke
                   </a>
                   <p className="text-gray-600">
                     <span className="mr-2">📍</span>
@@ -347,7 +347,7 @@ function welcome() {
                   </p>
                 </div>
                 <Link
-                  href="https://stkizito.ke/"
+                  href="https://stkizito.ac.ke/"
                   target="_blank"
                   className="text-blue-600 hover:underline font-semibold"
                 >
@@ -414,6 +414,13 @@ function welcome() {
                       </li>
                     </ul>
                   </div>
+                  <Link
+                  href="https://stjosephwendani.org/"
+                  target="_blank"
+                  className="text-blue-600 hover:underline font-semibold"
+                >
+                  Learn More →
+                </Link>
                 </div>
                 <div className="h-72 bg-gray-200 rounded-lg">
                   <Image

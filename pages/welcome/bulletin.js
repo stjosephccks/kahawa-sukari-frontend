@@ -35,7 +35,7 @@ function Bulletin() {
         <title>St.Joseph Kahawa Sukari | News Bulletins</title>
         <meta
           property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Knowledge Base"
+          content="St Joseph Catholic Church Kahawa sukari - Knowledge Base"
           key="title"
         />
       </Head>

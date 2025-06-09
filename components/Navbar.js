@@ -351,12 +351,12 @@ function NavBar() {
                       <li>
                         <Link
                           className={
-                            pathname.includes("alter") ? "text-secondary" : ""
+                            pathname.includes("altar") ? "text-secondary" : ""
                           }
-                          href="/liturgy/alter"
+                          href="/liturgy/altar"
                           onClick={handleLinkClick}
                         >
-                          Alter Serving
+                          Altar Serving
                         </Link>
                       </li>
                       <li>

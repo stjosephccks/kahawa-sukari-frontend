@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Head from "next/head";
 
-export default function AlterServers() {
+export default function AltarServers() {
   const title = "Altar Servers";
   const imageurl =
     "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
@@ -74,7 +74,7 @@ export default function AlterServers() {
                   </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex justify-between">
-                      <span>Alter  Servers CLass</span>
+                      <span>Altar  Servers CLass</span>
                       <span className="font-medium">
                         Every Saturday 3:00 PM
                       </span>
