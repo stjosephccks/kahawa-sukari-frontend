@@ -13,7 +13,7 @@ function MantleOfStJoseph() {
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
   const chaplain = "Fr. Mattia - Spiritual Director";
   // const chapTel = "0737032180";
-  const moderator = "Mantle of St. Joseph Coordinator - Moderator";
+  const moderator = "Coordinator - Ednah Njeri ";
   // const modTel = "0723721678";
 
   return (

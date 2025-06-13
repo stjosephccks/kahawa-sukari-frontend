@@ -6,23 +6,21 @@ import Link from "next/link";
 import React from "react";
 import ContactCard from "@/components/ContactCard";
 
-function YouthServiceCommittee() {
-  const title = "Youth Service Committee";
+function YouthServingChrist() {
+  const title = "Youth Serving Christ";
   const text =
-    "The Youth Service Committee (YSC) is a vibrant group of young Catholics aged 18-26 years dedicated to serving our parish community.";
-  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
-  const chaplain = "Fr. Guliano - Youth Chaplain";
-  // const chapTel = "0737032180";
-  const moderator = "YSC Coordinator - Moderator";
-  // const modTel = "0703689886";
+    "The Youth Serving Christ (YSC) is a vibrant group of young Catholics aged 18-26 years dedicated to serving our parish community.";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/ysc-min.png";
+  const chaplain = "Fr. Mattia - Youth Chaplain";
+  const moderator = "Moderator - Michael Joseph";
 
   return (
     <Layout>
       <Head>
-        <title>St.Joseph Kahawa Sukari | Youth Service Committee</title>
+        <title>St.Joseph Kahawa Sukari | Youth Serving Christ</title>
         <meta
           property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Youth Service Committee"
+          content="St Joseph Catholic Church Kahwa sukari - Youth Serving Christ"
           key="title"
         />
       </Head>
@@ -46,7 +44,7 @@ function YouthServiceCommittee() {
                       About YSC
                     </h2>
                     <p className="text-lg text-gray-600 mb-6">
-                      The Youth Service Committee (YSC) is a vibrant group of
+                      The Youth Serving Christ (YSC) is a vibrant group of
                       young Catholics aged 18-26 years. We are dedicated to
                       serving our parish community through various ministries
                       and activities while growing in our faith and fellowship.
@@ -91,11 +89,10 @@ function YouthServiceCommittee() {
                         Regular Activities
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Weekly Bible Study and Prayer Meetings</li>
-                        <li>Monthly Youth Mass</li>
-                        <li>Community Service Projects</li>
-                        <li>Youth Retreats and Workshops</li>
-                        <li>Social and Recreational Activities</li>
+                        <li>Spiritual Thursdays</li>
+                        <li>Monthly Counselling Sessions</li>
+                        <li>Formation Classes(Third Sunday of the month)</li>
+
                       </ul>
                     </div>
 
@@ -133,7 +130,6 @@ function YouthServiceCommittee() {
                         <li>Liturgical Dancers</li>
                         <li>Lectors</li>
                         <li>Choir</li>
-                        <li>Ushers</li>
                       </ul>
                     </div>
 
@@ -148,7 +144,7 @@ function YouthServiceCommittee() {
                       </ul>
                     </div>
 
-                    <div className="bg-gray-50 p-6 rounded-lg">
+                    {/* <div className="bg-gray-50 p-6 rounded-lg">
                       <h3 className="text-xl font-semibold text-gray-800 mb-4">
                         Formation Ministry
                       </h3>
@@ -157,7 +153,7 @@ function YouthServiceCommittee() {
                         <li>Faith Formation</li>
                         <li>Leadership Training</li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
@@ -176,4 +172,4 @@ function YouthServiceCommittee() {
   );
 }
 
-export default YouthServiceCommittee;
+export default YouthServingChrist;
