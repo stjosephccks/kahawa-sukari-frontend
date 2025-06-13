@@ -10,10 +10,10 @@ function MissionaryYouthMovement() {
   const title = "Missionary Youth Movement";
   const text =
     "The Missionary Youth Movement (MYM) is a vibrant group of high school students who are passionate about their faith and service to the Church.";
-  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/mym1.jpeg";
   const chaplain = "Fr. Mattia - Youth Chaplain";
   // const chapTel = "0798 169977";
-  const moderator = "MYM Coordinator - Moderator";
+  const moderator = "MYM Coordinator - Diana Angela";
   // const modTel = "0723721678";
 
   return (
@@ -83,11 +83,15 @@ function MissionaryYouthMovement() {
                         Regular Activities
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Weekly Bible Study and Faith Formation</li>
-                        <li>Monthly Youth Mass and Adoration</li>
-                        <li>Missionary Outreach Programs</li>
-                        <li>Leadership Training Workshops</li>
-                        <li>Retreats and Spiritual Formation</li>
+                        <li>Formation Classes</li>
+                        <li>Exchange Programs with other parishes</li>
+                        <li>Camps at the end of the year</li>
+                        <li>Hiking</li>
+                        <li>Sports day/ Deanary games</li>
+                        <li>Charity Activities</li>
+                        <li>Deanary/ADN Masses</li>
+                        <li>Retreats</li>
+                        <li>Team building/ Social Programs</li>
                       </ul>
                     </div>
 
@@ -97,15 +101,16 @@ function MissionaryYouthMovement() {
                       </h3>
                       <ul className="space-y-2 text-gray-600">
                         <li>
-                          <strong>Every Saturday</strong> - 2:00 PM to 4:00 PM
+                          <strong>April Holiday</strong> - 2:00 PM to 4:00 PM
+                          <strong>August Holiday</strong> - 2:00 PM to 4:00 PM
+                          <strong>November-December Hopliday</strong> - 2:00 PM to 4:00 PM
                         </li>
                         <li>
-                          <strong>First Sunday of the Month</strong> - Youth
-                          Mass at 10:00 AM
+                          <strong>Every  Sunday </strong> - 2:30PM - 5:00PM
                         </li>
                         <li>
-                          <strong>Third Sunday of the Month</strong> -
-                          Missionary Outreach
+                          <strong>Wednesday</strong> - 3:00 PM - 5:00PM
+
                         </li>
                       </ul>
                     </div>
@@ -122,34 +127,11 @@ function MissionaryYouthMovement() {
                         Liturgical Ministry
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Altar Servers</li>
-                        <li>Lectors</li>
-                        <li>Choir</li>
-                        <li>Ushers</li>
+                        <li>10:30 AM Mass Animation on the last sunday of Holiday Month</li>
+
                       </ul>
                     </div>
 
-                    <div className="bg-gray-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                        Missionary Ministry
-                      </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>Community Service</li>
-                        <li>Evangelization</li>
-                        <li>Charity Work</li>
-                      </ul>
-                    </div>
-
-                    <div className="bg-gray-50 p-6 rounded-lg">
-                      <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                        Formation Ministry
-                      </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>Bible Study</li>
-                        <li>Catechism Classes</li>
-                        <li>Leadership Training</li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
 
