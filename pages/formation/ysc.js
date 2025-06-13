@@ -6,10 +6,10 @@ import Link from "next/link";
 import React from "react";
 import ContactCard from "@/components/ContactCard";
 
-function YouthServiceCommittee() {
-  const title = "Youth Service Committee";
+function YouthServingChrist() {
+  const title = "Youth Serving Christ";
   const text =
-    "The Youth Service Committee (YSC) is a vibrant group of young Catholics aged 18-26 years dedicated to serving our parish community.";
+    "The Youth Serving Christ (YSC) is a vibrant group of young Catholics aged 18-26 years dedicated to serving our parish community.";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/ysc-min.png";
   const chaplain = "Fr. Mattia - Youth Chaplain";
   const moderator = "Moderator - Michael Joseph";
@@ -17,10 +17,10 @@ function YouthServiceCommittee() {
   return (
     <Layout>
       <Head>
-        <title>St.Joseph Kahawa Sukari | Youth Service Committee</title>
+        <title>St.Joseph Kahawa Sukari | Youth Serving Christ</title>
         <meta
           property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Youth Service Committee"
+          content="St Joseph Catholic Church Kahwa sukari - Youth Serving Christ"
           key="title"
         />
       </Head>
@@ -44,7 +44,7 @@ function YouthServiceCommittee() {
                       About YSC
                     </h2>
                     <p className="text-lg text-gray-600 mb-6">
-                      The Youth Service Committee (YSC) is a vibrant group of
+                      The Youth Serving Christ (YSC) is a vibrant group of
                       young Catholics aged 18-26 years. We are dedicated to
                       serving our parish community through various ministries
                       and activities while growing in our faith and fellowship.
@@ -172,4 +172,4 @@ function YouthServiceCommittee() {
   );
 }
 
-export default YouthServiceCommittee;
+export default YouthServingChrist;
