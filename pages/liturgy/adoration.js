@@ -8,7 +8,7 @@ import Head from "next/head";
 export default function EucharisticAdoration() {
   const title = "Eucharistic Adoration";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const text = "Come and spend time with Jesus in the Blessed Sacrament";
 
   return (

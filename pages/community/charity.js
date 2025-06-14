@@ -18,7 +18,7 @@ function Charity() {
   const text =
     "Join us in making a difference through our various support groups and community services";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
 
   const groups = [
     {

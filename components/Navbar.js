@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-
+import logo from '@/public/images/sjccks_logo.png'
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
   const [aboutDropDown, setAboutDropDown] = useState(false);
@@ -45,14 +45,14 @@ function NavBar() {
             <div className="flex items-center justify-between py-2 md:py-5 md:block">
               {/* LOGO */}
               <Link href="/">
-                <h2 className="text-2xl text-cyan-600 font-bold">SJCCKS</h2>
-                {/* <Image
-                  src="https://kahawa-sukari.s3.us-east-1.amazonaws.com/sukari.png"
-                  alt="Logo"
-                  width={50}
+                {/* <h2 className="text-2xl text-cyan-600 font-bold">SJCCKS</h2> */}
+                <Image
+                  src={logo}
+                  alt="St. Joseph The Worker Catholic Church Kahawa Sukari logo"
+                  width={150}
                   height={50}
-                  className="md:hidden"
-                /> */}
+                  className="w-24 md:w-32 lg:w-40" />
+
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden absolute right-4 top-2">

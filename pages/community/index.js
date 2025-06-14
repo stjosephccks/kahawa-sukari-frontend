@@ -9,7 +9,7 @@ function Event() {
   const [events, setEvents] = useState([]);
 
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const title = "EVENTS";
   const text =
     "As I hope in thee, O Lord, inspire me with that confidence, which brings me to thy holy mountain.";

@@ -9,7 +9,7 @@ import ContactCard from "@/components/ContactCard";
 export default function Anointing() {
   const title = "The Sacrament of the Anointing of the Sick";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const text =
     "A special grace for those who are seriously ill or facing surgery";
   const chaplain = "Parish Office";

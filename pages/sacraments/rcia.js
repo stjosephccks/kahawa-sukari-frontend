@@ -8,7 +8,7 @@ import React from "react";
 function AdultsBecomingCatholic() {
   const title = "Becoming Catholic (RCIA)";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const text = "Rite of Christian Initiation for Adults";
   const chaplain = "Parish Office";
   const chapTel = "0726 145609";

@@ -13,8 +13,7 @@ import AnnouncementDoc from "@/components/AnnouncementDocs";
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg",
-    // Add more church images here
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg",
   ];
 
   const title = "LIVING IN LOVE";

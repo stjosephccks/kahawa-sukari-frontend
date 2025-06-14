@@ -8,7 +8,7 @@ import React from "react";
 function ChildrenBecomingCatholic() {
   const title = "Becoming catholic";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const text = "Right of Christian Initiation for Children";
   const chaplain = "Parish Office";
   const chapTel = "0726 145609";
