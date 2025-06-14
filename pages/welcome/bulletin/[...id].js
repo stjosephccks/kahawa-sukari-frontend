@@ -12,7 +12,7 @@ function BulletDetailsPage() {
   const { id } = router.query;
 
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const title = "Bulletin:";
 
   useEffect(() => {

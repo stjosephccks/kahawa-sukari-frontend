@@ -9,7 +9,7 @@ import ContactCard from "@/components/ContactCard";
 export default function Orders() {
   const title = "The Sacrament of Holy Orders";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const text =
     "The means through which Christ&apos;s mission continues in the Church";
 

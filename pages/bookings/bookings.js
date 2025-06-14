@@ -21,7 +21,7 @@ function Bookings() {
 
             console.log(`Fetched Bookings data: ${JSON.stringify(data)}`)
             console.log(`Fetched Venues data: ${JSON.stringify(venuesData)}`)
-            
+
             if (error) {
                 console.error('Error fetching bookings:', error);
             } else {
@@ -62,8 +62,8 @@ function Bookings() {
         return bookings.filter(b => {
             const bDate = new Date(b.start_time);
             return bDate.getFullYear() === date.getFullYear() &&
-                   bDate.getMonth() === date.getMonth() &&
-                   bDate.getDate() === date.getDate();
+                bDate.getMonth() === date.getMonth() &&
+                bDate.getDate() === date.getDate();
         });
     }
 
@@ -74,6 +74,17 @@ function Bookings() {
             <h1 className="mb-2 text-3xl font-extrabold tracking-tight text-blue-700 flex items-center gap-2 sm:pt-12 lg:pt-6">
                 <span role="img" aria-label="calendar">📅</span> Bookings
             </h1>
+            <div className="mb-4 p-4 border rounded-lg bg-gray-50">
+                <h2 className="text-lg font-bold mb-2">Venue Key</h2>
+                <div className="flex flex-wrap gap-4">
+                    {venues.map(venue => (
+                        <div key={venue.id} className="flex items-center gap-2">
+                            <span className={`w-4 h-4 rounded-full ${venue.color}`}></span>
+                            <span>{venue.name}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
             {showModal && selectedBooking && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-all duration-300" onClick={() => setShowModal(false)}>
                     <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 max-w-full w-[95vw] sm:max-w-md relative animate-fadeIn" onClick={e => e.stopPropagation()}>
@@ -167,7 +178,7 @@ function Bookings() {
                     </div>
                 </div>
             </div>
-            
+
         </Layout>
     );
 }

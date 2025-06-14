@@ -9,7 +9,7 @@ import ContactCard from "@/components/ContactCard";
 export default function Matrimony() {
   const title = "The Sacrament of Matrimony";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const text = "A sacred covenant established by God";
   const chaplain = "Parish Office";
   const chapTel = "0726 145609";

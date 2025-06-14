@@ -9,7 +9,7 @@ function welcome() {
   const title = "Welcome to St. Joseph Catholic Church";
   const text = "A beacon of faith, education, and healthcare in our community";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
 
   return (
     <Layout>

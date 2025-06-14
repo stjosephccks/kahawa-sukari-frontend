@@ -8,7 +8,7 @@ import Head from "next/head";
 export default function MassSchedule() {
   const title = "Mass Schedule";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const text = "Join us in celebrating the Holy Eucharist";
 
   return (

@@ -9,7 +9,7 @@ import Head from "next/head";
 export default function AltarServers() {
   const title = "Altar Servers";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const text = "Serving at the Altar of the Lord";
 
   return (

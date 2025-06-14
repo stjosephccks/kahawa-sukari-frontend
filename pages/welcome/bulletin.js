@@ -11,7 +11,7 @@ function Bulletin() {
   const [page, setPage] = useState(1);
 
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const title = "BULLETIN";
   const text =
     "Faith and reason are like two wings on which the human spirit rises to the contemplation of truth";

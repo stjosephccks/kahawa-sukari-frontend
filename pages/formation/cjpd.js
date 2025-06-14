@@ -7,7 +7,7 @@ import ContactCard from "@/components/ContactCard";
 function cjpd() {
   const title = "Catholic Justice and Peace Department (CJPD)";
   const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg";
+    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const text = "Promoting justice, peace, and human dignity in our community";
   const chaplain = "Fr. Mimmo - Spiritual Director";
   // const chapTel = "0737032180";

@@ -208,7 +208,7 @@ function Jumuiya() {
         />
       </Head>
       <Hero
-        imageUrl="https://kahawa-sukari.s3.amazonaws.com/stJosephkahawasukari+(1).jpg"
+        imageUrl="https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg"
         title="Our Jumuiyas - Small Christian Communities"
         text="Join our vibrant small Christian communities where faith comes alive through prayer, service, and fellowship."
       />
