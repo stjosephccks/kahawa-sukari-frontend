@@ -9,9 +9,9 @@ import ContactCard from "@/components/ContactCard";
 function MantleOfStJoseph() {
   const title = "Mantle of St. Joseph";
   const text =
-    "The Mantle of St. Joseph is a special group for young Catholics who have completed their confirmation but have not yet entered high school.";
+    "God is giving you a gift. If you see it, share it. If you can't see it, pray for it.";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
-  const chaplain = "Fr. Mattia - Spiritual Director";
+  const chaplain = "Mantle Chaplain - Fr. Mattia";
   // const chapTel = "0737032180";
   const moderator = "Coordinator - Ednah Njeri ";
   // const modTel = "0723721678";
@@ -46,19 +46,17 @@ function MantleOfStJoseph() {
                       About Mantle of St. Joseph
                     </h2>
                     <p className="text-lg text-gray-600 mb-6">
-                      The Mantle of St. Joseph is a special group for young
-                      Catholics who have completed their confirmation but
-                      haven&apos;t yet entered high school. This group serves as
-                      a bridge between childhood faith formation and the more
-                      mature youth ministry programs.
+                      The Mantle of St. Joseph (Mantle) is a post-Confirmation 
+                      group in our parish made up of Junior Secondary School students, 
+                      mostly aged 12-15. The group serves as a bridge between childhood 
+                      faith formation and youth ministry. Under the patronage of St. Joseph, 
+                      the group provides a space for members to grow spiritually and socially. 
+                      We also aim to deepen their faith, help them develop their spiritual gifts 
+                      and prepare them for active participation in the Church's mission.
                     </p>
                     <p className="text-lg text-gray-600">
-                      Under the patronage of St. Joseph, we help young people
-                      deepen their faith, develop their spiritual gifts, and
-                      prepare for active participation in the Church&apos;s
-                      mission. We focus on building a strong foundation for
-                      their future involvement in MYM and other parish
-                      ministries.
+                      Our Motto is: God is giving you a gift. 
+                      If you see it, share it. If you can't see it, pray for it.
                     </p>
                   </div>
 
@@ -67,10 +65,13 @@ function MantleOfStJoseph() {
                       Our Objectives
                     </h2>
                     <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                      <li>To strengthen the faith received in confirmation</li>
-                      <li>To develop a personal relationship with Jesus</li>
-                      <li>To learn about the life and virtues of St. Joseph</li>
-                      <li>To prepare for future involvement in MYM</li>
+                      <li>Deepen Faith - Strengthen understanding of Catholic teachings and love for the Eucharist. </li>
+                      <li>Foster Spiritual Growth - Encourage personal prayer, devotion to Mother Mary and the saints
+                         plus regular participation in Mass and sacraments.</li>
+                      <li>Build Community - Create a supportive environment for friendships rooted in faith</li>
+                      <li>Develop Leadership - Nurture confidence and respponsibility through group roles and activities.</li>
+                      <li>Encourage Service - Instill a spirit of generosity through parish and community outreach.</li>
+                      <li>Prepare for Youth Ministry - Future involvement in MYM</li>
                     </ul>
                   </div>
                 </div>
@@ -85,11 +86,17 @@ function MantleOfStJoseph() {
                         Regular Activities
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Weekly Faith Formation Classes</li>
-                        <li>Monthly Youth Mass</li>
-                        <li>Service Projects</li>
-                        <li>Retreats and Spiritual Activities</li>
-                        <li>Social and Team Building Events</li>
+                        <li>Weekly Meetings</li>
+                        <li>Spiritual Formation</li>
+                        <li>Life skills formation</li>
+                        <li>Lenten and Advent Retreats</li>
+                        <li>Charity works</li>
+                        <li>Movies</li>
+                        <li>Pilgrimages</li>
+                        <li>Trips</li>
+                        <li>Games Tournaments</li>
+                        <li>Camp</li>
+                        <li>Exhibitions</li>
                       </ul>
                     </div>
 
@@ -99,15 +106,7 @@ function MantleOfStJoseph() {
                       </h3>
                       <ul className="space-y-2 text-gray-600">
                         <li>
-                          <strong>Every Sunday</strong> - After 10:00 AM Mass
-                        </li>
-                        <li>
-                          <strong>First Saturday of the Month</strong> - Service
-                          Project
-                        </li>
-                        <li>
-                          <strong>Third Sunday of the Month</strong> - Youth
-                          Mass at 10:00 AM
+                          <strong>Every Sunday</strong> - From 2.30pm - 5.00pm
                         </li>
                       </ul>
                     </div>
@@ -124,10 +123,9 @@ function MantleOfStJoseph() {
                         Liturgical Ministry
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Altar Servers</li>
-                        <li>Lectors</li>
-                        <li>Choir</li>
-                        <li>Ushers</li>
+                        <li>10.30 AM Mass animation during mid-term breaks 
+                          and the last Sunday before a new term begins.</li>
+
                       </ul>
                     </div>
 
