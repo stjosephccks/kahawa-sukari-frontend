@@ -75,7 +75,7 @@ const choirs = [
 export default function Choir() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    "https://kahawa-sukari.s3.amazonaws.com/stRomanus.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/choir.jpeg",
     // Add more church images here
   ];
   useEffect(() => {
