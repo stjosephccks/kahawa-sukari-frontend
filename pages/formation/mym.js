@@ -11,7 +11,7 @@ function MissionaryYouthMovement() {
   const text =
     "The Missionary Youth Movement (MYM) is a vibrant group of high school students who are passionate about their faith and service to the Church.";
   const imageurl = "https://kahawa-sukari.s3.amazonaws.com/mym1.jpeg";
-  const chaplain = "Fr. Mattia - Youth Chaplain";
+  const chaplain = "Youth Chaplain - Fr. Mattia";
   // const chapTel = "0798 169977";
   const moderator = "MYM Coordinator - Diana Angela";
   // const modTel = "0723721678";
@@ -28,7 +28,7 @@ function MissionaryYouthMovement() {
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
-          <Hero text={text} title={title} imageUrl={imageurl} />
+          <Hero text={text} title={title} imageUrl={imageurl}/>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col lg:flex-row gap-8">

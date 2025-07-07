@@ -13,7 +13,7 @@ const choirs = [
     practiceDays: ["Sunday at 9:00 AM"],
     massSchedule: "10:30 AM Mass (Swahili)",
     // contactTel: "0755428887",
-    moderator: "Moderator: John Doe",
+    moderator: "Moderator: Lorna Karumba",
     description:
       "The PMC Choir leads the congregation in worship with their harmonious voices at the 10:30 AM Swahili Mass.",
   },
@@ -26,7 +26,7 @@ const choirs = [
     ],
     massSchedule: "12:00 PM Mass (English)",
     // contactTel: "0708 576056",
-    moderator: "Moderator: Eveline Ochieng ",
+    moderator: "Moderator: Eveline Achieng ",
     description:
       "St. Romanos Choir brings traditional hymns to life with their beautiful renditions at the 12:00 PM English Mass.",
     src: "https://kahawa-sukari.s3.amazonaws.com/stRomanus.jpeg",
@@ -34,26 +34,26 @@ const choirs = [
   {
     name: "St. Andrew Choir",
     practiceDays: [
-      "Sunday at 8:00 AM",
-      "Tuesday at 7:00 PM",
-      "Friday at 7:00 PM",
+      "Sunday after 9.00 AM mass",
+      "Monday at 6:45 PM",
+      "Friday at 6:45 PM",
     ],
     massSchedule: "9:00 AM Mass (Swahili)",
-    // contactTel: "0755428887",
-    moderator: "Chairperson: Michael Brown",
+    // contactTel: "0723435606",
+    moderator: "Chairperson: Samuel Lawrence",
     description:
       "St. Andrew Choir is known for their contemporary worship music and vibrant performances at the 9:00 AM Swahili Mass.",
   },
   {
     name: "Magnificat Choir",
     practiceDays: [
-      "Monday at 6:00 PM",
+      "Sunday after 7:30 AM mass",
+      "Tuesday at 7:00 PM",
       "Thursday at 7:00 PM",
-      "Saturday at 4:00 PM",
     ],
     massSchedule: "7:30 AM Mass (English)",
-    // contactTel: "0755428887",
-    moderator: "Chairperson: Sarah Johnson ",
+    // contactTel: "0728319443",
+    moderator: "Chairperson: Tom Siahi ",
     description:
       "Magnificat Choir specializes in classical and traditional church music at the 7:30 AM English Mass.",
   },
