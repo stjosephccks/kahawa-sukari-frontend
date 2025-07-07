@@ -9,8 +9,8 @@ function CatholicMenAssociation() {
   const title = "Catholic Men Association";
   const text =
     "The Catholic Men Association (CMA) is a group of men dedicated to growing in faith, serving the Church, and supporting each other in their spiritual journey.";
-  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
-  const chaplain = "Fr. Giuliano - Spiritual Director";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/cma1.jpeg";
+  const chaplain = "Fr. Mimmo - Spiritual Director";
   // const chapTel = "0798 169977";
   const moderator = "CMA Coordinator - Moderator";
   // const modTel = "0723721678";

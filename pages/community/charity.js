@@ -55,7 +55,7 @@ function Charity() {
       ],
       meetingDay: "Second Wednesday of the Month",
       meetingTime: "6:30 pm",
-      image: "/images/visiting-sick.jpg",
+      image: "https://kahawa-sukari.s3.amazonaws.com/hospitalhands.jpg",
       icon: <FaHandHoldingHeart className="text-4xl text-primary" />,
     },
   ];
@@ -75,7 +75,7 @@ function Charity() {
       ],
       dropOff: "Parish Office",
       timing: "Monday to Friday, 8:00 AM - 5:00 PM",
-      contact: "Parish Office: +254 700 000 000",
+      contact: "Parish Office: +254  726 145609",
       icon: "🍞",
     },
     {
@@ -89,7 +89,7 @@ function Charity() {
       ],
       dropOff: "Parish Office",
       timing: "Monday to Friday, 8:00 AM - 5:00 PM",
-      contact: "Parish Office: +254 700 000 000",
+      contact: "Parish Office: +254  726 145609",
       icon: "👕",
     },
     {
@@ -103,7 +103,7 @@ function Charity() {
       ],
       dropOff: "Parish Office",
       timing: "Monday to Friday, 8:00 AM - 5:00 PM",
-      contact: "Parish Office: +254 700 000 000",
+      contact: "Parish Office: +254  726 145609",
       icon: "📦",
     },
   ];
@@ -215,12 +215,13 @@ function Charity() {
                   key={index}
                   className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="relative h-48 w-full">
+                  <div className="relative h-64 w-full">
                     <Image
                       src={service.image}
                       alt={service.name}
                       fill
                       className="object-cover"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-6">

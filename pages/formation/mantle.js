@@ -5,12 +5,24 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import ContactCard from "@/components/ContactCard";
+import InfiniteCarousel from "@/components/Carousel";
 
 function MantleOfStJoseph() {
+  const images = [
+    "https://kahawa-sukari.s3.amazonaws.com/mantle2.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/mantle3.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/mantle4.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/mantle5.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/mantle7.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/mantle8.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/mantle10.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/mantle11.jpeg",
+    "https://kahawa-sukari.s3.amazonaws.com/mantle12.jpeg",
+  ]
   const title = "Mantle of St. Joseph";
   const text =
     "God is giving you a gift. If you see it, share it. If you can't see it, pray for it.";
-  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/mantle13.jpeg";
   const chaplain = "Mantle Chaplain - Fr. Mattia";
   // const chapTel = "0737032180";
   const moderator = "Coordinator - Ednah Njeri ";
@@ -46,16 +58,16 @@ function MantleOfStJoseph() {
                       About Mantle of St. Joseph
                     </h2>
                     <p className="text-lg text-gray-600 mb-6">
-                      The Mantle of St. Joseph (Mantle) is a post-Confirmation 
-                      group in our parish made up of Junior Secondary School students, 
-                      mostly aged 12-15. The group serves as a bridge between childhood 
-                      faith formation and youth ministry. Under the patronage of St. Joseph, 
-                      the group provides a space for members to grow spiritually and socially. 
-                      We also aim to deepen their faith, help them develop their spiritual gifts 
+                      The Mantle of St. Joseph (Mantle) is a post-Confirmation
+                      group in our parish made up of Junior Secondary School students,
+                      mostly aged 12-15. The group serves as a bridge between childhood
+                      faith formation and youth ministry. Under the patronage of St. Joseph,
+                      the group provides a space for members to grow spiritually and socially.
+                      We also aim to deepen their faith, help them develop their spiritual gifts
                       and prepare them for active participation in the Church's mission.
                     </p>
                     <p className="text-lg text-gray-600">
-                      Our Motto is: God is giving you a gift. 
+                      Our Motto is: God is giving you a gift.
                       If you see it, share it. If you can't see it, pray for it.
                     </p>
                   </div>
@@ -67,7 +79,7 @@ function MantleOfStJoseph() {
                     <ul className="list-disc pl-6 space-y-2 text-gray-600">
                       <li>Deepen Faith - Strengthen understanding of Catholic teachings and love for the Eucharist. </li>
                       <li>Foster Spiritual Growth - Encourage personal prayer, devotion to Mother Mary and the saints
-                         plus regular participation in Mass and sacraments.</li>
+                        plus regular participation in Mass and sacraments.</li>
                       <li>Build Community - Create a supportive environment for friendships rooted in faith</li>
                       <li>Develop Leadership - Nurture confidence and respponsibility through group roles and activities.</li>
                       <li>Encourage Service - Instill a spirit of generosity through parish and community outreach.</li>
@@ -85,19 +97,23 @@ function MantleOfStJoseph() {
                       <h3 className="text-xl font-semibold text-gray-800 mb-4">
                         Regular Activities
                       </h3>
-                      <ul className="space-y-2 text-gray-600">
-                        <li>Weekly Meetings</li>
-                        <li>Spiritual Formation</li>
-                        <li>Life skills formation</li>
-                        <li>Lenten and Advent Retreats</li>
-                        <li>Charity works</li>
-                        <li>Movies</li>
-                        <li>Pilgrimages</li>
-                        <li>Trips</li>
-                        <li>Games Tournaments</li>
-                        <li>Camp</li>
-                        <li>Exhibitions</li>
-                      </ul>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <ul className="space-y-2 text-gray-600">
+                          <li>Weekly Meetings</li>
+                          <li>Spiritual Formation</li>
+                          <li>Life skills formation</li>
+                          <li>Lenten and Advent Retreats</li>
+                          <li>Charity works</li>
+                        </ul>
+                        <ul className="space-y-2 text-gray-600">
+                          <li>Movies</li>
+                          <li>Pilgrimages</li>
+                          <li>Trips</li>
+                          <li>Games Tournaments</li>
+                          <li>Camp</li>
+                          <li>Exhibitions</li>
+                        </ul>
+                      </div>
                     </div>
 
                     <div className="bg-gray-50 p-6 rounded-lg">
@@ -123,7 +139,7 @@ function MantleOfStJoseph() {
                         Liturgical Ministry
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>10.30 AM Mass animation during mid-term breaks 
+                        <li>10.30 AM Mass animation during mid-term breaks
                           and the last Sunday before a new term begins.</li>
 
                       </ul>
@@ -174,6 +190,12 @@ function MantleOfStJoseph() {
                   moderator={moderator}
                 // modTel={modTel}
                 />
+                <div className="mt-12">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                    Gallery
+                  </h2>
+                  <InfiniteCarousel images={images} interval={10000} />
+                </div>
               </div>
             </div>
           </div>
