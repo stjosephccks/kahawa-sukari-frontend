@@ -20,7 +20,7 @@ function YouthServingChrist() {
         <title>St.Joseph Kahawa Sukari | Youth Serving Christ</title>
         <meta
           property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Youth Serving Christ"
+          content="St Joseph Catholic Church Kahawa sukari - Youth Serving Christ"
           key="title"
         />
       </Head>

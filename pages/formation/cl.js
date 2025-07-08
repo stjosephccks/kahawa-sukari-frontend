@@ -22,7 +22,7 @@ function CommunionAndLiberation() {
         <title>St.Joseph Kahawa Sukari | Communion and Liberation</title>
         <meta
           property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Communion and Liberation"
+          content="St Joseph Catholic Church Kahawa sukari - Communion and Liberation"
           key="title"
         />
       </Head>
