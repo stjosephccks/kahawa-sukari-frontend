@@ -682,6 +682,17 @@ function NavBar() {
                           Young Couples
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          className={
+                            pathname.includes("pioneer") ? "text-secondary" : ""
+                          }
+                          href="/formation/pioneer"
+                          onClick={handleLinkClick}
+                        >
+                          Pioneer
+                        </Link>
+                      </li>
                     </ul>
                   )}
                 </li>

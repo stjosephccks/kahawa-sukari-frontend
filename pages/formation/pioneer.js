@@ -1,30 +1,27 @@
 import Hero from "@/components/Hero";
-import Layout from "@/components/Layout";
 import Formations_Links from "@/components/Formations_Links";
-import Head from "next/head";
-import Link from "next/link";
-import React from "react";
 import ContactCard from "@/components/ContactCard";
-
-function YouthServingChrist() {
-  const title = "Youth Serving Christ";
-  const text =
-    "The Youth Serving Christ (YSC) is a vibrant group of young Catholics aged 18-26 years dedicated to serving our parish community.";
-  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/ysc-min.png";
-  const chaplain = "Fr. Mattia - Youth Chaplain";
-  const moderator = "Moderator - Michael Joseph";
-
-  return (
-    <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Youth Serving Christ</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahawa sukari - Youth Serving Christ"
-          key="title"
-        />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
+import Head from "next/head";
+import Layout from "@/components/Layout";
+import React from "react";
+function PioneerAssociationGroup() {
+    const title= "Pioneer Total Abstinence Association of the Sacred Heart of Jesus"
+    const text= 
+    "For Thy greater glory and consolation, O Sacred Heart of Jesus"
+    const imageurl= "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg"
+    const chaplain = "Chaplain - "
+    const moderator = "Moderator - "
+    return (
+        <Layout>
+            <Head>
+                <title>St. Joseph Kahawa Sukari | Pioneer Association Group</title>
+                <meta
+                 property="og:title"
+                 content="St Joseph Catholic Church Kahawa sukari - Pioneer Association Group"
+                 key="title"
+                />
+            </Head>
+            <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
         </div>
@@ -41,21 +38,21 @@ function YouthServingChrist() {
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                      About YSC
+                      About Pioneer Association Group
                     </h2>
                     <p className="text-lg text-gray-600 mb-6">
-                      The Youth Serving Christ (YSC) is a vibrant group of
-                      young Catholics aged 18-26 years. We are dedicated to
-                      serving our parish community through various ministries
-                      and activities while growing in our faith and fellowship.
+                      The Pioneer Total Abstinence Association of The 
+                      Sacred Heart of Jesus (PTAA) is a faith-based Ministry 
+                      within our parish that promotes total abstinence 
+                      from alcohol as a loving sacrifice to the Sacred Heart 
+                      of Jesus. Founded in 1898 by Fr. James Cullen, S.J., 
+                      the PTAA has grown into a global movement encouraging 
+                      people of all ages to embrace sobriety as an expression 
+                      of faith, love, and solidarity with those affected 
+                      by alcohol-related harm.
                     </p>
                     <p className="text-lg text-gray-600">
-                      Our mission is to empower young people to live as
-                      disciples of Jesus Christ in our world today, to draw
-                      young people to responsible participation in the life,
-                      mission, and work of the Catholic faith community, and to
-                      foster the total personal and spiritual growth of each
-                      young person.
+                      This group stands in the gap to pray for alcoholics and drug addicts.
                     </p>
                   </div>
 
@@ -65,15 +62,20 @@ function YouthServingChrist() {
                     </h2>
                     <ul className="list-disc pl-6 space-y-2 text-gray-600">
                       <li>
-                        To foster spiritual growth through prayer and sacraments
-                      </li>
-                      <li>To develop leadership skills among young people</li>
-                      <li>
-                        To promote Christian values and social responsibility
+                        To honor the Sacred Heart of Jesus through the offering of total abstinence from alcohol.
                       </li>
                       <li>
-                        To create opportunities for fellowship and community
-                        building
+                        To promote sobriety and Christian values, especially among the youth.
+                      </li>
+                      <li>
+                        To support individuals and families affected by alcohol misuse and addiction.
+                      </li>
+                      <li>
+                        To foster prayerful living and moral responsibility in society
+                      </li>
+                      <li>
+                        To offer spiritual reparation for the excessive use of alcohol
+                         and its effects on communities.
                       </li>
                     </ul>
                   </div>
@@ -89,9 +91,10 @@ function YouthServingChrist() {
                         Regular Activities
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Spiritual Thursdays</li>
-                        <li>Monthly Counselling Sessions</li>
-                        <li>Formation Classes(Third Sunday of the month)</li>
+                        <li>Daily Prayer</li>
+                        <li>Monthly meetings</li>
+                        <li>Support and outreach</li>
+                        <li>Participation in the liturgical life</li>
 
                       </ul>
                     </div>
@@ -102,16 +105,9 @@ function YouthServingChrist() {
                       </h3>
                       <ul className="space-y-2 text-gray-600">
                         <li>
-                          <strong>Every Sunday</strong> - After 12:00 NOON Mass
+                          <strong>Once a month</strong> - on Sunday 10.30 AM at Social Hall.
                         </li>
-                        <li>
-                          <strong>Every Thursday</strong> - Bible Study at 6:00
-                          PM
-                        </li>
-                        <li>
-                          <strong>First Saturday of the Month</strong> - Youth
-                          Mass at 5:00 PM
-                        </li>
+                        
                       </ul>
                     </div>
                   </div>
@@ -127,9 +123,10 @@ function YouthServingChrist() {
                         Liturgical Ministry
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Liturgical Dancers</li>
-                        <li>Lectors</li>
-                        <li>Choir</li>
+                        <li>Leading Prayer</li>
+                        <li>Lectors and ushers</li>
+                        <li>Choir participation</li>
+                        <li>Participating in Eucharistic Adoration</li>
                       </ul>
                     </div>
 
@@ -138,8 +135,8 @@ function YouthServingChrist() {
                         Social Ministry
                       </h3>
                       <ul className="space-y-2 text-gray-600">
-                        <li>Community Service</li>
-                        <li>Charity Work</li>
+                        <li>Support for Families Affected by Addiction</li>
+                        <li>Community Engagement</li>
                         <li>Youth Outreach</li>
                       </ul>
                     </div>
@@ -169,7 +166,7 @@ function YouthServingChrist() {
         </div>
       </div>
     </Layout>
-  );
+    
+    );
 }
-
-export default YouthServingChrist;
+export default PioneerAssociationGroup
