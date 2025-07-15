@@ -117,17 +117,7 @@ function NavBar() {
                     Home
                   </Link>
                 </li>
-                <li className={pathname === "/bookings" ? activeNav : Navstyles}>
-                  <Link
-                    className={
-                      pathname === "/bookings" ? "text-secondary" : "text-white"
-                    }
-                    href="/bookings/bookings"
-                    onClick={handleLinkClick}
-                  >
-                    Bookings
-                  </Link>
-                </li>
+            
                 <li className={`relative ${Navstyles}`}>
                   <Link
                     className={
@@ -695,6 +685,17 @@ function NavBar() {
                       </li>
                     </ul>
                   )}
+                </li>
+                <li className={pathname === "/bookings" ? activeNav : Navstyles}>
+                  <Link
+                    className={
+                      pathname === "/bookings" ? "text-secondary" : "text-white"
+                    }
+                    href="/bookings/bookings"
+                    onClick={handleLinkClick}
+                  >
+                    Bookings
+                  </Link>
                 </li>
               </ul>
             </div>
