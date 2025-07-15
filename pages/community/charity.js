@@ -38,7 +38,7 @@ function Charity() {
       meetingDay: "Thursdays",
       meetingTime: "2:00 PM - 4:00 PM",
       location: "Mabati Church Extention",
-      image: "/images/meeting-point.jpg",
+      image: "https://kahawa-sukari.s3.amazonaws.com/meetingpoint.webp",
       icon: <FaHospitalUser className="text-4xl text-primary" />,
     },
   ];

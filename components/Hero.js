@@ -12,7 +12,7 @@ function Hero({ imageUrl, title, text, link, linkTitle }) {
           loading="eager"
           fill
           quality={75}
-          className="object-cover md:object-cover brightness-[0.7] blur-[0.5px] transition-opacity duration-300"
+          className="object-cover md:object-cover brightness-[0.8] blur-[0.5px] transition-opacity duration-300"
           priority
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
           style={{

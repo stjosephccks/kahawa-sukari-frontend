@@ -8,7 +8,7 @@ function PioneerAssociationGroup() {
     const title= "Pioneer Total Abstinence Association of the Sacred Heart of Jesus"
     const text= 
     "For Thy greater glory and consolation, O Sacred Heart of Jesus"
-    const imageurl= "https://kahawa-sukari.s3.amazonaws.com/yca.jpeg"
+    const imageurl= "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg"
     const chaplain = "Chaplain - "
     const moderator = "Moderator - "
     return (
@@ -118,7 +118,7 @@ function PioneerAssociationGroup() {
                     Ministries
                   </h2>
                   <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-gray-50 p-6 rounded-lg">
+                    {/* <div className="bg-gray-50 p-6 rounded-lg">
                       <h3 className="text-xl font-semibold text-gray-800 mb-4">
                         Liturgical Ministry
                       </h3>
@@ -128,7 +128,7 @@ function PioneerAssociationGroup() {
                         <li>Choir participation</li>
                         <li>Participating in Eucharistic Adoration</li>
                       </ul>
-                    </div>
+                    </div> */}
 
                     <div className="bg-gray-50 p-6 rounded-lg">
                       <h3 className="text-xl font-semibold text-gray-800 mb-4">

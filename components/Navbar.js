@@ -24,7 +24,7 @@ function NavBar() {
   };
 
   const dropdown =
-    "relative md:absolute right-0 md:mt-8 rounded-md bg-cyan-600 text-white max-w-max py-3 md:whitespace-nowrap shadow-lg z-[999999]";
+    "relative md:absolute right-0 md:mt-8 rounded-md bg-[#1A9B96] text-white max-w-max py-3 md:whitespace-nowrap shadow-lg z-[999999]";
   const Navstyles =
     "pb-3 md:pb-6 text-md py-1 md:py-2 md:px-6 md:flex md:border-b-0 md:hover:text-purple-600 md:hover:bg-transparent";
   const activeNav = Navstyles + " text-primary1";
