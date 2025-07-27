@@ -3,10 +3,31 @@ import Layout from "@/components/Layout";
 import Formations_Links from "@/components/Formations_Links";
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ContactCard from "@/components/ContactCard";
+import BulletinCard from "@/components/Bulletincard";
+import axios from "axios";
 
 function YouthServingChrist() {
+  const [bulletins, setBulletins] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBulletins = async () => {
+      try {
+        const response = await axios.get("/api/bulletins");
+        const yscBulletin = response.data.filter( (bulletin) => bulletin.sections && bulletin.sections.includes("YSC"))
+        setBulletins(yscBulletin);
+      } catch (error) {
+        console.error("Error fetching bulletins:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchBulletins();
+  }, []);
+
   const title = "Youth Serving Christ";
   const text =
     "The Youth Serving Christ (YSC) is a vibrant group of young Catholics aged 18-26 years dedicated to serving our parish community.";
@@ -163,6 +184,28 @@ function YouthServingChrist() {
                   moderator={moderator}
                 // modTel={modTel}
                 />
+
+                {/* Bulletin Section */}
+                <div className="mt-12">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                    YSC Bulletins 
+                  </h2>
+                  {isLoading ? (
+                    <div className="flex justify-center items-center min-h-[200px]">
+                      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+                    </div>
+                  ) : bulletins.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {bulletins.map((bulletin) => (
+                        <BulletinCard key={bulletin._id} bulletin={bulletin} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center py-8 bg-gray-50 rounded-lg">
+                      <p className="text-gray-600">No bulletins available at the moment.</p>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

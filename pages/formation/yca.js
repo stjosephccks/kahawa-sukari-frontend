@@ -3,11 +3,34 @@ import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Formations_Links from "@/components/Formations_Links";
 import ContactCard from "@/components/ContactCard";
+import BulletinCard from "@/components/Bulletincard";
+import axios from "axios";
 
 function YoungCatholicAdults() {
+  const [bulletins, setBulletins] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBulletins = async () => {
+      try {
+        const response = await axios.get("/api/bulletins");
+        const ycaBulletins = response.data.filter(
+          (bulletin) => bulletin.sections && bulletin.sections.includes("YCA")
+        );
+        setBulletins(ycaBulletins);
+      } catch (error) {
+        console.error("Error fetching bulletins:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchBulletins();
+  }, []);
+
   const images = [
     "https://kahawa-sukari.s3.amazonaws.com/1728037544945.jpg",
     "https://kahawa-sukari.s3.amazonaws.com/1728037588402.jpg",
@@ -160,11 +183,33 @@ function YoungCatholicAdults() {
                   </h2>
                   <InfiniteCarousel images={images} interval={10000} />
                 </div>
+                </div>
+
+                {/* Bulletin Section */}
+                <div className="mt-12">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                    YCA Bulletins
+                  </h2>
+                  {isLoading ? (
+                    <div className="flex justify-center items-center min-h-[200px]">
+                      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+                    </div>
+                  ) : bulletins.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {bulletins.map((bulletin) => (
+                        <BulletinCard key={bulletin._id} bulletin={bulletin} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center py-8 bg-gray-50 rounded-lg">
+                      <p className="text-gray-600">No bulletins available at the moment.</p>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </Layout>
   );
 }

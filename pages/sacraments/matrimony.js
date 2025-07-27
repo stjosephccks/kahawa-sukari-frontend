@@ -5,11 +5,32 @@ import Hero from "@/components/Hero";
 import Sacraments_Links from "@/components/Sacraments_Links";
 import Head from "next/head";
 import ContactCard from "@/components/ContactCard";
+import BulletinCard from "@/components/Bulletincard";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function Matrimony() {
+  const [bulletins, setBulletins] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBulletins = async () => {
+      try {
+        const response = await axios.get("/api/bulletins");
+        const matrimonyBulletins = response.data.filter(
+          (bulletin) => bulletin.sections && bulletin.sections.includes("MATRIMONY"))
+      } catch (error) {
+        console.error("Error fetching bulletins:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchBulletins();
+  }, []);
+
   const title = "The Sacrament of Matrimony";
-  const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
   const text = "A sacred covenant established by God";
   const chaplain = "Parish Office";
   const chapTel = "0726 145609";
@@ -119,8 +140,29 @@ export default function Matrimony() {
                   <ContactCard
                     chaplain={chaplain}
                     chapTel={chapTel}
-
                   />
+
+                  {/* Bulletin Section */}
+                  <div className="mt-12">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                      Matrimony Bulletins 
+                    </h2>
+                    {isLoading ? (
+                      <div className="flex justify-center items-center min-h-[200px]">
+                        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+                      </div>
+                    ) : bulletins.length > 0 ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {bulletins.map((bulletin) => (
+                          <BulletinCard key={bulletin._id} bulletin={bulletin} />
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="text-center py-8 bg-gray-50 rounded-lg">
+                        <p className="text-gray-600">No bulletins available at the moment.</p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </motion.div>
