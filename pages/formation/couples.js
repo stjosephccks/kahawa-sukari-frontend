@@ -170,4 +170,4 @@ function Couples() {
   );
 }
 
-export default couples;
+export default Couples;
