@@ -21,7 +21,7 @@ export default async function handler(req, res) {
         console.log("Found by title:", bulletin);
         res.json(bulletin);
       } else {
-        const bulletins = await Bulletin.find({}).sort({ _id: -1 }).exec();
+        const bulletins = await Bulletin.find({ published: true }).sort({ _id: -1 }).exec();
         console.log("Found all bulletins:", bulletins.length);
         res.json(bulletins);
       }

@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import AnnouncementDoc from "@/components/AnnouncementDocs";
+import LiturgicalResponse from "@/components/LiturgicalResponse";
 
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -29,6 +30,7 @@ export default function Home() {
   }, [images.length]);
 
   const quickLinks = [
+ 
     {
       title: "Mass Times",
       description: "View our weekly mass schedule",
@@ -61,12 +63,12 @@ export default function Home() {
         <title>St.Joseph Kahawa Sukari | Home</title>
         <meta
           property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Home"
+          content="St Joseph Catholic Church Kahawa sukari - Home"
           key="title"
         />
       </Head>
       <Hero imageUrl={images[currentImageIndex]} title={title} text={text} />
-
+      
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Quick Links Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -85,8 +87,16 @@ export default function Home() {
           ))}
         </div>
 
+        {/* Liturgical Response Section */}
+        <section id="liturgy" className="py-8">
+          <div className="container mx-auto px-4">
+           
+            <LiturgicalResponse />
+          </div>
+        </section>
+
         {/* Mass Schedule and Announcements Section */}
-        <div className="bg-white rounded-lg shadow-sm" id="liturgy">
+        <div className="bg-white rounded-lg shadow-sm" id="mass-times">
           <div className="py-6 px-2 space-y-8">
             <MassSchedule />
             {/* <div className="border-t border-gray-200 pt-8" id="announcements">

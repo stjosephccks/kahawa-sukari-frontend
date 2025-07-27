@@ -11,7 +11,7 @@ export default async function handler(req, res){
         if(req.query?.id){
             res.json(await Event.findOne({_id:req.query.id}));
         }else{
-       const event = await Event.find({}).sort({_id:-1}).exec();
+       const event = await Event.find({ published: true }).sort({_id:-1}).exec();
        res.json(event);
         }
     

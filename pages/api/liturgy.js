@@ -1,12 +1,12 @@
 import mongooseConnect from "@/lib/mongoose";
-import { AnnouncementDocument } from "@/models/AnnouncementDocument";
+import { LiturgicalProgram } from "@/models/Liturgical";
 import { NextResponse } from "next/server";
 
 export default async function handler(req, res) {
     try {
         await mongooseConnect();
-        const announcementDocument = await AnnouncementDocument.find({published:true});
-        res.json(announcementDocument);
+        const liturgicalDocument = await LiturgicalProgram.find({ published: true });
+        res.json(liturgicalDocument);
 
     } catch (error) {
         return new NextResponse('Error fetching announcement ', { status: 500 })

@@ -8,6 +8,11 @@ const BulletinScema = new Schema({
         type: [String],
         enum: ["YCA", "YSC", "CJPD", "MATRIMONY", "CHATECHISIS"]
     },
+    published:{
+        type:Boolean,
+        default:false,
+        required:true
+    }
 });
 const Bulletin = models?.Bulletin || model('Bulletin', BulletinScema);
 export default Bulletin;

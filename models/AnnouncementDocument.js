@@ -55,6 +55,10 @@ const AnnouncementDocumentSchema = new Schema({
         type: String,
         enum: ['uploaded', 'processing', 'parsed', 'error'],
         default: 'uploaded'
+    }, published:{
+        type:Boolean,
+        default:false,
+        required:true
     }
 },
 

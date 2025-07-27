@@ -5,7 +5,7 @@ import Sunday from "@/models/Sunday";
 export default async function handler(req, res) {
   try {
     await mongooseConnect();
-    const announcements = await Announcement.find({})
+    const announcements = await Announcement.find({published:true})
       .populate("sunday", "sunday", Sunday)
       .lean();
     res.json(announcements);

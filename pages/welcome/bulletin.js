@@ -27,7 +27,7 @@ function Bulletin() {
     };
 
     fetchBulletins();
-  }, [bulletins]);
+  }, []); 
 
   return (
     <Layout>
