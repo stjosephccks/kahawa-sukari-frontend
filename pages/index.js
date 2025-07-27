@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import AnnouncementDoc from "@/components/AnnouncementDocs";
-import LiturgicalResponse from "@/components/LiturgicalResponse";
+import LiturgicalResponse from "@/components/LiturgicalProgram";
 
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -69,9 +69,9 @@ export default function Home() {
       </Head>
       <Hero imageUrl={images[currentImageIndex]} title={title} text={text} />
       
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4 py-12 space-y-12">
         {/* Quick Links Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {quickLinks.map((link, index) => (
             <Link
               key={index}
@@ -87,6 +87,17 @@ export default function Home() {
           ))}
         </div>
 
+        {/* Announcements Section */}
+        <section id="announcements" className="space-y-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-primary mb-2">Parish Notices</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Stay informed with the latest updates and announcements from our parish community
+            </p>
+          </div>
+          <Announcements maxItems={3} showViewAll={true} />
+        </section>
+
         {/* Liturgical Response Section */}
         <section id="liturgy" className="py-8">
           <div className="container mx-auto px-4">
@@ -99,10 +110,7 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-sm" id="mass-times">
           <div className="py-6 px-2 space-y-8">
             <MassSchedule />
-            {/* <div className="border-t border-gray-200 pt-8" id="announcements">
-              <Announcements />
-            </div> */}
-            <div className="border-t border-gray-200 pt-8" id="announcements">
+            <div className="border-t border-gray-200 pt-8" id="documents">
               <AnnouncementDoc />
             </div>
           </div>

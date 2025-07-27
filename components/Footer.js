@@ -52,15 +52,19 @@ function Footer() {
 
         <h3 className="my-2">ST.JOSEPH CATHOLIC CHURCH KAHAWA SUKARI</h3>
         <h4 className="mb-2">CHURCH OFFICE HOURS</h4>
-        <p className="">
-          <span className="font-bold">Monday-Friday:</span> 8:00 AM - 5:00 PM
-        </p>
-        {/* <p className=''><span className='font-bold'>Saturday:</span> 8:00am - 3:00pm</p> */}
+        <div className="space-y-1">
+          <p className="">
+            <span className="font-bold">Tuesday - Friday:</span> 8:00 AM - 5:00 PM
+          </p>
+          <p className="">
+            <span className="font-bold">Saturday:</span> 8:00 AM - 12:00 PM
+          </p>
+        </div>
         <h4 className="my-2">
           PARISH PHONE:{" "}
-          <a className="underline" href="tel: 0726 145609">
+          {/* <a className="underline" href="tel: 0726 145609">
             0726 145609
-          </a>
+          </a> */}
           &nbsp;&nbsp;|&nbsp;&nbsp;
           <a className="underline" href="tel: 0726 145609">
             0726 145609

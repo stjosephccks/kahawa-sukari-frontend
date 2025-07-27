@@ -1,19 +1,14 @@
-import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import RichTextEditor from "@/components/RichTextEditor";
 import axios from "axios";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
-import { format } from "date-fns";
+;
+import { useEffect, useState } from "react";
 
 function BulletDetailsPage() {
   const [bulletin, setBulletin] = useState(null);
   const router = useRouter();
   const { id } = router.query;
-
-  const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg";
-  const title = "Bulletin:";
 
   useEffect(() => {
     if (!id) {
@@ -47,8 +42,7 @@ function BulletDetailsPage() {
 
   return (
     <Layout>
-      <Hero text={bulletin.title} imageUrl={imageurl} title={title} />
-      <div className="max-w-4xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
+      <div className="max-w-4xl mx-auto px-3 sm:px-4 py-6 sm:py-8 mt-10">
         <article className="bg-white rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
           <header className="mb-4 sm:mb-6 text-center">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-2 sm:mb-4">
@@ -70,12 +64,10 @@ function BulletDetailsPage() {
             </div>
           )}
 
-          <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none">
+          <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none mt-10">
             {bulletin.content && (
               <RichTextEditor
                 initialContent={bulletin.content}
-                readOnly={true}
-                className="prose prose-sm sm:prose-base md:prose-lg max-w-none"
               />
             )}
           </div>

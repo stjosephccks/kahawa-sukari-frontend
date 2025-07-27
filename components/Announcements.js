@@ -1,151 +1,125 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { FaBell, FaCalendarAlt, FaClock, FaChurch } from "react-icons/fa";
 
-export default function Announcements() {
-  const [groupedAnnouncements, setGroupedAnnouncements] = useState([]);
+export default function Announcements({ maxItems = 3 }) {
+  const [announcements, setAnnouncements] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    axios.get("/api/announcements").then((response) => {
-      const grouped = response.data.reduce((acc, announcement) => {
-        const sunday = announcement.sunday.sunday;
-        if (!acc[sunday]) {
-          acc[sunday] = [];
-        }
-        acc[sunday].push(announcement);
-        return acc;
-      }, {});
+    const fetchAnnouncements = async () => {
+      try {
+        const response = await axios.get("/api/announcements");
+        // Sort by date, newest first
+        const sorted = response.data.sort(
+          (a, b) => new Date(b.updatedAt) - new Date(a.updatedAt)
+        );
+        setAnnouncements(sorted);
+      } catch (error) {
+        console.error("Error fetching announcements:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-      // Sort Sundays in descending order (newest first)
-      const sortedSundays = Object.keys(grouped).sort(
-        (a, b) => new Date(b) - new Date(a)
-      );
-      const sortedGrouped = {};
-
-      // Add all Sundays in sorted order
-      sortedSundays.forEach((sunday) => {
-        sortedGrouped[sunday] = grouped[sunday];
-      });
-
-      setGroupedAnnouncements(sortedGrouped);
-      setIsLoading(false);
-    });
+    fetchAnnouncements();
   }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center min-h-[200px]">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+      <div className="flex justify-center items-center p-12">
+        <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-primary"></div>
       </div>
     );
   }
 
+  if (announcements.length === 0) {
+    return (
+      <div className="text-center p-8 bg-gray-50 rounded-lg">
+        <FaBell className="mx-auto text-3xl text-gray-300 mb-3" />
+        <h3 className="text-gray-700">No announcements available</h3>
+        <p className="text-gray-500 text-sm mt-1">Please check back later</p>
+      </div>
+    );
+  }
+
+  const displayedAnnouncements = showAll 
+    ? announcements 
+    : announcements.slice(0, maxItems);
+
   return (
-    <div className="py-8 px-1 sm:px-2 lg:px-8">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-center mb-8 sm:mb-12"
-      >
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-3 sm:mb-4">
-          Announcements
-        </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base lg:text-lg px-1 sm:px-2">
-          Stay updated with the latest news and events from our parish
-          community.
-        </p>
-      </motion.div>
+    <div className="bg-white rounded-lg shadow-sm border border-gray-100">
+      <div className="bg-primary text-white p-4 rounded-t-lg">
+        <div className="flex items-center">
+          <FaBell className="mr-3 text-xl" />
+          <h2 className="text-xl font-semibold">Parish Notices</h2>
+        </div>
+      </div>
 
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="max-w-6xl mx-auto space-y-6 sm:space-y-8"
-      >
-        {Object.keys(groupedAnnouncements).map((sunday) => (
-          <motion.div
-            key={sunday}
-            variants={itemVariants}
-            className="bg-white rounded-xl shadow-lg overflow-hidden"
-          >
-            <div className="bg-primary p-3 sm:p-6">
-              <h2 className="text-xl sm:text-2xl font-semibold text-white">
-                Announcements for {sunday}
-              </h2>
-            </div>
-            <div className="p-3 sm:p-6">
-              <ul className="space-y-4 sm:space-y-6">
-                {groupedAnnouncements[sunday].map((announcement) => (
-                  <motion.li
-                    key={announcement._id}
-                    variants={itemVariants}
-                    className="border-l-4 border-primary pl-3 sm:pl-6 py-2 sm:py-3 hover:bg-gray-50 transition-colors duration-200"
-                  >
-                    <h3 className="text-lg sm:text-xl font-semibold text-primary mb-1 sm:mb-2">
-                      {announcement.title}
-                    </h3>
-                    <p className="text-gray-700 mb-3 sm:mb-4 text-base sm:text-lg leading-relaxed">
-                      {announcement.description}
-                    </p>
+      <div className="divide-y divide-gray-100">
+        {displayedAnnouncements.map((announcement) => (
+          <div key={announcement._id} className="p-4 hover:bg-gray-50 transition-colors">
+            <div className="flex items-start">
+              <div className="flex-1">
+                <div className="flex justify-between items-start">
+                  <h3 className="font-semibold text-gray-900">
+                    {announcement.title}
+                  </h3>
+                  <span className="text-xs text-gray-500 ml-2 whitespace-nowrap">
+                    {new Date(announcement.updatedAt).toLocaleDateString()}
+                  </span>
+                </div>
+                <p className="mt-1 text-gray-700">
+                  {announcement.description}
+                </p>
 
-                    {announcement.massScheduleAssignments &&
-                      announcement.massScheduleAssignments.length > 0 && (
-                        <div className="bg-gray-50 p-3 sm:p-4 rounded-lg">
-                          {/* <h4 className="font-medium text-primary mb-2 sm:mb-3 text-base sm:text-lg">
-                            Mass Schedule Assignments
-                          </h4> */}
-                          <ul className="space-y-2">
-                            {announcement.massScheduleAssignments.map(
-                              (assignment, index) => (
-                                <li
-                                  key={index}
-                                  className="flex flex-col sm:flex-row sm:items-center sm:space-x-2"
-                                >
-                                  <span className="text-primary hidden sm:inline">
-                                    •
-                                  </span>
-                                  <span className="font-medium text-base sm:text-lg">
-                                    {assignment.name}
-                                  </span>
-                                  <span className="text-gray-500 text-sm sm:text-base">
-                                    {assignment.time}
-                                  </span>
-                                </li>
-                              )
+                {announcement.massScheduleAssignments?.length > 0 && (
+                  <div className="mt-3 bg-gray-50 p-3 rounded">
+                    <h4 className="text-sm font-medium text-gray-800 flex items-center mb-2">
+                      <FaCalendarAlt className="mr-2 text-primary" />
+                      Mass Schedule
+                    </h4>
+                    <ul className="space-y-2">
+                      {announcement.massScheduleAssignments.map((item, i) => (
+                        <li key={i} className="text-sm text-gray-700">
+                          <div className="flex flex-wrap items-center gap-2">
+                            <span className="font-medium">{item.name}</span>
+                            {item.time && (
+                              <span className="inline-flex items-center text-xs text-gray-600">
+                                <FaClock className="mr-1" />
+                                {item.time}
+                              </span>
                             )}
-                          </ul>
-                        </div>
-                      )}
-                  </motion.li>
-                ))}
-              </ul>
+                            {item.location && (
+                              <span className="inline-flex items-center text-xs text-gray-600">
+                                <FaChurch className="mr-1" />
+                                {item.location}
+                              </span>
+                            )}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
+
+      {announcements.length > maxItems && (
+        <div className="p-4 text-center border-t border-gray-100">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="text-sm text-primary hover:text-primary-dark font-medium"
+          >
+            {showAll ? 'Show Less' : `View All (${announcements.length})`}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
+ 
