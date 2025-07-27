@@ -34,15 +34,15 @@ export default function Announcements({ maxItems = 3 }) {
     );
   }
 
-  if (announcements.length === 0) {
-    return (
-      <div className="text-center p-8 bg-gray-50 rounded-lg">
-        <FaBell className="mx-auto text-3xl text-gray-300 mb-3" />
-        <h3 className="text-gray-700">No announcements available</h3>
-        <p className="text-gray-500 text-sm mt-1">Please check back later</p>
-      </div>
-    );
-  }
+  // if (announcements.length === 0) {
+  //   return (
+  //     <div className="text-center p-8 bg-gray-50 rounded-lg">
+  //       <FaBell className="mx-auto text-3xl text-gray-300 mb-3" />
+  //       <h3 className="text-gray-700">No announcements available</h3>
+  //       <p className="text-gray-500 text-sm mt-1">Please check back later</p>
+  //     </div>
+  //   );
+  // }
 
   const displayedAnnouncements = showAll 
     ? announcements 
@@ -50,16 +50,19 @@ export default function Announcements({ maxItems = 3 }) {
 
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-100">
-      <div className="bg-primary text-white p-4 rounded-t-lg">
+     
+
+      <div className="divide-y divide-gray-100">
+      
+        {displayedAnnouncements.map((announcement) => (
+          
+          <div key={announcement._id} className="p-4 hover:bg-gray-50 transition-colors">
+            <div className="bg-primary text-white p-4 rounded-t-lg">
         <div className="flex items-center">
           <FaBell className="mr-3 text-xl" />
           <h2 className="text-xl font-semibold">Parish Notices</h2>
         </div>
       </div>
-
-      <div className="divide-y divide-gray-100">
-        {displayedAnnouncements.map((announcement) => (
-          <div key={announcement._id} className="p-4 hover:bg-gray-50 transition-colors">
             <div className="flex items-start">
               <div className="flex-1">
                 <div className="flex justify-between items-start">

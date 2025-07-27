@@ -90,10 +90,7 @@ export default function Home() {
         {/* Announcements Section */}
         <section id="announcements" className="space-y-6">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-primary mb-2">Parish Notices</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Stay informed with the latest updates and announcements from our parish community
-            </p>
+            
           </div>
           <Announcements maxItems={3} showViewAll={true} />
         </section>
