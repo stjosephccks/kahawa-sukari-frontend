@@ -3,9 +3,8 @@
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
-import Head from "next/head";
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import SEO from "@/components/SEO";
 
 const choirs = [
   {
