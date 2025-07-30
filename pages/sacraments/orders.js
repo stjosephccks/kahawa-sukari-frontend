@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Sacraments_Links from "@/components/Sacraments_Links";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 
 export default function Orders() {
@@ -20,14 +20,11 @@ export default function Orders() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | The Sacrament of Holy Orders</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - The Sacrament of Holy Orders"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | The Sacrament of Holy Orders"
+        description="St.Joseph Kahawa Sukari | The Sacrament of Holy Orders"
+        keywords="St.Joseph Kahawa Sukari, The Sacrament of Holy Orders, Church The Sacrament of Holy Orders, Church Events"
+        url="https://stjosephchurchkahawasukari.org/sacraments/orders"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

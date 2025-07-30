@@ -2,8 +2,7 @@ import ContactCard from "@/components/ContactCard";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Sacraments_Links from "@/components/Sacraments_Links";
-import Head from "next/head";
-import React from "react";
+import SEO from "@/components/SEO";
 
 function ChildrenBecomingCatholic() {
   const title = "Becoming catholic";
@@ -14,17 +13,11 @@ function ChildrenBecomingCatholic() {
   const chapTel = "0726 145609";
   return (
     <Layout>
-      <Head>
-        <title>
-          St.Joseph Kahawa Sukari | Rite for Christian Initiation for Children
-          (RCIC)
-        </title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Right for christian Initiation for Children - Catechism"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | Right of Christian Initiation for Children (RCIC)"
+        description="St.Joseph Kahawa Sukari | Right of Christian Initiation for Children (RCIC)"
+        keywords="St.Joseph Kahawa Sukari, Right of Christian Initiation for Children (RCIC), Church Right of Christian Initiation for Children (RCIC), Church Events"
+        url="https://stjosephchurchkahawasukari.org/sacraments/rcic"
+      />
       <Hero text={text} title={title} imageUrl={imageurl} />
       <div className="flex flex-col md:flex-row justify-center  md:max-w-screen-lg mx-auto p-4">
         <div className="sticky top-4">

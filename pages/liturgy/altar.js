@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 
 export default function AltarServers() {
   const title = "Altar Servers";
@@ -14,14 +14,11 @@ export default function AltarServers() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Altar Servers</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Altar Servers"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | Altar Servers"
+        description="St.Joseph Kahawa Sukari | Altar Servers"
+        keywords="St.Joseph Kahawa Sukari, Altar Servers, Church Altar Servers, Church Events"
+        url="https://stjosephchurchkahawasukari.org/liturgy/altar"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

@@ -2,8 +2,8 @@ import Eventcard from "@/components/Eventcard";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import axios from "axios";
-import Head from "next/head";
 import React, { useEffect, useState } from "react";
+import SEO from "@/components/SEO";
 
 function Event() {
   const [events, setEvents] = useState([]);
@@ -22,14 +22,11 @@ function Event() {
   }, []);
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Upcoming Events</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Upcoming Events"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | Upcoming Events" 
+          description="St.Joseph Kahawa Sukari | Upcoming Events As I hope in thee, O Lord, inspire me with that confidence, which brings me to thy holy mountain." 
+          keywords="St.Joseph Kahawa Sukari, Upcoming Events, Mass Times, Church Events"
+          url="https://stjosephchurchkahawasukari.org/community"
+     />
       <Hero imageUrl={imageurl} text={text} title={title} />
       <div>
         <h1 className="text-primary mt-24 ml-3 md:text-center">

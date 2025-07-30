@@ -1,13 +1,12 @@
 import InfiniteCarousel from "@/components/Carousel";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
-import Head from "next/head";
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Formations_Links from "@/components/Formations_Links";
 import ContactCard from "@/components/ContactCard";
 import BulletinCard from "@/components/Bulletincard";
 import axios from "axios";
+import SEO from "@/components/SEO";
 
 function YoungCatholicAdults() {
   const [bulletins, setBulletins] = useState([]);
@@ -59,14 +58,11 @@ function YoungCatholicAdults() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Young Catholic Adults</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Young Catholic Adults Group - We are Legacy Seekers"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | Young Catholic Adults"
+        description="St.Joseph Kahawa Sukari | Young Catholic Adults"
+        keywords="St.Joseph Kahawa Sukari, Young Catholic Adults, Church Young Catholic Adults, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/yca"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

@@ -1,10 +1,9 @@
 import BulletinCard from "@/components/Bulletincard";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import axios from "axios";
-import Head from "next/head";
 import React, { useEffect, useState } from "react";
+import SEO from "@/components/SEO";
 
 function CatechesisPage() {
   const [bulletins, setBulletins] = useState([]);
@@ -36,14 +35,11 @@ function CatechesisPage() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Catechesis</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahawa Sukari - Catechesis"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | Catechesis" 
+          description="St.Joseph Kahawa Sukari | Catechesis" 
+          keywords="St.Joseph Kahawa Sukari, Catechesis, Mass Times, Church Events"
+          url="https://stjosephchurchkahawasukari.org/catechesis"
+     />
       <Hero imageUrl={imageurl} title={title} text={text} />
       <div>
         <h1 className="text-primary mt-24 ml-3 md:text-center">Catechesis</h1>
@@ -63,8 +59,6 @@ function CatechesisPage() {
           )}
         </div>
       </div>
-      {/* Footer is usually part of Layout, if not, uncomment below */}
-      {/* <Footer /> */}
     </Layout>
   );
 }

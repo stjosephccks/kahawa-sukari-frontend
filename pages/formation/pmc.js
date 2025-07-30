@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Formations_Links from "@/components/Formations_Links";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import React from "react";
 
@@ -17,14 +17,11 @@ function Pmc() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Pontifical Missionary Childhood</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Pontifical Missionary Childhood"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | Pontifical Missionary Childhood"
+        description="St.Joseph Kahawa Sukari | Pontifical Missionary Childhood"
+        keywords="St.Joseph Kahawa Sukari, Pontifical Missionary Childhood, Church Pontifical Missionary Childhood, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/pmc"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

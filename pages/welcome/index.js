@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 
 function welcome() {
   const title = "Welcome to St. Joseph Catholic Church";
@@ -13,14 +13,12 @@ function welcome() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Welcome to our community</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Welcome to our community"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | Welcome to our community" 
+          description="Welcome to St.Joseph Kahawa Sukari | Welcome to our community" 
+          keywords="St.Joseph Kahawa Sukari, Welcome to our community, Mass Times, Church Events"
+          url="https://stjosephchurchkahawasukari.org/welcome"
+     />
+      
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

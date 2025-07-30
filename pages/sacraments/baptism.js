@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Sacraments_Links from "@/components/Sacraments_Links";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 
 export default function Baptism() {
@@ -17,14 +17,11 @@ export default function Baptism() {
   // const modTel = "0729 455437";
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | The Sacrament of Baptism</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - The Sacrament of Baptism"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | The Sacrament of Baptism"
+        description="St.Joseph Kahawa Sukari | The Sacrament of Baptism"
+        keywords="St.Joseph Kahawa Sukari, The Sacrament of Baptism, Church The Sacrament of Baptism, Church Events"
+        url="https://stjosephchurchkahawasukari.org/sacraments/baptism"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

@@ -2,8 +2,7 @@ import ContactCard from "@/components/ContactCard";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Sacraments_Links from "@/components/Sacraments_Links";
-import Head from "next/head";
-import React from "react";
+import SEO from "@/components/SEO";
 
 function AdultsBecomingCatholic() {
   const title = "Becoming Catholic (RCIA)";
@@ -15,17 +14,11 @@ function AdultsBecomingCatholic() {
 
   return (
     <Layout>
-      <Head>
-        <title>
-          St.Joseph Kahawa Sukari | Rite of Christian Initiation for Adults
-          (RCIA)
-        </title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Rite of Christian Initiation for Adults (RCIA)"
-          key="title"
-        />
-      </Head>
+     <SEO title="St.Joseph Kahawa Sukari | Rite of Christian Initiation for Adults (RCIA)"
+        description="St.Joseph Kahawa Sukari | Rite of Christian Initiation for Adults (RCIA)"
+        keywords="St.Joseph Kahawa Sukari, Rite of Christian Initiation for Adults (RCIA), Church Rite of Christian Initiation for Adults (RCIA), Church Events"
+        url="https://stjosephchurchkahawasukari.org/sacraments/rcia"
+      />
       <Hero text={text} title={title} imageUrl={imageurl} />
       <div className="flex flex-col md:flex-row justify-center md:max-w-screen-lg mx-auto p-4">
         <div className="sticky top-4">

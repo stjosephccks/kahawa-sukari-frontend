@@ -1,27 +1,24 @@
 import Hero from "@/components/Hero";
 import Formations_Links from "@/components/Formations_Links";
 import ContactCard from "@/components/ContactCard";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import Layout from "@/components/Layout";
 import React from "react";
 function PioneerAssociationGroup() {
-    const title= "Pioneer Total Abstinence Association of the Sacred Heart of Jesus"
-    const text= 
+  const title = "Pioneer Total Abstinence Association of the Sacred Heart of Jesus"
+  const text =
     "For Thy greater glory and consolation, O Sacred Heart of Jesus"
-    const imageurl= "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg"
-    const chaplain = "Chaplain - "
-    const moderator = "Moderator - "
-    return (
-        <Layout>
-            <Head>
-                <title>St. Joseph Kahawa Sukari | Pioneer Association Group</title>
-                <meta
-                 property="og:title"
-                 content="St Joseph Catholic Church Kahawa sukari - Pioneer Association Group"
-                 key="title"
-                />
-            </Head>
-            <div className="min-h-screen bg-gray-50">
+  const imageurl = "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg"
+  const chaplain = "Chaplain - "
+  const moderator = "Moderator - "
+  return (
+    <Layout>
+      <SEO title="St.Joseph Kahawa Sukari | Pioneer Association Group"
+        description="St.Joseph Kahawa Sukari | Pioneer Association Group"
+        keywords="St.Joseph Kahawa Sukari, Pioneer Association Group, Church Pioneer Association Group, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/pioneer"
+      />
+      <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
         </div>
@@ -41,14 +38,14 @@ function PioneerAssociationGroup() {
                       About Pioneer Association Group
                     </h2>
                     <p className="text-lg text-gray-600 mb-6">
-                      The Pioneer Total Abstinence Association of The 
-                      Sacred Heart of Jesus (PTAA) is a faith-based Ministry 
-                      within our parish that promotes total abstinence 
-                      from alcohol as a loving sacrifice to the Sacred Heart 
-                      of Jesus. Founded in 1898 by Fr. James Cullen, S.J., 
-                      the PTAA has grown into a global movement encouraging 
-                      people of all ages to embrace sobriety as an expression 
-                      of faith, love, and solidarity with those affected 
+                      The Pioneer Total Abstinence Association of The
+                      Sacred Heart of Jesus (PTAA) is a faith-based Ministry
+                      within our parish that promotes total abstinence
+                      from alcohol as a loving sacrifice to the Sacred Heart
+                      of Jesus. Founded in 1898 by Fr. James Cullen, S.J.,
+                      the PTAA has grown into a global movement encouraging
+                      people of all ages to embrace sobriety as an expression
+                      of faith, love, and solidarity with those affected
                       by alcohol-related harm.
                     </p>
                     <p className="text-lg text-gray-600">
@@ -75,7 +72,7 @@ function PioneerAssociationGroup() {
                       </li>
                       <li>
                         To offer spiritual reparation for the excessive use of alcohol
-                         and its effects on communities.
+                        and its effects on communities.
                       </li>
                     </ul>
                   </div>
@@ -107,7 +104,7 @@ function PioneerAssociationGroup() {
                         <li>
                           <strong>Once a month</strong> - on Sunday 10.30 AM at Social Hall.
                         </li>
-                        
+
                       </ul>
                     </div>
                   </div>
@@ -166,7 +163,7 @@ function PioneerAssociationGroup() {
         </div>
       </div>
     </Layout>
-    
-    );
+
+  );
 }
 export default PioneerAssociationGroup

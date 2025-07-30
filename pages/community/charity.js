@@ -11,7 +11,7 @@ import {
   FaUsers,
   FaHospitalUser,
 } from "react-icons/fa";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 
 function Charity() {
   const title = "Community Outreach";
@@ -110,14 +110,12 @@ function Charity() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Charity</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Charity"
-          key="title"
-        />
-      </Head>
+      
+      <SEO title="St.Joseph Kahawa Sukari | Charity" 
+          description="St.Joseph Kahawa Sukari | Charity" 
+          keywords="St.Joseph Kahawa Sukari, Charity, Mass Times, Church Events"
+          url="https://stjosephchurchkahawasukari.org/community/charity"
+     />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

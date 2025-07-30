@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Sacraments_Links from "@/components/Sacraments_Links";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import BulletinCard from "@/components/Bulletincard";
 import { useState, useEffect } from "react";
@@ -37,14 +37,11 @@ export default function Matrimony() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | The Sacrament of Matrimony</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - The Sacrament of Matrimony"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | The Sacrament of Matrimony"
+        description="St.Joseph Kahawa Sukari | The Sacrament of Matrimony"
+        keywords="St.Joseph Kahawa Sukari, The Sacrament of Matrimony, Church The Sacrament of Matrimony, Church Events"
+        url="https://stjosephchurchkahawasukari.org/sacraments/matrimony"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

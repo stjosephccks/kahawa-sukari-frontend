@@ -5,7 +5,7 @@ import Formations_Links from "@/components/Formations_Links";
 import ContactCard from "@/components/ContactCard";
 import BulletinCard from "@/components/Bulletincard";
 import axios from "axios";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 
 function Couples() {
   const [bulletins, setBulletins] = useState([]);
@@ -37,16 +37,11 @@ function Couples() {
 
   return (
     <Layout>
-      <Head>
-        <title>
-          St.Joseph Kahawa Sukari | Couples Growing Together in Christ
-        </title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Couples Growing Together in Christ"
-          key="title"
-        />
-      </Head>
+     <SEO title="St.Joseph Kahawa Sukari | Couples Growing Together in Christ"
+        description="St.Joseph Kahawa Sukari | Couples Growing Together in Christ"
+        keywords="St.Joseph Kahawa Sukari, Couples Growing Together in Christ, Church Couples Growing Together in Christ, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/couples"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

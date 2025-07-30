@@ -1,10 +1,9 @@
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
-import Head from "next/head";
-import Link from "next/link";
 import React from "react";
 import Formations_Links from "@/components/Formations_Links";
 import ContactCard from "@/components/ContactCard";
+import SEO from "@/components/SEO";
 
 function CommunionAndLiberation() {
   const title = "Communion and Liberation";
@@ -18,14 +17,11 @@ function CommunionAndLiberation() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Communion and Liberation</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahawa sukari - Communion and Liberation"
-          key="title"
-        />
-      </Head>
+     <SEO title="St.Joseph Kahawa Sukari | Communion and Liberation"
+        description="St.Joseph Kahawa Sukari | Communion and Liberation"
+        keywords="St.Joseph Kahawa Sukari, Communion and Liberation, Church Communion and Liberation, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/cl"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

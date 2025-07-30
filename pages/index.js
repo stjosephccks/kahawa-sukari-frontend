@@ -10,7 +10,7 @@ import Link from "next/link";
 import Head from "next/head";
 import AnnouncementDoc from "@/components/AnnouncementDocs";
 import LiturgicalResponse from "@/components/LiturgicalProgram";
-
+import SEO from "@/components/SEO";
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
@@ -67,6 +67,11 @@ export default function Home() {
           key="title"
         />
       </Head>
+      <SEO title="St.Joseph Kahawa Sukari | Home" 
+          description="Welcome to St.Joseph Kahawa Sukari | Home" 
+          keywords="St.Joseph Kahawa Sukari, Home, Mass Times, Church Events"
+          url="https://stjosephchurchkahawasukari.org"
+     />
       <Hero imageUrl={images[currentImageIndex]} title={title} text={text} />
       
       <div className="max-w-7xl mx-auto px-4 py-12 space-y-12">

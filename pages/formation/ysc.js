@@ -1,8 +1,7 @@
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Formations_Links from "@/components/Formations_Links";
-import Head from "next/head";
-import Link from "next/link";
+import SEO from "@/components/SEO";
 import React, { useState, useEffect } from "react";
 import ContactCard from "@/components/ContactCard";
 import BulletinCard from "@/components/Bulletincard";
@@ -37,14 +36,11 @@ function YouthServingChrist() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Youth Serving Christ</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahawa sukari - Youth Serving Christ"
-          key="title"
-        />
-      </Head>
+     <SEO title="St.Joseph Kahawa Sukari | Youth Serving Christ"
+        description="St.Joseph Kahawa Sukari | Youth Serving Christ"
+        keywords="St.Joseph Kahawa Sukari, Youth Serving Christ, Church Youth Serving Christ, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/ysc"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

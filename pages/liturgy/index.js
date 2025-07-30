@@ -3,7 +3,7 @@
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import { motion } from "framer-motion";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 
 export default function MassSchedule() {
   const title = "Mass Schedule";
@@ -13,14 +13,11 @@ export default function MassSchedule() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Mass Schedule</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Mass Schedule"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | Mass Schedule"
+        description="St.Joseph Kahawa Sukari | Mass Schedule"
+        keywords="St.Joseph Kahawa Sukari, Mass Schedule, Mass Times, Church Events"
+        url="https://stjosephchurchkahawasukari.org/liturgy"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

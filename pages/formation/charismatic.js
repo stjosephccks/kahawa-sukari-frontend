@@ -1,9 +1,8 @@
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Formations_Links from "@/components/Formations_Links";
-import Head from "next/head";
-import Link from "next/link";
 import React from "react";
+import SEO from "@/components/SEO";
 
 function Charismatic() {
   const title = "Catholic Charismatic Renewal";
@@ -13,14 +12,11 @@ function Charismatic() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Catholic Charismatic Renewal</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Catholic Charismatic Renewal"
-          key="title"
-        />
-      </Head>
+    <SEO title="St.Joseph Kahawa Sukari | Catholic Charismatic Renewal"
+        description="St.Joseph Kahawa Sukari | Catholic Charismatic Renewal"
+        keywords="St.Joseph Kahawa Sukari, Catholic Charismatic Renewal, Church Catholic Charismatic Renewal, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/charismatic"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

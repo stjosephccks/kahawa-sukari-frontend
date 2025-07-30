@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import React from "react";
 import Hero from "@/components/Hero";
 import Head from "next/head";
+import SEO from "@/components/SEO";
 
 function Jumuiya() {
   const jumuiyas = [
@@ -199,14 +200,12 @@ function Jumuiya() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Jumuiyas</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Jumuiyas"
-          key="title"
-        />
-      </Head>
+      
+      <SEO title="St.Joseph Kahawa Sukari | Jumuiyas" 
+          description="St.Joseph Kahawa Sukari | Jumuiyas" 
+          keywords="St.Joseph Kahawa Sukari, Jumuiyas, Mass Times, Church Events"
+          url="https://stjosephchurchkahawasukari.org/community/jumuiya"
+     />
       <Hero
         imageUrl="https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg"
         title="Our Jumuiyas - Small Christian Communities"

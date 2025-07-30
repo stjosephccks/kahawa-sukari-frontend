@@ -1,7 +1,7 @@
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Formations_Links from "@/components/Formations_Links";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 import ContactCard from "@/components/ContactCard";
 import React from "react";
 
@@ -17,14 +17,11 @@ function CatholicMenAssociation() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Catholic Men Association</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Catholic Men Association"
-          key="title"
-        />
-      </Head>
+    <SEO title="St.Joseph Kahawa Sukari | Catholic Men Association"
+        description="St.Joseph Kahawa Sukari | Catholic Men Association"
+        keywords="St.Joseph Kahawa Sukari, Catholic Men Association, Church Catholic Men Association, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/cma"
+      />
       <div className="min-h-screen bYouthg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

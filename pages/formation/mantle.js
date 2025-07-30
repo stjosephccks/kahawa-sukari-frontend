@@ -1,8 +1,7 @@
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Formations_Links from "@/components/Formations_Links";
-import Head from "next/head";
-import Link from "next/link";
+import SEO from "@/components/SEO";
 import React from "react";
 import ContactCard from "@/components/ContactCard";
 import InfiniteCarousel from "@/components/Carousel";
@@ -30,14 +29,11 @@ function MantleOfStJoseph() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Mantle of St. Joseph</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Mantle of St. Joseph"
-          key="title"
-        />
-      </Head>
+   <SEO title="St.Joseph Kahawa Sukari | Mantle of St. Joseph"
+        description="St.Joseph Kahawa Sukari | Mantle of St. Joseph"
+        keywords="St.Joseph Kahawa Sukari, Mantle of St. Joseph, Church Mantle of St. Joseph, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/mantle"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
@@ -71,7 +67,7 @@ function MantleOfStJoseph() {
                       If you see it, share it. If you can't see it, pray for it.
                     </p>
                   </div>
-
+      
                   <div>
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
                       Our Objectives

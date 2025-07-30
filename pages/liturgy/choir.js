@@ -93,14 +93,12 @@ export default function Choir() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Choirs</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Choirs"
-          key="title"
-        />
-      </Head>
+      
+      <SEO title="St.Joseph Kahawa Sukari | Choirs"
+        description="St.Joseph Kahawa Sukari | Choirs"
+        keywords="St.Joseph Kahawa Sukari, Choirs, Church Choirs, Church Events"
+        url="https://stjosephchurchkahawasukari.org/liturgy/choir"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero

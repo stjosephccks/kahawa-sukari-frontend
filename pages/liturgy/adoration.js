@@ -3,7 +3,7 @@
 import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import { motion } from "framer-motion";
-import Head from "next/head";
+import SEO from "@/components/SEO";
 
 export default function EucharisticAdoration() {
   const title = "Eucharistic Adoration";
@@ -13,14 +13,11 @@ export default function EucharisticAdoration() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Eucharistic Adoration </title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Eucharistic Adoration"
-          key="title"
-        />
-      </Head>
+      <SEO title="St.Joseph Kahawa Sukari | Eucharistic Adoration"
+        description="St.Joseph Kahawa Sukari | Eucharistic Adoration"
+        keywords="St.Joseph Kahawa Sukari, Eucharistic Adoration, Church Eucharistic Adoration, Church Events"
+        url="https://stjosephchurchkahawasukari.org/liturgy/adoration"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

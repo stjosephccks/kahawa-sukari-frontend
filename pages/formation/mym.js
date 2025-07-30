@@ -1,8 +1,7 @@
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Formations_Links from "@/components/Formations_Links";
-import Head from "next/head";
-import Link from "next/link";
+import SEO from "@/components/SEO";
 import React from "react";
 import ContactCard from "@/components/ContactCard";
 
@@ -18,14 +17,11 @@ function MissionaryYouthMovement() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Missionary Youth Movement</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Missionary Youth Movement"
-          key="title"
-        />
-      </Head>
+     <SEO title="St.Joseph Kahawa Sukari | Missionary Youth Movement"
+        description="St.Joseph Kahawa Sukari | Missionary Youth Movement"
+        keywords="St.Joseph Kahawa Sukari, Missionary Youth Movement, Church Missionary Youth Movement, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/mym"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl}/>

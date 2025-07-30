@@ -5,6 +5,7 @@ import Formations_Links from "@/components/Formations_Links";
 import ContactCard from "@/components/ContactCard";
 import BulletinCard from "@/components/Bulletincard";
 import axios from "axios";
+import SEO from "@/components/SEO";
 
 function CJPD() {
   const [bulletins, setBulletins] = useState([]);
@@ -36,6 +37,11 @@ function CJPD() {
 
   return (
     <Layout>
+      <SEO title="St.Joseph Kahawa Sukari | Catholic Justice and Peace Department (CJPD)"
+        description="St.Joseph Kahawa Sukari | Catholic Justice and Peace Department (CJPD)"
+        keywords="St.Joseph Kahawa Sukari, Catholic Justice and Peace Department (CJPD), Church Catholic Justice and Peace Department (CJPD), Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/cjpd"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />

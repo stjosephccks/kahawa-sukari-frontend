@@ -1,10 +1,9 @@
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import Formations_Links from "@/components/Formations_Links";
-import Head from "next/head";
-import Link from "next/link";
 import React from "react";
 import ContactCard from "@/components/ContactCard";
+import SEO from "@/components/SEO";
 
 function CatholicWomenAssociation() {
   const title = "Catholic Women Association";
@@ -18,14 +17,11 @@ function CatholicWomenAssociation() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Catholic Women Association</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahwa sukari - Catholic Women Association"
-          key="title"
-        />
-      </Head>
+     <SEO title="St.Joseph Kahawa Sukari | Catholic Women Association"
+        description="St.Joseph Kahawa Sukari | Catholic Women Association"
+        keywords="St.Joseph Kahawa Sukari, Catholic Women Association, Church Catholic Women Association, Church Events"
+        url="https://stjosephchurchkahawasukari.org/formation/cwa"
+      />
       <div className="min-h-screen bg-gray-50">
         <div className="w-full">
           <Hero text={text} title={title} imageUrl={imageurl} />
