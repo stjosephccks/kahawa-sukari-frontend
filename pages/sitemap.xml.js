@@ -9,7 +9,18 @@ export const getServerSideProps = async (ctx) => {
     { url: '/', lastmod: new Date().toISOString(), changefreq: 'daily', priority: 1.0 },
     { url: '/community', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.8 },
     { url: '/welcome/bulletin', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
-    // Add more static pages as needed
+    { url: '/formation/cl', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+    { url: '/formation/cjpd', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+    { url: '/formation/yca', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+    { url: '/formation/charismatic', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+    { url: '/formation/ysc', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+    { url: '/formation/mantle', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+    { url: '/formation/cma', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+    { url: '/formation/cwa', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+    { url: '/formation/couples', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+    { url: '/formation/pioneer', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+    { url: '/formation/pmc', lastmod: new Date().toISOString(), changefreq: 'weekly', priority: 0.9 },
+        // Add more static pages as needed
   ];
 
   // Convert to sitemap format
