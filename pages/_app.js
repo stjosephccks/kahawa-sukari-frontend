@@ -1,7 +1,41 @@
-import '@/styles/globals.css';
+import { useEffect } from 'react';
+import { smoothScroll } from '../utils/smoothScroll';
 import Head from 'next/head';
+import '@/styles/globals.css';
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    // Initialize smooth scrolling on mobile
+    if (typeof window !== 'undefined') {
+      smoothScroll.init();
+    }
+
+    // Add smooth scrolling CSS
+    const style = document.createElement('style');
+    style.textContent = `
+      html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+      * {
+        -webkit-overflow-scrolling: touch;
+      }
+      .smooth-scroll {
+        -webkit-overflow-scrolling: touch;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
     <>
       <Head>
