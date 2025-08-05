@@ -17,9 +17,9 @@ function CommunionAndLiberation() {
 
   return (
     <Layout>
-     <SEO title="St.Joseph Kahawa Sukari | Communion and Liberation"
-        description="St.Joseph Kahawa Sukari | Communion and Liberation"
-        keywords="St.Joseph Kahawa Sukari, Communion and Liberation, Church Communion and Liberation, Church Events"
+     <SEO title="Communion and Liberation (CL) | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | Communion and Liberation"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Communion and Liberation, Church Communion and Liberation, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/cl"
       />
       <div className="min-h-screen bg-gray-50">

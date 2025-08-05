@@ -17,9 +17,9 @@ function Pmc() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Pontifical Missionary Childhood"
-        description="St.Joseph Kahawa Sukari | Pontifical Missionary Childhood"
-        keywords="St.Joseph Kahawa Sukari, Pontifical Missionary Childhood, Church Pontifical Missionary Childhood, Church Events"
+      <SEO title="Pontifical Missionary Childhood (PMC) | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | Pontifical Missionary Childhood"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Pontifical Missionary Childhood, Church Pontifical Missionary Childhood, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/pmc"
       />
       <div className="min-h-screen bg-gray-50">

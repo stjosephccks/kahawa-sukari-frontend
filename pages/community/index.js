@@ -22,9 +22,9 @@ function Event() {
   }, []);
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Upcoming Events" 
-          description="St.Joseph Kahawa Sukari | Upcoming Events As I hope in thee, O Lord, inspire me with that confidence, which brings me to thy holy mountain." 
-          keywords="St.Joseph Kahawa Sukari, Upcoming Events, Mass Times, Church Events"
+      <SEO title="Upcoming Parish Events | St. Joseph Catholic Church Kahawa Sukari" 
+          description="St.Joseph Catholic Church Kahawa Sukari | Upcoming Events As I hope in thee, O Lord, inspire me with that confidence, which brings me to thy holy mountain." 
+          keywords="St.Joseph Catholic Church Kahawa Sukari, Upcoming Events, Mass Times, Church Events"
           url="https://stjosephchurchkahawasukari.org/community"
      />
       <Hero imageUrl={imageurl} text={text} title={title} />

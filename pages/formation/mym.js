@@ -17,9 +17,9 @@ function MissionaryYouthMovement() {
 
   return (
     <Layout>
-     <SEO title="St.Joseph Kahawa Sukari | Missionary Youth Movement"
-        description="St.Joseph Kahawa Sukari | Missionary Youth Movement"
-        keywords="St.Joseph Kahawa Sukari, Missionary Youth Movement, Church Missionary Youth Movement, Church Events"
+     <SEO title="Missionary Youth Movement (MYM) | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | Missionary Youth Movement"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Missionary Youth Movement, Church Missionary Youth Movement, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/mym"
       />
       <div className="min-h-screen bg-gray-50">

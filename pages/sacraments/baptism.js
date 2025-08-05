@@ -17,9 +17,9 @@ export default function Baptism() {
   // const modTel = "0729 455437";
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | The Sacrament of Baptism"
-        description="St.Joseph Kahawa Sukari | The Sacrament of Baptism"
-        keywords="St.Joseph Kahawa Sukari, The Sacrament of Baptism, Church The Sacrament of Baptism, Church Events"
+      <SEO title="Baptism Sacrament | St. Joseph Catholic Church Kahawa Sukari"
+        description="Baptism Sacrament at St. Joseph Catholic Church Kahawa Sukari - The gateway to life in the Spirit and the door to other sacraments"
+        keywords="Baptism sacrament Kahawa Sukari, Catholic baptism Nairobi, Infant baptism Kenya, Adult baptism Catholic, Baptism preparation, Catholic sacraments, St. Joseph Catholic Church"
         url="https://stjosephchurchkahawasukari.org/sacraments/baptism"
       />
       <div className="min-h-screen bg-gray-50">

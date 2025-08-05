@@ -59,17 +59,10 @@ export default function Home() {
 
   return (
     <Layout>
-      <Head>
-        <title>St.Joseph Kahawa Sukari | Home</title>
-        <meta
-          property="og:title"
-          content="St Joseph Catholic Church Kahawa sukari - Home"
-          key="title"
-        />
-      </Head>
-      <SEO title="St.Joseph Kahawa Sukari | Home" 
-          description="Welcome to St.Joseph Kahawa Sukari | Home" 
-          keywords="St.Joseph Kahawa Sukari, Home, Mass Times, Church Events"
+      
+      <SEO title="Home | St. Joseph Catholic Church Kahawa Sukari" 
+          description="Welcome to St. Joseph Catholic Church Kahawa Sukari - A vibrant faith community in Nairobi, Kenya. Join us for Mass, events, and spiritual growth." 
+          keywords="Catholic Church Nairobi, Kahawa Sukari Parish, Mass Times, Church Events, Catholic Community Kenya"
           url="https://stjosephchurchkahawasukari.org"
      />
       <Hero imageUrl={images[currentImageIndex]} title={title} text={text} />

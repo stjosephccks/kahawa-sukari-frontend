@@ -15,9 +15,9 @@ export default function Confirmation() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | The Sacrament of Confirmation"
-        description="St.Joseph Kahawa Sukari | The Sacrament of Confirmation"
-        keywords="St.Joseph Kahawa Sukari, The Sacrament of Confirmation, Church The Sacrament of Confirmation, Church Events"
+      <SEO title="Confirmation Sacrament | St. Joseph Catholic Church Kahawa Sukari"
+        description="Confirmation Sacrament at St. Joseph Catholic Church Kahawa Sukari - Sealed with the gift of the Holy Spirit"
+        keywords="Confirmation sacrament Kahawa Sukari, Catholic confirmation Nairobi, Confirmation preparation, Holy Spirit sacrament, Catholic sacraments Kenya, St. Joseph Catholic Church, Confirmation classes"
         url="https://stjosephchurchkahawasukari.org/sacraments/confirmation"
       />
       <div className="min-h-screen bg-gray-50">

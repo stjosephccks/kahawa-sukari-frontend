@@ -48,6 +48,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:site_name" content="St. Joseph Catholic Church Kahawa Sukari" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://stjosephchurchkahawasukari.org" />
+        <title>St Joseph Catholic Church Kahawa Sukari | Faith Community in Nairobi Kenya</title>
       </Head>
       <Component {...pageProps} />
     </>

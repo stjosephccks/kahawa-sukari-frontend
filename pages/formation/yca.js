@@ -58,9 +58,9 @@ function YoungCatholicAdults() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Young Catholic Adults"
-        description="St.Joseph Kahawa Sukari | Young Catholic Adults"
-        keywords="St.Joseph Kahawa Sukari, Young Catholic Adults, Church Young Catholic Adults, Church Events"
+      <SEO title="St.Joseph Catholic Church Kahawa Sukari | Young Catholic Adults"
+        description="St.Joseph Catholic Church Kahawa Sukari | Young Catholic Adults"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Young Catholic Adults, Church Young Catholic Adults, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/yca"
       />
       <div className="min-h-screen bg-gray-50">

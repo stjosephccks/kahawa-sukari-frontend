@@ -13,9 +13,9 @@ function ChildrenBecomingCatholic() {
   const chapTel = "0726 145609";
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Right of Christian Initiation for Children (RCIC)"
-        description="St.Joseph Kahawa Sukari | Right of Christian Initiation for Children (RCIC)"
-        keywords="St.Joseph Kahawa Sukari, Right of Christian Initiation for Children (RCIC), Church Right of Christian Initiation for Children (RCIC), Church Events"
+      <SEO title="RCIC - Children's Faith Formation | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph  Catholic Church Kahawa Sukari | Right of Christian Initiation for Children (RCIC)"
+        keywords="St.Joseph Catholic Kahawa Sukari, Right of Christian Initiation for Children (RCIC), Church Right of Christian Initiation for Children (RCIC), Church Events"
         url="https://stjosephchurchkahawasukari.org/sacraments/rcic"
       />
       <Hero text={text} title={title} imageUrl={imageurl} />

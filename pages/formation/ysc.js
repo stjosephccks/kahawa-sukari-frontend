@@ -36,9 +36,9 @@ function YouthServingChrist() {
 
   return (
     <Layout>
-     <SEO title="St.Joseph Kahawa Sukari | Youth Serving Christ"
-        description="St.Joseph Kahawa Sukari | Youth Serving Christ"
-        keywords="St.Joseph Kahawa Sukari, Youth Serving Christ, Church Youth Serving Christ, Church Events"
+     <SEO title="Youth Serving Christ (YSC) | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | Youth Serving Christ"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Youth Serving Christ, Church Youth Serving Christ, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/ysc"
       />
       <div className="min-h-screen bg-gray-50">

@@ -18,9 +18,9 @@ export default function Anointing() {
   // const modTel = "0729 455437";
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | The Sacrament of the Anointing of the Sick"
-        description="St.Joseph Kahawa Sukari | The Sacrament of the Anointing of the Sick"
-        keywords="St.Joseph Kahawa Sukari, The Sacrament of the Anointing of the Sick, Church The Sacrament of the Anointing of the Sick, Church Events"
+      <SEO title="Anointing of the Sick | St. Joseph Catholic Church Kahawa Sukari"
+        description="Receive the Sacrament of Anointing at St. Joseph Catholic Church Kahawa Sukari - Special grace for the seriously ill and those facing surgery"
+        keywords="Anointing of the Sick Kahawa Sukari, Catholic last rites, Sacrament of the Sick, Prayer for healing, Catholic sacraments Nairobi, St. Joseph Catholic Church, Hospital ministry"
         url="https://stjosephchurchkahawasukari.org/sacraments/annointing"
       />
       <div className="min-h-screen bg-gray-50">

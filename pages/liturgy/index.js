@@ -13,9 +13,9 @@ export default function MassSchedule() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Mass Schedule"
-        description="St.Joseph Kahawa Sukari | Mass Schedule"
-        keywords="St.Joseph Kahawa Sukari, Mass Schedule, Mass Times, Church Events"
+      <SEO title="Mass Times & Liturgy Schedule | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | Mass Schedule"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Mass Schedule, Mass Times, Church Events"
         url="https://stjosephchurchkahawasukari.org/liturgy"
       />
       <div className="min-h-screen bg-gray-50">

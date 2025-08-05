@@ -111,9 +111,9 @@ function Charity() {
   return (
     <Layout>
       
-      <SEO title="St.Joseph Kahawa Sukari | Charity" 
-          description="St.Joseph Kahawa Sukari | Charity" 
-          keywords="St.Joseph Kahawa Sukari, Charity, Mass Times, Church Events"
+      <SEO title="Charity & Outreach Programs | St. Joseph Catholic Church Kahawa Sukari" 
+          description="Join our charitable initiatives and outreach programs at St. Joseph Catholic Church in Kahawa Sukari. Make a difference through our community service and social justice ministries." 
+          keywords="Catholic charity Nairobi, Church outreach programs, Community service Kahawa Sukari, Social justice ministry, Volunteer opportunities, Helping the needy Kenya"
           url="https://stjosephchurchkahawasukari.org/community/charity"
      />
       <div className="min-h-screen bg-gray-50">

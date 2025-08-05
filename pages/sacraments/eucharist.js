@@ -16,9 +16,9 @@ export default function Eucharist() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | The Sacrament of the Eucharist"
-        description="St.Joseph Kahawa Sukari | The Sacrament of the Eucharist"
-        keywords="St.Joseph Kahawa Sukari, The Sacrament of the Eucharist, Church The Sacrament of the Eucharist, Church Events"
+      <SEO title="Holy Eucharist & Mass Times | St. Joseph Catholic Church Kahawa Sukari"
+        description="Experience the Holy Eucharist at St. Joseph Catholic Church Kahawa Sukari - The source and summit of the Christian life"
+        keywords="Holy Eucharist Kahawa Sukari, Catholic Mass Nairobi, Daily Mass times, First Holy Communion, Eucharistic adoration, Catholic sacraments Kenya, St. Joseph Catholic Church"
         url="https://stjosephchurchkahawasukari.org/sacraments/eucharist"
       />
       <div className="min-h-screen bg-gray-50">

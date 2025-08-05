@@ -14,9 +14,9 @@ export default function AltarServers() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Altar Servers"
-        description="St.Joseph Kahawa Sukari | Altar Servers"
-        keywords="St.Joseph Kahawa Sukari, Altar Servers, Church Altar Servers, Church Events"
+      <SEO title="St.Joseph Catholic Church Kahawa Sukari | Altar Servers"
+        description="St.Joseph Catholic Church Kahawa Sukari | Altar Servers"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Altar Servers, Church Altar Servers, Church Events"
         url="https://stjosephchurchkahawasukari.org/liturgy/altar"
       />
       <div className="min-h-screen bg-gray-50">

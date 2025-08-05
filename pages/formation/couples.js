@@ -37,9 +37,9 @@ function Couples() {
 
   return (
     <Layout>
-     <SEO title="St.Joseph Kahawa Sukari | Couples Growing Together in Christ"
-        description="St.Joseph Kahawa Sukari | Couples Growing Together in Christ"
-        keywords="St.Joseph Kahawa Sukari, Couples Growing Together in Christ, Church Couples Growing Together in Christ, Church Events"
+     <SEO title="Couples Growing Together in Christ | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | Couples Growing Together in Christ"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Couples Growing Together in Christ, Church Couples Growing Together in Christ, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/couples"
       />
       <div className="min-h-screen bg-gray-50">

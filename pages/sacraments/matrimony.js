@@ -37,9 +37,9 @@ export default function Matrimony() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | The Sacrament of Matrimony"
-        description="St.Joseph Kahawa Sukari | The Sacrament of Matrimony"
-        keywords="St.Joseph Kahawa Sukari, The Sacrament of Matrimony, Church The Sacrament of Matrimony, Church Events"
+      <SEO title="The Sacrament of Holy Matrimony | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | The Sacrament of Matrimony"
+        keywords="St.Joseph Catholic Church  Kahawa Sukari, The Sacrament of Matrimony, Church The Sacrament of Matrimony, Church Events"
         url="https://stjosephchurchkahawasukari.org/sacraments/matrimony"
       />
       <div className="min-h-screen bg-gray-50">

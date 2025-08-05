@@ -14,9 +14,9 @@ function AdultsBecomingCatholic() {
 
   return (
     <Layout>
-     <SEO title="St.Joseph Kahawa Sukari | Rite of Christian Initiation for Adults (RCIA)"
-        description="St.Joseph Kahawa Sukari | Rite of Christian Initiation for Adults (RCIA)"
-        keywords="St.Joseph Kahawa Sukari, Rite of Christian Initiation for Adults (RCIA), Church Rite of Christian Initiation for Adults (RCIA), Church Events"
+     <SEO title="RCIA - Becoming Catholic | St. Joseph Catholic Church Kahawa Sukari"
+        description="Join the RCIA program at St. Joseph Catholic Church Kahawa Sukari - Journey to becoming Catholic through the Rite of Christian Initiation for Adults"
+        keywords="RCIA program Nairobi, Become Catholic Kenya, Adult baptism Kahawa Sukari, Catholic confirmation classes, RCIA process, Catholic conversion Kenya, St. Joseph Catholic Church"
         url="https://stjosephchurchkahawasukari.org/sacraments/rcia"
       />
       <Hero text={text} title={title} imageUrl={imageurl} />

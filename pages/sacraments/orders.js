@@ -20,9 +20,9 @@ export default function Orders() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | The Sacrament of Holy Orders"
-        description="St.Joseph Kahawa Sukari | The Sacrament of Holy Orders"
-        keywords="St.Joseph Kahawa Sukari, The Sacrament of Holy Orders, Church The Sacrament of Holy Orders, Church Events"
+      <SEO title="Holy Orders - Priesthood & Religious Life | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | The Sacrament of Holy Orders"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, The Sacrament of Holy Orders, Church The Sacrament of Holy Orders, Church Events"
         url="https://stjosephchurchkahawasukari.org/sacraments/orders"
       />
       <div className="min-h-screen bg-gray-50">

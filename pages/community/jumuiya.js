@@ -201,9 +201,9 @@ function Jumuiya() {
   return (
     <Layout>
       
-      <SEO title="St.Joseph Kahawa Sukari | Jumuiyas" 
-          description="St.Joseph Kahawa Sukari | Jumuiyas" 
-          keywords="St.Joseph Kahawa Sukari, Jumuiyas, Mass Times, Church Events"
+      <SEO title="Jumuiya Small Christian Communities | St. Joseph Catholic Church Kahawa Sukari" 
+          description="Join our Jumuiya (Small Christian Communities) at St. Joseph Catholic Church in Kahawa Sukari. Grow in faith through fellowship, prayer, and service in your local community." 
+          keywords="Jumuiya Kenya, Small Christian Communities Nairobi, Catholic small groups, Parish community groups, Faith sharing Kahawa Sukari, SCC Catholic Church"
           url="https://stjosephchurchkahawasukari.org/community/jumuiya"
      />
       <Hero

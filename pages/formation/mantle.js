@@ -29,9 +29,9 @@ function MantleOfStJoseph() {
 
   return (
     <Layout>
-   <SEO title="St.Joseph Kahawa Sukari | Mantle of St. Joseph"
-        description="St.Joseph Kahawa Sukari | Mantle of St. Joseph"
-        keywords="St.Joseph Kahawa Sukari, Mantle of St. Joseph, Church Mantle of St. Joseph, Church Events"
+   <SEO title="St.Joseph Catholic Church Kahawa Sukari | Mantle of St. Joseph"
+        description="St.Joseph Catholic Church Kahawa Sukari | Mantle of St. Joseph"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Mantle of St. Joseph, Church Mantle of St. Joseph, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/mantle"
       />
       <div className="min-h-screen bg-gray-50">

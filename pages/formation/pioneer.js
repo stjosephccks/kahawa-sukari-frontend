@@ -13,9 +13,9 @@ function PioneerAssociationGroup() {
   const moderator = "Moderator - "
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Pioneer Association Group"
-        description="St.Joseph Kahawa Sukari | Pioneer Association Group"
-        keywords="St.Joseph Kahawa Sukari, Pioneer Association Group, Church Pioneer Association Group, Church Events"
+      <SEO title="St.Joseph Catholic Church Kahawa Sukari | Pioneer Association Group"
+        description="St.Joseph Catholic Church Kahawa Sukari | Pioneer Association Group"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Pioneer Association Group, Church Pioneer Association Group, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/pioneer"
       />
       <div className="min-h-screen bg-gray-50">

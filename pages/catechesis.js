@@ -35,9 +35,9 @@ function CatechesisPage() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Catechesis" 
-          description="St.Joseph Kahawa Sukari | Catechesis" 
-          keywords="St.Joseph Kahawa Sukari, Catechesis, Mass Times, Church Events"
+      <SEO title="Faith Formation & Catechesis | St. Joseph Catholic Church Kahawa Sukari" 
+          description="Explore our faith formation programs and catechesis at St. Joseph Catholic Church Kahawa Sukari. Grow in your Catholic faith through our comprehensive religious education." 
+          keywords="Catholic faith formation, Religious education Nairobi, Catechesis Kenya, Catholic sacramental preparation, Bible study Kahawa Sukari"
           url="https://stjosephchurchkahawasukari.org/catechesis"
      />
       <Hero imageUrl={imageurl} title={title} text={text} />

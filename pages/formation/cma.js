@@ -17,9 +17,9 @@ function CatholicMenAssociation() {
 
   return (
     <Layout>
-    <SEO title="St.Joseph Kahawa Sukari | Catholic Men Association"
-        description="St.Joseph Kahawa Sukari | Catholic Men Association"
-        keywords="St.Joseph Kahawa Sukari, Catholic Men Association, Church Catholic Men Association, Church Events"
+    <SEO title="Catholic Men Association (CMA) | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | Catholic Men Association"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Catholic Men Association, Church Catholic Men Association, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/cma"
       />
       <div className="min-h-screen bYouthg-gray-50">

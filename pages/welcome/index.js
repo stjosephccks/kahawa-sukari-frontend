@@ -13,9 +13,9 @@ function welcome() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Welcome to our community" 
-          description="Welcome to St.Joseph Kahawa Sukari | Welcome to our community" 
-          keywords="St.Joseph Kahawa Sukari, Welcome to our community, Mass Times, Church Events"
+      <SEO title="Welcome to Our Parish Family | St. Joseph Catholic Church Kahawa Sukari" 
+          description="Discover a welcoming Catholic community at St. Joseph's in Kahawa Sukari, Nairobi. Join us for worship, fellowship, and spiritual growth in our vibrant parish family." 
+          keywords="Catholic Church Nairobi, Kahawa Sukari parish, Catholic community Kenya, Mass times, Parish registration, Catholic sacraments"
           url="https://stjosephchurchkahawasukari.org/welcome"
      />
       

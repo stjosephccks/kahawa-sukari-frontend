@@ -30,9 +30,9 @@ function Bulletin() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | News Bulletins" 
-          description="St.Joseph Kahawa Sukari | News Bulletins" 
-          keywords="St.Joseph Kahawa Sukari, News Bulletins, Mass Times, Church Events"
+      <SEO title="Weekly Bulletins & Announcements | St. Joseph Catholic Church Kahawa Sukari" 
+          description="Stay updated with the latest parish news, events, and spiritual reflections through our weekly bulletins at St. Joseph Catholic Church Kahawa Sukari." 
+          keywords="Catholic Church bulletin, Parish news Kenya, Weekly announcements, Church events Nairobi, Kahawa Sukari parish updates"
           url="https://stjosephchurchkahawasukari.org/welcome/bulletin"
      />
       <Hero imageUrl={imageurl} title={title} text={text} />

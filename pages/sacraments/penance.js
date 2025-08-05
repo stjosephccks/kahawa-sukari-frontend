@@ -15,9 +15,9 @@ export default function Penance() {
 
   return (
     <Layout>
-     <SEO title="St.Joseph Kahawa Sukari | The Sacrament of Penance"
-        description="St.Joseph Kahawa Sukari | The Sacrament of Penance"
-        keywords="St.Joseph Kahawa Sukari, The Sacrament of Penance, Church The Sacrament of Penance, Church Events"
+     <SEO title="Sacrament of Reconciliation | St. Joseph Catholic Church Kahawa Sukari"
+        description="Experience God's mercy through the Sacrament of Reconciliation at St. Joseph Catholic Church Kahawa Sukari"
+        keywords="Confession Kahawa Sukari, Sacrament of Penance Nairobi, Catholic Reconciliation, Confession times, First confession, Catholic sacraments Kenya, St. Joseph Catholic Church"
         url="https://stjosephchurchkahawasukari.org/sacraments/penance"
       />
       <div className="min-h-screen bg-gray-50">

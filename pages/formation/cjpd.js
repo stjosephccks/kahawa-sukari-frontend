@@ -37,9 +37,9 @@ function CJPD() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Catholic Justice and Peace Department (CJPD)"
-        description="St.Joseph Kahawa Sukari | Catholic Justice and Peace Department (CJPD)"
-        keywords="St.Joseph Kahawa Sukari, Catholic Justice and Peace Department (CJPD), Church Catholic Justice and Peace Department (CJPD), Church Events"
+      <SEO title="Catholic Justice & Peace Department (CJPD) | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | Catholic Justice and Peace Department (CJPD)"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Catholic Justice and Peace Department (CJPD), Church Catholic Justice and Peace Department (CJPD), Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/cjpd"
       />
       <div className="min-h-screen bg-gray-50">

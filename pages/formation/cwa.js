@@ -17,9 +17,9 @@ function CatholicWomenAssociation() {
 
   return (
     <Layout>
-     <SEO title="St.Joseph Kahawa Sukari | Catholic Women Association"
-        description="St.Joseph Kahawa Sukari | Catholic Women Association"
-        keywords="St.Joseph Kahawa Sukari, Catholic Women Association, Church Catholic Women Association, Church Events"
+     <SEO title="Catholic Women Association (CWA) | St. Joseph Catholic Church Kahawa Sukari"
+        description="St.Joseph Catholic Church Kahawa Sukari | Catholic Women Association"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Catholic Women Association, Church Catholic Women Association, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/cwa"
       />
       <div className="min-h-screen bg-gray-50">

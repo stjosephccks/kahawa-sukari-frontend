@@ -12,9 +12,9 @@ function Charismatic() {
 
   return (
     <Layout>
-    <SEO title="St.Joseph Kahawa Sukari | Catholic Charismatic Renewal"
-        description="St.Joseph Kahawa Sukari | Catholic Charismatic Renewal"
-        keywords="St.Joseph Kahawa Sukari, Catholic Charismatic Renewal, Church Catholic Charismatic Renewal, Church Events"
+    <SEO title="St.Joseph Catholic Church Kahawa Sukari | Catholic Charismatic Renewal"
+        description="St.Joseph Catholic Church Kahawa Sukari | Catholic Charismatic Renewal"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Catholic Charismatic Renewal, Church Catholic Charismatic Renewal, Church Events"
         url="https://stjosephchurchkahawasukari.org/formation/charismatic"
       />
       <div className="min-h-screen bg-gray-50">

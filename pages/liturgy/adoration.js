@@ -13,9 +13,9 @@ export default function EucharisticAdoration() {
 
   return (
     <Layout>
-      <SEO title="St.Joseph Kahawa Sukari | Eucharistic Adoration"
-        description="St.Joseph Kahawa Sukari | Eucharistic Adoration"
-        keywords="St.Joseph Kahawa Sukari, Eucharistic Adoration, Church Eucharistic Adoration, Church Events"
+      <SEO title="St.Joseph Catholic Church Kahawa Sukari | Eucharistic Adoration"
+        description="St.Joseph Catholic Church Kahawa Sukari | Eucharistic Adoration"
+        keywords="St.Joseph Catholic Church Kahawa Sukari, Eucharistic Adoration, Church Eucharistic Adoration, Church Events"
         url="https://stjosephchurchkahawasukari.org/liturgy/adoration"
       />
       <div className="min-h-screen bg-gray-50">
