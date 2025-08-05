@@ -5,4 +5,5 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /*.json$
 
+# Sitemap location
 Sitemap: https://stjosephchurchkahawasukari.org/sitemap.xml
