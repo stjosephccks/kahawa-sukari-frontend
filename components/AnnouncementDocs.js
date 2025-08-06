@@ -133,7 +133,7 @@ export default function AnnouncementDoc() {
                         )}
                         {doc.nextWeekMasses && doc.nextWeekMasses.length > 0 && (
                             <div>
-                                <h3 className="text-xl font-semibold text-primary mt-6 mb-2 text-center">Next Week's Mass Animation</h3>
+                                <h3 className="text-xl font-semibold text-primary mt-6 mb-2 text-center">Next Week's Mass Animation-{doc.nextWeekOccasion}</h3>
                                 <div className="overflow-x-auto">
                                     <table className="min-w-full text-sm text-left">
                                         <thead>
