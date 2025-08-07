@@ -92,11 +92,16 @@ const LiturgicalResponse = () => {
               {selectedDay.day}, {selectedDay.date} {selectedDay.month}
             </h3>
             
-            {selectedDay.specialCelebration && (
+            {(selectedDay.specialCelebration || selectedDay.saint) && (
               <div className="mb-3">
-                <p className="font-medium text-lg">{selectedDay.specialCelebration}</p>
-                {selectedDay.saint && selectedDay.saint !== 'Ordinary Weekday' && (
-                  <p className="text-gray-600">Feast of {selectedDay.saint}</p>
+                {selectedDay.day === 'SUNDAY' ? (
+                  <p className="font-medium text-lg">{selectedDay.specialCelebration || selectedDay.saint}</p>
+                ) : selectedDay.saint && selectedDay.saint !== 'Ordinary Weekday' ? (
+                  <p className="font-medium text-lg">
+                    {selectedDay.saint.replace(/^(Feast of|Solemnity of|Memorial of|Optional Memorial of|Commemoration of|Votive Mass of)\s*/i, '')}
+                  </p>
+                ) : (
+                  <p className="font-medium text-lg">{selectedDay.specialCelebration}</p>
                 )}
               </div>
             )}
@@ -105,6 +110,7 @@ const LiturgicalResponse = () => {
               <p className="text-sm text-gray-600">
                 <span className="font-medium">Liturgical Rank:</span> {selectedDay.liturgicalRank}
               </p>
+            
             )}
           </div>
 
