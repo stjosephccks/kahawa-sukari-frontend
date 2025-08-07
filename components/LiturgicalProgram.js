@@ -146,7 +146,7 @@ const LiturgicalResponse = () => {
         </div>
       )}
       
-      {response.fileUrl && (
+      {/* {response.fileUrl && (
         <div className="mt-6 pt-4 border-t border-gray-200">
           <a
             href={response.fileUrl}
@@ -160,7 +160,7 @@ const LiturgicalResponse = () => {
             Download Full Program
           </a>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
