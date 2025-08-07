@@ -85,8 +85,8 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Announcements Section */}
-        <section id="announcements" className="space-y-6">
+        {/* Notice Section */}
+        <section id="notices" className="space-y-6">
           <div className="text-center mb-8">
             
           </div>
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="bg-white rounded-lg shadow-sm" id="mass-times">
           <div className="py-6 px-2 space-y-8">
             <MassSchedule />
-            <div className="border-t border-gray-200 pt-8" id="documents">
+            <div className="border-t border-gray-200 pt-8" id="announcements">
               <AnnouncementDoc />
             </div>
           </div>

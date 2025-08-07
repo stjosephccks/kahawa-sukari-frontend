@@ -201,37 +201,92 @@ export default function AnnouncementDoc() {
                     </h3>
                     <div className="flex flex-col gap-6 w-full">
                         {doc.matrimonyNotices.map((notice, i) => {
-                            const bannNumber = getBannNumber(notice);
-                            let bannText = '';
-                            if (bannNumber === 2) bannText = '2nd Marriage Bann';
-                            else if (bannNumber === 3) bannText = '3rd Marriage Bann';
-                            else if (bannNumber > 3) bannText = `${bannNumber}th Marriage Bann`;
+                            const isGroupWedding = notice.couples && notice.couples.length > 0;
+                            const weddingDate = new Date(notice.weddingDate).toLocaleDateString('en-US', {
+                                weekday: 'long',
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            });
+
+                            // Get bann text based on bannType
+                            const getBannText = (type) => {
+                                switch(type) {
+                                    case 'I': return '1st Bann';
+                                    case 'II': return '2nd Bann';
+                                    case 'III': return '3rd Bann';
+                                    default: return '';
+                                }
+                            };
+
                             return (
                                 <AnimatedFadeIn key={notice._id} delay={i * 0.12}>
                                     <article
-                                        className="relative bg-white/90 border border-pink-200 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col gap-2 items-center text-center ring-2 ring-pink-100 hover:ring-pink-300 transition"
+                                        className="relative bg-white/90 border border-pink-200 rounded-2xl p-4 sm:p-6 shadow-lg flex flex-col gap-4 items-center text-center ring-2 ring-pink-100 hover:ring-pink-300 transition"
                                         tabIndex={0}
-                                        aria-label={`Marriage Bann: ${notice.groomName} & ${notice.brideName}`}
+                                        aria-label={isGroupWedding ? 'Group Wedding Bann' : `Marriage Bann: ${notice.groomName} & ${notice.brideName}`}
                                     >
-                                        <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-4xl">💞</span>
-                                        <div className="font-bold text-xl md:text-2xl text-pink-700 mb-1 flex flex-col items-center gap-0">
-                                            <span>{notice.groomName}</span>
-                                            <span className="text-gray-700 text-base md:text-lg font-normal mt-0.5">S/O {notice.groomParents}</span>
+                                        <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-4xl">
+                                            {isGroupWedding ? '👰‍♂️🤵‍♀️' : '💞'}
+                                        </span>
+                                        
+                                        {isGroupWedding ? (
+                                            <div className="w-full space-y-4">
+                                                {notice.couples.map((couple, idx) => (
+                                                    <div key={couple._id} className="w-full">
+                                                        <div className="font-normal text-xl text-gray-700 mb-1">
+                                                            {couple.groomName}
+                                                        </div>
+                                                        <div className="text-pink-700 font-bold text-sm md:text-base mb-2 text-center tracking-wide">
+                                                            INTENDS TO CELEBRATE THE SACRAMENT OF MATRIMONY WITH
+                                                        </div>
+                                                        <div className="font-normal text-xl text-gray-700 mb-4">
+                                                            {couple.brideName}
+                                                        </div>
+                                                        {idx < notice.couples.length - 1 && (
+                                                            <div className="border-t border-pink-100 my-4"></div>
+                                                        )}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ) : (
+                                            <>
+                                                <div className="font-bold text-xl md:text-2xl text-pink-700 mb-1 flex flex-col items-center gap-0">
+                                                    <span>{notice.groomName}</span>
+                                                    {notice.groomParents && (
+                                                        <span className="text-gray-700 text-base md:text-lg font-normal mt-0.5">
+                                                            S/O {notice.groomParents}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                                <div className="text-pink-700 font-semibold text-sm md:text-base mb-2 text-center tracking-wide">
+                                                    INTENDS TO CELEBRATE THE SACRAMENT OF MATRIMONY WITH
+                                                </div>
+                                                <div className="font-bold text-xl md:text-2xl text-pink-700 mb-1 flex flex-col items-center gap-0">
+                                                    <span>{notice.brideName}</span>
+                                                    {notice.brideParents && (
+                                                        <span className="text-gray-700 text-base md:text-lg font-normal mt-0.5">
+                                                            D/O {notice.brideParents}
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            </>
+                                        )}
+                                        
+                                        <div className="mt-2 text-gray-600 text-sm w-full">
+                                            <div className="flex items-center justify-center gap-2 mb-1">
+                                                <span className="text-pink-500">📅</span>
+                                                <span>{formatDate(notice.weddingDate)}</span>
+                                            </div>
+                                            <div className="flex items-center justify-center gap-2">
+                                                <span className="text-pink-500">📍</span>
+                                                <span>{notice.venue}</span>
+                                            </div>
                                         </div>
-                                        <div className="text-pink-700 font-semibold text-sm md:text-base mb-2 text-center tracking-wide">INTENDS TO CELEBRATE THE SACRAMENT OF MATRIMONY WITH</div>
-                                        <div className="font-bold text-xl md:text-2xl text-pink-700 mb-1 flex flex-col items-center gap-0">
-                                            <span> {notice.brideName}</span>
-                                            <span className="text-gray-700 text-base md:text-lg font-normal mt-0.5">D/O {notice.brideParents}</span>
+                                        
+                                        <div className="mt-2 text-pink-600 font-bold text-base md:text-lg">
+                                            {getBannText(notice.bannType)}
                                         </div>
-                                        <div className="text-gray-800 text-base md:text-lg mb-1 flex items-center justify-center gap-2">
-                                            <span className="text-pink-500">📅</span>
-                                            <span className="font-semibold">{formatDate(notice.weddingDate)}</span>
-                                        </div>
-                                        <div className="text-gray-800 text-base md:text-lg flex items-center justify-center gap-2">
-                                            <span className="text-pink-500">📍</span>
-                                            <span className="font-semibold">{notice.venue}</span>
-                                        </div>
-                                        {bannText && <div className="mt-2 text-pink-700 font-bold text-base md:text-lg">{bannText}</div>}
                                         <span className="mt-4 text-3xl animate-pulse">💕</span>
                                     </article>
                                 </AnimatedFadeIn>

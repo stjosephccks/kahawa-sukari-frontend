@@ -69,9 +69,6 @@ export default function Announcements({ maxItems = 3 }) {
                   <h3 className="font-semibold text-gray-900">
                     {announcement.title}
                   </h3>
-                  <span className="text-xs text-gray-500 ml-2 whitespace-nowrap">
-                    {new Date(announcement.updatedAt).toLocaleDateString()}
-                  </span>
                 </div>
                 <p className="mt-1 text-gray-700">
                   {announcement.description}
@@ -81,7 +78,7 @@ export default function Announcements({ maxItems = 3 }) {
                   <div className="mt-3 bg-gray-50 p-3 rounded">
                     <h4 className="text-sm font-medium text-gray-800 flex items-center mb-2">
                       <FaCalendarAlt className="mr-2 text-primary" />
-                      Mass Schedule
+                       Schedule
                     </h4>
                     <ul className="space-y-2">
                       {announcement.massScheduleAssignments.map((item, i) => (

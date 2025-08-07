@@ -42,7 +42,8 @@ const choirs = [
     moderator: "Chairperson: Samuel Lawrence",
     description:
       "St. Andrew Choir is known for their contemporary worship music and vibrant performances at the 9:00 AM Swahili Mass.",
-  },
+    src: "https://kahawa-sukari.s3.amazonaws.com/stAndrew.jpg",
+    },
   {
     name: "Magnificat Choir",
     practiceDays: [
