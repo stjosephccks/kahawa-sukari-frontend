@@ -130,7 +130,7 @@ const LiturgicalResponse = () => {
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                       <div>
                         <p className="font-medium text-gray-900">
-                          <span className="text-primary">{service.originalText}</span> 
+                          <span className="text-primary">{service.time}</span>  {service.service}
                         </p>
                         {service.location && (
                           <p className="text-sm text-gray-600 mt-1">
