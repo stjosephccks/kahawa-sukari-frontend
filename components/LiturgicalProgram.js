@@ -1,27 +1,58 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import CacheQueue from '@/utils/cacheQueue';
 
 const LiturgicalResponse = () => {
   const [response, setResponse] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [selectedDay, setSelectedDay] = useState(null);
+  const [cache] = useState(() => new CacheQueue('liturgical_program'));
 
-  const fetchLiturgicalResponse = async () => {
+  const processLiturgicalData = (liturgicalData) => {
+    const today = new Date().getDate().toString();
+    const todaysSchedule = liturgicalData.days.find(day => day.date === today) || liturgicalData.days[0];
+    
+    const responseData = {
+      ...liturgicalData,
+      currentDay: todaysSchedule,
+      weekTitle: liturgicalData.weekTitle || 'Liturgical Program'
+    };
+    
+    setResponse(responseData);
+    setSelectedDay(todaysSchedule);
+    return responseData;
+  };
+
+  const fetchLiturgicalResponse = async (forceRefresh = false) => {
     try {
       setIsLoading(true);
+      
+      // Try to get cached data first if not forcing refresh
+      if (!forceRefresh) {
+        const cachedData = cache.getLatest();
+        if (cachedData) {
+          processLiturgicalData(cachedData);
+          
+          // Even if we have cached data, we'll fetch in the background to check for updates
+          fetchLiturgicalResponse(true).catch(console.error);
+          return;
+        }
+      }
+      
+      // Fetch fresh data from the API
       const res = await axios.get('/api/liturgy');
       if (res.data && res.data.length > 0) {
         const liturgicalData = res.data[0];
-        const today = new Date().getDate().toString();
-        const todaysSchedule = liturgicalData.days.find(day => day.date === today) || liturgicalData.days[0];
         
-        setResponse({
-          ...liturgicalData,
-          currentDay: todaysSchedule,
-          weekTitle: liturgicalData.weekTitle || 'Liturgical Program'
-        });
-        setSelectedDay(todaysSchedule);
+        // Only update the queue if data has changed
+        if (cache.isDataDifferent(liturgicalData)) {
+          cache.enqueue(liturgicalData);
+          processLiturgicalData(liturgicalData);
+        } else if (forceRefresh) {
+          // If we forced refresh but data is the same, just update the timestamp
+          cache.enqueue(liturgicalData);
+        }
       }
     } catch (err) {
       console.error('Error fetching liturgical response:', err);

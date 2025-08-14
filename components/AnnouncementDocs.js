@@ -1,26 +1,60 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import AnimatedFadeIn from "./AnimatedFadeIn";
+import CacheQueue from "@/utils/cacheQueue";
 
 export default function AnnouncementDoc() {
     const [isLoading, setIsLoading] = useState(true);
     const [docs, setDocs] = useState([]);
     const [selectedDocIndex, setSelectedDocIndex] = useState(0); // 0 = most recent
     const [error, setError] = useState(null);
+    const [cache] = useState(() => new CacheQueue('announcement_docs'));
+
+    const processAnnouncements = (announcements) => {
+        const sortedDocs = [...announcements].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        setDocs(sortedDocs);
+        return sortedDocs;
+    };
+
+    const fetchAnnouncements = async (forceRefresh = false) => {
+        try {
+            setIsLoading(true);
+            
+            // Try to get cached data first if not forcing refresh
+            if (!forceRefresh) {
+                const cachedData = cache.getLatest();
+                if (cachedData) {
+                    processAnnouncements(cachedData);
+                    setIsLoading(false);
+                    
+                    // Even if we have cached data, we'll fetch in the background to check for updates
+                    fetchAnnouncements(true).catch(console.error);
+                    return;
+                }
+            }
+
+            // Fetch fresh data from the API
+            const response = await axios.get("/api/announcement-docs");
+            const announcements = response.data || [];
+            
+            // Only update the queue if data has changed
+            if (cache.isDataDifferent(announcements)) {
+                cache.enqueue(announcements);
+                processAnnouncements(announcements);
+            } else if (forceRefresh) {
+                // If we forced refresh but data is the same, just update the timestamp
+                cache.enqueue(announcements);
+            }
+            
+            setIsLoading(false);
+        } catch (err) {
+            console.error('Error fetching announcements:', err);
+            setError("Failed to load announcements");
+            setIsLoading(false);
+        }
+    };
 
     useEffect(() => {
-        const fetchAnnouncements = async () => {
-            try {
-                const response = await axios.get("/api/announcement-docs");
-                // Sort by createdAt descending (most recent first)
-                const sortedDocs = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-                setDocs(sortedDocs);
-                setIsLoading(false);
-            } catch (err) {
-                setError("Failed to load announcements");
-                setIsLoading(false);
-            }
-        };
         fetchAnnouncements();
     }, []);
 
