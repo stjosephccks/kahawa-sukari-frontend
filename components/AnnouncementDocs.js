@@ -19,37 +19,53 @@ export default function AnnouncementDoc() {
     const fetchAnnouncements = async (forceRefresh = false) => {
         try {
             setIsLoading(true);
+            let data = null;
             
-            // Try to get cached data first if not forcing refresh
-            if (!forceRefresh) {
-                const cachedData = cache.getLatest();
-                if (cachedData) {
-                    processAnnouncements(cachedData);
-                    setIsLoading(false);
-                    
-                    // Even if we have cached data, we'll fetch in the background to check for updates
-                    fetchAnnouncements(true).catch(console.error);
-                    return;
-                }
+            // Always try to get cached data first for immediate response
+            const cachedData = cache.getLatest();
+            
+            // Only use cached data if not forcing refresh and it exists
+            if (!forceRefresh && cachedData) {
+                processAnnouncements(cachedData);
+                setIsLoading(false);
+                
+                // Still fetch fresh data in background to check for updates
+                fetchAnnouncements(true).catch(console.error);
+                return;
             }
 
-            // Fetch fresh data from the API
-            const response = await axios.get("/api/announcement-docs");
-            const announcements = response.data || [];
-            
-            // Only update the queue if data has changed
-            if (cache.isDataDifferent(announcements)) {
-                cache.enqueue(announcements);
-                processAnnouncements(announcements);
-            } else if (forceRefresh) {
-                // If we forced refresh but data is the same, just update the timestamp
-                cache.enqueue(announcements);
+            // If we reach here, either we're forcing refresh or no valid cache exists
+            try {
+                const response = await axios.get("/api/announcement-docs");
+                data = response.data || [];
+                
+                // Only update cache if we got valid data
+                if (Array.isArray(data) && data.length > 0) {
+                    cache.enqueue(data);
+                    processAnnouncements(data);
+                } else if (cachedData) {
+                    // If no data from API but we have cached data, use that
+                    processAnnouncements(cachedData);
+                } else {
+                    // No data from either source
+                    setDocs([]);
+                }
+            } catch (apiError) {
+                console.error('API Error:', apiError);
+                // If API fails but we have cached data, use that
+                if (cachedData) {
+                    processAnnouncements(cachedData);
+                } else {
+                    setError("Failed to load announcements. Please check your connection.");
+                    setDocs([]);
+                }
             }
             
             setIsLoading(false);
         } catch (err) {
-            console.error('Error fetching announcements:', err);
-            setError("Failed to load announcements");
+            console.error('Unexpected error:', err);
+            setError("An unexpected error occurred while loading announcements");
+            setDocs([]);
             setIsLoading(false);
         }
     };

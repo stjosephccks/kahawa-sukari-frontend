@@ -7,11 +7,13 @@ const LiturgicalResponse = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [selectedDay, setSelectedDay] = useState(null);
-  const [cache] = useState(() => new CacheQueue('liturgical_program'));
+  const [cache] = useState(() => new CacheQueue('liturgical_program', 5, 4)); // 4 hours cache duration
 
   const processLiturgicalData = (liturgicalData) => {
+    if (!liturgicalData) return null;
+    
     const today = new Date().getDate().toString();
-    const todaysSchedule = liturgicalData.days.find(day => day.date === today) || liturgicalData.days[0];
+    const todaysSchedule = liturgicalData.days?.find(day => day.date === today) || liturgicalData.days?.[0];
     
     const responseData = {
       ...liturgicalData,
@@ -27,37 +29,54 @@ const LiturgicalResponse = () => {
   const fetchLiturgicalResponse = async (forceRefresh = false) => {
     try {
       setIsLoading(true);
+      let data = null;
       
-      // Try to get cached data first if not forcing refresh
-      if (!forceRefresh) {
-        const cachedData = cache.getLatest();
+      // Always try to get cached data first for immediate response
+      const cachedData = cache.getLatest();
+      
+      // Only use cached data if not forcing refresh and it exists
+      if (!forceRefresh && cachedData) {
+        processLiturgicalData(cachedData);
+        setIsLoading(false);
+        
+        // Still fetch fresh data in background to check for updates
+        fetchLiturgicalResponse(true).catch(console.error);
+        return;
+      }
+
+      // If we reach here, either we're forcing refresh or no valid cache exists
+      try {
+        const res = await axios.get('/api/liturgy');
+        data = res.data?.[0];
+        
+        // Only update cache if we got valid data
+        if (data && data.days?.length > 0) {
+          cache.enqueue(data);
+          processLiturgicalData(data);
+        } else if (cachedData) {
+          // If no data from API but we have cached data, use that
+          processLiturgicalData(cachedData);
+        } else {
+          // No data from either source
+          setResponse(null);
+          setError('No liturgical program data available');
+        }
+      } catch (apiError) {
+        console.error('API Error:', apiError);
+        // If API fails but we have cached data, use that
         if (cachedData) {
           processLiturgicalData(cachedData);
-          
-          // Even if we have cached data, we'll fetch in the background to check for updates
-          fetchLiturgicalResponse(true).catch(console.error);
-          return;
+        } else {
+          setError('Failed to load liturgical program. Please check your connection.');
+          setResponse(null);
         }
       }
       
-      // Fetch fresh data from the API
-      const res = await axios.get('/api/liturgy');
-      if (res.data && res.data.length > 0) {
-        const liturgicalData = res.data[0];
-        
-        // Only update the queue if data has changed
-        if (cache.isDataDifferent(liturgicalData)) {
-          cache.enqueue(liturgicalData);
-          processLiturgicalData(liturgicalData);
-        } else if (forceRefresh) {
-          // If we forced refresh but data is the same, just update the timestamp
-          cache.enqueue(liturgicalData);
-        }
-      }
+      setIsLoading(false);
     } catch (err) {
-      console.error('Error fetching liturgical response:', err);
-      setError('Failed to load liturgical program');
-    } finally {
+      console.error('Unexpected error:', err);
+      setError('An unexpected error occurred while loading the liturgical program');
+      setResponse(null);
       setIsLoading(false);
     }
   };
@@ -76,15 +95,27 @@ const LiturgicalResponse = () => {
       <p className="mt-2 text-gray-600">Loading liturgical program...</p>
     </div>
   );
-  
 
+  if (error) return (
+    <div className="bg-red-50 border-l-4 border-red-400 p-4 my-4">
+      <div className="flex">
+        <div className="flex-shrink-0">
+          <svg className="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+          </svg>
+        </div>
+        <div className="ml-3">
+          <p className="text-sm text-red-700">{error}</p>
+        </div>
+      </div>
+    </div>
+  );
 
   if (!response) return null;
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
       <div className="mb-6">
-        
         <h2 className="text-2xl font-bold text-primary mb-1">{response.weekTitle}</h2>
         <p className="text-gray-600">
           {new Date(response.weekStartDate).toLocaleDateString('en-US', { 

@@ -1,8 +1,9 @@
 // Cache queue implementation with data comparison
 class CacheQueue {
-  constructor(key, maxSize = 5) {
+  constructor(key, maxSize = 5, cacheDurationHours = 4) {
     this.key = `cache_queue_${key}`;
     this.maxSize = maxSize;
+    this.cacheDurationMs = cacheDurationHours * 60 * 60 * 1000; // Convert hours to milliseconds
   }
 
   // Get the current queue from localStorage
@@ -12,6 +13,7 @@ class CacheQueue {
       return queue ? JSON.parse(queue) : [];
     } catch (error) {
       console.error(`Error reading cache queue for ${this.key}:`, error);
+      this.clear(); // Clear invalid cache
       return [];
     }
   }
@@ -27,6 +29,8 @@ class CacheQueue {
 
   // Check if new data is different from the latest in queue
   isDataDifferent(newData) {
+    if (!newData || !Array.isArray(newData)) return true;
+    
     const queue = this.getQueue();
     if (queue.length === 0) return true;
     
@@ -34,60 +38,70 @@ class CacheQueue {
     return JSON.stringify(latestData) !== JSON.stringify(newData);
   }
 
-  // Add new data to the queue if it's different
+  // Add new data to the queue
   enqueue(newData) {
-    if (!newData) return;
+    if (!newData || !Array.isArray(newData)) return false;
     
     const queue = this.getQueue();
-    const now = new Date().toISOString();
+    const now = new Date();
     
-    // Only add if data is different from the latest
-    if (queue.length === 0 || this.isDataDifferent(newData)) {
-      queue.unshift({
+    // Clean up any expired items first
+    const validQueue = queue.filter(item => new Date(item.expiry) > now);
+    
+    // Only add if data is different from the latest or if queue is empty
+    if (validQueue.length === 0 || this.isDataDifferent(newData)) {
+      validQueue.unshift({
         data: newData,
-        timestamp: now,
-        expiry: this.calculateExpiry()
+        timestamp: now.toISOString(),
+        expiry: new Date(now.getTime() + this.cacheDurationMs).toISOString()
       });
 
       // Keep queue size under maxSize
-      if (queue.length > this.maxSize) {
-        queue.pop();
+      if (validQueue.length > this.maxSize) {
+        validQueue.length = this.maxSize;
       }
 
-      this.saveQueue(queue);
-      return true; // Data was added to queue
+      this.saveQueue(validQueue);
+      return true;
     }
     
-    return false; // Data was not added (duplicate)
+    return false;
   }
 
-  // Get the latest data from the queue
+  // Get the latest valid data from the queue
   getLatest() {
+    const now = new Date();
     const queue = this.getQueue();
-    if (queue.length === 0) return null;
     
-    // Check if latest item is expired
-    const latest = queue[0];
-    if (new Date(latest.expiry) < new Date()) {
-      return null; // Return null if expired
+    // Find the first non-expired item
+    const validItem = queue.find(item => new Date(item.expiry) > now);
+    
+    // If found, move it to the front for faster access next time
+    if (validItem) {
+      const newQueue = [
+        validItem,
+        ...queue.filter(item => item !== validItem)
+      ].slice(0, this.maxSize);
+      
+      // Only update if the queue changed
+      if (JSON.stringify(queue) !== JSON.stringify(newQueue)) {
+        this.saveQueue(newQueue);
+      }
+      
+      return validItem.data;
     }
     
-    return latest.data;
-  }
-
-  // Calculate expiry time (default: 1 day from now)
-  calculateExpiry(days = 1) {
-    const expiry = new Date();
-    expiry.setDate(expiry.getDate() + days);
-    return expiry.toISOString();
+    return null;
   }
 
   // Clear the entire queue
   clear() {
     try {
       localStorage.removeItem(this.key);
+      return true;
     } catch (error) {
       console.error(`Error clearing cache queue for ${this.key}:`, error);
+      return false;
     }
   }
 }
