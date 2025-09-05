@@ -31,7 +31,7 @@ function NavBar() {
   return (
     <div className="relative z-[999999]">
       <nav
-        className={`w-full bg-primary fixed top-0 left-0 right-0 z-[999999] md:relative md:mt-0`}
+        className={`w-full bg-primary fixed top-0 left-0 right-0 z-[999999]`}
         onMouseLeave={() => {
           setAboutDropDown(false);
           setcommunityDropDown(false);
