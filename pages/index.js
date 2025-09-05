@@ -11,8 +11,10 @@ import Head from "next/head";
 import AnnouncementDoc from "@/components/AnnouncementDocs";
 import LiturgicalResponse from "@/components/LiturgicalProgram";
 import SEO from "@/components/SEO";
+import ZakaSearchModal from "@/components/ZakaSearchModal";
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isZakaModalOpen, setIsZakaModalOpen] = useState(false);
   const images = [
     "https://kahawa-sukari.s3.amazonaws.com/Homepage3.jpeg",
   ];
@@ -112,7 +114,30 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Zaka Search Section */}
+      <div className=" hidden bg-gray-50 py-12">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Find Your Zaka Information
+          </h2>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Search for your zaka details using your registered phone number. 
+            
+          </p>
+          <button
+            onClick={() => setIsZakaModalOpen(true)}
+            className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors shadow-lg hover:shadow-xl"
+          >
+            Search Your Zaka Number
+          </button>
+        </div>
+      </div>
+
       <Welcome id="welcome" />
+      <ZakaSearchModal
+        isOpen={isZakaModalOpen}
+        onClose={() => setIsZakaModalOpen(false)}
+      />
     </Layout>
   );
 }
