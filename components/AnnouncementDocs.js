@@ -30,7 +30,20 @@ export default function AnnouncementDoc() {
                 setIsLoading(false);
                 
                 // Still fetch fresh data in background to check for updates
-                fetchAnnouncements(true).catch(console.error);
+                try {
+                    const response = await axios.get("/api/announcement-docs");
+                    const freshData = response.data || [];
+                    
+                    // If we got fresh data and it's different from cached data, update UI
+                    if (Array.isArray(freshData) && freshData.length > 0 && 
+                        JSON.stringify(freshData) !== JSON.stringify(cachedData)) {
+                        cache.enqueue(freshData);
+                        processAnnouncements(freshData);
+                        console.log('Announcement docs updated from background refresh');
+                    }
+                } catch (backgroundError) {
+                    console.log('Background refresh failed, keeping cached data');
+                }
                 return;
             }
 
@@ -115,7 +128,7 @@ export default function AnnouncementDoc() {
             </div>
         );
     }
-    if (!doc) return <div style={{ textAlign: 'center' }}>There are currently no announcements to display.</div>;
+    if (!doc) return null;
 
     const formatDate = (dateStr) => {
         if (!dateStr) return '';
