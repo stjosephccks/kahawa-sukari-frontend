@@ -12,24 +12,24 @@ function BulletDetailsPage() {
   const [otherBulletins, setOtherBulletins] = useState([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-  const { id } = router.query;
+  const { slug } = router.query;
 
   useEffect(() => {
-    if (!id) return;
+    if (!slug) return;
 
     const fetchBulletin = async () => {
       try {
-        const actualId = Array.isArray(id) ? id[0] : id;
+        const actualSlug = Array.isArray(slug) ? slug[0] : slug;
         
         // Fetch current bulletin
-        const response = await axios.get('/api/bulletins?id=' + actualId);
+        const response = await axios.get('/api/bulletins?slug=' + actualSlug);
         const fetchedBulletin = response.data;
         setBulletin(fetchedBulletin);
         
         // Fetch all bulletins and filter out current one
         const allBulletinsResponse = await axios.get('/api/bulletins');
         const allBulletins = allBulletinsResponse.data;
-        const filteredBulletins = allBulletins.filter(b => b._id !== actualId).slice(0, 4); // Get 4 other bulletins
+        const filteredBulletins = allBulletins.filter(b => b.slug !== actualSlug).slice(0, 4); // Get 4 other bulletins
         setOtherBulletins(filteredBulletins);
         
         setLoading(false);
@@ -40,7 +40,7 @@ function BulletDetailsPage() {
     };
 
     fetchBulletin();
-  }, [id]);
+  }, [slug]);
 
   if (loading) {
     return (
@@ -74,7 +74,7 @@ function BulletDetailsPage() {
         title={`${bulletin.title} | St. Joseph Catholic Church Kahawa Sukari`}
         description={bulletin.excerpt || bulletin.description}
         keywords={bulletin.tags?.join(', ')}
-        url={`https://stjosephchurchkahawasukari.org/welcome/bulletin/${bulletin._id}`}
+        url={`https://stjosephchurchkahawasukari.org/welcome/bulletin/${bulletin.slug || bulletin._id}`}
       />
       <article className="max-w-4xl mx-auto px-4  py-28">
         <header className="mb-8">
@@ -167,7 +167,7 @@ function BulletDetailsPage() {
                 {otherBulletins.map((otherBulletin) => (
                   <Link 
                     key={otherBulletin._id}
-                    href={`/welcome/bulletin/${otherBulletin._id}`}
+                    href={`/welcome/bulletin/${otherBulletin.slug || otherBulletin._id}`}
                     className="group"
                   >
                     <article className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 hover:border-gray-200 transform hover:-translate-y-1">

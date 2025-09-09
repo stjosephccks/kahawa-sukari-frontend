@@ -4,7 +4,7 @@ import Image from "next/image";
 function BulletinCard({ bulletin }) {
   return (
     <div className="max-w-sm h-auto rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] bg-white">
-      <Link href={`/welcome/bulletin/${bulletin._id}`} className="block">
+      <Link href={`/welcome/bulletin/${bulletin.slug || bulletin._id}`} className="block">
         <div className="relative w-full h-64 group">
           <Image
             src={bulletin.images[0]}

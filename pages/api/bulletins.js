@@ -9,7 +9,11 @@ export default async function handler(req, res) {
     if (method === "GET") {
       console.log("API Query params:", req.query);
 
-      if (req.query?.id) {
+      if (req.query?.slug) {
+        const bulletin = await Bulletin.findOne({ slug: req.query.slug });
+        console.log("Found by slug:", bulletin);
+        res.json(bulletin);
+      } else if (req.query?.id) {
         const bulletin = await Bulletin.findOne({ _id: req.query.id });
         console.log("Found by ID:", bulletin);
         res.json(bulletin);

@@ -141,7 +141,7 @@ function BulletinPage() {
                       </div>
                     </div>
                     <Link 
-                      href={`/welcome/bulletin/${featuredBulletin._id}`}
+                      href={`/welcome/bulletin/${featuredBulletin.slug}`}
                       className="text-primary font-medium text-sm hover:underline flex items-center"
                     >
                       Read More <FiArrowRight className="ml-1" size={16} />
@@ -199,7 +199,7 @@ function BulletinPage() {
                       </span>
                     </div>
                     <Link 
-                      href={`/welcome/bulletin/${bulletin._id}`}
+                      href={`/welcome/bulletin/${bulletin.slug}`}
                       className="text-primary font-medium text-sm hover:underline flex items-center"
                     >
                       Read More <FiArrowRight className="ml-1" size={16} />

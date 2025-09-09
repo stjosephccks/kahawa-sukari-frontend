@@ -10,7 +10,7 @@ import { FaArrowLeft, FaCalendarAlt, FaClock } from "react-icons/fa";
 
 function EventDetails() {
   const router = useRouter();
-  const { id } = router.query;
+  const { slug } = router.query;
   const [event, setEvent] = useState(null);
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -27,11 +27,11 @@ function EventDetails() {
   const isPastEvent = event ? new Date(event.date) < new Date() : false;
 
   useEffect(() => {
-    if (!id) return;
+    if (!slug) return;
 
     setLoading(true);
     axios
-      .get("/api/events?id=" + id)
+      .get("/api/events?slug=" + slug)
       .then((response) => {
         setEvent(response.data);
         setLoading(false);
@@ -40,7 +40,7 @@ function EventDetails() {
         setError("Failed to load event details");
         setLoading(false);
       });
-  }, [id]);
+  }, [slug]);
 
   useEffect(() => {
     axios
@@ -205,7 +205,7 @@ function EventDetails() {
                 {events.map((e) => (
                   <Link
                     key={e._id}
-                    href={`/community/event/${e._id}`}
+                    href={`/community/event/${e.slug || e._id}`}
                     className="block p-4 hover:bg-gray-50 rounded-lg transition-colors"
                   >
                     <h3 className="text-lg font-semibold text-primary hover:text-primary-dark">

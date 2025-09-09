@@ -21,7 +21,7 @@ function Eventcard({ event }) {
   return (
     <div className="group relative w-full h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border-2 border-transparent hover:border-primary rounded-lg overflow-hidden">
       <Link
-        href={`/community/event/${event._id}`}
+        href={`/community/event/${event.slug || event._id}`}
         className="block h-full"
         aria-label={`View details for ${event.title}`}
       >
@@ -30,7 +30,7 @@ function Eventcard({ event }) {
             src={event.images?.[0] || "/placeholder-event.jpg"}
             alt={event.title || "Event image"}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-110"
+            className="object-contain transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
