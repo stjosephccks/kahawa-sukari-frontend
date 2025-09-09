@@ -24,6 +24,8 @@ function EventDetails() {
     return date ? format(new Date(date), "MMMM d, yyyy - h:mm a") : "";
   }
 
+  const isPastEvent = event ? new Date(event.date) < new Date() : false;
+
   useEffect(() => {
     if (!id) return;
 
@@ -79,9 +81,7 @@ function EventDetails() {
 
   return (
     <Layout>
-      <Hero imageUrl={imageurl} title={title} text={event.title} />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 pt-16">
         <button
           onClick={() => router.back()}
           className="flex items-center text-primary hover:text-primary-dark mb-6"
@@ -94,33 +94,103 @@ function EventDetails() {
           {/* Main Event Content */}
           <div className="lg:w-2/3">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              {event.images && event.images[0] && (
-                <div className="relative h-64 sm:h-96 w-full">
-                  <Image
-                    src={event.images[0]}
-                    alt={event.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-t-lg"
-                  />
+              {isPastEvent && event.images && event.images.length > 0 ? (
+                <div className="p-6">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Event Photos</h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {event.images.map((image, index) => (
+                      <div key={index} className="relative h-64 w-full rounded-lg overflow-hidden">
+                        <Image
+                          src={image}
+                          alt={`${event.title} photo ${index + 1}`}
+                          layout="fill"
+                          objectFit="cover"
+                          className="hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
+              ) : (
+                <>
+                  {event.images && event.images[0] && (
+                    <div className="relative h-64 sm:h-96 w-full">
+                      <Image
+                        src={event.images[0]}
+                        alt={event.title}
+                        layout="fill"
+                        objectFit={isPastEvent ? "contain" : "cover"}
+                        className="rounded-t-lg"
+                      />
+                    </div>
+                  )}
+
+                  {/* Additional Images Gallery for Past Events */}
+                  {isPastEvent && event.images && event.images.length > 1 && (
+                    <div className="p-4 bg-gray-50">
+                      <h3 className="text-lg font-semibold mb-4">Event Gallery</h3>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        {event.images.slice(1).map((image, index) => (
+                          <div key={index} className="relative h-32 w-full rounded-lg overflow-hidden">
+                            <Image
+                              src={image}
+                              alt={`${event.title} image ${index + 2}`}
+                              layout="fill"
+                              objectFit="cover"
+                              className="hover:scale-105 transition-transform duration-300"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </>
               )}
 
               <div className="p-6">
-                <h1 className="text-3xl font-bold text-gray-900 mb-4">
-                  {event.title}
-                </h1>
+                <div className="flex items-center justify-between mb-4">
+                  <h1 className="text-3xl font-extrabold text-gray-900">
+                    {event.title}
+                  </h1>
+                  {isPastEvent && (
+                    <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      Past Event
+                    </span>
+                  )}
+                </div>
 
                 <div className="flex items-center text-gray-600 mb-4">
                   <FaCalendarAlt className="mr-2" />
                   <span>{formatDateForDisplay(event.date)}</span>
                 </div>
 
-                <div className="prose max-w-none">
-                  <p className="text-gray-700 text-lg mb-6">
+                <div className="prose max-w-none mb-6">
+                  <p className="text-gray-700 text-lg">
                     {event.description}
                   </p>
                 </div>
+
+                {/* Additional Event Information */}
+                {event.moderator && (
+                  <div className="mb-4">
+                    <h3 className="text-lg font-bold text-primary">Organised By</h3>
+                    <p className="text-gray-700">{event.moderator}</p>
+                  </div>
+                )}
+
+                {event.keynoteSpeaker && (
+                  <div className="mb-4">
+                    <h3 className="text-lg font-bold text-primary">Keynote Speaker</h3>
+                    <p className="text-gray-700">{event.keynoteSpeaker}</p>
+                  </div>
+                )}
+
+                {event.paymentInfo && (
+                  <div className="mb-4">
+                    <h3 className="text-lg font-bold text-primary">Payment Information</h3>
+                    <p className="text-gray-700">{event.paymentInfo}</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>

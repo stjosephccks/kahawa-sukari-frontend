@@ -16,8 +16,10 @@ function Eventcard({ event }) {
       : text;
   };
 
+  const isPastEvent = event ? new Date(event.date) < new Date() : false;
+
   return (
-    <div className="group relative w-full h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+    <div className="group relative w-full h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border-2 border-transparent hover:border-primary rounded-lg overflow-hidden">
       <Link
         href={`/community/event/${event._id}`}
         className="block h-full"
@@ -34,10 +36,17 @@ function Eventcard({ event }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
 
-        <div className="bg-white p-6 rounded-b-lg border border-gray-200">
-          <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors duration-300">
-            {event.title}
-          </h3>
+        <div className="bg-gradient-to-br from-white to-gray-50 p-6 rounded-b-lg border-t-2 border-gray-200">
+          <div className="flex items-center justify-between mb-2">
+            <h3 className="text-xl font-extrabold text-gray-900 group-hover:text-primary transition-colors duration-300">
+              {event.title}
+            </h3>
+            {isPastEvent && (
+              <span className="bg-primary text-white px-2 py-1 rounded-full text-xs font-semibold">
+                Past Event
+              </span>
+            )}
+          </div>
 
           <div className="space-y-2 text-gray-600">
             <div className="flex items-center">
