@@ -32,34 +32,39 @@ function Event() {
           keywords="St.Joseph Catholic Church Kahawa Sukari, Upcoming Events, Past Events, Mass Times, Church Events"
           url="https://stjosephchurchkahawasukari.org/community"
      />
-      <Hero imageUrl={imageurl} text={text} title={title} />
-      <div>
+      <div className="bg-white min-h-screen pt-20">
         {upcomingEvents.length > 0 && (
-          <div>
-            <h1 className="text-primary mt-24 ml-3 md:text-center">
-              Upcoming Events
-            </h1>
-            <div className="container mx-auto my-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-2">
-                {upcomingEvents.map((event) => (
-                  <Eventcard key={event._id} event={event} />
-                ))}
-              </div>
+          <div className="container mx-auto px-4 py-16">
+            <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                Upcoming Events
+              </h1>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Join us for inspiring events that bring our community together in faith and fellowship.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {upcomingEvents.map((event) => (
+                <Eventcard key={event._id} event={event} />
+              ))}
             </div>
           </div>
         )}
 
         {pastEvents.length > 0 && (
-          <div>
-            <h1 className="text-primary mt-8 ml-3 md:text-center">
-              Past Events
-            </h1>
-            <div className="container mx-auto my-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mx-2">
-                {pastEvents.map((event) => (
-                  <Eventcard key={event._id} event={event} />
-                ))}
-              </div>
+          <div className="container mx-auto px-4 py-16">
+            <div className="text-center mb-12">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                Past Events
+              </h1>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Relive the moments that shaped our community through our recent events.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              {pastEvents.map((event) => (
+                <Eventcard key={event._id} event={event} />
+              ))}
             </div>
           </div>
         )}

@@ -46,12 +46,19 @@ function EventDetails() {
     axios
       .get("/api/events")
       .then((response) => {
-        setEvents(response.data);
+        const allEvents = response.data;
+        const now = new Date();
+        const filteredEvents = allEvents.filter(e => {
+          const isNotCurrent = e.slug !== actualSlug && e._id !== actualSlug;
+          const isUpcoming = new Date(e.date) >= now;
+          return isNotCurrent && isUpcoming;
+        }).slice(0, 4); // Show only 4 upcoming events
+        setEvents(filteredEvents);
       })
       .catch((err) => {
         console.error("Failed to load events:", err);
       });
-  }, []);
+  }, [slug]);
 
   if (loading) {
     return (
@@ -205,7 +212,7 @@ function EventDetails() {
                 {events.map((e) => (
                   <Link
                     key={e._id}
-                    href={`/community/event/${e.slug || e._id}`}
+                    href={`/community/event/${e.slug}`}
                     className="block p-4 hover:bg-gray-50 rounded-lg transition-colors"
                   >
                     <h3 className="text-lg font-semibold text-primary hover:text-primary-dark">

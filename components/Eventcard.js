@@ -19,7 +19,7 @@ function Eventcard({ event }) {
   const isPastEvent = event ? new Date(event.date) < new Date() : false;
 
   return (
-    <div className="group relative w-full h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border-2 border-transparent hover:border-primary rounded-lg overflow-hidden">
+    <div className="group relative w-full h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02] border-2 border-gray-300 hover:border-primary rounded-lg overflow-hidden">
       <Link
         href={`/community/event/${event.slug || event._id}`}
         className="block h-full"
