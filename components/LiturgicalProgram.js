@@ -142,7 +142,7 @@ const LiturgicalResponse = () => {
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
-            {day.day.slice(0, 3)} {day.date}
+            {day?.day?.slice(0, 3)} {day.date}
           </button>
         ))}
       </div>
