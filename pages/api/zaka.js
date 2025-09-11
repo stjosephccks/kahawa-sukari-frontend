@@ -38,14 +38,20 @@ export default async function handler(req, res) {
         });
       }
 
-      // Search for the normalized phone number
+      // Search for the normalized phone number in both mobileNumber and mobileNumber2
       const zaka = await Zaka.findOne({
         $or: [
           { mobileNumber: cleanPhone },
           { mobileNumber: `+254${cleanPhone}` },
           { mobileNumber: `0${cleanPhone}` },
           { mobileNumber: cleanPhone.replace(/^254/, '') },
-          { mobileNumber: cleanPhone.replace(/^0/, '') }
+          { mobileNumber: cleanPhone.replace(/^0/, '') },
+          // Also search in mobileNumber2 if it exists
+          { mobileNumber2: cleanPhone },
+          { mobileNumber2: `+254${cleanPhone}` },
+          { mobileNumber2: `0${cleanPhone}` },
+          { mobileNumber2: cleanPhone.replace(/^254/, '') },
+          { mobileNumber2: cleanPhone.replace(/^0/, '') }
         ]
       }).lean();
 

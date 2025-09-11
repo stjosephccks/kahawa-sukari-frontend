@@ -115,7 +115,7 @@ export default function Home() {
       </div>
 
       {/* Zaka Search Section */}
-      <div className=" hidden bg-gray-50 py-12">
+      <div className="bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Find Your Zaka Information
