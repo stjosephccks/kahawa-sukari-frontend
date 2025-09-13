@@ -163,7 +163,7 @@ export default function AnnouncementDoc() {
                         <span className="text-2xl md:text-3xl"></span>
                     </h2>
                 )}
-                <div className="text-gray-500 text-base md:text-lg mb-1"> Updated:{formatDate(doc.documentDate)}</div>
+                <div className="text-gray-500 text-base md:text-lg mb-1"> Occasion:{formatDate(doc.occasion)}</div>
             </header>
 
             {/* Mass Schedule Section (Dynamic from API) */}
