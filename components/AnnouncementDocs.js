@@ -20,22 +20,22 @@ export default function AnnouncementDoc() {
         try {
             setIsLoading(true);
             let data = null;
-            
+
             // Always try to get cached data first for immediate response
             const cachedData = cache.getLatest();
-            
+
             // Only use cached data if not forcing refresh and it exists
             if (!forceRefresh && cachedData) {
                 processAnnouncements(cachedData);
                 setIsLoading(false);
-                
+
                 // Still fetch fresh data in background to check for updates
                 try {
                     const response = await axios.get("/api/announcement-docs");
                     const freshData = response.data || [];
-                    
+
                     // If we got fresh data and it's different from cached data, update UI
-                    if (Array.isArray(freshData) && freshData.length > 0 && 
+                    if (Array.isArray(freshData) && freshData.length > 0 &&
                         JSON.stringify(freshData) !== JSON.stringify(cachedData)) {
                         cache.enqueue(freshData);
                         processAnnouncements(freshData);
@@ -51,7 +51,7 @@ export default function AnnouncementDoc() {
             try {
                 const response = await axios.get("/api/announcement-docs");
                 data = response.data || [];
-                
+
                 // Only update cache if we got valid data
                 if (Array.isArray(data) && data.length > 0) {
                     cache.enqueue(data);
@@ -73,7 +73,7 @@ export default function AnnouncementDoc() {
                     setDocs([]);
                 }
             }
-            
+
             setIsLoading(false);
         } catch (err) {
             console.error('Unexpected error:', err);
@@ -163,7 +163,12 @@ export default function AnnouncementDoc() {
                         <span className="text-2xl md:text-3xl"></span>
                     </h2>
                 )}
-                <div className="text-gray-500 text-base md:text-lg mb-1"> Occasion:{formatDate(doc.occasion)}</div>
+                {
+                    doc.occasion && (
+                        <div className="text-primary text-base md:text-lg mb-1 font-semibold"> Occasion: {doc.occasion}</div>
+                    )
+                }
+
             </header>
 
             {/* Mass Schedule Section (Dynamic from API) */}
@@ -274,7 +279,7 @@ export default function AnnouncementDoc() {
 
                             // Get bann text based on bannType
                             const getBannText = (type) => {
-                                switch(type) {
+                                switch (type) {
                                     case 'I': return '1st Bann';
                                     case 'II': return '2nd Bann';
                                     case 'III': return '3rd Bann';
@@ -292,7 +297,7 @@ export default function AnnouncementDoc() {
                                         <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-4xl">
                                             {isGroupWedding ? '👰‍♂️🤵‍♀️' : '💞'}
                                         </span>
-                                        
+
                                         {isGroupWedding ? (
                                             <div className="w-full space-y-4">
                                                 {notice.couples.map((couple, idx) => (
@@ -335,7 +340,7 @@ export default function AnnouncementDoc() {
                                                 </div>
                                             </>
                                         )}
-                                        
+
                                         <div className="mt-2 text-gray-600 text-sm w-full">
                                             <div className="flex items-center justify-center gap-2 mb-1">
                                                 <span className="text-pink-500">📅</span>
@@ -346,7 +351,7 @@ export default function AnnouncementDoc() {
                                                 <span>{notice.venue}</span>
                                             </div>
                                         </div>
-                                        
+
                                         <div className="mt-2 text-pink-600 font-bold text-base md:text-lg">
                                             {getBannText(notice.bannType)}
                                         </div>
