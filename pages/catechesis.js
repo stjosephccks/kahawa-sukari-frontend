@@ -1,5 +1,4 @@
 import BulletinCard from "@/components/Bulletincard";
-import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -9,11 +8,8 @@ function CatechesisPage() {
   const [bulletins, setBulletins] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const imageurl =
-    "https://kahawa-sukari.s3.amazonaws.com/1749292585307.jpg";
-  const title = "CATECHESIS";
-  const text =
-    "Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you."; // Matthew 28:19-20 or similar
+  // Default cover image for bulletins without images
+  const DEFAULT_COVER = "https://kahawa-sukari.s3.amazonaws.com/1757084396156.jpeg";
 
   useEffect(() => {
     const fetchBulletins = async () => {
@@ -22,7 +18,14 @@ function CatechesisPage() {
         const catechesisBulletins = response.data.filter(
           (bulletin) => bulletin.sections && bulletin.sections.includes("CHATECHISIS")
         );
-        setBulletins(catechesisBulletins);
+        // Add default cover if missing
+        const bulletinsWithCover = catechesisBulletins.map(bulletin => {
+          if (!bulletin.images || !Array.isArray(bulletin.images) || bulletin.images.length === 0) {
+            return { ...bulletin, images: [DEFAULT_COVER] };
+          }
+          return bulletin;
+        });
+        setBulletins(bulletinsWithCover);
       } catch (error) {
         console.error("Error fetching catechesis bulletins:", error);
       } finally {
@@ -35,14 +38,13 @@ function CatechesisPage() {
 
   return (
     <Layout>
-      <SEO title="Faith Formation & Catechesis | St. Joseph Catholic Church Kahawa Sukari" 
-          description="Explore our faith formation programs and catechesis at St. Joseph Catholic Church Kahawa Sukari. Grow in your Catholic faith through our comprehensive religious education." 
-          keywords="Catholic faith formation, Religious education Nairobi, Catechesis Kenya, Catholic sacramental preparation, Bible study Kahawa Sukari"
-          url="https://stjosephchurchkahawasukari.org/catechesis"
-     />
-      <Hero imageUrl={imageurl} title={title} text={text} />
-      <div>
-        <h1 className="text-primary mt-24 ml-3 md:text-center">Catechesis</h1>
+      <SEO title="Faith Formation & Catechesis | St. Joseph Catholic Church Kahawa Sukari"
+        description="Explore our faith formation programs and catechesis at St. Joseph Catholic Church Kahawa Sukari. Grow in your Catholic faith through our comprehensive religious education."
+        keywords="Catholic faith formation, Religious education Nairobi, Catechesis Kenya, Catholic sacramental preparation, Bible study Kahawa Sukari"
+        url="https://stjosephchurchkahawasukari.org/catechesis"
+      />
+      <div className="md:mt-32 mt-24">
+        <h1 className="text-primary mb-6 text-3xl font-bold text-center">Catechesis Bulletins</h1>
         <div className="container mx-auto my-8">
           {isLoading ? (
             <div className="flex justify-center items-center min-h-[200px]">
