@@ -38,22 +38,35 @@ export default async function handler(req, res) {
         });
       }
 
-      // Search for the normalized phone number in both mobileNumber and mobileNumber2
-      const zaka = await Zaka.findOne({
+      // Normalize to last 9 digits for robust matching
+      const normalizePhone = (num) => {
+        if (!num) return '';
+        // Remove all non-digit characters
+        let digits = num.replace(/\D/g, '');
+        // Always take the last 9 digits (Kenyan numbers)
+        return digits.slice(-9);
+      };
+
+      const normalizedInput = normalizePhone(phone);
+      if (normalizedInput.length < 9) {
+        return res.status(400).json({
+          error: 'Phone number must be at least 9 digits'
+        });
+      }
+
+      // Find all zakas where either mobileNumber or mobileNumber2 contains the last 9 digits
+      const candidates = await Zaka.find({
         $or: [
-          { mobileNumber: cleanPhone },
-          { mobileNumber: `+254${cleanPhone}` },
-          { mobileNumber: `0${cleanPhone}` },
-          { mobileNumber: cleanPhone.replace(/^254/, '') },
-          { mobileNumber: cleanPhone.replace(/^0/, '') },
-          // Also search in mobileNumber2 if it exists
-          { mobileNumber2: cleanPhone },
-          { mobileNumber2: `+254${cleanPhone}` },
-          { mobileNumber2: `0${cleanPhone}` },
-          { mobileNumber2: cleanPhone.replace(/^254/, '') },
-          { mobileNumber2: cleanPhone.replace(/^0/, '') }
+          { mobileNumber: { $regex: normalizedInput } },
+          { mobileNumber2: { $regex: normalizedInput } }
         ]
       }).lean();
+
+      // Now filter for exact match on normalized value
+      const zaka = candidates.find(z =>
+        normalizePhone(z.mobileNumber) === normalizedInput ||
+        normalizePhone(z.mobileNumber2) === normalizedInput
+      );
 
       if (!zaka) {
         return res.status(404).json({

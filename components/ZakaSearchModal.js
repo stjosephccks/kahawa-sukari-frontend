@@ -41,11 +41,11 @@ const ZakaSearchModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-xl shadow-2xl w-full max-w-md mx-auto max-h-[90vh] overflow-hidden">
-        <div className="p-6">
+    <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center z-50 p-2 sm:p-4">
+      <div className="bg-white rounded-xl shadow-2xl w-full max-w-md mx-auto max-h-[90vh] overflow-auto">
+        <div className="p-3 sm:p-6">
           <div className="flex justify-between items-center mb-6">
-            <h3 className="text-xl font-bold text-gray-900 flex items-center">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 flex items-center">
               <svg className="w-6 h-6 mr-2 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
@@ -61,9 +61,9 @@ const ZakaSearchModal = ({ isOpen, onClose }) => {
             </button>
           </div>
 
-          <form onSubmit={handleSearch} className="space-y-6">
+          <form onSubmit={handleSearch} className="space-y-4 sm:space-y-6">
             <div>
-              <label htmlFor="phone" className=" text-sm font-semibold text-gray-700 mb-2 flex items-center">
+              <label htmlFor="phone" className="text-xs sm:text-sm font-semibold text-gray-700 mb-2 flex items-center">
                 <svg className="w-4 h-4 mr-1 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -75,10 +75,10 @@ const ZakaSearchModal = ({ isOpen, onClose }) => {
                 value={phoneNumber}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 placeholder="e.g., 711231112 or +254790943918"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-base"
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-base"
                 required
               />
-              <p className="text-xs text-gray-500 mt-2 flex items-center">
+              <p className="text-[11px] sm:text-xs text-gray-500 mt-2 flex items-center">
                 <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -86,7 +86,7 @@ const ZakaSearchModal = ({ isOpen, onClose }) => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
               <button
                 type="submit"
                 disabled={loading}
@@ -137,14 +137,14 @@ const ZakaSearchModal = ({ isOpen, onClose }) => {
           )}
 
           {zakaInfo && (
-            <div className="mt-6 p-5 bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500 rounded-lg animate-fade-in">
-              <div className="flex items-start mb-4">
+            <div className="mt-4 sm:mt-6 p-3 sm:p-5 bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500 rounded-lg animate-fade-in">
+              <div className="flex items-start mb-3 sm:mb-4">
                 <svg className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <h4 className="text-lg font-semibold text-green-800">Your Zaka Information Found!</h4>
               </div>
-              <div className="grid gap-3 text-sm">
+              <div className="grid gap-2 sm:gap-3 text-xs sm:text-sm">
                 <div className="flex items-center p-3 bg-white rounded-lg border border-green-200">
                   <svg className="w-4 h-4 text-green-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
