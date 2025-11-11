@@ -67,7 +67,7 @@ export default function Announcements({ maxItems = 3 }) {
               <div className="flex-1">
                 <div className="flex justify-between items-start">
                   <h3 className="font-semibold text-gray-900">
-                    {announcement.title}
+                    {announcement.title} - {announcement.sunday.sunday}
                   </h3>
                 </div>
                 <p className="mt-1 text-gray-700">
@@ -78,7 +78,7 @@ export default function Announcements({ maxItems = 3 }) {
                   <div className="mt-3 bg-gray-50 p-3 rounded">
                     <h4 className="text-sm font-medium text-gray-800 flex items-center mb-2">
                       <FaCalendarAlt className="mr-2 text-primary" />
-                       Schedule
+                       Schedule  
                     </h4>
                     <ul className="space-y-2">
                       {announcement.massScheduleAssignments.map((item, i) => (
