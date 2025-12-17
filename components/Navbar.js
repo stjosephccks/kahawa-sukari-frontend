@@ -207,7 +207,7 @@ function NavBar() {
                     className={
                       pathname.includes("community") ? "text-secondary" : ""
                     }
-                    href="/community/event"
+                    href="/community"
                     onMouseEnter={(e) => {
                       e.preventDefault();
                       setAboutDropDown(false);
@@ -695,6 +695,17 @@ function NavBar() {
                     onClick={handleLinkClick}
                   >
                     Bookings
+                  </Link>
+                </li>
+                <li className={pathname === "/bookings" ? activeNav : Navstyles}>
+                  <Link
+                    className={
+                      pathname === "/bookings" ? "text-secondary" : "text-white"
+                    }
+                    href="/calendar/calendar"
+                    onClick={handleLinkClick}
+                  >
+                    Calendar
                   </Link>
                 </li>
               </ul>

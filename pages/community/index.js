@@ -25,6 +25,7 @@ function Event() {
       setPastEvents(past);
     });
   }, []);
+
   return (
     <Layout>
       <SEO title="Parish Events | St. Joseph Catholic Church Kahawa Sukari" 
@@ -47,6 +48,65 @@ function Event() {
               {upcomingEvents.map((event) => (
                 <Eventcard key={event._id} event={event} />
               ))}
+            </div>
+          </div>
+        )}
+
+        {upcomingEvents.length === 0 && pastEvents.length === 0 && (
+          <div className="container mx-auto px-4 py-16">
+            <div className="max-w-2xl mx-auto text-center">
+              <div className="bg-gray-50 rounded-lg p-12 shadow-sm">
+                <svg 
+                  className="w-24 h-24 mx-auto mb-6 text-gray-400" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={1.5} 
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" 
+                  />
+                </svg>
+                <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                  No Events Available
+                </h2>
+                <p className="text-lg text-gray-600 mb-6">
+                  We currently don't have any scheduled events. Please check back soon for upcoming Events.
+                </p>
+                <p className="text-md text-gray-500 italic">
+                  "For where two or three gather in my name, there am I with them." - Matthew 18:20
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {upcomingEvents.length === 0 && pastEvents.length > 0 && (
+          <div className="container mx-auto px-4 py-16">
+            <div className="max-w-2xl mx-auto text-center mb-12">
+              <div className="bg-blue-50 rounded-lg p-8 shadow-sm">
+                <svg 
+                  className="w-16 h-16 mx-auto mb-4 text-blue-500" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" 
+                  />
+                </svg>
+                <h2 className="text-2xl font-bold text-gray-800 mb-3">
+                  No Upcoming Events
+                </h2>
+                <p className="text-gray-600">
+                  Stay tuned! New events will be announced soon. Check out our past events below.
+                </p>
+              </div>
             </div>
           </div>
         )}
