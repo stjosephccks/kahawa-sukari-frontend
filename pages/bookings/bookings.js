@@ -5,7 +5,7 @@ import { format } from 'date-fns';
 import { createClient } from '@supabase/supabase-js'
 import { useEffect, useState } from 'react'
 
-const supabase = createClient('https://ptwgptbybxpmguedsibn.supabase.co/', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB0d2dwdGJ5YnhwbWd1ZWRzaWJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA2NjI3ODYsImV4cCI6MjA1NjIzODc4Nn0.HjAT_HQuiEX3sYK2P5jPy9x4f-L1f0wwo3Gmagg6-Ho')
+const supabase = createClient('https://yazuptkqzojoqnukmgld.supabase.co/', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlhenVwdGtxem9qb3FudWttZ2xkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc1OTU2MzUsImV4cCI6MjA2MzE3MTYzNX0.R0YEJsxb9-WPxsNY_exfHZiOB4MfgGKMVBMjqRVTIDo')
 
 function Bookings() {
     const [selectedBooking, setSelectedBooking] = useState(null);
