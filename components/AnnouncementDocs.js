@@ -175,33 +175,11 @@ export default function AnnouncementDoc() {
             <section className="mb-8">
                 <AnimatedFadeIn delay={0.05}>
                     <div className="bg-gray-50 rounded-xl p-4 sm:p-6 shadow-sm">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-4 text-center">This Week's Mass Animation</h2>
-                        {doc.massAnimation && (
-                            <div className="mb-4 text-pink-700 font-semibold italic text-center">{doc.massAnimation}</div>
-                        )}
-                        {doc.currentWeekMass && doc.currentWeekMass.length > 0 && (
-                            <div className="overflow-x-auto mb-6">
-                                <table className="min-w-full text-sm text-left">
-                                    <thead>
-                                        <tr className="text-gray-600 border-b">
-                                            <th className="py-2 px-2 font-semibold w-1/2">Time</th>
-                                            <th className="py-2 px-2 font-semibold w-1/2 md:text-right">Group</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {doc.currentWeekMass.map(mass => (
-                                            <tr key={mass._id} className="border-b last:border-b-0">
-                                                <td className="py-2 px-2 w-1/2">{mass.time}</td>
-                                                <td className="py-2 px-2 font-medium text-blue-700 w-1/2 md:text-right">{mass.group}</td>
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            </div>
-                        )}
+                        
+                        
                         {doc.nextWeekMasses && doc.nextWeekMasses.length > 0 && (
                             <div>
-                                <h3 className="text-xl font-semibold text-primary mt-6 mb-2 text-center">Next Week's Mass Animation-{doc.nextWeekOccasion}</h3>
+                                <h3 className="text-xl font-semibold text-primary mt-6 mb-2 text-center">Mass Animation Schedule for -{doc.nextWeekOccasion}</h3>
                                 <div className="overflow-x-auto">
                                     <table className="min-w-full text-sm text-left">
                                         <thead>
