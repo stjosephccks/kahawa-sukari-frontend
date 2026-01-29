@@ -18,10 +18,10 @@ function BulletinPage() {
   useEffect(() => {
     const fetchBulletins = async () => {
       try {
-        const response = await fetch('/api/bulletins');
-        if (!response.ok) throw new Error('Failed to fetch bulletins');
+        const response = await fetch('/api/bulletins')
         const data = await response.json();
-        setBulletins(data);
+        const filteredData = data.filter(bulletin => !bulletin.sections.includes('CHATECHISIS'));
+        setBulletins(filteredData);
       } catch (error) {
         console.error("Error fetching bulletins:", error);
       } finally {
