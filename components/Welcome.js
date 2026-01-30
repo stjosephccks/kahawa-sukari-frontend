@@ -95,10 +95,10 @@ function Welcome() {
                 Learn More
               </Link>
               <Link
-                href="/welcome/bulletin"
+                href="/catechesis"
                 className="inline-flex items-center justify-center px-6 py-3 border border-primary text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 transition-colors duration-200"
               >
-                View Bulletin
+                View Chatechesis
               </Link>
             </div>
           </motion.div>

@@ -24,9 +24,9 @@ function NavBar() {
   };
 
   const dropdown =
-    "relative md:absolute right-0 md:mt-8 rounded-md bg-[#1A9B96] text-white max-w-max py-3 md:whitespace-nowrap shadow-lg z-[999999]";
+    "relative lg:absolute right-0 lg:mt-8 rounded-md bg-[#1A9B96] text-white max-w-max py-3 lg:whitespace-nowrap shadow-lg z-[999999]";
   const Navstyles =
-    "pb-3 md:pb-6 text-md py-1 md:py-2 md:px-6 md:flex md:border-b-0 md:hover:text-purple-600 md:hover:bg-transparent";
+    "text-md lg:py-2 lg:px-6 lg:flex lg:border-b-0 lg:hover:text-purple-600 lg:hover:bg-transparent";
   const activeNav = Navstyles + " text-primary1";
   return (
     <div className="relative z-[999999]">
@@ -40,22 +40,22 @@ function NavBar() {
           setFormationDropDown(false);
         }}
       >
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 w-full">
-          <div>
-            <div className="flex items-center justify-between py-2 md:py-5 md:block">
+        <div className="justify-between px-4 mx-auto lg:max-w-7xl lg:items-center lg:flex lg:px-8 w-full">
+          <div className="flex items-center">
+            <div className="flex items-center justify-between py-2 lg:py-3 lg:block">
               {/* LOGO */}
               <Link href="/">
                 {/* <h2 className="text-2xl text-cyan-600 font-bold">SJCCKS</h2> */}
                 <Image
                   src={logo}
                   alt="St. Joseph The Worker Catholic Church Kahawa Sukari logo"
-                  width={150}
-                  height={50}
-                  className="w-24 md:w-32 lg:w-40" />
+                  width={200}
+                  height={60}
+                  className="w-28 md:w-36 lg:w-44 h-auto lg:h-12" />
 
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
-              <div className="md:hidden absolute right-4 top-2">
+              <div className="lg:hidden absolute right-4 top-2">
                 <button
                   className="p-2 text-white rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
@@ -97,14 +97,14 @@ function NavBar() {
           </div>
           <div>
             <div
-              className={`flex-1 justify-self-start pb-3 mt-2 md:block md:pb-0 md:mt-0 ${navbar
-                ? "px-4 right-0 md:p-0 block fixed top-10 left-0 w-2/3 h-[calc(100vh-2.5rem)] bg-primary overflow-y-auto"
+              className={`flex-1 justify-self-start pb-3 mt-2 lg:block lg:pb-0 lg:mt-0 ${navbar
+                ? "px-4 right-0 lg:p-0 block fixed top-10 left-0 w-2/3 h-[calc(100vh-2.5rem)] bg-primary overflow-y-auto"
                 : "hidden"
                 }`}
             >
               <ul
-                className={`h-full md:h-auto ${navbar ? "justify-start" : "justify-start"
-                  } md:flex`}
+                className={`h-full lg:h-auto ${navbar ? "justify-start" : "justify-start"
+                  } lg:flex`}
               >
                 <li className={pathname === "/" ? activeNav : Navstyles}>
                   <Link
@@ -146,11 +146,11 @@ function NavBar() {
                     }}
                   >
                     {aboutDropDown ? (
-                      <span className="md:hidden">- &nbsp;</span>
+                      <span className="lg:hidden">- &nbsp;</span>
                     ) : (
-                      <span className="md:hidden">+&nbsp;</span>
+                      <span className="lg:hidden">+&nbsp;</span>
                     )}
-                    <span className="md:block">
+                    <span className="lg:block">
                       <span>About</span>
                     </span>
                   </Link>
@@ -228,11 +228,11 @@ function NavBar() {
                     }}
                   >
                     {communityDropDown ? (
-                      <span className="md:hidden">- &nbsp;</span>
+                      <span className="lg:hidden">- &nbsp;</span>
                     ) : (
-                      <span className="md:hidden">+&nbsp;</span>
+                      <span className="lg:hidden">+&nbsp;</span>
                     )}
-                    <span className="md:block">
+                    <span className="lg:block">
                       <span> Community</span>
                     </span>
                   </Link>
@@ -302,11 +302,11 @@ function NavBar() {
                     }}
                   >
                     {liturgyDropDown ? (
-                      <span className="md:hidden">- &nbsp;</span>
+                      <span className="lg:hidden">- &nbsp;</span>
                     ) : (
-                      <span className="md:hidden">+&nbsp;</span>
+                      <span className="lg:hidden">+&nbsp;</span>
                     )}
-                    <span className="md:block">
+                    <span className="lg:block">
                       <span>Liturgy</span>
                     </span>
                   </Link>
@@ -391,11 +391,11 @@ function NavBar() {
                     }}
                   >
                     {sacramentsDropDown ? (
-                      <span className="md:hidden">- &nbsp;</span>
+                      <span className="lg:hidden">- &nbsp;</span>
                     ) : (
-                      <span className="md:hidden">+&nbsp;</span>
+                      <span className="lg:hidden">+&nbsp;</span>
                     )}
-                    <span className="md:block">
+                    <span className="lg:block">
                       <span>Sacraments</span>
                     </span>
                   </Link>
@@ -537,17 +537,17 @@ function NavBar() {
                     }}
                   >
                     {formationDropDown ? (
-                      <span className="md:hidden">- &nbsp;</span>
+                      <span className="lg:hidden">- &nbsp;</span>
                     ) : (
-                      <span className="md:hidden">+&nbsp;</span>
+                      <span className="lg:hidden">+&nbsp;</span>
                     )}
-                    <span className="md:block">
+                    <span className="lg:block">
                       <span>Formation</span>
                     </span>
                   </Link>
                   {formationDropDown && (
                     <ul
-                      className={`${dropdown} dropdown rounded-md z-[9999] md:absolute md:right-0`}
+                      className={`${dropdown} dropdown rounded-md z-[9999] lg:absolute lg:right-0`}
                     >
                       <li>
                         <Link

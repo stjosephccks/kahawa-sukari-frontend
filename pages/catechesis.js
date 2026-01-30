@@ -59,13 +59,13 @@ function CatechesisPage() {
       />
       
       <div className="min-h-screen bg-white">
-        <div className="bg-primary text-white py-12 md:py-16 mt-12 md:mt-12">
+        <div className=" text-gray-800 py-12 md:py-16 mt-12 md:mt-12">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-3xl md:text-4xl font-bold mb-3">
                 Catechesis
               </h1>
-              <p className="text-base md:text-lg text-gray-100">
+              <p className="text-base md:text-lg text-gray-600">
                 Weekly teachings and reflections from the Church
               </p>
             </div>
