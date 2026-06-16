@@ -22,12 +22,61 @@ function MassSchedule() {
               <h3 className="font-medium text-lg">Monday & Saturday</h3>
               <p className="text-gray-600">7:30 am</p>
             </div>
-            <div className="bg-white p-4 rounded-md shadow-sm">
-              <h3 className="font-medium text-lg">Sunday</h3>
-              <p className="text-gray-600">
-                7:30 am, 9:00 am, 10:30 am, 12:00 noon
-              </p>
-              <p className="text-gray-600">Wendani Mass - 9:30 am</p>
+
+            {/* Sunday — split parish cards */}
+            <div>
+              <h3 className="font-medium text-lg mb-3">Sunday</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="bg-white rounded-md shadow-sm overflow-hidden">
+                  <div className="bg-purple-100 px-4 py-2">
+                    <p className="text-xs font-medium text-purple-800">
+                      St Joseph Kahawa Sukari
+                    </p>
+                  </div>
+                  <div className="px-4 py-3 space-y-1">
+                    <div className="flex items-center justify-between">
+                      <p className="text-gray-700 text-sm">8:00 am</p>
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">
+                        Kiswahili
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="text-gray-700 text-sm">10:00 am</p>
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-700">
+                        English
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="text-gray-700 text-sm">12:00 noon</p>
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-700">
+                        English
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-md shadow-sm overflow-hidden">
+                  <div className="bg-purple-100 px-4 py-2">
+                    <p className="text-xs font-medium text-purple-800">
+                      St John Paul <i>II</i> – Kahawa Wendani
+                    </p>
+                  </div>
+                  <div className="px-4 py-3 space-y-1">
+                    <div className="flex items-center justify-between">
+                      <p className="text-gray-700 text-sm">8:30 am</p>
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">
+                        Kiswahili
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <p className="text-gray-700 text-sm">10:30 am</p>
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-teal-50 text-teal-700">
+                        Kiswahili
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -44,7 +93,7 @@ function MassSchedule() {
             </div>
             <div className="bg-white p-4 rounded-md shadow-sm">
               <h3 className="font-medium text-lg">Sunday</h3>
-              <p className="text-gray-600">7:30 am - 11:30 am</p>
+              <p className="text-gray-600">20 minutes before each mass</p>
             </div>
           </div>
         </div>
@@ -58,6 +107,17 @@ function MassSchedule() {
             <div className="bg-white p-4 rounded-md shadow-sm">
               <h3 className="font-medium text-lg">In the Church</h3>
               <p className="text-gray-600">Monday - Saturday: 6:45 am</p>
+            </div>
+            <div className="bg-white p-4 rounded-md shadow-sm">
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <h3 className="font-medium text-lg">2nd Wednesday of the month</h3>
+                  <p className="text-gray-600">7:00 pm</p>
+                </div>
+                <span className="shrink-0 text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 mt-1">
+                  Monthly
+                </span>
+              </div>
             </div>
           </div>
         </div>
