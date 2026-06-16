@@ -130,16 +130,18 @@ export default function MassSchedule() {
                 </h2>
                 <div className="space-y-4">
                   <div className="bg-gray-50 p-4 rounded-md">
-                    <h3 className="font-medium text-lg">In the Church</h3>
-                    <p className="text-gray-600">Monday - Saturday: 6:45 am</p>
+                    <h3 className="font-medium text-lg">St Joseph Church</h3>
+                    <p className="text-gray-600">Monday - Saturday: <b>6:45 am</b></p>
+                    <p className="text-gray-500 text-sm mt-1">Includes Morning Prayer</p>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-md">
                     <div className="flex items-start justify-between gap-2">
                       <div>
                         <h3 className="font-medium text-lg">
-                          2nd Wednesday of the month
+                          St Joseph Catholic Church Kahawa Sukari
                         </h3>
-                        <p className="text-gray-600">7:00 pm</p>
+                        <p className="text-gray-600">2<sup>nd</sup> Wednesday of the month at <b>7:00pm</b></p>
+                        <p className="text-gray-500 text-sm mt-1">Eucharistic Adoration</p>
                       </div>
                       <span className="shrink-0 text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 mt-1">
                         Monthly
