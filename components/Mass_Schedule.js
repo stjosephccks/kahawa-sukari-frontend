@@ -123,7 +123,7 @@ function MassSchedule() {
                       </span>
                     </div>
                   </div>
-                </div>
+                </div> 
               </div>
 
         {/* Holy Rosary */}
