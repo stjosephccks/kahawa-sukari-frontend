@@ -708,6 +708,17 @@ function NavBar() {
                     Calendar
                   </Link>
                 </li>
+                <li className={pathname === "/zaka-login" ? activeNav : Navstyles}>
+                  <Link
+                    className={
+                      pathname === "/zaka-login" ? "text-secondary" : "text-white"
+                    }
+                    href="/zaka-login"
+                    onClick={handleLinkClick}
+                  >
+                    Zaka Portal
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function ZakaDashboard() {
   const router = useRouter();
@@ -85,13 +86,21 @@ export default function ZakaDashboard() {
         <header className="bg-blue-900 text-white shadow-lg">
           <div className="container mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
-              <div>
-                <h1 className="text-2xl font-bold">St. Joseph Catholic Church</h1>
-                <p className="text-blue-200 text-sm">Kahawa Sukari</p>
+              <div className="flex items-center gap-4">
+                <Link href="/" className="text-blue-200 hover:text-white flex items-center text-sm">
+                  <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                  </svg>
+                  Home
+                </Link>
+                <div>
+                  <h1 className="text-xl font-bold">St. Joseph Catholic Church</h1>
+                  <p className="text-blue-200 text-xs">Kahawa Sukari</p>
+                </div>
               </div>
               <button
                 onClick={handleLogout}
-                className="bg-blue-700 hover:bg-blue-600 px-4 py-2 rounded-lg transition"
+                className="bg-blue-700 hover:bg-blue-600 px-4 py-2 rounded-lg transition text-sm"
               >
                 Logout
               </button>

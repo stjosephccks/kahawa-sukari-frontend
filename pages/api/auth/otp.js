@@ -18,19 +18,15 @@ export default async function handler(req, res) {
           return res.status(400).json({ error: 'Phone number is required' });
         }
 
-        // Normalize phone number
-        let cleanPhone = phoneNumber.replace(/[\s\-\(\)]/g, '');
-        if (cleanPhone.startsWith('+254')) {
-          cleanPhone = cleanPhone.substring(1);
-        } else if (cleanPhone.startsWith('0')) {
-          cleanPhone = '254' + cleanPhone.substring(1);
-        }
+        // Normalize phone number using smsService
+        const cleanPhone = smsService.normalizePhoneNumber(phoneNumber);
 
-        // Check if phone number belongs to a zaka member
+        // Check if phone number belongs to a zaka member (try multiple formats)
         const zaka = await Zaka.findOne({
           $or: [
             { mobileNumber: cleanPhone },
-            { mobileNumber: phoneNumber.replace(/[\s\-\(\)]/g, '') }
+            { mobileNumber: phoneNumber.replace(/[\s\-\(\)]/g, '') },
+            { mobileNumber: phoneNumber.replace(/[\s\-\(\)]/g, '').replace(/^\+/, '') }
           ]
         });
 
@@ -41,7 +37,7 @@ export default async function handler(req, res) {
         // Find or create user
         let user = await User.findOne({ phoneNumber: cleanPhone });
         if (!user) {
-          user = await User.create({ 
+          user = await User.create({
             phoneNumber: cleanPhone,
             zakaNumber: zaka.zakaNumber
           });
@@ -54,13 +50,20 @@ export default async function handler(req, res) {
         await user.save();
 
         // Send OTP via SMS
-        const message = `Your St. Joseph Church verification code is: ${generatedOTP}. Valid for 10 minutes. Do not share this code.`;
-        
         try {
-          await smsService.sendSingleSMS(cleanPhone, message);
+          const smsResult = await smsService.sendOTP(cleanPhone, generatedOTP);
+          if (!smsResult.success) {
+            return res.status(500).json({ 
+              error: 'Failed to send OTP via SMS',
+              details: smsResult.error
+            });
+          }
         } catch (smsError) {
           console.error('SMS sending error:', smsError);
-          // Continue even if SMS fails (for testing)
+          return res.status(500).json({ 
+            error: 'Failed to send OTP via SMS',
+            details: smsError.message
+          });
         }
 
         return res.json({ 
@@ -76,13 +79,8 @@ export default async function handler(req, res) {
           return res.status(400).json({ error: 'Phone number and OTP are required' });
         }
 
-        // Normalize phone number
-        let cleanPhone = phoneNumber.replace(/[\s\-\(\)]/g, '');
-        if (cleanPhone.startsWith('+254')) {
-          cleanPhone = cleanPhone.substring(1);
-        } else if (cleanPhone.startsWith('0')) {
-          cleanPhone = '254' + cleanPhone.substring(1);
-        }
+        // Normalize phone number using smsService
+        const cleanPhone = smsService.normalizePhoneNumber(phoneNumber);
 
         const user = await User.findOne({ phoneNumber: cleanPhone });
         if (!user) {
@@ -90,11 +88,11 @@ export default async function handler(req, res) {
         }
 
         const verificationResult = user.verifyOTP(otp);
-        
+
         if (verificationResult.success) {
           // Get zaka details
-          const zaka = await Zaka.findOne({ zakaNumber: user.zakaNumber });
-          
+          const zaka = await Zaka.findOne({ zakaNumber: user.zakaNumber });  
+
           return res.json({
             success: true,
             message: verificationResult.message,

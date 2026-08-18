@@ -1,5 +1,5 @@
 import mongooseConnect from "@/lib/mongoose";
-import { ZakaPayment } from "@/models/ZakaPayment";
+import ZakaPayment from "@/models/ZakaPayment";
 import { Zaka } from "@/models/Zaka";
 
 export default async function handler(req, res) {
@@ -22,16 +22,27 @@ export default async function handler(req, res) {
       }
 
       // Get all payments for this zaka member
-      const payments = await ZakaPayment.find({ zakaNumber })
-        .sort({ year: -1, month: -1, paymentDate: -1 });
+      let payments;
+      try {
+        payments = await ZakaPayment.find({ zakaNumber })
+          .sort({ year: -1, month: -1, paymentDate: -1 });
+      } catch (dbError) {
+        console.error('Error fetching payments:', dbError);
+        payments = [];
+      }
+
+      // Ensure payments is an array and filter out null/undefined
+      const paymentsArray = (Array.isArray(payments) ? payments : []).filter(p => p != null);
 
       // Calculate summary statistics
-      const totalPayments = payments.length;
-      const totalAmount = payments.reduce((sum, p) => sum + (p.amount || 0), 0);
+      const totalPayments = paymentsArray.length;
+      const totalAmount = paymentsArray.reduce((sum, p) => sum + (p.amount || 0), 0);
       
       // Group payments by year
       const paymentsByYear = {};
-      payments.forEach(payment => {
+      paymentsArray.forEach(payment => {
+        if (!payment) return;
+        
         const year = payment.year;
         if (!paymentsByYear[year]) {
           paymentsByYear[year] = {
@@ -58,7 +69,7 @@ export default async function handler(req, res) {
       const currentMonth = currentDate.toLocaleString('default', { month: 'long' });
 
       // Check if current month payment exists
-      const currentMonthPayment = payments.find(
+      const currentMonthPayment = paymentsArray.find(
         p => p.year === currentYear && p.month === currentMonth
       );
 
@@ -70,7 +81,7 @@ export default async function handler(req, res) {
           group: zaka.group,
           mobileNumber: zaka.mobileNumber
         },
-        payments,
+        payments: paymentsArray,
         summary: {
           totalPayments,
           totalAmount,
