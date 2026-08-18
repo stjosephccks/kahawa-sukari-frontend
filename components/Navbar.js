@@ -716,7 +716,7 @@ function NavBar() {
                     href="/zaka-login"
                     onClick={handleLinkClick}
                   >
-                    Zaka Portal
+                    Portal
                   </Link>
                 </li>
               </ul>
